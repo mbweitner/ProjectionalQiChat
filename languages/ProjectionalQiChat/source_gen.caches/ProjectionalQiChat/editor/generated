@@ -1,3 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="da632u5yexkzjuh38r11182914spxq4" />
+<product version="3" modelHash="-1t2urzudp9itwuacrd2nqytmbrjte14">
+  <files names="ConceptCollectionReference_SubstituteMenu.java:ConceptCollection_Editor.java:ConceptCollection_EditorBuilder_a.java:Description_Editor.java:Description_EditorBuilder_a.java:EditorAspectDescriptorImpl.java:HumanConceptReference_SubstituteMenu.java:HumanConcept_Editor.java:HumanConcept_EditorBuilder_a.java:HumanConcept_InspectorBuilder_a.java:InputStoreReference_SubstituteMenu.java:RobotConceptReference_SubstituteMenu.java:RobotConcept_Editor.java:RobotConcept_EditorBuilder_a.java:RobotConcept_InspectorBuilder_a.java:TopicReference_SubstituteMenu.java:VariableReference_SubstituteMenu.java:Word_Editor.java:Word_EditorBuilder_a.java:Word_InspectorBuilder_a.java:globalStyles_StyleSheet.java" />
+</product>
 
