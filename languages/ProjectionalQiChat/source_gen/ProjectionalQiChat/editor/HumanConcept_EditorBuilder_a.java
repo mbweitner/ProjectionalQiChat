@@ -69,7 +69,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Human Concept:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Human Input Concept:");
     editorCell.setCellId("Constant_xu9f4o_a0");
     Style style = new StyleImpl();
     new keywordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);

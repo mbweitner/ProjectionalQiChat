@@ -588,6 +588,12 @@
     <property role="EcuMT" value="8057541192470606117" />
     <property role="3GE5qa" value="GerneralInputOutput" />
     <property role="TrG5h" value="IChoiceConfirmed" />
+    <node concept="PrWs8" id="5Z9ErPsv6A3" role="PrDN$">
+      <ref role="PrY4T" node="Yce9eByMkq" resolve="IInputChoiceConfirmed" />
+    </node>
+    <node concept="PrWs8" id="5Z9ErPsv6A5" role="PrDN$">
+      <ref role="PrY4T" node="Yce9eByMkt" resolve="IOutputChoiceConfirmed" />
+    </node>
   </node>
   <node concept="PlHQZ" id="6Zi8Kosir4A">
     <property role="EcuMT" value="8057541192470606118" />
@@ -1197,17 +1203,11 @@
     <property role="EcuMT" value="1120332614130672922" />
     <property role="3GE5qa" value="GerneralInputOutput" />
     <property role="TrG5h" value="IInputChoiceConfirmed" />
-    <node concept="PrWs8" id="Yce9eByMkr" role="PrDN$">
-      <ref role="PrY4T" node="6Zi8Kosir4_" resolve="IChoiceConfirmed" />
-    </node>
   </node>
   <node concept="PlHQZ" id="Yce9eByMkt">
     <property role="EcuMT" value="1120332614130672925" />
     <property role="3GE5qa" value="GerneralInputOutput" />
     <property role="TrG5h" value="IOutputChoiceConfirmed" />
-    <node concept="PrWs8" id="Yce9eByMku" role="PrDN$">
-      <ref role="PrY4T" node="6Zi8Kosir4_" resolve="IChoiceConfirmed" />
-    </node>
     <node concept="PrWs8" id="Yce9eByMkB" role="PrDN$">
       <ref role="PrY4T" node="6Zi8Kosir4A" resolve="IPhraseConfirmed" />
     </node>
