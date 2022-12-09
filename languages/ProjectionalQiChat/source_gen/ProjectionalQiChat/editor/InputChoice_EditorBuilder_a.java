@@ -8,27 +8,30 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
-import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical;
-import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
+import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
 import jetbrains.mps.openapi.editor.style.Style;
 import jetbrains.mps.editor.runtime.style.StyleImpl;
-import ProjectionalQiChat.editor.globalStyles_StyleSheet.notEditableStyleClass;
 import jetbrains.mps.editor.runtime.style.StyleAttributes;
-import jetbrains.mps.editor.runtime.style.CellAlign;
+import de.itemis.mps.editor.collapsible.runtime.ICollapsibleCallback;
+import java.awt.Dimension;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
+import de.itemis.mps.editor.collapsible.runtime.CollapsibleContext;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Component;
 import javax.swing.JComponent;
 import java.awt.Color;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.nodeEditor.EditorSettings;
 import javax.swing.JPanel;
-import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.BasicStroke;
 import java.awt.RenderingHints;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
+import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
@@ -38,11 +41,11 @@ import jetbrains.mps.nodeEditor.cellMenu.SEmptyContainmentSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
 import jetbrains.mps.openapi.editor.cells.CellActionType;
 import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
-import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
 import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_CreateChildRangeSelection;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.nodeEditor.selection.NodeRangeSelection;
+import jetbrains.mps.editor.runtime.EditorCell_Empty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
 /*package*/ class InputChoice_EditorBuilder_a extends AbstractEditorBuilder {
@@ -65,44 +68,70 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
   }
 
   private EditorCell createCollection_0() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
     editorCell.setCellId("Collection_jkr9kg_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
-    editorCell.setFoldable(true);
-    editorCell.setFoldedCell(createCollection_2());
-    editorCell.addEditorCell(createConstant_0());
-    editorCell.addEditorCell(createCollection_1());
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.PUNCTUATION_LEFT, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createCollapsible_1());
+    editorCell.addEditorCell(createEmpty_0());
     return editorCell;
   }
-  private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Choice");
-    editorCell.setCellId("Constant_jkr9kg_a0");
-    Style style = new StyleImpl();
-    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-    style.set(StyleAttributes.HORIZONTAL_ALIGN, CellAlign.CENTER);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
+  private EditorCell createCollapsible_0(EditorContext editorContext, SNode node) {
+    EditorCell expanded = createCollection_1();
+    EditorCell collapsed = createCollection_2();
+
+    ICollapsibleCallback callback = new ICollapsibleCallback() {
+      public Dimension getNodeSize() {
+        return new Dimension(10, 10);
+      }
+      public boolean customPaint() {
+        return false;
+      }
+      public void paintNode(Graphics2D graphics, Rectangle bounds, boolean highlighted, boolean expanded) {
+        return;
+      }
+      public void paintEdge(Graphics2D graphics, Rectangle bounds, Rectangle parentBounds) {
+        return;
+      }
+      public void paintLine(Graphics2D graphics, Rectangle bounds, Rectangle parentBounds) {
+        return;
+      }
+    };
+
+    EditorCell editorCell = CollapsibleContext.getFactory().create(editorContext, node, expanded, collapsed, false, true, false, callback, "");
+    editorCell.setCellId("Collapsible_jkr9kg_a0");
+
     return editorCell;
+  }
+  private EditorCell createCollapsible_1() {
+    return createCollapsible_0(getEditorContext(), myNode);
   }
   private EditorCell createCollection_1() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_jkr9kg_b0");
+    editorCell.setCellId("Collection_jkr9kg_a0a");
     editorCell.addEditorCell(createJComponent_0());
     editorCell.addEditorCell(createRefNodeList_0());
     editorCell.addEditorCell(createJComponent_1());
     return editorCell;
   }
   private EditorCell createJComponent_0() {
-    EditorCell editorCell = EditorCell_Component.createComponentCell(getEditorContext(), myNode, _QueryFunction_JComponent_jkr9kg_a0b0(), "JComponent_jkr9kg_a1a");
-    editorCell.setCellId("JComponent_jkr9kg_a1a_0");
+    EditorCell editorCell = EditorCell_Component.createComponentCell(getEditorContext(), myNode, _QueryFunction_JComponent_jkr9kg_a0a0a(), "JComponent_jkr9kg_a0a0");
+    editorCell.setCellId("JComponent_jkr9kg_a0a0_0");
     return editorCell;
   }
-  private JComponent _QueryFunction_JComponent_jkr9kg_a0b0() {
+  private JComponent _QueryFunction_JComponent_jkr9kg_a0a0a() {
     final Color bracketColor = Color.white;
     final int choiceElementCount = ListSequence.fromList(SLinkOperations.getChildren(myNode, LINKS.choices$YXnx)).count();
+    final int eventElementCount = ListSequence.fromList(SLinkOperations.getChildren(myNode, LINKS.choices$YXnx)).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SNodeOperations.isInstanceOf(it, CONCEPTS.AbstractEvent$sH);
+      }
+    }).count();
     final int fontSize = EditorSettings.getInstance().getFontSize();
-    final int bracketHeight = (int) Math.round(choiceElementCount * fontSize * 1.5);
+    final int bracketHeight = (int) Math.round(choiceElementCount * fontSize * 1.5 + eventElementCount * fontSize * 1.25);
     final int bracketWidth = (((choiceElementCount + 5) <= 20) ? choiceElementCount + 5 : 20);
     JPanel panel = new JPanel() {
 
@@ -127,18 +156,18 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     return panel;
   }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new choicesListHandler_jkr9kg_b1a(myNode, getEditorContext());
+    AbstractCellListHandler handler = new choicesListHandler_jkr9kg_b0a0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Vertical(), false);
     editorCell.setCellId("refNodeList_choices");
     editorCell.setGridLayout(true);
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class choicesListHandler_jkr9kg_b1a extends RefNodeListHandler {
+  private static class choicesListHandler_jkr9kg_b0a0 extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public choicesListHandler_jkr9kg_b1a(SNode ownerNode, EditorContext context) {
+    public choicesListHandler_jkr9kg_b0a0(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -161,7 +190,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(choicesListHandler_jkr9kg_b1a.this.getNode(), LINKS.choices$YXnx));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(choicesListHandler_jkr9kg_b0a0.this.getNode(), LINKS.choices$YXnx));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -202,17 +231,17 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     }
   }
   private EditorCell createRefNodeList_1() {
-    AbstractCellListHandler handler = new choicesListHandler_jkr9kg_a1b0(myNode, getEditorContext());
+    AbstractCellListHandler handler = new choicesListHandler_jkr9kg_a1a0a(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Horizontal(), false);
     editorCell.setCellId("refNodeList_choices1");
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class choicesListHandler_jkr9kg_a1b0 extends RefNodeListHandler {
+  private static class choicesListHandler_jkr9kg_a1a0a extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public choicesListHandler_jkr9kg_a1b0(SNode ownerNode, EditorContext context) {
+    public choicesListHandler_jkr9kg_a1a0a(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -231,13 +260,13 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     public EditorCell createNodeCell(SNode elementNode) {
       EditorCell elementCell = getUpdateSession().updateChildNodeCell(elementNode);
       installElementCellActions(elementNode, elementCell, false);
-      elementCell.setAction(CellActionType.SELECT_NEXT, new CellAction_CreateChildRangeSelection(elementNode, new RangeSelectionFilter_jkr9kg_a1b0(getEditorContext()), "empty_choices", getEditorContext(), true));
-      elementCell.setAction(CellActionType.SELECT_PREVIOUS, new CellAction_CreateChildRangeSelection(elementNode, new RangeSelectionFilter_jkr9kg_a1b0(getEditorContext()), "empty_choices", getEditorContext(), false));
+      elementCell.setAction(CellActionType.SELECT_NEXT, new CellAction_CreateChildRangeSelection(elementNode, new RangeSelectionFilter_jkr9kg_a1a0a(getEditorContext()), "empty_choices", getEditorContext(), true));
+      elementCell.setAction(CellActionType.SELECT_PREVIOUS, new CellAction_CreateChildRangeSelection(elementNode, new RangeSelectionFilter_jkr9kg_a1a0a(getEditorContext()), "empty_choices", getEditorContext(), false));
       return elementCell;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(choicesListHandler_jkr9kg_a1b0.this.getNode(), LINKS.choices$YXnx));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(choicesListHandler_jkr9kg_a1a0a.this.getNode(), LINKS.choices$YXnx));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -280,10 +309,10 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
       return childNode == ListSequence.fromList(SNodeOperations.getChildren(SNodeOperations.getParent(childNode))).getElement(0);
     }
   }
-  public static class RangeSelectionFilter_jkr9kg_a1b0 extends NodeRangeSelection.RangeSelectionFilter {
+  public static class RangeSelectionFilter_jkr9kg_a1a0a extends NodeRangeSelection.RangeSelectionFilter {
 
 
-    public RangeSelectionFilter_jkr9kg_a1b0(EditorContext editorContext) {
+    public RangeSelectionFilter_jkr9kg_a1a0a(EditorContext editorContext) {
       super(editorContext);
     }
     public boolean accept(SNode childNode) {
@@ -294,14 +323,19 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     }
   }
   private EditorCell createJComponent_1() {
-    EditorCell editorCell = EditorCell_Component.createComponentCell(getEditorContext(), myNode, _QueryFunction_JComponent_jkr9kg_a2b0(), "JComponent_jkr9kg_c1a");
-    editorCell.setCellId("JComponent_jkr9kg_c1a_0");
+    EditorCell editorCell = EditorCell_Component.createComponentCell(getEditorContext(), myNode, _QueryFunction_JComponent_jkr9kg_a2a0a(), "JComponent_jkr9kg_c0a0");
+    editorCell.setCellId("JComponent_jkr9kg_c0a0_0");
     return editorCell;
   }
-  private JComponent _QueryFunction_JComponent_jkr9kg_a2b0() {
+  private JComponent _QueryFunction_JComponent_jkr9kg_a2a0a() {
     final int choiceElementCount = ListSequence.fromList(SLinkOperations.getChildren(myNode, LINKS.choices$YXnx)).count();
     final int fontSize = EditorSettings.getInstance().getFontSize();
-    final int bracketHeight = (int) Math.round(choiceElementCount * fontSize * 1.5);
+    final int eventElementCount = ListSequence.fromList(SLinkOperations.getChildren(myNode, LINKS.choices$YXnx)).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SNodeOperations.isInstanceOf(it, CONCEPTS.AbstractEvent$sH);
+      }
+    }).count();
+    final int bracketHeight = (int) Math.round(choiceElementCount * fontSize * 1.5 + eventElementCount * fontSize * 1.25);
     final int bracketWidth = (((choiceElementCount + 5) <= 20) ? choiceElementCount + 5 : 20);
     JPanel panel = new JPanel() {
 
@@ -327,18 +361,18 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
   }
   private EditorCell createCollection_2() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_jkr9kg_a0");
+    editorCell.setCellId("Collection_jkr9kg_a0a_0");
     editorCell.addEditorCell(createJComponent_2());
     editorCell.addEditorCell(createCollection_3());
     editorCell.addEditorCell(createJComponent_3());
     return editorCell;
   }
   private EditorCell createJComponent_2() {
-    EditorCell editorCell = EditorCell_Component.createComponentCell(getEditorContext(), myNode, _QueryFunction_JComponent_jkr9kg_a0a0(), "JComponent_jkr9kg_a0a");
-    editorCell.setCellId("JComponent_jkr9kg_a0a_0");
+    EditorCell editorCell = EditorCell_Component.createComponentCell(getEditorContext(), myNode, _QueryFunction_JComponent_jkr9kg_a0a0a_0(), "JComponent_jkr9kg_a0a0_1");
+    editorCell.setCellId("JComponent_jkr9kg_a0a0_2");
     return editorCell;
   }
-  private JComponent _QueryFunction_JComponent_jkr9kg_a0a0() {
+  private JComponent _QueryFunction_JComponent_jkr9kg_a0a0a_0() {
     final int choiceElementCount = 1;
     final int fontSize = EditorSettings.getInstance().getFontSize();
     final int bracketHeight = (int) Math.round(choiceElementCount * fontSize * 1.5);
@@ -367,24 +401,23 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
   }
   private EditorCell createCollection_3() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_jkr9kg_b0a");
+    editorCell.setCellId("Collection_jkr9kg_b0a0");
     editorCell.addEditorCell(createRefNodeList_2());
-    editorCell.addEditorCell(createConstant_1());
     return editorCell;
   }
   private EditorCell createRefNodeList_2() {
-    AbstractCellListHandler handler = new choicesListHandler_jkr9kg_a1a0(myNode, getEditorContext());
+    AbstractCellListHandler handler = new choicesListHandler_jkr9kg_a1a0a_0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Vertical(), false);
     editorCell.setCellId("refNodeList_choices2");
     editorCell.setGridLayout(true);
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class choicesListHandler_jkr9kg_a1a0 extends RefNodeListHandler {
+  private static class choicesListHandler_jkr9kg_a1a0a_0 extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public choicesListHandler_jkr9kg_a1a0(SNode ownerNode, EditorContext context) {
+    public choicesListHandler_jkr9kg_a1a0a_0(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -403,13 +436,13 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     public EditorCell createNodeCell(SNode elementNode) {
       EditorCell elementCell = getUpdateSession().updateChildNodeCell(elementNode);
       installElementCellActions(elementNode, elementCell, false);
-      elementCell.setAction(CellActionType.SELECT_NEXT, new CellAction_CreateChildRangeSelection(elementNode, new RangeSelectionFilter_jkr9kg_a1a0(getEditorContext()), "empty_choices", getEditorContext(), true));
-      elementCell.setAction(CellActionType.SELECT_PREVIOUS, new CellAction_CreateChildRangeSelection(elementNode, new RangeSelectionFilter_jkr9kg_a1a0(getEditorContext()), "empty_choices", getEditorContext(), false));
+      elementCell.setAction(CellActionType.SELECT_NEXT, new CellAction_CreateChildRangeSelection(elementNode, new RangeSelectionFilter_jkr9kg_a1a0a_0(getEditorContext()), "empty_choices", getEditorContext(), true));
+      elementCell.setAction(CellActionType.SELECT_PREVIOUS, new CellAction_CreateChildRangeSelection(elementNode, new RangeSelectionFilter_jkr9kg_a1a0a_0(getEditorContext()), "empty_choices", getEditorContext(), false));
       return elementCell;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(choicesListHandler_jkr9kg_a1a0.this.getNode(), LINKS.choices$YXnx));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(choicesListHandler_jkr9kg_a1a0a_0.this.getNode(), LINKS.choices$YXnx));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -452,10 +485,10 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
       return childNode == ListSequence.fromList(SNodeOperations.getChildren(SNodeOperations.getParent(childNode))).getElement(0);
     }
   }
-  public static class RangeSelectionFilter_jkr9kg_a1a0 extends NodeRangeSelection.RangeSelectionFilter {
+  public static class RangeSelectionFilter_jkr9kg_a1a0a_0 extends NodeRangeSelection.RangeSelectionFilter {
 
 
-    public RangeSelectionFilter_jkr9kg_a1a0(EditorContext editorContext) {
+    public RangeSelectionFilter_jkr9kg_a1a0a_0(EditorContext editorContext) {
       super(editorContext);
     }
     public boolean accept(SNode childNode) {
@@ -466,17 +499,17 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     }
   }
   private EditorCell createRefNodeList_3() {
-    AbstractCellListHandler handler = new choicesListHandler_jkr9kg_a0b0a(myNode, getEditorContext());
+    AbstractCellListHandler handler = new choicesListHandler_jkr9kg_a0b0a0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Horizontal(), false);
     editorCell.setCellId("refNodeList_choices3");
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class choicesListHandler_jkr9kg_a0b0a extends RefNodeListHandler {
+  private static class choicesListHandler_jkr9kg_a0b0a0 extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public choicesListHandler_jkr9kg_a0b0a(SNode ownerNode, EditorContext context) {
+    public choicesListHandler_jkr9kg_a0b0a0(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -495,13 +528,13 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     public EditorCell createNodeCell(SNode elementNode) {
       EditorCell elementCell = getUpdateSession().updateChildNodeCell(elementNode);
       installElementCellActions(elementNode, elementCell, false);
-      elementCell.setAction(CellActionType.SELECT_NEXT, new CellAction_CreateChildRangeSelection(elementNode, new RangeSelectionFilter_jkr9kg_a0b0a(getEditorContext()), "empty_choices", getEditorContext(), true));
-      elementCell.setAction(CellActionType.SELECT_PREVIOUS, new CellAction_CreateChildRangeSelection(elementNode, new RangeSelectionFilter_jkr9kg_a0b0a(getEditorContext()), "empty_choices", getEditorContext(), false));
+      elementCell.setAction(CellActionType.SELECT_NEXT, new CellAction_CreateChildRangeSelection(elementNode, new RangeSelectionFilter_jkr9kg_a0b0a0(getEditorContext()), "empty_choices", getEditorContext(), true));
+      elementCell.setAction(CellActionType.SELECT_PREVIOUS, new CellAction_CreateChildRangeSelection(elementNode, new RangeSelectionFilter_jkr9kg_a0b0a0(getEditorContext()), "empty_choices", getEditorContext(), false));
       return elementCell;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(choicesListHandler_jkr9kg_a0b0a.this.getNode(), LINKS.choices$YXnx));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(choicesListHandler_jkr9kg_a0b0a0.this.getNode(), LINKS.choices$YXnx));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -544,10 +577,10 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
       return childNode == ListSequence.fromList(SNodeOperations.getChildren(SNodeOperations.getParent(childNode))).getElement(0);
     }
   }
-  public static class RangeSelectionFilter_jkr9kg_a0b0a extends NodeRangeSelection.RangeSelectionFilter {
+  public static class RangeSelectionFilter_jkr9kg_a0b0a0 extends NodeRangeSelection.RangeSelectionFilter {
 
 
-    public RangeSelectionFilter_jkr9kg_a0b0a(EditorContext editorContext) {
+    public RangeSelectionFilter_jkr9kg_a0b0a0(EditorContext editorContext) {
       super(editorContext);
     }
     public boolean accept(SNode childNode) {
@@ -557,18 +590,12 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
       return "9f283760-f9ca-4f5b-8990-d42851344ce7(ProjectionalQiChat)";
     }
   }
-  private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "...");
-    editorCell.setCellId("Constant_jkr9kg_b1a0");
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
   private EditorCell createJComponent_3() {
-    EditorCell editorCell = EditorCell_Component.createComponentCell(getEditorContext(), myNode, _QueryFunction_JComponent_jkr9kg_a2a0(), "JComponent_jkr9kg_c0a");
-    editorCell.setCellId("JComponent_jkr9kg_c0a_0");
+    EditorCell editorCell = EditorCell_Component.createComponentCell(getEditorContext(), myNode, _QueryFunction_JComponent_jkr9kg_a2a0a_0(), "JComponent_jkr9kg_c0a0_1");
+    editorCell.setCellId("JComponent_jkr9kg_c0a0_2");
     return editorCell;
   }
-  private JComponent _QueryFunction_JComponent_jkr9kg_a2a0() {
+  private JComponent _QueryFunction_JComponent_jkr9kg_a2a0a_0() {
     final int choiceElementCount = 1;
     final int fontSize = EditorSettings.getInstance().getFontSize();
     final int bracketHeight = (int) Math.round(choiceElementCount * fontSize * 1.5);
@@ -595,12 +622,20 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     panel.setBackground(new Color(1, 0, 0, 0));
     return panel;
   }
+  private EditorCell createEmpty_0() {
+    EditorCell_Empty editorCell = new EditorCell_Empty(getEditorContext(), myNode);
+    editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteNode(editorCell.getSNode(), CellAction_DeleteNode.DeleteDirection.FORWARD));
+    editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteNode(editorCell.getSNode(), CellAction_DeleteNode.DeleteDirection.BACKWARD));
+    editorCell.setCellId("Empty_jkr9kg_b0");
+    return editorCell;
+  }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink choices$YXnx = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b114L, 0xf8c3893a78b2520L, "choices");
   }
 
   private static final class CONCEPTS {
+    /*package*/ static final SConcept AbstractEvent$sH = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b160L, "ProjectionalQiChat.structure.AbstractEvent");
     /*package*/ static final SInterfaceConcept IInputChoiceConfirmed$5b = MetaAdapterFactory.getInterfaceConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b251aL, "ProjectionalQiChat.structure.IInputChoiceConfirmed");
   }
 }
