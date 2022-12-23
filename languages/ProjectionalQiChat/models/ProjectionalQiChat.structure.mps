@@ -73,6 +73,13 @@
     <node concept="PrWs8" id="6Zi8Kosir0c" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+    <node concept="1TJgyj" id="2PzpqhhJwRO" role="1TKVEi">
+      <property role="IQ2ns" value="3270569510821563892" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="description" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="Yce9eBzYYp" resolve="Description" />
+    </node>
     <node concept="1TJgyj" id="4P1LQvocRHI" role="1TKVEi">
       <property role="IQ2ns" value="5566949863229455214" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -93,10 +100,11 @@
     <property role="TrG5h" value="Rule" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="6Zi8Kosir0k" role="1TKVEl">
-      <property role="IQ2nx" value="8057541192470605844" />
-      <property role="TrG5h" value="comment" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="1TJgyj" id="1IlkMXT4Uhp" role="1TKVEi">
+      <property role="IQ2ns" value="1987586273913840729" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="comment" />
+      <ref role="20lvS9" node="1IlkMXT4Uho" resolve="Comment" />
     </node>
   </node>
   <node concept="1TIwiD" id="6Zi8Kosir0m">
@@ -533,6 +541,7 @@
     <property role="EcuMT" value="8057541192470606113" />
     <property role="3GE5qa" value="GerneralInputOutput" />
     <property role="TrG5h" value="Phrase" />
+    <property role="34LRSv" value="&quot;" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="6Zi8Kosir4F" role="PzmwI">
       <ref role="PrY4T" node="6Zi8Kosir4a" resolve="IHumanInputConfirmed" />
@@ -558,6 +567,8 @@
     <property role="EcuMT" value="8057541192470606114" />
     <property role="3GE5qa" value="GerneralInputOutput" />
     <property role="TrG5h" value="Optional" />
+    <property role="34LRSv" value="{" />
+    <property role="R4oN_" value="Optional" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="6Zi8Kosir4S" role="PzmwI">
       <ref role="PrY4T" node="6Zi8Kosir4a" resolve="IHumanInputConfirmed" />
@@ -753,6 +764,7 @@
     <property role="EcuMT" value="8057541192470606192" />
     <property role="3GE5qa" value="RobotOutput" />
     <property role="TrG5h" value="VariableReference" />
+    <property role="34LRSv" value="VariableReference" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="6Zi8KosircJ" role="PzmwI">
       <ref role="PrY4T" node="6Zi8Kosir4g" resolve="IExtendedRobotOutput" />
@@ -1245,18 +1257,21 @@
     <property role="EcuMT" value="1120332614130672949" />
     <property role="3GE5qa" value="Functions" />
     <property role="TrG5h" value="NextProposal" />
+    <property role="34LRSv" value="nextProposal" />
     <ref role="1TJDcQ" node="Yce9eByMkO" resolve="ProposalFunction" />
   </node>
   <node concept="1TIwiD" id="Yce9eByMkQ">
     <property role="EcuMT" value="1120332614130672950" />
     <property role="3GE5qa" value="Functions" />
     <property role="TrG5h" value="SameProposal" />
+    <property role="34LRSv" value="sameProposal" />
     <ref role="1TJDcQ" node="Yce9eByMkO" resolve="ProposalFunction" />
   </node>
   <node concept="1TIwiD" id="Yce9eByMkR">
     <property role="EcuMT" value="1120332614130672951" />
     <property role="3GE5qa" value="Functions" />
     <property role="TrG5h" value="PreviousProposal" />
+    <property role="34LRSv" value="previousProposal" />
     <ref role="1TJDcQ" node="Yce9eByMkO" resolve="ProposalFunction" />
   </node>
   <node concept="1TIwiD" id="Yce9eByMkV">
@@ -1297,6 +1312,12 @@
   <node concept="1TIwiD" id="Yce9eBzYYp">
     <property role="EcuMT" value="1120332614130986905" />
     <property role="TrG5h" value="Description" />
+    <property role="3GE5qa" value="Utilities" />
+    <ref role="1TJDcQ" to="tpee:1w9VmqdQ_lv" resolve="MultiLineComment" />
+  </node>
+  <node concept="1TIwiD" id="1IlkMXT4Uho">
+    <property role="EcuMT" value="1987586273913840728" />
+    <property role="TrG5h" value="Comment" />
     <property role="3GE5qa" value="Utilities" />
     <ref role="1TJDcQ" to="tpee:1w9VmqdQ_lv" resolve="MultiLineComment" />
   </node>

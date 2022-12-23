@@ -5,7 +5,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
   <root>
     <file name="ActionAspectDescriptorImpl.java">
-      <unit at="12,0,28,0" name="ProjectionalQiChat.actions.ActionAspectDescriptorImpl" />
+      <unit at="12,0,30,0" name="ProjectionalQiChat.actions.ActionAspectDescriptorImpl" />
     </file>
   </root>
   <root nodeRef="r:0641c388-4638-4ae9-924f-d5e71c20d5e6(ProjectionalQiChat.actions)/1884303105527564454">
@@ -28,6 +28,24 @@
       <unit id="1884303105527564454" at="21,0,26,0" name="ProjectionalQiChat.actions.test$PROPS" />
       <unit id="1884303105527564455" at="13,0,20,0" name="ProjectionalQiChat.actions.test$NodeFactory_1884303105527564455" />
       <unit id="1884303105527564454" at="12,0,27,0" name="ProjectionalQiChat.actions.test" />
+    </file>
+  </root>
+  <root nodeRef="r:0641c388-4638-4ae9-924f-d5e71c20d5e6(ProjectionalQiChat.actions)/5556009294073239502">
+    <file name="createComment.java">
+      <node id="5556009294073239517" at="15,102,16,229" concept="0" />
+      <node id="5556009294073239502" at="21,0,22,0" concept="2" trace="comment$qgE6" />
+      <node id="5556009294073239503" at="15,0,18,0" concept="1" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;ILorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <scope id="5556009294073239503" at="15,102,16,229" />
+      <scope id="5556009294073239503" at="15,0,18,0">
+        <var name="enclosingNode" id="5556009294073239503" />
+        <var name="index" id="5556009294073239503" />
+        <var name="model" id="5556009294073239503" />
+        <var name="newNode" id="5556009294073239503" />
+        <var name="sampleNode" id="5556009294073239503" />
+      </scope>
+      <unit id="5556009294073239502" at="20,0,23,0" name="ProjectionalQiChat.actions.createComment$LINKS" />
+      <unit id="5556009294073239503" at="14,0,19,0" name="ProjectionalQiChat.actions.createComment$NodeFactory_5556009294073239503" />
+      <unit id="5556009294073239502" at="13,0,24,0" name="ProjectionalQiChat.actions.createComment" />
     </file>
   </root>
 </debug-info>

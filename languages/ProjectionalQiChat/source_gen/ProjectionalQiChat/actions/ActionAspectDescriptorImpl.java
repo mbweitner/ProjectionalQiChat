@@ -16,6 +16,8 @@ public class ActionAspectDescriptorImpl extends BaseActionAspectDescriptor imple
   public Collection<NodeFactory> getFactories(SAbstractConcept concept) {
     if (LANGUAGE_FQ_NAME.equals(concept.getLanguage().getQualifiedName())) {
       switch (concept.getName()) {
+        case "CommentRule":
+          return Collections.<NodeFactory>singletonList(new createComment.NodeFactory_5556009294073239503());
         case "VoiceTuningConfig":
           return Collections.<NodeFactory>singletonList(new test.NodeFactory_1884303105527564455());
         default:
