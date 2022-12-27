@@ -141,6 +141,8 @@
   <node concept="1TIwiD" id="6Zi8Kosir0I">
     <property role="EcuMT" value="8057541192470605870" />
     <property role="TrG5h" value="TopicReference" />
+    <property role="34LRSv" value="import" />
+    <property role="R4oN_" value="import Topic" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="4P1LQvocRHN" role="1TKVEi">
       <property role="IQ2ns" value="5566949863229455219" />
@@ -712,7 +714,7 @@
     <node concept="1TJgyi" id="4P1LQvocRJf" role="1TKVEl">
       <property role="IQ2nx" value="5566949863229455311" />
       <property role="TrG5h" value="optionalName" />
-      <ref role="AX2Wp" node="6Zi8Kosir4w" resolve="WordString" />
+      <ref role="AX2Wp" node="2pcQLgnDY7n" resolve="nameString" />
     </node>
     <node concept="1TJgyj" id="4P1LQvocRJi" role="1TKVEi">
       <property role="IQ2ns" value="5566949863229455314" />
@@ -1203,6 +1205,8 @@
     <property role="EcuMT" value="5566949863229542205" />
     <property role="3GE5qa" value="Concepts" />
     <property role="TrG5h" value="ConceptCollectionReference" />
+    <property role="34LRSv" value="import" />
+    <property role="R4oN_" value="import ConceptCollection" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="4P1LQvodcWY" role="1TKVEi">
       <property role="IQ2ns" value="5566949863229542206" />
@@ -1320,6 +1324,29 @@
     <property role="TrG5h" value="Comment" />
     <property role="3GE5qa" value="Utilities" />
     <ref role="1TJDcQ" to="tpee:1w9VmqdQ_lv" resolve="MultiLineComment" />
+  </node>
+  <node concept="Az7Fb" id="2pcQLgnDY7n">
+    <property role="3F6X1D" value="2759821551013978583" />
+    <property role="3GE5qa" value="HumanInput" />
+    <property role="FLfZY" value="[a-zA-ZöäüÖÄÜ]*[0-9]*" />
+    <property role="TrG5h" value="NameString" />
+  </node>
+  <node concept="1TIwiD" id="2pcQLgp4ACP">
+    <property role="EcuMT" value="2759821551037737525" />
+    <property role="3GE5qa" value="Utilities" />
+    <property role="TrG5h" value="CustomVariable" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="2pcQLgp4ACQ" role="1TKVEl">
+      <property role="IQ2nx" value="2759821551037737526" />
+      <property role="TrG5h" value="name" />
+      <ref role="AX2Wp" node="6Zi8KosircP" resolve="VariableName" />
+    </node>
+    <node concept="PrWs8" id="2pcQLgp4AEA" role="PzmwI">
+      <ref role="PrY4T" node="6Zi8Kosircz" resolve="IVariableValue" />
+    </node>
+    <node concept="PrWs8" id="2pcQLgp4AEC" role="PzmwI">
+      <ref role="PrY4T" node="6Zi8Kosirdd" resolve="ConditionConfirmed" />
+    </node>
   </node>
 </model>
 

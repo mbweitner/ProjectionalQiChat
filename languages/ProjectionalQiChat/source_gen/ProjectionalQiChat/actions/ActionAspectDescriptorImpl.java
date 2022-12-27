@@ -17,9 +17,11 @@ public class ActionAspectDescriptorImpl extends BaseActionAspectDescriptor imple
     if (LANGUAGE_FQ_NAME.equals(concept.getLanguage().getQualifiedName())) {
       switch (concept.getName()) {
         case "CommentRule":
-          return Collections.<NodeFactory>singletonList(new createComment.NodeFactory_5556009294073239503());
+          return Collections.<NodeFactory>singletonList(new createCommentForCommentRule.NodeFactory_5556009294073239503());
+        case "InputStore":
+          return Collections.<NodeFactory>singletonList(new InitializeInputStore.NodeFactory_2759821551011159298());
         case "VoiceTuningConfig":
-          return Collections.<NodeFactory>singletonList(new test.NodeFactory_1884303105527564455());
+          return Collections.<NodeFactory>singletonList(new VoiceTuningConfigStandardInitializing.NodeFactory_1884303105527564455());
         default:
       }
     }
