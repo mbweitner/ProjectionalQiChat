@@ -3,7 +3,7 @@
   <id>de.itemis.mps.utils</id>
   <name>de.itemis.mps.utils</name>
   <description>Various MPS utilities, such as nodeversioning, serializer, and modelmerger</description>
-  <version>2021.3.2472.32dbb86</version>
+  <version>2021.3.2496.3b163cd</version>
   <vendor url="https://www.itemis.com/">Itemis</vendor>
   <depends>jetbrains.mps.core</depends>
   <depends>org.apache.commons</depends>

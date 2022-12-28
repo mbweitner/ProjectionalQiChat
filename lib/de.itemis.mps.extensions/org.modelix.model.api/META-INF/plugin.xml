@@ -3,7 +3,7 @@
   <id>org.modelix.model.api</id>
   <name>org.modelix.model.api</name>
   <description>Alternative model API with better support for persistent data structures</description>
-  <version>2021.3.2472.32dbb86</version>
+  <version>2021.3.2496.3b163cd</version>
   <vendor url="http://modelix.org/">Modelix</vendor>
   <depends>jetbrains.mps.core</depends>
   <depends>de.q60.mps.collections.libs</depends>

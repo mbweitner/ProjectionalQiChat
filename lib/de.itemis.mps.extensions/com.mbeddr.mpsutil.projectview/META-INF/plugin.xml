@@ -3,7 +3,7 @@
   <id>com.mbeddr.mpsutil.projectview</id>
   <name>com.mbeddr.mpsutil.projectview</name>
   <description>Abstraction on top of MPS lower-level API to create custom views in the view tool window (like logical view, file view, etc.)</description>
-  <version>2021.3.2472.32dbb86</version>
+  <version>2021.3.2496.3b163cd</version>
   <vendor url="http://mbeddr.com">mbeddr</vendor>
   <depends>jetbrains.mps.core</depends>
   <depends>de.slisson.mps.hacks</depends>

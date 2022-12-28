@@ -3,7 +3,7 @@
   <id>de.itemis.mps.editor.diagram</id>
   <name>de.itemis.mps.editor.diagram</name>
   <description>Diagrammatic notation for MPS editors</description>
-  <version>2021.3.2472.32dbb86</version>
+  <version>2021.3.2496.3b163cd</version>
   <vendor url="https://www.itemis.com/">Itemis</vendor>
   <depends>jetbrains.mps.core</depends>
   <depends>de.slisson.mps.hacks</depends>

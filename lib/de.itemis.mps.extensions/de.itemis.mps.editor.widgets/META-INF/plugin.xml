@@ -3,7 +3,7 @@
   <id>de.itemis.mps.editor.widgets</id>
   <name>MPS Editor Widgets</name>
   <description>A library of widgets (checkbox, dropdown, etc.) that can be used in MPS editors</description>
-  <version>2021.3.2472.32dbb86</version>
+  <version>2021.3.2496.3b163cd</version>
   <vendor url="https://github.com/slisson/mps-all">itemis AG</vendor>
   <depends>jetbrains.mps.core</depends>
   <depends>jetbrains.mps.build</depends>

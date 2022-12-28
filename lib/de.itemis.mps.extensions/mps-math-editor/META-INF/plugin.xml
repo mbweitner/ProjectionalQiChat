@@ -3,7 +3,7 @@
   <id>de.itemis.mps.editor.math</id>
   <name>MPS Math Editor</name>
   <description>Mathematical notation for MPS Editors</description>
-  <version>2021.3.2472.32dbb86</version>
+  <version>2021.3.2496.3b163cd</version>
   <vendor url="https://github.com/slisson/mps-math">itemis AG</vendor>
   <depends>de.slisson.mps.hacks</depends>
   <depends>jetbrains.mps.core</depends>

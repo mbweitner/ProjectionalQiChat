@@ -194,8 +194,8 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="Yce9eBzYYp" resolve="Description" />
     </node>
-    <node concept="1TJgyj" id="4P1LQvocRIJ" role="1TKVEi">
-      <property role="IQ2ns" value="5566949863229455279" />
+    <node concept="1TJgyj" id="3bVKjQMPvEI" role="1TKVEi">
+      <property role="IQ2ns" value="3673742391788305070" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="concepts" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
@@ -494,7 +494,7 @@
   <node concept="1TIwiD" id="6Zi8Kosir4l">
     <property role="EcuMT" value="8057541192470606101" />
     <property role="3GE5qa" value="GerneralInputOutput" />
-    <property role="TrG5h" value="OuputChoice" />
+    <property role="TrG5h" value="OutputChoice" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="6Zi8Kosir4D" role="PzmwI">
       <ref role="PrY4T" node="6Zi8Kosir4f" resolve="IRobotOuputConfirmed" />
@@ -537,7 +537,7 @@
     <property role="3F6X1D" value="8057541192470606112" />
     <property role="3GE5qa" value="GerneralInputOutput" />
     <property role="TrG5h" value="WordString" />
-    <property role="FLfZY" value="([a-zA-ZöäüÖÄÜ]*[!\\?\\.',]?)|([0-9]*)" />
+    <property role="FLfZY" value="([a-zA-ZöäüÖÄÜ]+[!\\?\\.',]?)|([0-9]*)" />
   </node>
   <node concept="1TIwiD" id="6Zi8Kosir4x">
     <property role="EcuMT" value="8057541192470606113" />

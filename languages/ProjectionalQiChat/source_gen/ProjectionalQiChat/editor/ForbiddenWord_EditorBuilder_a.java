@@ -55,6 +55,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setCellId("Collection_evdnj8_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
+    editorCell.addKeyMap(new ForbiddenWord_KeyMap());
     editorCell.addEditorCell(createConstant_0());
     editorCell.addEditorCell(createProperty_0());
     return editorCell;

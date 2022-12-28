@@ -17,13 +17,13 @@
         <reference id="5566949863229542206" name="conceptCollection" index="2ltgxp" />
       </concept>
       <concept id="1120332614130986905" name="ProjectionalQiChat.structure.Description" flags="ng" index="2C0Xsa" />
-      <concept id="1120332614130672951" name="ProjectionalQiChat.structure.PreviousProposal" flags="ng" index="2C1LQ$" />
-      <concept id="1120332614130672950" name="ProjectionalQiChat.structure.SameProposal" flags="ng" index="2C1LQ_" />
-      <concept id="1120332614130672949" name="ProjectionalQiChat.structure.NextProposal" flags="ng" index="2C1LQA" />
       <concept id="1120332614130672955" name="ProjectionalQiChat.structure.VoiceTuningConfig" flags="ng" index="2C1LQC">
         <property id="1120332614130672958" name="speakingRate" index="2C1LQH" />
         <property id="1120332614130672956" name="pitch" index="2C1LQJ" />
         <property id="1120332614130672961" name="volume" index="2C1LRi" />
+      </concept>
+      <concept id="1120332614130672981" name="ProjectionalQiChat.structure.Pause" flags="ng" index="2C1LR6">
+        <property id="1120332614130672984" name="length" index="2C1LRb" />
       </concept>
       <concept id="2759821551037737525" name="ProjectionalQiChat.structure.CustomVariable" flags="ng" index="ZnF4x">
         <property id="2759821551037737526" name="name" index="ZnF4y" />
@@ -33,12 +33,6 @@
         <child id="5566949863229455214" name="header" index="2lsFK9" />
         <child id="5566949863229455216" name="body" index="2lsFKn" />
         <child id="3270569510821563892" name="description" index="1WRmxg" />
-      </concept>
-      <concept id="8057541192470606618" name="ProjectionalQiChat.structure.RobotConceptReference" flags="ng" index="1NAT0s">
-        <reference id="5566949863229455328" name="concept" index="2lsFM7" />
-      </concept>
-      <concept id="8057541192470606619" name="ProjectionalQiChat.structure.RobotConceptCall" flags="ng" index="1NAT0t">
-        <child id="5566949863229455330" name="concept" index="2lsFM5" />
       </concept>
       <concept id="8057541192470606630" name="ProjectionalQiChat.structure.VariableDeclaration" flags="ng" index="1NAT0w">
         <property id="5566949863229455336" name="name" index="2lsFMf" />
@@ -69,15 +63,6 @@
         <child id="5566949863229455262" name="output" index="2lsFNT" />
         <child id="5566949863229455260" name="input" index="2lsFNV" />
       </concept>
-      <concept id="8057541192470606088" name="ProjectionalQiChat.structure.RobotConcept" flags="ng" index="1NAT8e">
-        <child id="5566949863229455287" name="rule" index="2lsFNg" />
-      </concept>
-      <concept id="8057541192470606100" name="ProjectionalQiChat.structure.InputChoice" flags="ng" index="1NAT8i">
-        <child id="1120332614130672928" name="choices" index="2C1LQN" />
-      </concept>
-      <concept id="8057541192470606101" name="ProjectionalQiChat.structure.OuputChoice" flags="ng" index="1NAT8j">
-        <child id="1120332614130672930" name="choices" index="2C1LQL" />
-      </concept>
       <concept id="8057541192470606114" name="ProjectionalQiChat.structure.Optional" flags="ng" index="1NAT8$">
         <child id="5566949863229455301" name="optional" index="2lsFMy" />
       </concept>
@@ -91,7 +76,6 @@
       <concept id="8057541192470606174" name="ProjectionalQiChat.structure.ForbiddenWord" flags="ng" index="1NAT9o">
         <property id="5566949863229455305" name="word" index="2lsFMI" />
       </concept>
-      <concept id="8057541192470606175" name="ProjectionalQiChat.structure.Wildcard" flags="ng" index="1NAT9p" />
       <concept id="8057541192470606172" name="ProjectionalQiChat.structure.StoreChoice" flags="ng" index="1NAT9q">
         <child id="5566949863229455316" name="choices" index="2lsFMN" />
       </concept>
@@ -99,15 +83,6 @@
         <property id="5566949863229455311" name="optionalName" index="2lsFMC" />
         <property id="5566949863229455309" name="position" index="2lsFME" />
         <child id="5566949863229455314" name="storeChoice" index="2lsFMP" />
-      </concept>
-      <concept id="8057541192470606196" name="ProjectionalQiChat.structure.DialogueEvent" flags="ng" index="1NAT9M">
-        <property id="5566949863229455326" name="dialogueEvent" index="2lsFMT" />
-      </concept>
-      <concept id="8057541192470606192" name="ProjectionalQiChat.structure.VariableReference" flags="ng" index="1NAT9Q">
-        <reference id="5566949863229455340" name="variable" index="2lsFMb" />
-      </concept>
-      <concept id="8057541192470606193" name="ProjectionalQiChat.structure.CustomEvent" flags="ng" index="1NAT9R">
-        <property id="5566949863229455318" name="eventName" index="2lsFML" />
       </concept>
       <concept id="8057541192470605846" name="ProjectionalQiChat.structure.HeaderSpecification" flags="ng" index="1NATcg">
         <property id="5566949863229455221" name="language" index="2lsFKi" />
@@ -125,7 +100,7 @@
         <child id="5566949863229455289" name="inputs" index="2lsFNu" />
       </concept>
       <concept id="8057541192470605874" name="ProjectionalQiChat.structure.ConceptCollection" flags="ng" index="1NATcO">
-        <child id="5566949863229455279" name="concepts" index="2lsFN8" />
+        <child id="3673742391788305070" name="concepts" index="20bzIj" />
         <child id="1120332614130965875" name="description" index="2C0Unw" />
       </concept>
       <concept id="8057541192470605875" name="ProjectionalQiChat.structure.RobotOutput" flags="ng" index="1NATcP">
@@ -155,77 +130,69 @@
   </registry>
   <node concept="1NATcO" id="1CAoV3Aa5L0">
     <property role="TrG5h" value="ExampleCollection" />
-    <node concept="1NAT8e" id="2PzpqhhCHn3" role="2lsFN8">
-      <property role="2ltiAv" value="Beispiel" />
-      <node concept="1NATcP" id="2PzpqhhCHn7" role="2lsFNg">
-        <node concept="1NAT8B" id="2PzpqhhCHog" role="2lsFNs">
-          <node concept="1NAT8Q" id="2PzpqhhCHol" role="2lsFM$">
-            <property role="1NAT8K" value="Hier" />
-            <node concept="2C1LQC" id="2PzpqhhCHom" role="2C1LR3">
-              <property role="2C1LQJ" value="100" />
-              <property role="2C1LQH" value="100" />
-              <property role="2C1LRi" value="100" />
-            </node>
+    <node concept="1NAT80" id="3bVKjQN5dBp" role="20bzIj">
+      <property role="2ltiAv" value="adh" />
+      <node concept="1NATcM" id="3bVKjQN5dBt" role="2lsFNk">
+        <node concept="1NAT8Q" id="3bVKjQN5dCd" role="2lsFNu">
+          <property role="1NAT8K" value="hier" />
+          <node concept="2C1LQC" id="3bVKjQN5dCe" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
           </node>
-          <node concept="1NAT8Q" id="2PzpqhhCHot" role="2lsFM$">
-            <property role="1NAT8K" value="steht" />
-            <node concept="2C1LQC" id="2PzpqhhCHov" role="2C1LR3">
-              <property role="2C1LQJ" value="100" />
-              <property role="2C1LQH" value="100" />
-              <property role="2C1LRi" value="100" />
-            </node>
+        </node>
+        <node concept="1NAT8Q" id="3bVKjQN5dCh" role="2lsFNu">
+          <property role="1NAT8K" value="steht" />
+          <node concept="2C1LQC" id="3bVKjQN5dCi" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
           </node>
-          <node concept="1NAT8Q" id="2PzpqhhCHoF" role="2lsFM$">
-            <property role="1NAT8K" value="etwas" />
-            <node concept="2C1LQC" id="2PzpqhhCHoH" role="2C1LR3">
-              <property role="2C1LQJ" value="100" />
-              <property role="2C1LQH" value="100" />
-              <property role="2C1LRi" value="100" />
-            </node>
+        </node>
+        <node concept="1NAT8Q" id="3bVKjQN5dCn" role="2lsFNu">
+          <property role="1NAT8K" value="eine" />
+          <node concept="2C1LQC" id="3bVKjQN5dCo" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
           </node>
-          <node concept="1NAT8Q" id="2PzpqhhCHoX" role="2lsFM$">
-            <property role="1NAT8K" value="tolles" />
-            <node concept="2C1LQC" id="2PzpqhhCHoZ" role="2C1LR3">
-              <property role="2C1LQJ" value="100" />
-              <property role="2C1LQH" value="100" />
-              <property role="2C1LRi" value="100" />
-            </node>
+        </node>
+        <node concept="1NAT8Q" id="3bVKjQN5dCv" role="2lsFNu">
+          <property role="1NAT8K" value="tolle" />
+          <node concept="2C1LQC" id="3bVKjQN5dCw" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="3bVKjQN5dCF" role="2lsFNu">
+          <property role="1NAT8K" value="erklärung" />
+          <node concept="2C1LQC" id="3bVKjQN5dCG" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
           </node>
         </node>
       </node>
-      <node concept="2C0Xsa" id="2PzpqhhDRZI" role="2C0Un$">
-        <node concept="1PaTwC" id="2PzpqhhDRZM" role="2lOMFJ">
-          <node concept="3oM_SD" id="2PzpqhhDRZQ" role="1PaTwD">
-            <property role="3oM_SC" value="Hier" />
+      <node concept="2C0Xsa" id="3bVKjQN5dBy" role="2C0Un$">
+        <node concept="1PaTwC" id="3bVKjQN5dBz" role="2lOMFJ">
+          <node concept="3oM_SD" id="3bVKjQN5dD5" role="1PaTwD">
+            <property role="3oM_SC" value="so" />
           </node>
-          <node concept="3oM_SD" id="2PzpqhhDRZS" role="1PaTwD">
-            <property role="3oM_SC" value="steht" />
+          <node concept="3oM_SD" id="3bVKjQN5dD7" role="1PaTwD">
+            <property role="3oM_SC" value="sollte" />
           </node>
-          <node concept="3oM_SD" id="2PzpqhhDRZV" role="1PaTwD">
-            <property role="3oM_SC" value="eine" />
+          <node concept="3oM_SD" id="3bVKjQN5dDa" role="1PaTwD">
+            <property role="3oM_SC" value="die" />
           </node>
-          <node concept="3oM_SD" id="2PzpqhhDRZZ" role="1PaTwD">
-            <property role="3oM_SC" value="tolle" />
+          <node concept="3oM_SD" id="3bVKjQN5dDp" role="1PaTwD">
+            <property role="3oM_SC" value="Erklärung" />
           </node>
-          <node concept="3oM_SD" id="2PzpqhhF5gz" role="1PaTwD">
-            <property role="3oM_SC" value="beschreibung" />
+          <node concept="3oM_SD" id="3bVKjQN5dDu" role="1PaTwD">
+            <property role="3oM_SC" value="eigentlich" />
           </node>
-        </node>
-        <node concept="1PaTwC" id="2PzpqhhF5gE" role="2lOMFJ">
-          <node concept="3oM_SD" id="2PzpqhhF5gD" role="1PaTwD">
-            <property role="3oM_SC" value="Hier" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhF5gZ" role="1PaTwD">
-            <property role="3oM_SC" value="steht" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhF5h2" role="1PaTwD">
-            <property role="3oM_SC" value="was" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhF5h6" role="1PaTwD">
-            <property role="3oM_SC" value="tolles" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhF5hb" role="1PaTwD">
-            <property role="3oM_SC" value="" />
+          <node concept="3oM_SD" id="3bVKjQN5dEF" role="1PaTwD">
+            <property role="3oM_SC" value="aussehen" />
           </node>
         </node>
       </node>
@@ -284,264 +251,107 @@
         </node>
       </node>
     </node>
-    <node concept="1NAT80" id="1CAoV3Aa5O4" role="2lsFN8">
-      <property role="2ltiAv" value="FirstHumanConcept" />
-      <node concept="1NATcM" id="1CAoV3Aa5O5" role="2lsFNk">
-        <node concept="1NAT8i" id="1CAoV3AaDn3" role="2lsFNu">
-          <node concept="1NAT8Q" id="1CAoV3AaDna" role="2C1LQN">
-            <property role="1NAT8K" value="hi" />
-            <node concept="2C1LQC" id="1CAoV3AaDnc" role="2C1LR3">
-              <property role="2C1LQJ" value="100" />
-              <property role="2C1LQH" value="100" />
-              <property role="2C1LRi" value="100" />
-            </node>
-          </node>
-          <node concept="1NAT8Q" id="1CAoV3AaDnC" role="2C1LQN">
-            <property role="1NAT8K" value="was" />
-            <node concept="2C1LQC" id="1CAoV3AaDnE" role="2C1LR3">
-              <property role="2C1LQJ" value="100" />
-              <property role="2C1LQH" value="100" />
-              <property role="2C1LRi" value="100" />
-            </node>
-          </node>
-          <node concept="1NAT8B" id="1CAoV3AaDnQ" role="2C1LQN">
-            <node concept="1NAT8Q" id="1CAoV3AaDnZ" role="2lsFM$">
-              <property role="1NAT8K" value="Geht" />
-              <node concept="2C1LQC" id="1CAoV3AaDo1" role="2C1LR3">
-                <property role="2C1LQJ" value="100" />
-                <property role="2C1LQH" value="100" />
-                <property role="2C1LRi" value="100" />
-              </node>
-            </node>
-            <node concept="1NAT8Q" id="1CAoV3AaDof" role="2lsFM$">
-              <property role="1NAT8K" value="ihr" />
-              <node concept="2C1LQC" id="1CAoV3AaDoh" role="2C1LR3">
-                <property role="2C1LQJ" value="100" />
-                <property role="2C1LQH" value="100" />
-                <property role="2C1LRi" value="100" />
-              </node>
-            </node>
-            <node concept="1NAT8Q" id="1CAoV3AaDot" role="2lsFM$">
-              <property role="1NAT8K" value="lappen" />
-              <node concept="2C1LQC" id="1CAoV3AaDov" role="2C1LR3">
-                <property role="2C1LQJ" value="100" />
-                <property role="2C1LQH" value="100" />
-                <property role="2C1LRi" value="100" />
-              </node>
-            </node>
-          </node>
-          <node concept="1NAT9R" id="1CAoV3Aefsv" role="2C1LQN">
-            <property role="2lsFML" value="Hier steht was" />
-          </node>
-          <node concept="1NAT9M" id="1CAoV3AeQtQ" role="2C1LQN">
-            <property role="2lsFMT" value="6Zi8KosiraY/Dialog1NotSpeaking5" />
-          </node>
-          <node concept="1NAT8Q" id="1CAoV3AeQuk" role="2C1LQN">
-            <property role="1NAT8K" value="Hier" />
-            <node concept="2C1LQC" id="1CAoV3AeQum" role="2C1LR3">
-              <property role="2C1LQJ" value="100" />
-              <property role="2C1LQH" value="100" />
-              <property role="2C1LRi" value="100" />
-            </node>
-          </node>
-          <node concept="1NAT8Q" id="1CAoV3AeQxo" role="2C1LQN">
-            <property role="1NAT8K" value="sdfasdf" />
-            <node concept="2C1LQC" id="1CAoV3AeQxq" role="2C1LR3">
-              <property role="2C1LQJ" value="100" />
-              <property role="2C1LQH" value="100" />
-              <property role="2C1LRi" value="100" />
-            </node>
-          </node>
-        </node>
-        <node concept="1NAT9p" id="1CAoV3AeQ$3" role="2lsFNu" />
-        <node concept="1NAT9R" id="1CAoV3AeQ$L" role="2lsFNu">
-          <property role="2lsFML" value="Etwas tolles wird passieren" />
-        </node>
-        <node concept="1NAT9M" id="1CAoV3AeQ_x" role="2lsFNu">
-          <property role="2lsFMT" value="6Zi8KosiraL/Dialog1NoOneSpeak15" />
-        </node>
-        <node concept="1NAT8Q" id="1CAoV3AeQAj" role="2lsFNu">
-          <property role="1NAT8K" value="hierstehtEinTolles" />
-          <node concept="2C1LQC" id="1CAoV3AeQAl" role="2C1LR3">
-            <property role="2C1LQJ" value="100" />
-            <property role="2C1LQH" value="100" />
-            <property role="2C1LRi" value="100" />
-          </node>
-        </node>
-        <node concept="1NAT8Q" id="1CAoV3AaDmB" role="2lsFNu">
-          <property role="1NAT8K" value="test" />
-          <node concept="2C1LQC" id="1CAoV3AaDmD" role="2C1LR3">
-            <property role="2C1LQJ" value="100" />
-            <property role="2C1LQH" value="100" />
-            <property role="2C1LRi" value="100" />
-          </node>
-        </node>
-      </node>
-      <node concept="2C0Xsa" id="1CAoV3Aa5O7" role="2C0Un$">
-        <node concept="1PaTwC" id="1CAoV3Aa5O8" role="2lOMFJ">
-          <node concept="3oM_SD" id="1CAoV3AeQAK" role="1PaTwD">
-            <property role="3oM_SC" value="Hier" />
-          </node>
-          <node concept="3oM_SD" id="1CAoV3AeQAM" role="1PaTwD">
-            <property role="3oM_SC" value="steht" />
-          </node>
-          <node concept="3oM_SD" id="1CAoV3AeQAP" role="1PaTwD">
-            <property role="3oM_SC" value="natürlich" />
-          </node>
-          <node concept="3oM_SD" id="1CAoV3AeQAT" role="1PaTwD">
-            <property role="3oM_SC" value="ein" />
-          </node>
-          <node concept="3oM_SD" id="1CAoV3AeQBb" role="1PaTwD">
-            <property role="3oM_SC" value="toller" />
-          </node>
-          <node concept="3oM_SD" id="1CAoV3AeQBh" role="1PaTwD">
-            <property role="3oM_SC" value="Text" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1NAT80" id="1CAoV3AeQIF" role="2lsFN8">
-      <property role="2ltiAv" value="SecondHumanConcept" />
-      <node concept="1NATcM" id="1CAoV3AeQIJ" role="2lsFNk">
-        <node concept="1NAT8Q" id="1CAoV3AeQJB" role="2lsFNu">
-          <property role="1NAT8K" value="hi" />
-          <node concept="2C1LQC" id="1CAoV3AeQJD" role="2C1LR3">
-            <property role="2C1LQJ" value="100" />
-            <property role="2C1LQH" value="100" />
-            <property role="2C1LRi" value="100" />
-          </node>
-        </node>
-      </node>
-      <node concept="2C0Xsa" id="1CAoV3AeQIO" role="2C0Un$">
-        <node concept="1PaTwC" id="2PzpqhhCHrr" role="2lOMFJ">
-          <node concept="3oM_SD" id="2PzpqhhCHru" role="1PaTwD">
-            <property role="3oM_SC" value="Hier" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhCHrw" role="1PaTwD">
-            <property role="3oM_SC" value="steht" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhCHrz" role="1PaTwD">
-            <property role="3oM_SC" value="was" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhCHrB" role="1PaTwD">
-            <property role="3oM_SC" value="tolles" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhCHrG" role="1PaTwD">
-            <property role="3oM_SC" value="ich" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhCHrM" role="1PaTwD">
-            <property role="3oM_SC" value="weis" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhCHrT" role="1PaTwD">
-            <property role="3oM_SC" value="nur" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhCHs1" role="1PaTwD">
-            <property role="3oM_SC" value="noch" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhCHsa" role="1PaTwD">
-            <property role="3oM_SC" value="nicht" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhCHsk" role="1PaTwD">
-            <property role="3oM_SC" value="was" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhCHsv" role="1PaTwD">
-            <property role="3oM_SC" value="genau" />
-          </node>
-        </node>
-        <node concept="1PaTwC" id="2PzpqhhNz_p" role="2lOMFJ">
-          <node concept="3oM_SD" id="2PzpqhhNz_o" role="1PaTwD">
-            <property role="3oM_SC" value="Hier" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhNzA2" role="1PaTwD">
-            <property role="3oM_SC" value="kann" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhNzA5" role="1PaTwD">
-            <property role="3oM_SC" value="was" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhNzA9" role="1PaTwD">
-            <property role="3oM_SC" value="schreiben" />
-          </node>
-        </node>
-        <node concept="1PaTwC" id="2PzpqhhNz$L" role="2lOMFJ">
-          <node concept="3oM_SD" id="2PzpqhhNz$K" role="1PaTwD">
-            <property role="3oM_SC" value="" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1NAT8e" id="1CAoV3Abeaz" role="2lsFN8">
+    <node concept="1NAT80" id="3bVKjQMTmC3" role="20bzIj">
       <property role="2ltiAv" value="asdasd" />
-      <node concept="1NATcP" id="1CAoV3AbeaB" role="2lsFNg">
-        <node concept="1NAT8j" id="2PzpqhhGury" role="2lsFNs">
-          <node concept="1NAT8Q" id="2PzpqhhGurD" role="2C1LQL">
-            <property role="1NAT8K" value="test" />
-            <node concept="2C1LQC" id="2PzpqhhGurF" role="2C1LR3">
-              <property role="2C1LQJ" value="100" />
-              <property role="2C1LQH" value="100" />
-              <property role="2C1LRi" value="100" />
-            </node>
-          </node>
-          <node concept="1NAT8Q" id="2PzpqhhGush" role="2C1LQL">
-            <property role="1NAT8K" value="Hier" />
-            <node concept="2C1LQC" id="2PzpqhhGusj" role="2C1LR3">
-              <property role="2C1LQJ" value="100" />
-              <property role="2C1LQH" value="100" />
-              <property role="2C1LRi" value="100" />
-            </node>
-          </node>
-          <node concept="1NAT8Q" id="2PzpqhhGusv" role="2C1LQL">
-            <property role="1NAT8K" value="steht" />
-            <node concept="2C1LQC" id="2PzpqhhGusx" role="2C1LR3">
-              <property role="2C1LQJ" value="100" />
-              <property role="2C1LQH" value="100" />
-              <property role="2C1LRi" value="100" />
-            </node>
-          </node>
-          <node concept="1NAT8Q" id="2PzpqhhGusL" role="2C1LQL">
-            <property role="1NAT8K" value="was" />
-            <node concept="2C1LQC" id="2PzpqhhGusN" role="2C1LR3">
-              <property role="2C1LQJ" value="100" />
-              <property role="2C1LQH" value="100" />
-              <property role="2C1LRi" value="100" />
-            </node>
-          </node>
-        </node>
-        <node concept="2C1LQA" id="2PzpqhhHVNt" role="2lsFNs" />
-        <node concept="2C1LQ$" id="2PzpqhhHVNT" role="2lsFNs" />
-        <node concept="2C1LQ_" id="2PzpqhhHVOn" role="2lsFNs" />
-        <node concept="1NAT0w" id="2PzpqhhIHY8" role="2lsFNs">
-          <property role="2lsFMf" value="peter" />
-          <node concept="1NAT0K" id="2PzpqhhIHYr" role="2lsFMd">
-            <property role="2lsFM9" value="hier steht eine tolle Variable" />
-          </node>
-        </node>
-        <node concept="1NAT8Q" id="1CAoV3AeQF2" role="2lsFNs">
-          <property role="1NAT8K" value="Hier" />
-          <node concept="2C1LQC" id="1CAoV3AeQF3" role="2C1LR3">
+      <node concept="1NATcM" id="3bVKjQMTmC4" role="2lsFNk">
+        <node concept="1NAT8Q" id="3bVKjQMXRB5" role="2lsFNu">
+          <property role="1NAT8K" value="hier" />
+          <node concept="2C1LQC" id="3bVKjQMXRB6" role="2C1LR3">
             <property role="2C1LQJ" value="100" />
             <property role="2C1LQH" value="100" />
             <property role="2C1LRi" value="100" />
           </node>
         </node>
-      </node>
-      <node concept="2C0Xsa" id="1CAoV3AbeaG" role="2C0Un$">
-        <node concept="1PaTwC" id="1CAoV3AbeaH" role="2lOMFJ">
-          <node concept="3oM_SD" id="2PzpqhhF5hh" role="1PaTwD">
-            <property role="3oM_SC" value="Hier" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhF5hj" role="1PaTwD">
-            <property role="3oM_SC" value="könnte" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhF5hm" role="1PaTwD">
-            <property role="3oM_SC" value="ihre" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhF5hq" role="1PaTwD">
-            <property role="3oM_SC" value="Werbung" />
-          </node>
-          <node concept="3oM_SD" id="2PzpqhhF5hv" role="1PaTwD">
-            <property role="3oM_SC" value="stehen" />
+        <node concept="1NAT8Q" id="3bVKjQMXRB9" role="2lsFNu">
+          <property role="1NAT8K" value="könne" />
+          <node concept="2C1LQC" id="3bVKjQMXRBa" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
           </node>
         </node>
+        <node concept="1NAT8Q" id="3bVKjQMXRBf" role="2lsFNu">
+          <property role="1NAT8K" value="ihre" />
+          <node concept="2C1LQC" id="3bVKjQMXRBg" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="3bVKjQMXRBn" role="2lsFNu">
+          <property role="1NAT8K" value="werbung" />
+          <node concept="2C1LQC" id="3bVKjQMXRBo" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT9o" id="3bVKjQMXRBL" role="2lsFNu">
+          <property role="2lsFMI" value="nicht" />
+        </node>
+        <node concept="1NAT8Q" id="3bVKjQMXRBZ" role="2lsFNu">
+          <property role="1NAT8K" value="stehen" />
+          <node concept="2C1LQC" id="3bVKjQMXRC0" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8$" id="3bVKjQN1b9c" role="2lsFNu">
+          <node concept="1NAT8Q" id="3bVKjQN1b9x" role="2lsFMy">
+            <property role="1NAT8K" value="hier" />
+            <node concept="2C1LQC" id="3bVKjQN1b9y" role="2C1LR3">
+              <property role="2C1LQJ" value="100" />
+              <property role="2C1LQH" value="100" />
+              <property role="2C1LRi" value="100" />
+            </node>
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="3bVKjQN1b9B" role="2lsFNu">
+          <property role="1NAT8K" value="könnte" />
+          <node concept="2C1LQC" id="3bVKjQN1b9C" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="3bVKjQN1b9T" role="2lsFNu">
+          <property role="1NAT8K" value="ihre" />
+          <node concept="2C1LQC" id="3bVKjQN1b9U" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="3bVKjQN1bad" role="2lsFNu">
+          <property role="1NAT8K" value="werbung" />
+          <node concept="2C1LQC" id="3bVKjQN1bae" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="3bVKjQN1ba_" role="2lsFNu">
+          <property role="1NAT8K" value="stehen" />
+          <node concept="2C1LQC" id="3bVKjQN1baA" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8$" id="3bVKjQN2xly" role="2lsFNu">
+          <node concept="1NAT8Q" id="3bVKjQN2xm2" role="2lsFMy">
+            <property role="1NAT8K" value="hier" />
+            <node concept="2C1LQC" id="3bVKjQN2xm3" role="2C1LR3">
+              <property role="2C1LQJ" value="100" />
+              <property role="2C1LQH" value="100" />
+              <property role="2C1LRi" value="100" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2C0Xsa" id="3bVKjQMTmC6" role="2C0Un$">
+        <node concept="1PaTwC" id="3bVKjQMTmC7" role="2lOMFJ" />
       </node>
     </node>
   </node>
@@ -597,9 +407,6 @@
             <property role="2C1LRi" value="100" />
           </node>
         </node>
-        <node concept="1NAT9Q" id="4OqUggm5SM1" role="2lsFNs">
-          <ref role="2lsFMb" node="2PzpqhhIHY8" />
-        </node>
         <node concept="1NAT0w" id="4OqUggm5SMt" role="2lsFNs">
           <property role="2lsFMf" value="guenter" />
           <node concept="1NAT0K" id="4OqUggm5SM_" role="2lsFMd">
@@ -633,6 +440,9 @@
           </node>
           <node concept="3oM_SD" id="4OqUggmHmVM" role="1PaTwD">
             <property role="3oM_SC" value="tolles" />
+          </node>
+          <node concept="3oM_SD" id="6CMrdVSwB9m" role="1PaTwD">
+            <property role="3oM_SC" value="" />
           </node>
         </node>
         <node concept="1PaTwC" id="4OqUggmHmVT" role="2lOMFJ">
@@ -682,6 +492,9 @@
           <node concept="3oM_SD" id="4OqUggmHmYb" role="1PaTwD">
             <property role="3oM_SC" value="ist" />
           </node>
+          <node concept="3oM_SD" id="6CMrdVS_urY" role="1PaTwD">
+            <property role="3oM_SC" value="" />
+          </node>
         </node>
         <node concept="1PaTwC" id="4OqUggmHmYf" role="2lOMFJ">
           <node concept="3oM_SD" id="4OqUggmHmYe" role="1PaTwD">
@@ -719,6 +532,68 @@
               </node>
             </node>
           </node>
+          <node concept="1NAT9r" id="6gZe8ui0jah" role="2lsFNu">
+            <property role="2lsFME" value="2" />
+            <property role="2lsFMC" value="InputStore2" />
+            <node concept="1NAT9q" id="6gZe8ui0jaM" role="2lsFMP">
+              <node concept="1NAT8Q" id="6gZe8ui0jaO" role="2lsFMN">
+                <property role="1NAT8K" value="hier" />
+                <node concept="2C1LQC" id="6gZe8ui0jaQ" role="2C1LR3">
+                  <property role="2C1LQJ" value="100" />
+                  <property role="2C1LQH" value="100" />
+                  <property role="2C1LRi" value="100" />
+                </node>
+              </node>
+              <node concept="1NAT8Q" id="6gZe8ui0jaV" role="2lsFMN">
+                <property role="1NAT8K" value="steht" />
+                <node concept="2C1LQC" id="6gZe8ui0jaW" role="2C1LR3">
+                  <property role="2C1LQJ" value="100" />
+                  <property role="2C1LQH" value="100" />
+                  <property role="2C1LRi" value="100" />
+                </node>
+              </node>
+              <node concept="1NAT8Q" id="6gZe8ui0jb3" role="2lsFMN">
+                <property role="1NAT8K" value="ein" />
+                <node concept="2C1LQC" id="6gZe8ui0jb4" role="2C1LR3">
+                  <property role="2C1LQJ" value="100" />
+                  <property role="2C1LQH" value="100" />
+                  <property role="2C1LRi" value="100" />
+                </node>
+              </node>
+              <node concept="1NAT8Q" id="6gZe8ui0jbt" role="2lsFMN">
+                <property role="1NAT8K" value="wort" />
+                <node concept="2C1LQC" id="6gZe8ui0jbu" role="2C1LR3">
+                  <property role="2C1LQJ" value="100" />
+                  <property role="2C1LQH" value="100" />
+                  <property role="2C1LRi" value="100" />
+                </node>
+              </node>
+              <node concept="1NAT8Q" id="6gZe8ui0jbD" role="2lsFMN">
+                <property role="1NAT8K" value="der" />
+                <node concept="2C1LQC" id="6gZe8ui0jbE" role="2C1LR3">
+                  <property role="2C1LQJ" value="100" />
+                  <property role="2C1LQH" value="100" />
+                  <property role="2C1LRi" value="100" />
+                </node>
+              </node>
+              <node concept="1NAT8Q" id="6gZe8ui0jbR" role="2lsFMN">
+                <property role="1NAT8K" value="extra" />
+                <node concept="2C1LQC" id="6gZe8ui0jbS" role="2C1LR3">
+                  <property role="2C1LQJ" value="100" />
+                  <property role="2C1LQH" value="100" />
+                  <property role="2C1LRi" value="100" />
+                </node>
+              </node>
+              <node concept="1NAT8Q" id="6gZe8ui0jcf" role="2lsFMN">
+                <property role="1NAT8K" value="klasse" />
+                <node concept="2C1LQC" id="6gZe8ui0jcg" role="2C1LR3">
+                  <property role="2C1LQJ" value="100" />
+                  <property role="2C1LQH" value="100" />
+                  <property role="2C1LRi" value="100" />
+                </node>
+              </node>
+            </node>
+          </node>
           <node concept="1NAT8Q" id="2pcQLgomt0j" role="2lsFNu">
             <property role="1NAT8K" value="hasd" />
             <node concept="2C1LQC" id="2pcQLgomt0l" role="2C1LR3">
@@ -728,8 +603,8 @@
             </node>
           </node>
           <node concept="1NAT9r" id="2pcQLgoW6Pe" role="2lsFNu">
-            <property role="2lsFME" value="2" />
-            <property role="2lsFMC" value="InputStore2" />
+            <property role="2lsFME" value="3" />
+            <property role="2lsFMC" value="InputStore3" />
             <node concept="1NAT9q" id="2pcQLgoW6Ps" role="2lsFMP">
               <node concept="1NAT8Q" id="2pcQLgoW6Pu" role="2lsFMN">
                 <property role="1NAT8K" value="asdf" />
@@ -742,8 +617,8 @@
             </node>
           </node>
           <node concept="1NAT9r" id="2pcQLgoZQAI" role="2lsFNu">
-            <property role="2lsFME" value="3" />
-            <property role="2lsFMC" value="InputStore3" />
+            <property role="2lsFME" value="4" />
+            <property role="2lsFMC" value="InputStore4" />
             <node concept="1NAT9q" id="2pcQLgoZQB1" role="2lsFMP">
               <node concept="1NAT8Q" id="2pcQLgoZQB3" role="2lsFMN">
                 <property role="1NAT8K" value="adfasdf" />
@@ -769,11 +644,19 @@
                   <property role="2C1LRi" value="100" />
                 </node>
               </node>
+              <node concept="1NAT8Q" id="6gZe8uhUoj_" role="2lsFMN">
+                <property role="1NAT8K" value="asd" />
+                <node concept="2C1LQC" id="6gZe8uhUojA" role="2C1LR3">
+                  <property role="2C1LQJ" value="100" />
+                  <property role="2C1LQH" value="100" />
+                  <property role="2C1LRi" value="100" />
+                </node>
+              </node>
             </node>
           </node>
           <node concept="1NAT9r" id="2pcQLgoW6PO" role="2lsFNu">
-            <property role="2lsFME" value="4" />
-            <property role="2lsFMC" value="InputStore4" />
+            <property role="2lsFME" value="5" />
+            <property role="2lsFMC" value="InputStore5" />
             <node concept="1NAT9q" id="2pcQLgoW6Q6" role="2lsFMP">
               <node concept="1NAT8Q" id="2pcQLgoW6Q8" role="2lsFMN">
                 <property role="1NAT8K" value="asdf" />
@@ -790,8 +673,13 @@
               <node concept="ZnF4x" id="2pcQLgp71gU" role="2lsFMl">
                 <property role="ZnF4y" value="asdf" />
               </node>
-              <node concept="1NAT19" id="2pcQLgp71gX" role="2lsFMj">
-                <property role="1NAT1k" value="12" />
+              <node concept="1NAT8Q" id="6gZe8ui65OO" role="2lsFMj">
+                <property role="1NAT8K" value="ads" />
+                <node concept="2C1LQC" id="6gZe8ui65OQ" role="2C1LR3">
+                  <property role="2C1LQJ" value="100" />
+                  <property role="2C1LQH" value="100" />
+                  <property role="2C1LRi" value="100" />
+                </node>
               </node>
             </node>
           </node>
@@ -817,12 +705,17 @@
               </node>
             </node>
             <node concept="1NAT0Z" id="2pcQLgp2eyP" role="2lsFM$">
-              <node concept="1NAT9Q" id="2pcQLgp3qFQ" role="2lsFMl">
-                <ref role="2lsFMb" node="2PzpqhhIHY8" />
-              </node>
               <node concept="1NAT8Q" id="2pcQLgp3qFT" role="2lsFMj">
                 <property role="1NAT8K" value="asdf" />
                 <node concept="2C1LQC" id="2pcQLgp3qFV" role="2C1LR3">
+                  <property role="2C1LQJ" value="100" />
+                  <property role="2C1LQH" value="100" />
+                  <property role="2C1LRi" value="100" />
+                </node>
+              </node>
+              <node concept="1NAT8Q" id="3bVKjQMO9t4" role="2lsFMl">
+                <property role="1NAT8K" value="ads" />
+                <node concept="2C1LQC" id="3bVKjQMO9t5" role="2C1LR3">
                   <property role="2C1LQJ" value="100" />
                   <property role="2C1LQH" value="100" />
                   <property role="2C1LRi" value="100" />
@@ -839,9 +732,41 @@
         </node>
       </node>
       <node concept="1NATcM" id="4OqUggmiIKb" role="2lsFNV">
-        <node concept="1NAT8Q" id="4OqUggmiIKz" role="2lsFNu">
-          <property role="1NAT8K" value="hi" />
-          <node concept="2C1LQC" id="4OqUggmiIK_" role="2C1LR3">
+        <node concept="1NAT8Q" id="6CMrdVS174u" role="2lsFNu">
+          <property role="1NAT8K" value="was" />
+          <node concept="2C1LQC" id="6CMrdVS174v" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6CMrdVS174I" role="2lsFNu">
+          <property role="1NAT8K" value="geht" />
+          <node concept="2C1LQC" id="6CMrdVS174J" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6CMrdVS175m" role="2lsFNu">
+          <property role="1NAT8K" value="ihr" />
+          <node concept="2C1LQC" id="6CMrdVS175n" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6CMrdVS175Q" role="2lsFNu">
+          <property role="1NAT8K" value="luschen" />
+          <node concept="2C1LQC" id="6CMrdVS175R" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6CMrdVSGn0v" role="2lsFNu">
+          <property role="1NAT8K" value="fawefasdf" />
+          <node concept="2C1LQC" id="6CMrdVSGn0w" role="2C1LR3">
             <property role="2C1LQJ" value="100" />
             <property role="2C1LQH" value="100" />
             <property role="2C1LRi" value="100" />
@@ -857,9 +782,413 @@
             <property role="2C1LRi" value="100" />
           </node>
         </node>
-        <node concept="1NAT0t" id="2pcQLgprzQw" role="2lsFNs">
-          <node concept="1NAT0s" id="2pcQLgprzQF" role="2lsFM5">
-            <ref role="2lsFM7" node="2PzpqhhCHn3" />
+        <node concept="1NAT8Q" id="6CMrdVRWklu" role="2lsFNs">
+          <property role="1NAT8K" value="hallo" />
+          <node concept="2C1LQC" id="6CMrdVRWklv" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6fJNlNne1KO" role="2lsFNs">
+          <property role="1NAT8K" value="ich" />
+          <node concept="2C1LQC" id="6fJNlNne1KP" role="2C1LR3">
+            <property role="2C1LQJ" value="100717" />
+            <property role="2C1LQH" value="10071" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6fJNlNne1KY" role="2lsFNs">
+          <property role="1NAT8K" value="teste" />
+          <node concept="2C1LQC" id="6fJNlNne1KZ" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="1003" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6fJNlNne1La" role="2lsFNs">
+          <property role="1NAT8K" value="mal" />
+          <node concept="2C1LQC" id="6fJNlNne1Lb" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="10" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8uhUnfX" role="2lsFNs">
+          <property role="1NAT8K" value="wie" />
+          <node concept="2C1LQC" id="6gZe8uhUnfY" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="10" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8uhUngp" role="2lsFNs">
+          <property role="1NAT8K" value="das" />
+          <node concept="2C1LQC" id="6gZe8uhUngq" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="10" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8uhUngR" role="2lsFNs">
+          <property role="1NAT8K" value="ganze" />
+          <node concept="2C1LQC" id="6gZe8uhUngS" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="10" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8uhUnhn" role="2lsFNs">
+          <property role="1NAT8K" value="hier" />
+          <node concept="2C1LQC" id="6gZe8uhUnho" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="10" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8uhUnhT" role="2lsFNs">
+          <property role="1NAT8K" value="von" />
+          <node concept="2C1LQC" id="6gZe8uhUnhU" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="10" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8uhUnit" role="2lsFNs">
+          <property role="1NAT8K" value="statten" />
+          <node concept="2C1LQC" id="6gZe8uhUniu" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="10" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8uhUnj3" role="2lsFNs">
+          <property role="1NAT8K" value="geht" />
+          <node concept="2C1LQC" id="6gZe8uhUnj4" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="10" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="2C1LR6" id="6gZe8ui4Ibq" role="2lsFNs">
+          <property role="2C1LRb" value="1000" />
+        </node>
+        <node concept="1NAT8Q" id="6fJNlNne1Lo" role="2lsFNs">
+          <property role="1NAT8K" value="wie" />
+          <node concept="2C1LQC" id="6fJNlNne1Lp" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6fJNlNne1LC" role="2lsFNs">
+          <property role="1NAT8K" value="das" />
+          <node concept="2C1LQC" id="6fJNlNne1LD" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6fJNlNne1My" role="2lsFNs">
+          <property role="1NAT8K" value="ganze" />
+          <node concept="2C1LQC" id="6fJNlNne1Mz" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6fJNlNne1MQ" role="2lsFNs">
+          <property role="1NAT8K" value="hier" />
+          <node concept="2C1LQC" id="6fJNlNne1MR" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6fJNlNne1Nc" role="2lsFNs">
+          <property role="1NAT8K" value="so" />
+          <node concept="2C1LQC" id="6fJNlNne1Nd" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65oI" role="2lsFNs">
+          <property role="1NAT8K" value="also" />
+          <node concept="2C1LQC" id="6gZe8ui65oJ" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65pp" role="2lsFNs">
+          <property role="1NAT8K" value="ich" />
+          <node concept="2C1LQC" id="6gZe8ui65pq" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65q6" role="2lsFNs">
+          <property role="1NAT8K" value="versuche" />
+          <node concept="2C1LQC" id="6gZe8ui65q7" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65qP" role="2lsFNs">
+          <property role="1NAT8K" value="mal" />
+          <node concept="2C1LQC" id="6gZe8ui65qQ" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="10041" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65rC" role="2lsFNs">
+          <property role="1NAT8K" value="herauszufinden" />
+          <node concept="2C1LQC" id="6gZe8ui65rD" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65st" role="2lsFNs">
+          <property role="1NAT8K" value="was" />
+          <node concept="2C1LQC" id="6gZe8ui65su" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65ti" role="2lsFNs">
+          <property role="1NAT8K" value="passiert" />
+          <node concept="2C1LQC" id="6gZe8ui65tj" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="10" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65ub" role="2lsFNs">
+          <property role="1NAT8K" value="wenn" />
+          <node concept="2C1LQC" id="6gZe8ui65uc" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65vc" role="2lsFNs">
+          <property role="1NAT8K" value="ich" />
+          <node concept="2C1LQC" id="6gZe8ui65vd" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65w7" role="2lsFNs">
+          <property role="1NAT8K" value="über" />
+          <node concept="2C1LQC" id="6gZe8ui65w8" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65x6" role="2lsFNs">
+          <property role="1NAT8K" value="eine" />
+          <node concept="2C1LQC" id="6gZe8ui65x7" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65y9" role="2lsFNs">
+          <property role="1NAT8K" value="längere" />
+          <node concept="2C1LQC" id="6gZe8ui65ya" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65za" role="2lsFNs">
+          <property role="1NAT8K" value="Zeile" />
+          <node concept="2C1LQC" id="6gZe8ui65zb" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65$f" role="2lsFNs">
+          <property role="1NAT8K" value="schreibe" />
+          <node concept="2C1LQC" id="6gZe8ui65$g" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65_k" role="2lsFNs">
+          <property role="1NAT8K" value="und" />
+          <node concept="2C1LQC" id="6gZe8ui65_l" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65Ar" role="2lsFNs">
+          <property role="1NAT8K" value="in" />
+          <node concept="2C1LQC" id="6gZe8ui65As" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65B$" role="2lsFNs">
+          <property role="1NAT8K" value="den" />
+          <node concept="2C1LQC" id="6gZe8ui65B_" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65CJ" role="2lsFNs">
+          <property role="1NAT8K" value="bereich" />
+          <node concept="2C1LQC" id="6gZe8ui65CK" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65Ei" role="2lsFNs">
+          <property role="1NAT8K" value="von" />
+          <node concept="2C1LQC" id="6gZe8ui65Ej" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65Fx" role="2lsFNs">
+          <property role="1NAT8K" value="text" />
+          <node concept="2C1LQC" id="6gZe8ui65Fy" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65GS" role="2lsFNs">
+          <property role="1NAT8K" value="komme" />
+          <node concept="2C1LQC" id="6gZe8ui65GT" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65Ib" role="2lsFNs">
+          <property role="1NAT8K" value="der" />
+          <node concept="2C1LQC" id="6gZe8ui65Ic" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65Jw" role="2lsFNs">
+          <property role="1NAT8K" value="einen" />
+          <node concept="2C1LQC" id="6gZe8ui65Jx" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65KR" role="2lsFNs">
+          <property role="1NAT8K" value="linienumbruch" />
+          <node concept="2C1LQC" id="6gZe8ui65KS" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65Mw" role="2lsFNs">
+          <property role="1NAT8K" value="erzwingt" />
+          <node concept="2C1LQC" id="6gZe8ui65Mx" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6fJNlNne1O0" role="2lsFNs">
+          <property role="1NAT8K" value="funktioniert" />
+          <node concept="2C1LQC" id="6fJNlNne1O1" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="10" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1NAT84" id="6gZe8ui65Sc" role="2lsFKn">
+      <node concept="1NATcM" id="6gZe8ui65Se" role="2lsFNV">
+        <node concept="1NAT8Q" id="6gZe8ui65VK" role="2lsFNu">
+          <property role="1NAT8K" value="asdfadf" />
+          <node concept="2C1LQC" id="6gZe8ui65VL" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+      </node>
+      <node concept="1NATcP" id="6gZe8ui65Sh" role="2lsFNT">
+        <node concept="1NAT8Q" id="6gZe8ui65W8" role="2lsFNs">
+          <property role="1NAT8K" value="asdflsdf" />
+          <node concept="2C1LQC" id="6gZe8ui65W9" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65Wc" role="2lsFNs">
+          <property role="1NAT8K" value="dsf" />
+          <node concept="2C1LQC" id="6gZe8ui65Wd" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65Wi" role="2lsFNs">
+          <property role="1NAT8K" value="asdfl" />
+          <node concept="2C1LQC" id="6gZe8ui65Wj" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65Wq" role="2lsFNs">
+          <property role="1NAT8K" value="asdf" />
+          <node concept="2C1LQC" id="6gZe8ui65Wr" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65W$" role="2lsFNs">
+          <property role="1NAT8K" value="wei" />
+          <node concept="2C1LQC" id="6gZe8ui65W_" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65WK" role="2lsFNs">
+          <property role="1NAT8K" value="aef" />
+          <node concept="2C1LQC" id="6gZe8ui65WL" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
+          </node>
+        </node>
+        <node concept="1NAT8Q" id="6gZe8ui65Xh" role="2lsFNs">
+          <property role="1NAT8K" value="ef" />
+          <node concept="2C1LQC" id="6gZe8ui65Xi" role="2C1LR3">
+            <property role="2C1LQJ" value="100" />
+            <property role="2C1LQH" value="100" />
+            <property role="2C1LRi" value="100" />
           </node>
         </node>
       </node>

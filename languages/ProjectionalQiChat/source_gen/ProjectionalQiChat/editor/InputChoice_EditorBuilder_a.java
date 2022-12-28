@@ -101,7 +101,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
       }
     };
 
-    EditorCell editorCell = CollapsibleContext.getFactory().create(editorContext, node, expanded, collapsed, false, true, false, callback, "");
+    EditorCell editorCell = CollapsibleContext.getFactory().create(editorContext, node, expanded, collapsed, false, false, false, callback, "");
     editorCell.setCellId("Collapsible_jkr9kg_a0");
 
     return editorCell;
