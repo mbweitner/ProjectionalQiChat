@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="a2lip78ertsqwu069uizmxldrq9pu3z">
+<product version="3" modelHash="-2juoa4zs4zgsyiwpr6v1u6b7y4rj6a2">
   <files names="ConceptPresentationAspectImpl.java:EnumerationDescriptor_ChooseOrder.java:EnumerationDescriptor_ConditionSymbol.java:EnumerationDescriptor_DialogueEvents.java:EnumerationDescriptor_Language.java:EnumerationDescriptor_NAOqiEvents.java:LanguageConceptSwitch.java:StructureAspectDescriptor.java" />
 </product>
 

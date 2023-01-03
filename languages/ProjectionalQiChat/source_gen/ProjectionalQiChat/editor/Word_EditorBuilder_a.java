@@ -7,12 +7,24 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
+import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Image;
+import jetbrains.mps.openapi.editor.style.Style;
+import jetbrains.mps.editor.runtime.style.StyleImpl;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
+import jetbrains.mps.editor.runtime.style.CellAlign;
+import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.openapi.editor.menus.transformation.SPropertyInfo;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Property;
 import jetbrains.mps.nodeEditor.cells.SPropertyAccessor;
+import ProjectionalQiChat.editor.helper_StyleSheet.leftOneSpaceStyleClass;
+import ProjectionalQiChat.editor.helper_StyleSheet.leftTabSpaceStyleClass;
 import jetbrains.mps.nodeEditor.cellMenu.SPropertySubstituteInfo;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.IAttributeDescriptor;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
@@ -20,8 +32,10 @@ import java.util.Objects;
 import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
 import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.openapi.editor.update.AttributeKind;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import ProjectionalQiChat.behavior.VoiceTuningConfig__BehaviorDescriptor;
 import org.jetbrains.mps.openapi.language.SConcept;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 /*package*/ class Word_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -39,9 +53,61 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   /*package*/ EditorCell createCell() {
-    return createProperty_0();
+    return createCollection_0();
   }
 
+  private EditorCell createCollection_0() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
+    editorCell.setCellId("Collection_8g1p9d_a");
+    editorCell.setBig(true);
+    setCellContext(editorCell);
+    editorCell.addKeyMap(new Word_KeyMap());
+    if (nodeCondition_8g1p9d_a0a()) {
+      editorCell.addEditorCell(createImage_0());
+    }
+    if (nodeCondition_8g1p9d_a1a()) {
+      editorCell.addEditorCell(createImage_1());
+    }
+    editorCell.addEditorCell(createCollection_1());
+    return editorCell;
+  }
+  private boolean nodeCondition_8g1p9d_a0a() {
+    boolean isstandardCondition = SPropertyOperations.getInteger(SLinkOperations.getTarget(myNode, LINKS.voiceTuning$ZxMO), PROPS.speakingRate$mjeX) > 100 && (SNodeOperations.getNodeAncestor(myNode, CONCEPTS.RobotOutput$SA, false, false) != null);
+    boolean isNotChoice = (SNodeOperations.getNodeAncestor(myNode, CONCEPTS.InputChoice$KG, false, false) == null) && (SNodeOperations.getNodeAncestor(myNode, CONCEPTS.OutputChoice$Lb, false, false) == null);
+    return isNotChoice && isstandardCondition;
+  }
+  private boolean nodeCondition_8g1p9d_a1a() {
+    boolean isstandardCondition = SPropertyOperations.getInteger(SLinkOperations.getTarget(myNode, LINKS.voiceTuning$ZxMO), PROPS.speakingRate$mjeX) < 100 && (SNodeOperations.getNodeAncestor(myNode, CONCEPTS.RobotOutput$SA, false, false) != null);
+    boolean isNotChoice = (SNodeOperations.getNodeAncestor(myNode, CONCEPTS.InputChoice$KG, false, false) == null) && (SNodeOperations.getNodeAncestor(myNode, CONCEPTS.OutputChoice$Lb, false, false) == null);
+    return isNotChoice && isstandardCondition;
+  }
+  private EditorCell createImage_0() {
+    EditorCell_Image editorCell = EditorCell_Image.createImageCell(getEditorContext(), myNode, SNodeOperations.getConcept(myNode).getLanguage().getSourceModule(), "${module}/icons/fast.png");
+    editorCell.setCellId("Image_8g1p9d_a0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.HORIZONTAL_ALIGN, CellAlign.CENTER);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDescent(0);
+    return editorCell;
+  }
+  private EditorCell createImage_1() {
+    EditorCell_Image editorCell = EditorCell_Image.createImageCell(getEditorContext(), myNode, SNodeOperations.getConcept(myNode).getLanguage().getSourceModule(), "${module}/icons/slow.png");
+    editorCell.setCellId("Image_8g1p9d_b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.HORIZONTAL_ALIGN, CellAlign.CENTER);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDescent(0);
+    return editorCell;
+  }
+  private EditorCell createCollection_1() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_8g1p9d_c0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.BASE_LINE_CELL, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createProperty_0());
+    return editorCell;
+  }
   private EditorCell createProperty_0() {
     getCellFactory().pushCellContext();
     try {
@@ -50,8 +116,17 @@ import org.jetbrains.mps.openapi.language.SConcept;
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
       editorCell.setDefaultText("<no word>");
       editorCell.setCellId("property_word");
-      editorCell.setBig(true);
-      setCellContext(editorCell);
+      Style style = new StyleImpl();
+      style.set(StyleAttributes.BASE_LINE_CELL, true);
+      style.set(StyleAttributes.HORIZONTAL_ALIGN, CellAlign.CENTER);
+      if (_StyleParameter_QueryFunction_8g1p9d_a2a2a()) {
+        new leftOneSpaceStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+      }
+      if (_StyleParameter_QueryFunction_8g1p9d_a3a2a()) {
+        new leftTabSpaceStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+      }
+      editorCell.getStyle().putAll(style);
+      editorCell.addKeyMap(new Word_KeyMap());
       editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
       setCellContext(editorCell);
       Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.PropertyAttribute$Gb);
@@ -69,12 +144,28 @@ import org.jetbrains.mps.openapi.language.SConcept;
       getCellFactory().popCellContext();
     }
   }
-
-  private static final class PROPS {
-    /*package*/ static final SProperty word$QCkP = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L, 0x6fd223061c49b136L, "word");
+  private boolean _StyleParameter_QueryFunction_8g1p9d_a2a2a() {
+    boolean isChoice = (SNodeOperations.getNodeAncestor(getNode(), CONCEPTS.OutputChoice$Lb, false, false) != null);
+    return !(isChoice) && (boolean) VoiceTuningConfig__BehaviorDescriptor.isModified_id2JDDPTDOYiA.invoke(SLinkOperations.getTarget(getNode(), LINKS.voiceTuning$ZxMO));
+  }
+  private boolean _StyleParameter_QueryFunction_8g1p9d_a3a2a() {
+    boolean isChoice = (SNodeOperations.getNodeAncestor(getNode(), CONCEPTS.OutputChoice$Lb, false, false) != null);
+    return isChoice && (boolean) VoiceTuningConfig__BehaviorDescriptor.isModified_id2JDDPTDOYiA.invoke(SLinkOperations.getTarget(getNode(), LINKS.voiceTuning$ZxMO));
   }
 
   private static final class CONCEPTS {
+    /*package*/ static final SConcept RobotOutput$SA = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b033L, "ProjectionalQiChat.structure.RobotOutput");
+    /*package*/ static final SConcept InputChoice$KG = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b114L, "ProjectionalQiChat.structure.InputChoice");
+    /*package*/ static final SConcept OutputChoice$Lb = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b115L, "ProjectionalQiChat.structure.OutputChoice");
     /*package*/ static final SConcept PropertyAttribute$Gb = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink voiceTuning$ZxMO = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L, 0xf8c3893a78b2550L, "voiceTuning");
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty speakingRate$mjeX = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b253bL, 0xf8c3893a78b253eL, "speakingRate");
+    /*package*/ static final SProperty word$QCkP = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L, 0x6fd223061c49b136L, "word");
   }
 }

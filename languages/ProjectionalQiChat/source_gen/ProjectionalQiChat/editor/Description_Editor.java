@@ -11,4 +11,7 @@ public class Description_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
     return new Description_EditorBuilder_a(editorContext, node).createCell();
   }
+  public EditorCell createInspectedCell(EditorContext editorContext, SNode node) {
+    return new Description_InspectorBuilder_a(editorContext, node).createCell();
+  }
 }
