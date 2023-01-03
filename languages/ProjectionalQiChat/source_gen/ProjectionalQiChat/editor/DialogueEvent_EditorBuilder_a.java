@@ -30,6 +30,7 @@ import java.util.Objects;
 import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
 import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.openapi.editor.update.AttributeKind;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
@@ -122,8 +123,15 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createConstant_1() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
     editorCell.setCellId("Constant_nayvlh_b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.PUNCTUATION_LEFT, _StyleParameter_QueryFunction_nayvlh_a0b0());
+    editorCell.getStyle().putAll(style);
+    editorCell.addKeyMap(new AbstractEvent_KeyMap());
     editorCell.setDefaultText("");
     return editorCell;
+  }
+  private boolean _StyleParameter_QueryFunction_nayvlh_a0b0() {
+    return SNodeOperations.getNextSibling(getNode()) != null;
   }
 
   private static final class PROPS {

@@ -35,7 +35,13 @@ import com.mbeddr.mpsutil.grammarcells.runtime.IRule;
 import org.jetbrains.mps.openapi.model.SModel;
 import java.util.Set;
 import org.jetbrains.mps.openapi.language.SLanguage;
+import com.mbeddr.mpsutil.grammarcells.runtime.AbstractRule;
+import com.mbeddr.mpsutil.grammarcells.runtime.ISymbol;
+import com.mbeddr.mpsutil.grammarcells.runtime.PropertySymbol;
+import com.mbeddr.mpsutil.grammarcells.runtime.ConstantSymbol;
+import com.mbeddr.mpsutil.grammarcells.runtime.ChildSymbol;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor implements IGrammarActionsDescriptor {
 
@@ -98,6 +104,73 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                       @Override
                       public SAbstractConcept getOutputConcept() {
                         return CONCEPTS.Word$iA;
+                      }
+                    });
+                  }
+                }
+
+              }
+            }
+          } finally {
+            _context.getEditorMenuTrace().popTraceInfo();
+          }
+          return ListSequence.fromList(result).where(new IWhereFilter<SubstituteMenuItem>() {
+            public boolean accept(SubstituteMenuItem it) {
+              return it != null;
+            }
+          }).toListSequence();
+        }
+      }.query()));
+      ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+        public Iterable<SubstituteMenuItem> query() {
+          List<SubstituteMenuItem> result = ListSequence.fromList(new ArrayList<SubstituteMenuItem>());
+          _context.getEditorMenuTrace().pushTraceInfo();
+          _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "StringValue", new SNodePointer("r:6e4f8c9a-1cc1-4bd6-b531-aa9f10c70464(ProjectionalQiChat.editor)", "3164244237120231723")));
+          try {
+            if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.StringValue$75)) {
+              final SAbstractConcept expectedOutputConcept = GrammarCellsUtil.getExpectedOutputConcept(_context, expectedOutputConceptExactly);
+
+              for (SConcept subconcept : ListSequence.fromList(GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.StringValue$75, _context.getModel(), StringValue_Editor.class, _context.getEditorContext()))) {
+                final SConcept outputConcept = ((SConcept) subconcept);
+
+                if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(outputConcept), SNodeOperations.asSConcept(expectedOutputConcept))) {
+                  boolean isApplicable = GrammarCellsUtil.canBeChild(subconcept, _context);
+                  if (isApplicable) {
+                    ListSequence.fromList(result).addElement(new GrammarCellsSubstituteMenuItem(_context) {
+                      private SProperty myProperty = PROPS.value$oPT2;
+
+                      public String getMatchingText(String pattern) {
+                        return pattern;
+                      }
+                      @Override
+                      public boolean canExecute(@NotNull String pattern) {
+                        if ((pattern == null || pattern.length() == 0)) {
+                          return false;
+                        }
+                        return GrammarCellsUtil.isValidPropertyValue(myProperty, expectedOutputConceptExactly, pattern);
+                      }
+                      @Override
+                      public boolean canExecuteStrictly(@NotNull String pattern) {
+                        return canExecute(pattern);
+                      }
+
+                      @Override
+                      public SNode createNode(@NotNull String pattern) {
+                        SNode newNode = SNodeFactoryOperations.createNewNode(expectedOutputConceptExactly, null);
+                        SPropertyOperations.assign(newNode, PROPS.value$oPT2, GrammarCellsUtil.toInternalPropertyValue(myProperty, pattern));
+
+                        return newNode;
+                      }
+
+
+                      @Override
+                      public void select(@NotNull SNode newNode, @NotNull String pattern) {
+                        super.select(newNode, pattern);
+                      }
+
+                      @Override
+                      public SAbstractConcept getOutputConcept() {
+                        return CONCEPTS.StringValue$75;
                       }
                     });
                   }
@@ -232,6 +305,29 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             public Iterable<TransformationMenuItem> query(final TransformationMenuContext _context) {
               List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
               _context.getEditorMenuTrace().pushTraceInfo();
+              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "StringValue", new SNodePointer("r:6e4f8c9a-1cc1-4bd6-b531-aa9f10c70464(ProjectionalQiChat.editor)", "3164244237120231723")));
+              try {
+              } finally {
+                _context.getEditorMenuTrace().popTraceInfo();
+              }
+              return ListSequence.fromList(result).where(new IWhereFilter<TransformationMenuItem>() {
+                public boolean accept(TransformationMenuItem it) {
+                  return it != null;
+                }
+              }).toListSequence();
+            }
+          }.query(_context)));
+        }
+      }
+      {
+        boolean sideEnabled = false;
+        sideEnabled |= _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM;
+        sideEnabled |= _context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM;
+        if (sideEnabled) {
+          ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+            public Iterable<TransformationMenuItem> query(final TransformationMenuContext _context) {
+              List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
+              _context.getEditorMenuTrace().pushTraceInfo();
               _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "Number", new SNodePointer("r:6e4f8c9a-1cc1-4bd6-b531-aa9f10c70464(ProjectionalQiChat.editor)", "7652298421762871862")));
               try {
               } finally {
@@ -275,17 +371,59 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
 
     final Set<SLanguage> visibleLanguages = GrammarCellsUtil.getVisibleLanguages(contextModel);
 
+    {
+      final List<SConcept> subconcepts = GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.VariableDeclaration$Pa, visibleLanguages);
+      for (final SAbstractConcept subconcept : subconcepts) {
+        ListSequence.fromList(rules).addElement(new AbstractRule() {
+          private List<ISymbol> symbols = ListSequence.fromList(new ArrayList<ISymbol>());
+          {
+            ListSequence.fromList(symbols).addElement(new PropertySymbol(CONCEPTS.VariableDeclaration$Pa, PROPS.name$MnvL));
+            ListSequence.fromList(symbols).addElement(new ConstantSymbol("="));
+            ListSequence.fromList(symbols).addElement(new ChildSymbol(LINKS.value$oJJI));
+            symbols = ListSequence.fromList(symbols).where(new IWhereFilter<ISymbol>() {
+              public boolean accept(ISymbol it) {
+                return it != null;
+              }
+            }).toListSequence();
+          }
+          @Override
+          public List<ISymbol> getSymbols() {
+            return symbols;
+          }
+          @Override
+          public SAbstractConcept getOutputConcept() {
+            return subconcept;
+          }
+          @Override
+          public SAbstractConcept getDefinedForConcept() {
+            return CONCEPTS.VariableDeclaration$Pa;
+          }
+          @Override
+          public String toString() {
+            return subconcept.getName();
+          }
+        });
+      }
+    }
 
     return rules;
   }
 
   private static final class PROPS {
     /*package*/ static final SProperty word$QCkP = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L, 0x6fd223061c49b136L, "word");
+    /*package*/ static final SProperty value$oPT2 = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b336L, 0x4d41c767d8337beeL, "value");
     /*package*/ static final SProperty number$9ifX = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b34fL, 0x6fd223061c49b352L, "number");
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Word$iA = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L, "ProjectionalQiChat.structure.Word");
+    /*package*/ static final SConcept StringValue$75 = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b336L, "ProjectionalQiChat.structure.StringValue");
     /*package*/ static final SConcept Number$LH = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b34fL, "ProjectionalQiChat.structure.Number");
+    /*package*/ static final SConcept VariableDeclaration$Pa = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b326L, "ProjectionalQiChat.structure.VariableDeclaration");
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink value$oJJI = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b326L, 0x4d41c767d8337beaL, "value");
   }
 }

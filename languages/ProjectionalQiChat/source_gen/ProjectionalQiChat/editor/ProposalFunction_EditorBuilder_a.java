@@ -61,6 +61,7 @@ import ProjectionalQiChat.editor.globalStyles_StyleSheet.proposalFunctionStyleCl
     Style style = new StyleImpl();
     new proposalFunctionStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
+    editorCell.addKeyMap(new Function_KeyMap());
     return editorCell;
   }
 }

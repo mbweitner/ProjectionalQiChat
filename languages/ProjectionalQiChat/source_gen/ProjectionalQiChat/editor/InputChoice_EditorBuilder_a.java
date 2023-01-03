@@ -627,7 +627,14 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteNode(editorCell.getSNode(), CellAction_DeleteNode.DeleteDirection.FORWARD));
     editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteNode(editorCell.getSNode(), CellAction_DeleteNode.DeleteDirection.BACKWARD));
     editorCell.setCellId("Empty_jkr9kg_b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.PUNCTUATION_LEFT, _StyleParameter_QueryFunction_jkr9kg_a0b0());
+    editorCell.getStyle().putAll(style);
+    editorCell.addKeyMap(new InputChoice_KeyMap());
     return editorCell;
+  }
+  private boolean _StyleParameter_QueryFunction_jkr9kg_a0b0() {
+    return SNodeOperations.getNextSibling(getNode()) != null;
   }
 
   private static final class LINKS {

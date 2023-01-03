@@ -83,11 +83,11 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createProperty_0() {
     getCellFactory().pushCellContext();
     try {
-      final SProperty property = PROPS.optionalName$nW9J;
+      final SProperty property = PROPS.name$MnvL;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
-      editorCell.setDefaultText("<no optionalName>");
-      editorCell.setCellId("property_optionalName");
+      editorCell.setDefaultText("<no name>");
+      editorCell.setCellId("property_name");
       Style style = new StyleImpl();
       new inputStoreTextStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
       style.set(StyleAttributes.SELECTABLE, true);
@@ -172,11 +172,18 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteNode(editorCell.getSNode(), CellAction_DeleteNode.DeleteDirection.FORWARD));
     editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteNode(editorCell.getSNode(), CellAction_DeleteNode.DeleteDirection.BACKWARD));
     editorCell.setCellId("Empty_jfqkze_b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.PUNCTUATION_LEFT, _StyleParameter_QueryFunction_jfqkze_a0b0());
+    editorCell.getStyle().putAll(style);
+    editorCell.addKeyMap(new InputStore_KeyMap());
     return editorCell;
+  }
+  private boolean _StyleParameter_QueryFunction_jfqkze_a0b0() {
+    return SNodeOperations.getNextSibling(getNode()) != null;
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty optionalName$nW9J = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b15dL, 0x4d41c767d8337bcfL, "optionalName");
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 
   private static final class CONCEPTS {

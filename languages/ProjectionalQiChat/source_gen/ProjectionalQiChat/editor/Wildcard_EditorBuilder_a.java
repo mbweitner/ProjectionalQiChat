@@ -39,6 +39,7 @@ import ProjectionalQiChat.editor.globalStyles_StyleSheet.keywordStyleClass;
     Style style = new StyleImpl();
     new keywordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
+    editorCell.addKeyMap(new Wildcard_KeyMap());
     editorCell.setDefaultText("");
     return editorCell;
   }

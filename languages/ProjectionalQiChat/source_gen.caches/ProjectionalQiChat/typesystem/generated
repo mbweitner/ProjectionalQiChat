@@ -1,3 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-2pbrspeoyt6jdq086bkk846qr5dmh8u" />
+<product version="3" modelHash="-c77thpc8twmy2e6872frmos28fpdn9r">
+  <files names="TypesystemDescriptor.java:change_names_ConceptCollection_QuickFix.java:change_names_Topic_QuickFix.java:check_double_cc_imports_Topic_NonTypesystemRule.java:check_double_human_concept_ConceptCollection_NonTypesystemRule.java:check_double_human_concept_Topic_NonTypesystemRule.java:check_double_robot_concept_ConceptCollection_NonTypesystemRule.java:check_double_robot_concept_Topic_NonTypesystemRule.java:check_double_topic_import_Topic_NonTypesystemRule.java:delete_double_imports_QuickFix.java" />
+</product>
 

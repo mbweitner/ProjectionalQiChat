@@ -1,3 +1,735 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<debug-info version="2" />
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144231330558:jetbrains.mps.baseLanguage.structure.ForStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144226303539:jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1076505808687:jetbrains.mps.baseLanguage.structure.WhileStatement" />
+  <root>
+    <file name="TypesystemDescriptor.java">
+      <unit at="8,0,36,0" name="ProjectionalQiChat.typesystem.TypesystemDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/3164244237093420999">
+    <file name="TypesystemDescriptor.java">
+      <node id="3164244237093420999" at="30,5,31,108" concept="7" />
+      <node id="3164244237093420999" at="31,108,32,55" concept="2" />
+      <node id="3164244237093420999" at="29,5,33,5" concept="0" />
+      <scope id="3164244237093420999" at="30,5,32,55">
+        <var name="nonTypesystemRule" id="3164244237093420999" />
+      </scope>
+    </file>
+    <file name="check_double_topic_import_Topic_NonTypesystemRule.java">
+      <node id="3164244237099780340" at="30,118,31,135" concept="7" />
+      <node id="3164244237093436302" at="33,38,34,111" concept="8" />
+      <node id="3164244237093446013" at="36,7,37,95" concept="7" />
+      <node id="3164244237093461411" at="37,95,38,124" concept="7" />
+      <node id="3164244237099878253" at="42,45,43,144" concept="7" />
+      <node id="3164244237099878275" at="46,50,47,221" concept="8" />
+      <node id="3164244237099878293" at="51,17,52,76" concept="7" />
+      <node id="3164244237099878293" at="52,76,53,341" concept="7" />
+      <node id="3164244237100514088" at="54,19,55,180" concept="7" />
+      <node id="3164244237102137453" at="55,180,56,66" concept="2" />
+      <node id="3164244237100514088" at="56,66,57,81" concept="2" />
+      <node id="3164244237093420999" at="67,50,68,29" concept="8" />
+      <node id="3164244237093420999" at="70,68,71,102" concept="8" />
+      <node id="3164244237093420999" at="73,30,74,17" concept="8" />
+      <node id="3164244237093420999" at="78,0,79,0" concept="10" trace="header$Q5v0" />
+      <node id="3164244237093420999" at="79,0,80,0" concept="10" trace="topics$hNc1" />
+      <node id="3164244237093420999" at="80,0,81,0" concept="10" trace="topic$hHYL" />
+      <node id="3164244237093420999" at="84,0,85,0" concept="10" trace="name$MnvL" />
+      <node id="3164244237093420999" at="88,0,89,0" concept="10" trace="Topic$xv" />
+      <node id="3164244237093420999" at="28,0,30,0" concept="1" trace="check_double_topic_import_Topic_NonTypesystemRule#()V" />
+      <node id="3164244237093436158" at="33,0,36,0" concept="6" trace="select#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="3164244237099878273" at="46,0,49,0" concept="6" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="3164244237093420999" at="67,0,70,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="3164244237093420999" at="70,0,73,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="3164244237093420999" at="73,0,76,0" concept="6" trace="overrides#()Z" />
+      <node id="3164244237093443039" at="31,135,36,7" concept="7" />
+      <node id="3164244237099878265" at="44,31,49,25" concept="7" />
+      <node id="3164244237100514088" at="53,341,58,19" concept="0" />
+      <node id="3164244237099878293" at="50,31,59,17" concept="0" />
+      <node id="3164244237099878291" at="49,25,60,15" concept="5" />
+      <node id="3164244237099878263" at="43,144,61,13" concept="5" />
+      <node id="3164244237099878251" at="42,0,63,0" concept="6" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3164244237099936679" at="40,45,63,11" concept="2" />
+      <node id="3164244237095546300" at="39,112,64,7" concept="4" />
+      <node id="3164244237093452396" at="38,124,65,5" concept="5" />
+      <node id="3164244237093420999" at="30,0,67,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="3164244237093420999" at="28,62,28,62" />
+      <scope id="3164244237093436159" at="33,38,34,111" />
+      <scope id="3164244237099878274" at="46,50,47,221" />
+      <scope id="3164244237093420999" at="67,50,68,29" />
+      <scope id="3164244237093420999" at="70,68,71,102" />
+      <scope id="3164244237093420999" at="73,30,74,17" />
+      <scope id="3164244237093420999" at="28,0,30,0" />
+      <scope id="3164244237093436158" at="33,0,36,0">
+        <var name="it" id="3164244237093436158" />
+      </scope>
+      <scope id="3164244237099878273" at="46,0,49,0">
+        <var name="it2" id="3164244237099878273" />
+      </scope>
+      <scope id="3164244237100514088" at="54,19,57,81">
+        <var name="intentionProvider" id="3164244237100514088" />
+      </scope>
+      <scope id="3164244237093420999" at="67,0,70,0" />
+      <scope id="3164244237093420999" at="70,0,73,0">
+        <var name="argument" id="3164244237093420999" />
+      </scope>
+      <scope id="3164244237093420999" at="73,0,76,0" />
+      <scope id="3164244237099878293" at="51,17,58,19">
+        <var name="_reporter_2309309498" id="3164244237099878293" />
+        <var name="errorTarget" id="3164244237099878293" />
+      </scope>
+      <scope id="3164244237099878292" at="50,31,59,17" />
+      <scope id="3164244237099878264" at="44,31,60,15">
+        <var name="isFirst" id="3164244237099878266" />
+      </scope>
+      <scope id="3164244237099878252" at="42,45,61,13">
+        <var name="maybeTooMuch" id="3164244237099878254" />
+      </scope>
+      <scope id="3164244237099878251" at="42,0,63,0">
+        <var name="it" id="3164244237099878251" />
+      </scope>
+      <scope id="3164244237095546303" at="40,45,63,11" />
+      <scope id="3164244237093452398" at="39,112,64,7" />
+      <scope id="3164244237095546300" at="39,112,64,7">
+        <var name="topicName" id="3164244237095546304" />
+      </scope>
+      <scope id="3164244237093421000" at="30,118,65,5">
+        <var name="allTopicReferences" id="3164244237093443042" />
+        <var name="distinctReferences" id="3164244237093446016" />
+        <var name="toMuch" id="3164244237093461414" />
+        <var name="topics" id="3164244237099780343" />
+      </scope>
+      <scope id="3164244237093420999" at="30,0,67,0">
+        <var name="status" id="3164244237093420999" />
+        <var name="topic" id="3164244237093420999" />
+        <var name="typeCheckingContext" id="3164244237093420999" />
+      </scope>
+      <unit id="3164244237093420999" at="83,0,86,0" name="ProjectionalQiChat.typesystem.check_double_topic_import_Topic_NonTypesystemRule$PROPS" />
+      <unit id="3164244237093420999" at="87,0,90,0" name="ProjectionalQiChat.typesystem.check_double_topic_import_Topic_NonTypesystemRule$CONCEPTS" />
+      <unit id="3164244237093436158" at="32,83,36,5" name="ProjectionalQiChat.typesystem.check_double_topic_import_Topic_NonTypesystemRule$1" />
+      <unit id="3164244237099878273" at="45,78,49,15" name="ProjectionalQiChat.typesystem.check_double_topic_import_Topic_NonTypesystemRule$2$1" />
+      <unit id="3164244237093420999" at="77,0,82,0" name="ProjectionalQiChat.typesystem.check_double_topic_import_Topic_NonTypesystemRule$LINKS" />
+      <unit id="3164244237099878251" at="41,51,63,9" name="ProjectionalQiChat.typesystem.check_double_topic_import_Topic_NonTypesystemRule$2" />
+      <unit id="3164244237093420999" at="27,0,91,0" name="ProjectionalQiChat.typesystem.check_double_topic_import_Topic_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/3164244237096107974">
+    <file name="delete_double_imports_QuickFix.java">
+      <node id="3164244237096107974" at="11,43,12,124" concept="11" />
+      <node id="3164244237096108309" at="14,44,15,35" concept="8" />
+      <node id="3164244237097300495" at="17,35,18,137" concept="2" />
+      <node id="3164244237099670722" at="18,137,19,134" concept="2" />
+      <node id="3164244237096107974" at="11,0,14,0" concept="1" trace="delete_double_imports_QuickFix#()V" />
+      <node id="3164244237096107974" at="14,0,17,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="3164244237096107974" at="17,0,21,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="3164244237096107974" at="11,43,12,124" />
+      <scope id="3164244237096108011" at="14,44,15,35" />
+      <scope id="3164244237096107976" at="17,35,19,134" />
+      <scope id="3164244237096107974" at="11,0,14,0" />
+      <scope id="3164244237096107974" at="14,0,17,0">
+        <var name="node" id="3164244237096107974" />
+      </scope>
+      <scope id="3164244237096107974" at="17,0,21,0">
+        <var name="node" id="3164244237096107974" />
+      </scope>
+      <unit id="3164244237096107974" at="10,0,22,0" name="ProjectionalQiChat.typesystem.delete_double_imports_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/3164244237099675461">
+    <file name="TypesystemDescriptor.java">
+      <node id="3164244237099675461" at="10,5,11,106" concept="7" />
+      <node id="3164244237099675461" at="11,106,12,55" concept="2" />
+      <node id="3164244237099675461" at="9,33,13,5" concept="0" />
+      <scope id="3164244237099675461" at="10,5,12,55">
+        <var name="nonTypesystemRule" id="3164244237099675461" />
+      </scope>
+    </file>
+    <file name="check_double_cc_imports_Topic_NonTypesystemRule.java">
+      <node id="3164244237100517922" at="30,118,31,168" concept="7" />
+      <node id="3164244237100517939" at="33,38,34,123" concept="8" />
+      <node id="3164244237100517948" at="36,7,37,92" concept="7" />
+      <node id="3164244237100517955" at="37,92,38,121" concept="7" />
+      <node id="3164244237100517973" at="42,45,43,153" concept="7" />
+      <node id="3164244237100517995" at="46,50,47,245" concept="8" />
+      <node id="3164244237100518013" at="51,17,52,76" concept="7" />
+      <node id="3164244237100518013" at="52,76,53,353" concept="7" />
+      <node id="3164244237100518022" at="54,19,55,180" concept="7" />
+      <node id="3164244237102729566" at="55,180,56,66" concept="2" />
+      <node id="3164244237100518022" at="56,66,57,81" concept="2" />
+      <node id="3164244237099675461" at="67,50,68,29" concept="8" />
+      <node id="3164244237099675461" at="70,68,71,102" concept="8" />
+      <node id="3164244237099675461" at="73,30,74,17" concept="8" />
+      <node id="3164244237099675461" at="78,0,79,0" concept="10" trace="header$Q5v0" />
+      <node id="3164244237099675461" at="79,0,80,0" concept="10" trace="conceptCollections$hNE3" />
+      <node id="3164244237099675461" at="80,0,81,0" concept="10" trace="conceptCollection$PnAr" />
+      <node id="3164244237099675461" at="84,0,85,0" concept="10" trace="name$MnvL" />
+      <node id="3164244237099675461" at="88,0,89,0" concept="10" trace="Topic$xv" />
+      <node id="3164244237099675461" at="28,0,30,0" concept="1" trace="check_double_cc_imports_Topic_NonTypesystemRule#()V" />
+      <node id="3164244237100517937" at="33,0,36,0" concept="6" trace="select#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="3164244237100517993" at="46,0,49,0" concept="6" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="3164244237099675461" at="67,0,70,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="3164244237099675461" at="70,0,73,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="3164244237099675461" at="73,0,76,0" concept="6" trace="overrides#()Z" />
+      <node id="3164244237100517931" at="31,168,36,7" concept="7" />
+      <node id="3164244237100517985" at="44,31,49,25" concept="7" />
+      <node id="3164244237100518022" at="53,353,58,19" concept="0" />
+      <node id="3164244237100518013" at="50,31,59,17" concept="0" />
+      <node id="3164244237100518011" at="49,25,60,15" concept="5" />
+      <node id="3164244237100517983" at="43,153,61,13" concept="5" />
+      <node id="3164244237100517971" at="42,0,63,0" concept="6" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3164244237100517967" at="40,42,63,11" concept="2" />
+      <node id="3164244237100517965" at="39,109,64,7" concept="4" />
+      <node id="3164244237100517963" at="38,121,65,5" concept="5" />
+      <node id="3164244237099675461" at="30,0,67,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="3164244237099675461" at="28,60,28,60" />
+      <scope id="3164244237100517938" at="33,38,34,123" />
+      <scope id="3164244237100517994" at="46,50,47,245" />
+      <scope id="3164244237099675461" at="67,50,68,29" />
+      <scope id="3164244237099675461" at="70,68,71,102" />
+      <scope id="3164244237099675461" at="73,30,74,17" />
+      <scope id="3164244237099675461" at="28,0,30,0" />
+      <scope id="3164244237100517937" at="33,0,36,0">
+        <var name="it" id="3164244237100517937" />
+      </scope>
+      <scope id="3164244237100517993" at="46,0,49,0">
+        <var name="it2" id="3164244237100517993" />
+      </scope>
+      <scope id="3164244237100518022" at="54,19,57,81">
+        <var name="intentionProvider" id="3164244237100518022" />
+      </scope>
+      <scope id="3164244237099675461" at="67,0,70,0" />
+      <scope id="3164244237099675461" at="70,0,73,0">
+        <var name="argument" id="3164244237099675461" />
+      </scope>
+      <scope id="3164244237099675461" at="73,0,76,0" />
+      <scope id="3164244237100518013" at="51,17,58,19">
+        <var name="_reporter_2309309498" id="3164244237100518013" />
+        <var name="errorTarget" id="3164244237100518013" />
+      </scope>
+      <scope id="3164244237100518012" at="50,31,59,17" />
+      <scope id="3164244237100517984" at="44,31,60,15">
+        <var name="isFirst" id="3164244237100517986" />
+      </scope>
+      <scope id="3164244237100517972" at="42,45,61,13">
+        <var name="maybeTooMuch" id="3164244237100517974" />
+      </scope>
+      <scope id="3164244237100517971" at="42,0,63,0">
+        <var name="it" id="3164244237100517971" />
+      </scope>
+      <scope id="3164244237100517966" at="40,42,63,11" />
+      <scope id="3164244237100517964" at="39,109,64,7" />
+      <scope id="3164244237100517965" at="39,109,64,7">
+        <var name="ccName" id="3164244237100518028" />
+      </scope>
+      <scope id="3164244237099675462" at="30,118,65,5">
+        <var name="allCCReferences" id="3164244237100517932" />
+        <var name="conceptCollectionReferences" id="3164244237100517923" />
+        <var name="distinctReferences" id="3164244237100517949" />
+        <var name="toMuch" id="3164244237100517956" />
+      </scope>
+      <scope id="3164244237099675461" at="30,0,67,0">
+        <var name="status" id="3164244237099675461" />
+        <var name="topic" id="3164244237099675461" />
+        <var name="typeCheckingContext" id="3164244237099675461" />
+      </scope>
+      <unit id="3164244237099675461" at="83,0,86,0" name="ProjectionalQiChat.typesystem.check_double_cc_imports_Topic_NonTypesystemRule$PROPS" />
+      <unit id="3164244237099675461" at="87,0,90,0" name="ProjectionalQiChat.typesystem.check_double_cc_imports_Topic_NonTypesystemRule$CONCEPTS" />
+      <unit id="3164244237100517937" at="32,101,36,5" name="ProjectionalQiChat.typesystem.check_double_cc_imports_Topic_NonTypesystemRule$1" />
+      <unit id="3164244237100517993" at="45,99,49,15" name="ProjectionalQiChat.typesystem.check_double_cc_imports_Topic_NonTypesystemRule$2$1" />
+      <unit id="3164244237099675461" at="77,0,82,0" name="ProjectionalQiChat.typesystem.check_double_cc_imports_Topic_NonTypesystemRule$LINKS" />
+      <unit id="3164244237100517971" at="41,72,63,9" name="ProjectionalQiChat.typesystem.check_double_cc_imports_Topic_NonTypesystemRule$2" />
+      <unit id="3164244237099675461" at="27,0,91,0" name="ProjectionalQiChat.typesystem.check_double_cc_imports_Topic_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/7237576769901947419">
+    <file name="TypesystemDescriptor.java">
+      <node id="7237576769901947419" at="14,5,15,121" concept="7" />
+      <node id="7237576769901947419" at="15,121,16,55" concept="2" />
+      <node id="7237576769901947419" at="13,5,17,5" concept="0" />
+      <scope id="7237576769901947419" at="14,5,16,55">
+        <var name="nonTypesystemRule" id="7237576769901947419" />
+      </scope>
+    </file>
+    <file name="check_double_human_concept_ConceptCollection_NonTypesystemRule.java">
+      <node id="7237576769901985362" at="29,130,30,74" concept="7" />
+      <node id="7237576769902002837" at="33,9,34,68" concept="7" />
+      <node id="7237576769902002837" at="34,68,35,320" concept="7" />
+      <node id="7237576769903391197" at="36,11,37,181" concept="7" />
+      <node id="7237576769903391222" at="37,181,38,82" concept="2" />
+      <node id="7237576769903391197" at="38,82,39,73" concept="2" />
+      <node id="7237576769902006764" at="42,7,43,119" concept="2" />
+      <node id="7237576769901947419" at="46,50,47,41" concept="8" />
+      <node id="7237576769901947419" at="49,68,50,102" concept="8" />
+      <node id="7237576769901947419" at="52,30,53,17" concept="8" />
+      <node id="7237576769901947419" at="57,0,58,0" concept="10" trace="name$MnvL" />
+      <node id="7237576769901947419" at="61,0,62,0" concept="10" trace="concepts$ACmo" />
+      <node id="7237576769901947419" at="65,0,66,0" concept="10" trace="HumanConcept$qf" />
+      <node id="7237576769901947419" at="66,0,67,0" concept="10" trace="ConceptCollection$S7" />
+      <node id="7237576769901947419" at="27,0,29,0" concept="1" trace="check_double_human_concept_ConceptCollection_NonTypesystemRule#()V" />
+      <node id="7237576769901947419" at="46,0,49,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="7237576769901947419" at="49,0,52,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="7237576769901947419" at="52,0,55,0" concept="6" trace="overrides#()Z" />
+      <node id="7237576769903391197" at="35,320,40,11" concept="0" />
+      <node id="7237576769902002837" at="32,123,41,9" concept="0" />
+      <node id="7237576769901990641" at="31,159,42,7" concept="5" />
+      <node id="7237576769901984887" at="30,74,44,5" concept="4" />
+      <node id="7237576769901947419" at="29,0,46,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="7237576769901947419" at="27,75,27,75" />
+      <scope id="7237576769901947419" at="46,50,47,41" />
+      <scope id="7237576769901947419" at="49,68,50,102" />
+      <scope id="7237576769901947419" at="52,30,53,17" />
+      <scope id="7237576769901947419" at="27,0,29,0" />
+      <scope id="7237576769903391197" at="36,11,39,73">
+        <var name="intentionProvider" id="7237576769903391197" />
+      </scope>
+      <scope id="7237576769901947419" at="46,0,49,0" />
+      <scope id="7237576769901947419" at="49,0,52,0">
+        <var name="argument" id="7237576769901947419" />
+      </scope>
+      <scope id="7237576769901947419" at="52,0,55,0" />
+      <scope id="7237576769902002837" at="33,9,40,11">
+        <var name="_reporter_2309309498" id="7237576769902002837" />
+        <var name="errorTarget" id="7237576769902002837" />
+      </scope>
+      <scope id="7237576769901990643" at="32,123,41,9" />
+      <scope id="7237576769901984890" at="31,159,43,119" />
+      <scope id="7237576769901984887" at="30,74,44,5">
+        <var name="node_HumanConcept_" id="7237576769901984891" />
+      </scope>
+      <scope id="7237576769901947420" at="29,130,44,5">
+        <var name="conceptNames" id="7237576769901985365" />
+      </scope>
+      <scope id="7237576769901947419" at="29,0,46,0">
+        <var name="conceptCollection" id="7237576769901947419" />
+        <var name="status" id="7237576769901947419" />
+        <var name="typeCheckingContext" id="7237576769901947419" />
+      </scope>
+      <unit id="7237576769901947419" at="56,0,59,0" name="ProjectionalQiChat.typesystem.check_double_human_concept_ConceptCollection_NonTypesystemRule$PROPS" />
+      <unit id="7237576769901947419" at="60,0,63,0" name="ProjectionalQiChat.typesystem.check_double_human_concept_ConceptCollection_NonTypesystemRule$LINKS" />
+      <unit id="7237576769901947419" at="64,0,68,0" name="ProjectionalQiChat.typesystem.check_double_human_concept_ConceptCollection_NonTypesystemRule$CONCEPTS" />
+      <unit id="7237576769901947419" at="26,0,69,0" name="ProjectionalQiChat.typesystem.check_double_human_concept_ConceptCollection_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/7237576769902018413">
+    <file name="TypesystemDescriptor.java">
+      <node id="7237576769902018413" at="22,5,23,121" concept="7" />
+      <node id="7237576769902018413" at="23,121,24,55" concept="2" />
+      <node id="7237576769902018413" at="21,5,25,5" concept="0" />
+      <scope id="7237576769902018413" at="22,5,24,55">
+        <var name="nonTypesystemRule" id="7237576769902018413" />
+      </scope>
+    </file>
+    <file name="check_double_robot_concept_ConceptCollection_NonTypesystemRule.java">
+      <node id="7237576769902018422" at="29,130,30,74" concept="7" />
+      <node id="7237576769902048165" at="33,9,34,68" concept="7" />
+      <node id="7237576769902048165" at="34,68,35,319" concept="7" />
+      <node id="7237576769903374601" at="36,11,37,181" concept="7" />
+      <node id="7237576769903374626" at="37,181,38,82" concept="2" />
+      <node id="7237576769903374601" at="38,82,39,73" concept="2" />
+      <node id="7237576769902051858" at="42,7,43,119" concept="2" />
+      <node id="7237576769902018413" at="46,50,47,41" concept="8" />
+      <node id="7237576769902018413" at="49,68,50,102" concept="8" />
+      <node id="7237576769902018413" at="52,30,53,17" concept="8" />
+      <node id="7237576769902018413" at="57,0,58,0" concept="10" trace="name$MnvL" />
+      <node id="7237576769902018413" at="61,0,62,0" concept="10" trace="concepts$ACmo" />
+      <node id="7237576769902018413" at="65,0,66,0" concept="10" trace="RobotConcept$rd" />
+      <node id="7237576769902018413" at="66,0,67,0" concept="10" trace="ConceptCollection$S7" />
+      <node id="7237576769902018413" at="27,0,29,0" concept="1" trace="check_double_robot_concept_ConceptCollection_NonTypesystemRule#()V" />
+      <node id="7237576769902018413" at="46,0,49,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="7237576769902018413" at="49,0,52,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="7237576769902018413" at="52,0,55,0" concept="6" trace="overrides#()Z" />
+      <node id="7237576769903374601" at="35,319,40,11" concept="0" />
+      <node id="7237576769902048165" at="32,123,41,9" concept="0" />
+      <node id="7237576769902034295" at="31,159,42,7" concept="5" />
+      <node id="7237576769902033829" at="30,74,44,5" concept="4" />
+      <node id="7237576769902018413" at="29,0,46,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="7237576769902018413" at="27,75,27,75" />
+      <scope id="7237576769902018413" at="46,50,47,41" />
+      <scope id="7237576769902018413" at="49,68,50,102" />
+      <scope id="7237576769902018413" at="52,30,53,17" />
+      <scope id="7237576769902018413" at="27,0,29,0" />
+      <scope id="7237576769903374601" at="36,11,39,73">
+        <var name="intentionProvider" id="7237576769903374601" />
+      </scope>
+      <scope id="7237576769902018413" at="46,0,49,0" />
+      <scope id="7237576769902018413" at="49,0,52,0">
+        <var name="argument" id="7237576769902018413" />
+      </scope>
+      <scope id="7237576769902018413" at="52,0,55,0" />
+      <scope id="7237576769902048165" at="33,9,40,11">
+        <var name="_reporter_2309309498" id="7237576769902048165" />
+        <var name="errorTarget" id="7237576769902048165" />
+      </scope>
+      <scope id="7237576769902034297" at="32,123,41,9" />
+      <scope id="7237576769902033832" at="31,159,43,119" />
+      <scope id="7237576769902033829" at="30,74,44,5">
+        <var name="node_RobotConcept_" id="7237576769902033833" />
+      </scope>
+      <scope id="7237576769902018414" at="29,130,44,5">
+        <var name="conceptNames" id="7237576769902018425" />
+      </scope>
+      <scope id="7237576769902018413" at="29,0,46,0">
+        <var name="conceptCollection" id="7237576769902018413" />
+        <var name="status" id="7237576769902018413" />
+        <var name="typeCheckingContext" id="7237576769902018413" />
+      </scope>
+      <unit id="7237576769902018413" at="56,0,59,0" name="ProjectionalQiChat.typesystem.check_double_robot_concept_ConceptCollection_NonTypesystemRule$PROPS" />
+      <unit id="7237576769902018413" at="60,0,63,0" name="ProjectionalQiChat.typesystem.check_double_robot_concept_ConceptCollection_NonTypesystemRule$LINKS" />
+      <unit id="7237576769902018413" at="64,0,68,0" name="ProjectionalQiChat.typesystem.check_double_robot_concept_ConceptCollection_NonTypesystemRule$CONCEPTS" />
+      <unit id="7237576769902018413" at="26,0,69,0" name="ProjectionalQiChat.typesystem.check_double_robot_concept_ConceptCollection_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/7237576769902494051">
+    <file name="change_names_ConceptCollection_QuickFix.java">
+      <node id="7237576769902494051" at="22,52,23,124" concept="11" />
+      <node id="7237576769903385921" at="25,44,26,29" concept="8" />
+      <node id="7237576769902641865" at="28,35,29,263" concept="7" />
+      <node id="7237576769902686097" at="29,263,30,263" concept="7" />
+      <node id="7237576769902641693" at="30,263,31,0" concept="9" />
+      <node id="7237576769902548045" at="33,38,34,66" concept="8" />
+      <node id="7237576769902530650" at="36,24,37,87" concept="7" />
+      <node id="7237576769902575436" at="39,38,40,66" concept="8" />
+      <node id="7237576769902532319" at="42,24,43,87" concept="7" />
+      <node id="7237576769902532520" at="43,87,44,0" concept="9" />
+      <node id="7237576769902598225" at="45,50,46,20" concept="7" />
+      <node id="7237576769902598433" at="46,20,47,35" concept="7" />
+      <node id="7237576769902599284" at="48,77,49,44" concept="2" />
+      <node id="7237576769902605560" at="49,44,50,16" concept="2" />
+      <node id="7237576769902608756" at="51,7,52,70" concept="2" />
+      <node id="7237576769902614903" at="53,5,54,0" concept="9" />
+      <node id="7237576769902615767" at="55,50,56,20" concept="7" />
+      <node id="7237576769902615851" at="56,20,57,35" concept="7" />
+      <node id="7237576769902625743" at="58,77,59,44" concept="2" />
+      <node id="7237576769902631010" at="59,44,60,16" concept="2" />
+      <node id="7237576769902634419" at="61,7,62,70" concept="2" />
+      <node id="7237576769902736306" at="63,5,64,0" concept="9" />
+      <node id="7237576769902799343" at="65,76,66,161" concept="2" />
+      <node id="7237576769902813921" at="68,76,69,161" concept="2" />
+      <node id="7237576769902494051" at="74,0,75,0" concept="10" trace="concepts$ACmo" />
+      <node id="7237576769902494051" at="78,0,79,0" concept="10" trace="HumanConcept$qf" />
+      <node id="7237576769902494051" at="79,0,80,0" concept="10" trace="RobotConcept$rd" />
+      <node id="7237576769902494051" at="83,0,84,0" concept="10" trace="name$MnvL" />
+      <node id="7237576769902494051" at="22,0,25,0" concept="1" trace="change_names_ConceptCollection_QuickFix#()V" />
+      <node id="7237576769902494051" at="25,0,28,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="7237576769902547681" at="33,0,36,0" concept="6" trace="select#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="7237576769902574836" at="39,0,42,0" concept="6" trace="select#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="7237576769902736650" at="64,0,67,5" concept="3" />
+      <node id="7237576769902780605" at="67,5,70,5" concept="3" />
+      <node id="7237576769902590251" at="47,35,51,7" concept="12" />
+      <node id="7237576769902615955" at="57,35,61,7" concept="12" />
+      <node id="7237576769902526938" at="31,0,36,24" concept="7" />
+      <node id="7237576769902527184" at="37,87,42,24" concept="7" />
+      <node id="7237576769902583224" at="44,0,53,5" concept="4" />
+      <node id="7237576769902615191" at="54,0,63,5" concept="4" />
+      <node id="7237576769902494051" at="28,0,72,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="7237576769902494051" at="22,52,23,124" />
+      <scope id="7237576769903385574" at="25,44,26,29" />
+      <scope id="7237576769902547682" at="33,38,34,66" />
+      <scope id="7237576769902574837" at="39,38,40,66" />
+      <scope id="7237576769902736652" at="65,76,66,161" />
+      <scope id="7237576769902780606" at="68,76,69,161" />
+      <scope id="7237576769902590253" at="48,77,50,16" />
+      <scope id="7237576769902615957" at="58,77,60,16" />
+      <scope id="7237576769902494051" at="22,0,25,0" />
+      <scope id="7237576769902494051" at="25,0,28,0">
+        <var name="node" id="7237576769902494051" />
+      </scope>
+      <scope id="7237576769902547681" at="33,0,36,0">
+        <var name="it" id="7237576769902547681" />
+      </scope>
+      <scope id="7237576769902574836" at="39,0,42,0">
+        <var name="it" id="7237576769902574836" />
+      </scope>
+      <scope id="7237576769902736650" at="64,0,67,5">
+        <var name="i" id="7237576769902736653" />
+      </scope>
+      <scope id="7237576769902780605" at="67,5,70,5">
+        <var name="i" id="7237576769902780608" />
+      </scope>
+      <scope id="7237576769902583230" at="45,50,52,70">
+        <var name="count" id="7237576769902598228" />
+        <var name="tmpName" id="7237576769902598436" />
+      </scope>
+      <scope id="7237576769902615197" at="55,50,62,70">
+        <var name="count" id="7237576769902615770" />
+        <var name="tmpName" id="7237576769902615854" />
+      </scope>
+      <scope id="7237576769902583224" at="44,0,53,5">
+        <var name="conceptName" id="7237576769902583226" />
+      </scope>
+      <scope id="7237576769902615191" at="54,0,63,5">
+        <var name="conceptName" id="7237576769902615193" />
+      </scope>
+      <scope id="7237576769902494053" at="28,35,70,5">
+        <var name="humanConceptNames" id="7237576769902526941" />
+        <var name="humanConcepts" id="7237576769902641868" />
+        <var name="newHumanConceptNames" id="7237576769902530653" />
+        <var name="newRobotConceptNames" id="7237576769902532322" />
+        <var name="robotConceptNames" id="7237576769902527187" />
+        <var name="robotConcepts" id="7237576769902686100" />
+      </scope>
+      <scope id="7237576769902494051" at="28,0,72,0">
+        <var name="node" id="7237576769902494051" />
+      </scope>
+      <unit id="7237576769902494051" at="73,0,76,0" name="ProjectionalQiChat.typesystem.change_names_ConceptCollection_QuickFix$LINKS" />
+      <unit id="7237576769902494051" at="82,0,85,0" name="ProjectionalQiChat.typesystem.change_names_ConceptCollection_QuickFix$PROPS" />
+      <unit id="7237576769902547681" at="32,85,36,5" name="ProjectionalQiChat.typesystem.change_names_ConceptCollection_QuickFix$1" />
+      <unit id="7237576769902574836" at="38,85,42,5" name="ProjectionalQiChat.typesystem.change_names_ConceptCollection_QuickFix$2" />
+      <unit id="7237576769902494051" at="77,0,81,0" name="ProjectionalQiChat.typesystem.change_names_ConceptCollection_QuickFix$CONCEPTS" />
+      <unit id="7237576769902494051" at="21,0,86,0" name="ProjectionalQiChat.typesystem.change_names_ConceptCollection_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/7237576769905716568">
+    <file name="TypesystemDescriptor.java">
+      <node id="7237576769905716568" at="18,5,19,109" concept="7" />
+      <node id="7237576769905716568" at="19,109,20,55" concept="2" />
+      <node id="7237576769905716568" at="17,5,21,5" concept="0" />
+      <scope id="7237576769905716568" at="18,5,20,55">
+        <var name="nonTypesystemRule" id="7237576769905716568" />
+      </scope>
+    </file>
+    <file name="check_double_human_concept_Topic_NonTypesystemRule.java">
+      <node id="7237576769905719008" at="29,118,30,74" concept="7" />
+      <node id="7237576769905719019" at="33,9,34,68" concept="7" />
+      <node id="7237576769905719019" at="34,68,35,320" concept="7" />
+      <node id="7237576769906180390" at="36,11,37,169" concept="7" />
+      <node id="7237576769906184985" at="37,169,38,58" concept="2" />
+      <node id="7237576769906180390" at="38,58,39,73" concept="2" />
+      <node id="7237576769905719035" at="42,7,43,119" concept="2" />
+      <node id="7237576769905716568" at="46,50,47,29" concept="8" />
+      <node id="7237576769905716568" at="49,68,50,102" concept="8" />
+      <node id="7237576769905716568" at="52,30,53,17" concept="8" />
+      <node id="7237576769905716568" at="57,0,58,0" concept="10" trace="name$MnvL" />
+      <node id="7237576769905716568" at="61,0,62,0" concept="10" trace="header$Q5v0" />
+      <node id="7237576769905716568" at="62,0,63,0" concept="10" trace="localConcepts$hTKt" />
+      <node id="7237576769905716568" at="66,0,67,0" concept="10" trace="HumanConcept$qf" />
+      <node id="7237576769905716568" at="67,0,68,0" concept="10" trace="Topic$xv" />
+      <node id="7237576769905716568" at="27,0,29,0" concept="1" trace="check_double_human_concept_Topic_NonTypesystemRule#()V" />
+      <node id="7237576769905716568" at="46,0,49,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="7237576769905716568" at="49,0,52,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="7237576769905716568" at="52,0,55,0" concept="6" trace="overrides#()Z" />
+      <node id="7237576769906180390" at="35,320,40,11" concept="0" />
+      <node id="7237576769905719019" at="32,123,41,9" concept="0" />
+      <node id="7237576769905719017" at="31,198,42,7" concept="5" />
+      <node id="7237576769905719015" at="30,74,44,5" concept="4" />
+      <node id="7237576769905716568" at="29,0,46,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="7237576769905716568" at="27,63,27,63" />
+      <scope id="7237576769905716568" at="46,50,47,29" />
+      <scope id="7237576769905716568" at="49,68,50,102" />
+      <scope id="7237576769905716568" at="52,30,53,17" />
+      <scope id="7237576769905716568" at="27,0,29,0" />
+      <scope id="7237576769906180390" at="36,11,39,73">
+        <var name="intentionProvider" id="7237576769906180390" />
+      </scope>
+      <scope id="7237576769905716568" at="46,0,49,0" />
+      <scope id="7237576769905716568" at="49,0,52,0">
+        <var name="argument" id="7237576769905716568" />
+      </scope>
+      <scope id="7237576769905716568" at="52,0,55,0" />
+      <scope id="7237576769905719019" at="33,9,40,11">
+        <var name="_reporter_2309309498" id="7237576769905719019" />
+        <var name="errorTarget" id="7237576769905719019" />
+      </scope>
+      <scope id="7237576769905719018" at="32,123,41,9" />
+      <scope id="7237576769905719016" at="31,198,43,119" />
+      <scope id="7237576769905719015" at="30,74,44,5">
+        <var name="node_HumanConcept_" id="7237576769905719042" />
+      </scope>
+      <scope id="7237576769905716569" at="29,118,44,5">
+        <var name="conceptNames" id="7237576769905719009" />
+      </scope>
+      <scope id="7237576769905716568" at="29,0,46,0">
+        <var name="status" id="7237576769905716568" />
+        <var name="topic" id="7237576769905716568" />
+        <var name="typeCheckingContext" id="7237576769905716568" />
+      </scope>
+      <unit id="7237576769905716568" at="56,0,59,0" name="ProjectionalQiChat.typesystem.check_double_human_concept_Topic_NonTypesystemRule$PROPS" />
+      <unit id="7237576769905716568" at="60,0,64,0" name="ProjectionalQiChat.typesystem.check_double_human_concept_Topic_NonTypesystemRule$LINKS" />
+      <unit id="7237576769905716568" at="65,0,69,0" name="ProjectionalQiChat.typesystem.check_double_human_concept_Topic_NonTypesystemRule$CONCEPTS" />
+      <unit id="7237576769905716568" at="26,0,70,0" name="ProjectionalQiChat.typesystem.check_double_human_concept_Topic_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/7237576769905744937">
+    <file name="TypesystemDescriptor.java">
+      <node id="7237576769905744937" at="26,5,27,109" concept="7" />
+      <node id="7237576769905744937" at="27,109,28,55" concept="2" />
+      <node id="7237576769905744937" at="25,5,29,5" concept="0" />
+      <scope id="7237576769905744937" at="26,5,28,55">
+        <var name="nonTypesystemRule" id="7237576769905744937" />
+      </scope>
+    </file>
+    <file name="check_double_robot_concept_Topic_NonTypesystemRule.java">
+      <node id="7237576769905744939" at="29,118,30,74" concept="7" />
+      <node id="7237576769905744950" at="33,9,34,68" concept="7" />
+      <node id="7237576769905744950" at="34,68,35,326" concept="7" />
+      <node id="7237576769906183287" at="36,11,37,169" concept="7" />
+      <node id="7237576769906183335" at="37,169,38,58" concept="2" />
+      <node id="7237576769906183287" at="38,58,39,73" concept="2" />
+      <node id="7237576769905744963" at="42,7,43,119" concept="2" />
+      <node id="7237576769905744937" at="46,50,47,29" concept="8" />
+      <node id="7237576769905744937" at="49,68,50,102" concept="8" />
+      <node id="7237576769905744937" at="52,30,53,17" concept="8" />
+      <node id="7237576769905744937" at="57,0,58,0" concept="10" trace="name$MnvL" />
+      <node id="7237576769905744937" at="61,0,62,0" concept="10" trace="header$Q5v0" />
+      <node id="7237576769905744937" at="62,0,63,0" concept="10" trace="localConcepts$hTKt" />
+      <node id="7237576769905744937" at="66,0,67,0" concept="10" trace="RobotConcept$rd" />
+      <node id="7237576769905744937" at="67,0,68,0" concept="10" trace="Topic$xv" />
+      <node id="7237576769905744937" at="27,0,29,0" concept="1" trace="check_double_robot_concept_Topic_NonTypesystemRule#()V" />
+      <node id="7237576769905744937" at="46,0,49,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="7237576769905744937" at="49,0,52,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="7237576769905744937" at="52,0,55,0" concept="6" trace="overrides#()Z" />
+      <node id="7237576769906183287" at="35,326,40,11" concept="0" />
+      <node id="7237576769905744950" at="32,123,41,9" concept="0" />
+      <node id="7237576769905744948" at="31,198,42,7" concept="5" />
+      <node id="7237576769905744946" at="30,74,44,5" concept="4" />
+      <node id="7237576769905744937" at="29,0,46,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="7237576769905744937" at="27,63,27,63" />
+      <scope id="7237576769905744937" at="46,50,47,29" />
+      <scope id="7237576769905744937" at="49,68,50,102" />
+      <scope id="7237576769905744937" at="52,30,53,17" />
+      <scope id="7237576769905744937" at="27,0,29,0" />
+      <scope id="7237576769906183287" at="36,11,39,73">
+        <var name="intentionProvider" id="7237576769906183287" />
+      </scope>
+      <scope id="7237576769905744937" at="46,0,49,0" />
+      <scope id="7237576769905744937" at="49,0,52,0">
+        <var name="argument" id="7237576769905744937" />
+      </scope>
+      <scope id="7237576769905744937" at="52,0,55,0" />
+      <scope id="7237576769905744950" at="33,9,40,11">
+        <var name="_reporter_2309309498" id="7237576769905744950" />
+        <var name="errorTarget" id="7237576769905744950" />
+      </scope>
+      <scope id="7237576769905744949" at="32,123,41,9" />
+      <scope id="7237576769905744947" at="31,198,43,119" />
+      <scope id="7237576769905744946" at="30,74,44,5">
+        <var name="node_HumanConcept_" id="7237576769905744970" />
+      </scope>
+      <scope id="7237576769905744938" at="29,118,44,5">
+        <var name="conceptNames" id="7237576769905744940" />
+      </scope>
+      <scope id="7237576769905744937" at="29,0,46,0">
+        <var name="status" id="7237576769905744937" />
+        <var name="topic" id="7237576769905744937" />
+        <var name="typeCheckingContext" id="7237576769905744937" />
+      </scope>
+      <unit id="7237576769905744937" at="56,0,59,0" name="ProjectionalQiChat.typesystem.check_double_robot_concept_Topic_NonTypesystemRule$PROPS" />
+      <unit id="7237576769905744937" at="60,0,64,0" name="ProjectionalQiChat.typesystem.check_double_robot_concept_Topic_NonTypesystemRule$LINKS" />
+      <unit id="7237576769905744937" at="65,0,69,0" name="ProjectionalQiChat.typesystem.check_double_robot_concept_Topic_NonTypesystemRule$CONCEPTS" />
+      <unit id="7237576769905744937" at="26,0,70,0" name="ProjectionalQiChat.typesystem.check_double_robot_concept_Topic_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/7237576769905748250">
+    <file name="change_names_Topic_QuickFix.java">
+      <node id="7237576769905748250" at="22,40,23,124" concept="11" />
+      <node id="7237576769905773094" at="25,44,26,29" concept="8" />
+      <node id="7237576769905751198" at="28,35,29,290" concept="7" />
+      <node id="7237576769905751210" at="29,290,30,290" concept="7" />
+      <node id="7237576769905751222" at="30,290,31,0" concept="9" />
+      <node id="7237576769905751232" at="33,38,34,66" concept="8" />
+      <node id="7237576769905751240" at="36,24,37,87" concept="7" />
+      <node id="7237576769905751256" at="39,38,40,66" concept="8" />
+      <node id="7237576769905751264" at="42,24,43,87" concept="7" />
+      <node id="7237576769905751271" at="43,87,44,0" concept="9" />
+      <node id="7237576769905751276" at="45,50,46,20" concept="7" />
+      <node id="7237576769905751280" at="46,20,47,35" concept="7" />
+      <node id="7237576769905751286" at="48,77,49,44" concept="2" />
+      <node id="7237576769905751294" at="49,44,50,16" concept="2" />
+      <node id="7237576769905751301" at="51,7,52,70" concept="2" />
+      <node id="7237576769905751306" at="53,5,54,0" concept="9" />
+      <node id="7237576769905751311" at="55,50,56,20" concept="7" />
+      <node id="7237576769905751315" at="56,20,57,35" concept="7" />
+      <node id="7237576769905751321" at="58,77,59,44" concept="2" />
+      <node id="7237576769905751329" at="59,44,60,16" concept="2" />
+      <node id="7237576769905751336" at="61,7,62,70" concept="2" />
+      <node id="7237576769905751341" at="63,5,64,0" concept="9" />
+      <node id="7237576769905751344" at="65,76,66,161" concept="2" />
+      <node id="7237576769905751366" at="68,76,69,161" concept="2" />
+      <node id="7237576769905748250" at="74,0,75,0" concept="10" trace="header$Q5v0" />
+      <node id="7237576769905748250" at="75,0,76,0" concept="10" trace="localConcepts$hTKt" />
+      <node id="7237576769905748250" at="79,0,80,0" concept="10" trace="HumanConcept$qf" />
+      <node id="7237576769905748250" at="80,0,81,0" concept="10" trace="RobotConcept$rd" />
+      <node id="7237576769905748250" at="84,0,85,0" concept="10" trace="name$MnvL" />
+      <node id="7237576769905748250" at="22,0,25,0" concept="1" trace="change_names_Topic_QuickFix#()V" />
+      <node id="7237576769905748250" at="25,0,28,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="7237576769905751230" at="33,0,36,0" concept="6" trace="select#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="7237576769905751254" at="39,0,42,0" concept="6" trace="select#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="7237576769905751342" at="64,0,67,5" concept="3" />
+      <node id="7237576769905751364" at="67,5,70,5" concept="3" />
+      <node id="7237576769905751284" at="47,35,51,7" concept="12" />
+      <node id="7237576769905751319" at="57,35,61,7" concept="12" />
+      <node id="7237576769905751223" at="31,0,36,24" concept="7" />
+      <node id="7237576769905751247" at="37,87,42,24" concept="7" />
+      <node id="7237576769905751272" at="44,0,53,5" concept="4" />
+      <node id="7237576769905751307" at="54,0,63,5" concept="4" />
+      <node id="7237576769905748250" at="28,0,72,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="7237576769905748250" at="22,40,23,124" />
+      <scope id="7237576769905772472" at="25,44,26,29" />
+      <scope id="7237576769905751231" at="33,38,34,66" />
+      <scope id="7237576769905751255" at="39,38,40,66" />
+      <scope id="7237576769905751343" at="65,76,66,161" />
+      <scope id="7237576769905751365" at="68,76,69,161" />
+      <scope id="7237576769905751285" at="48,77,50,16" />
+      <scope id="7237576769905751320" at="58,77,60,16" />
+      <scope id="7237576769905748250" at="22,0,25,0" />
+      <scope id="7237576769905748250" at="25,0,28,0">
+        <var name="node" id="7237576769905748250" />
+      </scope>
+      <scope id="7237576769905751230" at="33,0,36,0">
+        <var name="it" id="7237576769905751230" />
+      </scope>
+      <scope id="7237576769905751254" at="39,0,42,0">
+        <var name="it" id="7237576769905751254" />
+      </scope>
+      <scope id="7237576769905751342" at="64,0,67,5">
+        <var name="i" id="7237576769905751354" />
+      </scope>
+      <scope id="7237576769905751364" at="67,5,70,5">
+        <var name="i" id="7237576769905751376" />
+      </scope>
+      <scope id="7237576769905751275" at="45,50,52,70">
+        <var name="count" id="7237576769905751277" />
+        <var name="tmpName" id="7237576769905751281" />
+      </scope>
+      <scope id="7237576769905751310" at="55,50,62,70">
+        <var name="count" id="7237576769905751312" />
+        <var name="tmpName" id="7237576769905751316" />
+      </scope>
+      <scope id="7237576769905751272" at="44,0,53,5">
+        <var name="conceptName" id="7237576769905751273" />
+      </scope>
+      <scope id="7237576769905751307" at="54,0,63,5">
+        <var name="conceptName" id="7237576769905751308" />
+      </scope>
+      <scope id="7237576769905748252" at="28,35,70,5">
+        <var name="humanConceptNames" id="7237576769905751224" />
+        <var name="humanConcepts" id="7237576769905751199" />
+        <var name="newHumanConceptNames" id="7237576769905751241" />
+        <var name="newRobotConceptNames" id="7237576769905751265" />
+        <var name="robotConceptNames" id="7237576769905751248" />
+        <var name="robotConcepts" id="7237576769905751211" />
+      </scope>
+      <scope id="7237576769905748250" at="28,0,72,0">
+        <var name="node" id="7237576769905748250" />
+      </scope>
+      <unit id="7237576769905748250" at="83,0,86,0" name="ProjectionalQiChat.typesystem.change_names_Topic_QuickFix$PROPS" />
+      <unit id="7237576769905751230" at="32,85,36,5" name="ProjectionalQiChat.typesystem.change_names_Topic_QuickFix$1" />
+      <unit id="7237576769905751254" at="38,85,42,5" name="ProjectionalQiChat.typesystem.change_names_Topic_QuickFix$2" />
+      <unit id="7237576769905748250" at="73,0,77,0" name="ProjectionalQiChat.typesystem.change_names_Topic_QuickFix$LINKS" />
+      <unit id="7237576769905748250" at="78,0,82,0" name="ProjectionalQiChat.typesystem.change_names_Topic_QuickFix$CONCEPTS" />
+      <unit id="7237576769905748250" at="21,0,87,0" name="ProjectionalQiChat.typesystem.change_names_Topic_QuickFix" />
+    </file>
+  </root>
+</debug-info>
 

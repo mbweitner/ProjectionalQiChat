@@ -69,7 +69,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private boolean nodeCondition_8g1p9d_a2a() {
-    return SNodeOperations.isInstanceOf(SNodeOperations.getParent(myNode), CONCEPTS.RobotOutput$SA);
+    return (SNodeOperations.getNodeAncestor(myNode, CONCEPTS.RobotOutput$SA, false, false) != null);
   }
   private EditorCell createConstant_0() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Word:");

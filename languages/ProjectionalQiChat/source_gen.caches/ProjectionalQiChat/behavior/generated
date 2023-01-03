@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-29d0dk9r738cfsiedukc50dbjrmj0e9">
-  <files names="BehaviorAspectDescriptor.java:ConceptCollection__BehaviorDescriptor.java:Pause__BehaviorDescriptor.java" />
+<product version="3" modelHash="byjtnr5sl35y98didqiiicc942aiidz">
+  <files names="AbstractUserRule__BehaviorDescriptor.java:BehaviorAspectDescriptor.java:CommentRule__BehaviorDescriptor.java:ConceptCollection__BehaviorDescriptor.java:ConceptContainer__BehaviorDescriptor.java:Concept__BehaviorDescriptor.java:HumanConcept__BehaviorDescriptor.java:InputChoice__BehaviorDescriptor.java:OutputChoice__BehaviorDescriptor.java:Pause__BehaviorDescriptor.java:Proposal__BehaviorDescriptor.java:RobotConcept__BehaviorDescriptor.java:Topic__BehaviorDescriptor.java:VariableDeclarationContainer__BehaviorDescriptor.java:VoiceTuningConfig__BehaviorDescriptor.java:Word__BehaviorDescriptor.java" />
 </product>
 

@@ -9,7 +9,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
   <root>
     <file name="ActionAspectDescriptorImpl.java">
-      <unit at="12,0,32,0" name="ProjectionalQiChat.actions.ActionAspectDescriptorImpl" />
+      <unit at="12,0,38,0" name="ProjectionalQiChat.actions.ActionAspectDescriptorImpl" />
     </file>
   </root>
   <root nodeRef="r:0641c388-4638-4ae9-924f-d5e71c20d5e6(ProjectionalQiChat.actions)/1884303105527564454">
@@ -42,22 +42,22 @@
       <node id="2759821551024032800" at="21,63,22,23" concept="4" />
       <node id="2759821551024020952" at="22,23,23,0" concept="5" />
       <node id="2759821551032468692" at="25,35,26,77" concept="0" />
-      <node id="2759821551032791481" at="26,77,27,112" concept="0" />
-      <node id="2759821551024129982" at="27,112,28,34" concept="0" />
+      <node id="2759821551032791481" at="26,77,27,104" concept="0" />
+      <node id="2759821551024129982" at="27,104,28,34" concept="0" />
       <node id="2759821551024071642" at="30,124,31,95" concept="4" />
       <node id="2759821551024073551" at="31,95,32,82" concept="0" />
-      <node id="2759821551024090656" at="33,192,34,119" concept="0" />
+      <node id="2759821551024090656" at="33,176,34,111" concept="0" />
       <node id="2759821551024108577" at="35,11,36,34" concept="0" />
       <node id="2759821551023994118" at="38,7,39,0" concept="5" />
       <node id="2759821551011159297" at="44,0,45,0" concept="6" trace="position$nQKo" />
-      <node id="2759821551011159297" at="45,0,46,0" concept="6" trace="optionalName$nW9J" />
+      <node id="2759821551011159297" at="45,0,46,0" concept="6" trace="name$MnvL" />
       <node id="2759821551011159297" at="49,0,50,0" concept="6" trace="InputStore$rg" />
       <node id="2759821551024079418" at="32,82,35,11" concept="2" />
       <node id="2759821551024120106" at="24,74,29,9" concept="2" />
       <node id="2759821551024064488" at="29,9,37,9" concept="2" />
       <node id="2759821551024023209" at="23,0,38,7" concept="1" />
       <node id="2759821551011159298" at="18,0,41,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;ILorg/jetbrains/mps/openapi/model/SModel;)V" />
-      <scope id="2759821551024079420" at="33,192,34,119" />
+      <scope id="2759821551024079420" at="33,176,34,111" />
       <scope id="2759821551024120108" at="25,35,28,34" />
       <scope id="2759821551024064490" at="30,124,36,34">
         <var name="currentStore" id="2759821551024071645" />
@@ -101,6 +101,66 @@
       <unit id="5556009294073239502" at="20,0,23,0" name="ProjectionalQiChat.actions.createCommentForCommentRule$LINKS" />
       <unit id="5556009294073239503" at="14,0,19,0" name="ProjectionalQiChat.actions.createCommentForCommentRule$NodeFactory_5556009294073239503" />
       <unit id="5556009294073239502" at="13,0,24,0" name="ProjectionalQiChat.actions.createCommentForCommentRule" />
+    </file>
+  </root>
+  <root nodeRef="r:0641c388-4638-4ae9-924f-d5e71c20d5e6(ProjectionalQiChat.actions)/8305283705764148390">
+    <file name="initializeFirstOrderSubrule.java">
+      <node id="8305283705764148405" at="15,102,16,230" concept="0" />
+      <node id="8305283705764156760" at="16,230,17,232" concept="0" />
+      <node id="8305283705764148390" at="22,0,23,0" concept="6" trace="input$kRKG" />
+      <node id="8305283705764148390" at="23,0,24,0" concept="6" trace="output$kSeI" />
+      <node id="8305283705764148391" at="15,0,19,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;ILorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <scope id="8305283705764148391" at="15,102,17,232" />
+      <scope id="8305283705764148391" at="15,0,19,0">
+        <var name="enclosingNode" id="8305283705764148391" />
+        <var name="index" id="8305283705764148391" />
+        <var name="model" id="8305283705764148391" />
+        <var name="newNode" id="8305283705764148391" />
+        <var name="sampleNode" id="8305283705764148391" />
+      </scope>
+      <unit id="8305283705764148390" at="21,0,25,0" name="ProjectionalQiChat.actions.initializeFirstOrderSubrule$LINKS" />
+      <unit id="8305283705764148391" at="14,0,20,0" name="ProjectionalQiChat.actions.initializeFirstOrderSubrule$NodeFactory_8305283705764148391" />
+      <unit id="8305283705764148390" at="13,0,26,0" name="ProjectionalQiChat.actions.initializeFirstOrderSubrule" />
+    </file>
+  </root>
+  <root nodeRef="r:0641c388-4638-4ae9-924f-d5e71c20d5e6(ProjectionalQiChat.actions)/8305283705764670628">
+    <file name="initializeSecondOrderSubrule.java">
+      <node id="8305283705764670643" at="15,102,16,230" concept="0" />
+      <node id="8305283705764674035" at="16,230,17,232" concept="0" />
+      <node id="8305283705764670628" at="22,0,23,0" concept="6" trace="input$kRKG" />
+      <node id="8305283705764670628" at="23,0,24,0" concept="6" trace="output$kSeI" />
+      <node id="8305283705764670629" at="15,0,19,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;ILorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <scope id="8305283705764670629" at="15,102,17,232" />
+      <scope id="8305283705764670629" at="15,0,19,0">
+        <var name="enclosingNode" id="8305283705764670629" />
+        <var name="index" id="8305283705764670629" />
+        <var name="model" id="8305283705764670629" />
+        <var name="newNode" id="8305283705764670629" />
+        <var name="sampleNode" id="8305283705764670629" />
+      </scope>
+      <unit id="8305283705764670628" at="21,0,25,0" name="ProjectionalQiChat.actions.initializeSecondOrderSubrule$LINKS" />
+      <unit id="8305283705764670629" at="14,0,20,0" name="ProjectionalQiChat.actions.initializeSecondOrderSubrule$NodeFactory_8305283705764670629" />
+      <unit id="8305283705764670628" at="13,0,26,0" name="ProjectionalQiChat.actions.initializeSecondOrderSubrule" />
+    </file>
+  </root>
+  <root nodeRef="r:0641c388-4638-4ae9-924f-d5e71c20d5e6(ProjectionalQiChat.actions)/8305283705764678568">
+    <file name="initializeThirdOrderSubrule.java">
+      <node id="8305283705764678583" at="15,102,16,230" concept="0" />
+      <node id="8305283705764681623" at="16,230,17,232" concept="0" />
+      <node id="8305283705764678568" at="22,0,23,0" concept="6" trace="input$kRKG" />
+      <node id="8305283705764678568" at="23,0,24,0" concept="6" trace="output$kSeI" />
+      <node id="8305283705764678569" at="15,0,19,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;ILorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <scope id="8305283705764678569" at="15,102,17,232" />
+      <scope id="8305283705764678569" at="15,0,19,0">
+        <var name="enclosingNode" id="8305283705764678569" />
+        <var name="index" id="8305283705764678569" />
+        <var name="model" id="8305283705764678569" />
+        <var name="newNode" id="8305283705764678569" />
+        <var name="sampleNode" id="8305283705764678569" />
+      </scope>
+      <unit id="8305283705764678568" at="21,0,25,0" name="ProjectionalQiChat.actions.initializeThirdOrderSubrule$LINKS" />
+      <unit id="8305283705764678569" at="14,0,20,0" name="ProjectionalQiChat.actions.initializeThirdOrderSubrule$NodeFactory_8305283705764678569" />
+      <unit id="8305283705764678568" at="13,0,26,0" name="ProjectionalQiChat.actions.initializeThirdOrderSubrule" />
     </file>
   </root>
 </debug-info>

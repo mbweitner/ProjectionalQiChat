@@ -9,6 +9,7 @@
   <imports>
     <import index="zefy" ref="r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -312,7 +313,7 @@
                       <node concept="2OqwBi" id="2pcQLgoLJgY" role="37vLTJ">
                         <node concept="1r4Lsj" id="2pcQLgoLJ6S" role="2Oq$k0" />
                         <node concept="3TrcHB" id="2pcQLgoLJOt" role="2OqNvi">
-                          <ref role="3TsBF5" to="zefy:4P1LQvocRJf" resolve="optionalName" />
+                          <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                         </node>
                       </node>
                     </node>
@@ -399,7 +400,7 @@
                               <ref role="3cqZAo" node="2pcQLgoguft" resolve="currentStore" />
                             </node>
                             <node concept="3TrcHB" id="2pcQLgogz_w" role="2OqNvi">
-                              <ref role="3TsBF5" to="zefy:4P1LQvocRJf" resolve="optionalName" />
+                              <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                             </node>
                           </node>
                         </node>
@@ -412,7 +413,7 @@
                             <ref role="3cqZAo" node="2pcQLgoguft" resolve="currentStore" />
                           </node>
                           <node concept="3TrcHB" id="2pcQLgohZMM" role="2OqNvi">
-                            <ref role="3TsBF5" to="zefy:4P1LQvocRJf" resolve="optionalName" />
+                            <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                           </node>
                         </node>
                         <node concept="liA8E" id="2pcQLgoBDjp" role="2OqNvi">
@@ -425,7 +426,7 @@
                             <ref role="3cqZAo" node="2pcQLgoguft" resolve="currentStore" />
                           </node>
                           <node concept="3TrcHB" id="2pcQLgogwBA" role="2OqNvi">
-                            <ref role="3TsBF5" to="zefy:4P1LQvocRJf" resolve="optionalName" />
+                            <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                           </node>
                         </node>
                         <node concept="liA8E" id="2pcQLgogy39" role="2OqNvi">
@@ -492,6 +493,141 @@
             </node>
           </node>
           <node concept="3clFbH" id="2pcQLgogbk6" role="3cqZAp" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="37WguZ" id="7d2iSrKUniA">
+    <property role="3GE5qa" value="UserRules" />
+    <property role="TrG5h" value="initializeFirstOrderSubrule" />
+    <node concept="37WvkG" id="7d2iSrKUniB" role="37WGs$">
+      <ref role="37XkoT" to="zefy:6Zi8Kosir43" resolve="FirstOrderSubrule" />
+      <node concept="37Y9Zx" id="7d2iSrKUniC" role="37ZfLb">
+        <node concept="3clFbS" id="7d2iSrKUniD" role="2VODD2">
+          <node concept="3clFbF" id="7d2iSrKUniP" role="3cqZAp">
+            <node concept="37vLTI" id="7d2iSrKUoUR" role="3clFbG">
+              <node concept="2ShNRf" id="7d2iSrKUoXt" role="37vLTx">
+                <node concept="3zrR0B" id="7d2iSrKUphr" role="2ShVmc">
+                  <node concept="3Tqbb2" id="7d2iSrKUpht" role="3zrR0E">
+                    <ref role="ehGHo" to="zefy:6Zi8Kosir0O" resolve="HumanInput" />
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="7d2iSrKUntp" role="37vLTJ">
+                <node concept="1r4Lsj" id="7d2iSrKUniO" role="2Oq$k0" />
+                <node concept="3TrEf2" id="7d2iSrKUoKo" role="2OqNvi">
+                  <ref role="3Tt5mk" to="zefy:4P1LQvocRIs" resolve="input" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="7d2iSrKUplo" role="3cqZAp">
+            <node concept="37vLTI" id="7d2iSrKUpUs" role="3clFbG">
+              <node concept="2ShNRf" id="7d2iSrKUpWZ" role="37vLTx">
+                <node concept="3zrR0B" id="7d2iSrKUqgX" role="2ShVmc">
+                  <node concept="3Tqbb2" id="7d2iSrKUqgZ" role="3zrR0E">
+                    <ref role="ehGHo" to="zefy:6Zi8Kosir0N" resolve="RobotOutput" />
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="7d2iSrKUpwe" role="37vLTJ">
+                <node concept="1r4Lsj" id="7d2iSrKUpln" role="2Oq$k0" />
+                <node concept="3TrEf2" id="7d2iSrKUpLL" role="2OqNvi">
+                  <ref role="3Tt5mk" to="zefy:4P1LQvocRIu" resolve="output" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="37WguZ" id="7d2iSrKWmM$">
+    <property role="3GE5qa" value="UserRules" />
+    <property role="TrG5h" value="initializeSecondOrderSubrule" />
+    <node concept="37WvkG" id="7d2iSrKWmM_" role="37WGs$">
+      <ref role="37XkoT" to="zefy:6Zi8Kosir44" resolve="SecondOrderSubrule" />
+      <node concept="37Y9Zx" id="7d2iSrKWmMA" role="37ZfLb">
+        <node concept="3clFbS" id="7d2iSrKWmMB" role="2VODD2">
+          <node concept="3clFbF" id="7d2iSrKWmMN" role="3cqZAp">
+            <node concept="37vLTI" id="7d2iSrKWnpS" role="3clFbG">
+              <node concept="2ShNRf" id="7d2iSrKWnsu" role="37vLTx">
+                <node concept="3zrR0B" id="7d2iSrKWnzs" role="2ShVmc">
+                  <node concept="3Tqbb2" id="7d2iSrKWnzT" role="3zrR0E">
+                    <ref role="ehGHo" to="zefy:6Zi8Kosir0O" resolve="HumanInput" />
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="7d2iSrKWmXf" role="37vLTJ">
+                <node concept="1r4Lsj" id="7d2iSrKWmMM" role="2Oq$k0" />
+                <node concept="3TrEf2" id="7d2iSrKWneK" role="2OqNvi">
+                  <ref role="3Tt5mk" to="zefy:4P1LQvocRIs" resolve="input" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="7d2iSrKWnBN" role="3cqZAp">
+            <node concept="37vLTI" id="7d2iSrKWohg" role="3clFbG">
+              <node concept="2OqwBi" id="7d2iSrKWnMN" role="37vLTJ">
+                <node concept="1r4Lsj" id="7d2iSrKWnBM" role="2Oq$k0" />
+                <node concept="3TrEf2" id="7d2iSrKWo4k" role="2OqNvi">
+                  <ref role="3Tt5mk" to="zefy:4P1LQvocRIu" resolve="output" />
+                </node>
+              </node>
+              <node concept="2ShNRf" id="7d2iSrKWosm" role="37vLTx">
+                <node concept="3zrR0B" id="7d2iSrKWosk" role="2ShVmc">
+                  <node concept="3Tqbb2" id="7d2iSrKWosl" role="3zrR0E">
+                    <ref role="ehGHo" to="zefy:6Zi8Kosir0N" resolve="RobotOutput" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="37WguZ" id="7d2iSrKWoIC">
+    <property role="3GE5qa" value="UserRules" />
+    <property role="TrG5h" value="initializeThirdOrderSubrule" />
+    <node concept="37WvkG" id="7d2iSrKWoID" role="37WGs$">
+      <ref role="37XkoT" to="zefy:6Zi8Kosir45" resolve="ThirdOrderSubrule" />
+      <node concept="37Y9Zx" id="7d2iSrKWoIE" role="37ZfLb">
+        <node concept="3clFbS" id="7d2iSrKWoIF" role="2VODD2">
+          <node concept="3clFbF" id="7d2iSrKWoIR" role="3cqZAp">
+            <node concept="37vLTI" id="7d2iSrKWpoc" role="3clFbG">
+              <node concept="2ShNRf" id="7d2iSrKWpqM" role="37vLTx">
+                <node concept="3zrR0B" id="7d2iSrKWpqK" role="2ShVmc">
+                  <node concept="3Tqbb2" id="7d2iSrKWpqL" role="3zrR0E">
+                    <ref role="ehGHo" to="zefy:6Zi8Kosir0O" resolve="HumanInput" />
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="7d2iSrKWoVz" role="37vLTJ">
+                <node concept="1r4Lsj" id="7d2iSrKWoIQ" role="2Oq$k0" />
+                <node concept="3TrEf2" id="7d2iSrKWpd4" role="2OqNvi">
+                  <ref role="3Tt5mk" to="zefy:4P1LQvocRIs" resolve="input" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="7d2iSrKWpun" role="3cqZAp">
+            <node concept="37vLTI" id="7d2iSrKWq3r" role="3clFbG">
+              <node concept="2ShNRf" id="7d2iSrKWq8r" role="37vLTx">
+                <node concept="3zrR0B" id="7d2iSrKWq8p" role="2ShVmc">
+                  <node concept="3Tqbb2" id="7d2iSrKWq8q" role="3zrR0E">
+                    <ref role="ehGHo" to="zefy:6Zi8Kosir0N" resolve="RobotOutput" />
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="7d2iSrKWpDd" role="37vLTJ">
+                <node concept="1r4Lsj" id="7d2iSrKWpum" role="2Oq$k0" />
+                <node concept="3TrEf2" id="7d2iSrKWpUK" role="2OqNvi">
+                  <ref role="3Tt5mk" to="zefy:4P1LQvocRIu" resolve="output" />
+                </node>
+              </node>
+            </node>
+          </node>
         </node>
       </node>
     </node>

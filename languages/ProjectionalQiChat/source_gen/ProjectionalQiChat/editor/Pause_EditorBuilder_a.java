@@ -15,6 +15,10 @@ import jetbrains.mps.editor.runtime.style.StyleImpl;
 import ProjectionalQiChat.editor.globalStyles_StyleSheet.notEditableStyleClass;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Image;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.editor.runtime.EditorCell_Empty;
+import jetbrains.mps.openapi.editor.cells.CellActionType;
+import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
 
 /*package*/ class Pause_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -40,9 +44,10 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
     editorCell.setCellId("Collection_5zq6tn_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
+    editorCell.addKeyMap(new Pause_KeyMap());
     editorCell.addEditorCell(createConstant_0());
     editorCell.addEditorCell(createImage_0());
-    editorCell.addEditorCell(createConstant_1());
+    editorCell.addEditorCell(createEmpty_0());
     return editorCell;
   }
   private EditorCell createConstant_0() {
@@ -57,16 +62,22 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
   private EditorCell createImage_0() {
     EditorCell_Image editorCell = EditorCell_Image.createImageCell(getEditorContext(), myNode, SNodeOperations.getConcept(myNode).getLanguage().getSourceModule(), "${module}/icons/pause.png");
     editorCell.setCellId("Image_5zq6tn_b0");
+    editorCell.addKeyMap(new Pause_KeyMap());
     editorCell.setDescent(0);
     return editorCell;
   }
-  private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
-    editorCell.setCellId("Constant_5zq6tn_c0");
+  private EditorCell createEmpty_0() {
+    EditorCell_Empty editorCell = new EditorCell_Empty(getEditorContext(), myNode);
+    editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteNode(editorCell.getSNode(), CellAction_DeleteNode.DeleteDirection.FORWARD));
+    editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteNode(editorCell.getSNode(), CellAction_DeleteNode.DeleteDirection.BACKWARD));
+    editorCell.setCellId("Empty_5zq6tn_c0");
     Style style = new StyleImpl();
-    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    style.set(StyleAttributes.PUNCTUATION_LEFT, _StyleParameter_QueryFunction_5zq6tn_a0c0());
     editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
+    editorCell.addKeyMap(new Pause_KeyMap());
     return editorCell;
+  }
+  private boolean _StyleParameter_QueryFunction_5zq6tn_a0c0() {
+    return SNodeOperations.getNextSibling(getNode()) != null;
   }
 }

@@ -144,6 +144,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     Style style = new StyleImpl();
     style.set(StyleAttributes.PUNCTUATION_LEFT, true);
     editorCell.getStyle().putAll(style);
+    editorCell.addKeyMap(new Phrase_KeyMap());
     editorCell.setDefaultText("");
     return editorCell;
   }

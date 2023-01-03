@@ -25,7 +25,6 @@ import ProjectionalQiChat.editor.globalStyles_StyleSheet.ruleBordersStyleClass;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import ProjectionalQiChat.editor.globalStyles_StyleSheet.notEditableStyleClass;
-import jetbrains.mps.nodeEditor.cells.EditorCell_Indent;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
@@ -140,19 +139,13 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.addEditorCell(createConstant_2());
     editorCell.addEditorCell(createConstant_3());
     editorCell.addEditorCell(createRefNode_2());
-    if (nodeCondition_stapb6_a6b0()) {
-      editorCell.addEditorCell(createConstant_4());
-    }
-    editorCell.addEditorCell(createIndentCell_0());
-    if (nodeCondition_stapb6_a8b0()) {
-      editorCell.addEditorCell(createRefNodeList_0());
+    editorCell.addEditorCell(createConstant_4());
+    if (nodeCondition_stapb6_a7b0()) {
+      editorCell.addEditorCell(createCollection_2());
     }
     return editorCell;
   }
-  private boolean nodeCondition_stapb6_a6b0() {
-    return ListSequence.fromList(SLinkOperations.getChildren(myNode, LINKS.subrules$kZhF)).isNotEmpty();
-  }
-  private boolean nodeCondition_stapb6_a8b0() {
+  private boolean nodeCondition_stapb6_a7b0() {
     return ListSequence.fromList(SLinkOperations.getChildren(myNode, LINKS.subrules$kZhF)).isNotEmpty();
   }
   private EditorCell createConstant_0() {
@@ -316,15 +309,26 @@ import org.jetbrains.mps.openapi.language.SConcept;
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     editorCell.getStyle().putAll(style);
+    editorCell.addKeyMap(new new_firstOrderSubrule());
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createIndentCell_0() {
-    EditorCell_Indent editorCell = new EditorCell_Indent(getEditorContext(), myNode);
+  private EditorCell createCollection_2() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_stapb6_h1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    editorCell.getStyle().putAll(style);
+    if (nodeCondition_stapb6_a0h1a()) {
+      editorCell.addEditorCell(createRefNodeList_0());
+    }
     return editorCell;
   }
+  private boolean nodeCondition_stapb6_a0h1a() {
+    return ListSequence.fromList(SLinkOperations.getChildren(myNode, LINKS.subrules$kZhF)).isNotEmpty();
+  }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new subrulesListHandler_stapb6_i1a(myNode, getEditorContext());
+    AbstractCellListHandler handler = new subrulesListHandler_stapb6_a7b0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Indent(), false);
     editorCell.setCellId("refNodeList_subrules");
     Style style = new StyleImpl();
@@ -335,11 +339,11 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class subrulesListHandler_stapb6_i1a extends RefNodeListHandler {
+  private static class subrulesListHandler_stapb6_a7b0 extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public subrulesListHandler_stapb6_i1a(SNode ownerNode, EditorContext context) {
+    public subrulesListHandler_stapb6_a7b0(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -365,7 +369,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(subrulesListHandler_stapb6_i1a.this.getNode(), LINKS.subrules$kZhF));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(subrulesListHandler_stapb6_a7b0.this.getNode(), LINKS.subrules$kZhF));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -406,7 +410,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     @Override
     public EditorCell createSeparatorCell(SNode prevNode, SNode nextNode) {
-      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), getNode(), subrulesListHandler_stapb6_i1a.this.getSeparatorText(prevNode, nextNode));
+      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), getNode(), subrulesListHandler_stapb6_a7b0.this.getSeparatorText(prevNode, nextNode));
       editorCell.setSelectable(false);
       Style style = new StyleImpl();
       style.set(StyleAttributes.LAYOUT_CONSTRAINT, "");

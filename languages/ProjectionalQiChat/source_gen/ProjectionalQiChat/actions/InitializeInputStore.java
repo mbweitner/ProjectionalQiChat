@@ -24,14 +24,14 @@ public class InitializeInputStore {
       for (int childNumber = 0; childNumber < childCount; childNumber++) {
         if (childNumber == index) {
           SPropertyOperations.assign(newNode, PROPS.position$nQKo, position);
-          SPropertyOperations.assign(newNode, PROPS.optionalName$nW9J, "InputStore" + String.valueOf(position));
+          SPropertyOperations.assign(newNode, PROPS.name$MnvL, "InputStore" + String.valueOf(position));
           position = position + 1;
         }
         if (SNodeOperations.isInstanceOf(ListSequence.fromList(children).getElement(childNumber), CONCEPTS.InputStore$rg)) {
           SNode currentStore = (SNode) ListSequence.fromList(children).getElement(childNumber);
           SPropertyOperations.assign(currentStore, PROPS.position$nQKo, position);
-          if (SPropertyOperations.getString(currentStore, PROPS.optionalName$nW9J).startsWith("InputStore") || SPropertyOperations.getString(currentStore, PROPS.optionalName$nW9J).isEmpty()) {
-            SPropertyOperations.assign(currentStore, PROPS.optionalName$nW9J, "InputStore" + String.valueOf(position));
+          if (SPropertyOperations.getString(currentStore, PROPS.name$MnvL).startsWith("InputStore") || SPropertyOperations.getString(currentStore, PROPS.name$MnvL).isEmpty()) {
+            SPropertyOperations.assign(currentStore, PROPS.name$MnvL, "InputStore" + String.valueOf(position));
           }
           position = position + 1;
         }
@@ -42,7 +42,7 @@ public class InitializeInputStore {
 
   private static final class PROPS {
     /*package*/ static final SProperty position$nQKo = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b15dL, 0x4d41c767d8337bcdL, "position");
-    /*package*/ static final SProperty optionalName$nW9J = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b15dL, 0x4d41c767d8337bcfL, "optionalName");
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 
   private static final class CONCEPTS {

@@ -18,13 +18,17 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
 import jetbrains.mps.openapi.editor.cells.DefaultSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.SEmptyContainmentSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
 import jetbrains.mps.openapi.editor.cells.CellActionType;
 import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import org.jetbrains.mps.openapi.language.SInterfaceConcept;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 /*package*/ class HumanInput_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -87,7 +91,12 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     }
 
     public SNode nodeFactory(SNode prevNode, SNode nextNode, int index) {
-      return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L, "ProjectionalQiChat.structure.Word"));
+      SNode newWord = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L, "ProjectionalQiChat.structure.Word"));
+      SLinkOperations.setTarget(newWord, LINKS.voiceTuning$ZxMO, SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b253bL, "ProjectionalQiChat.structure.VoiceTuningConfig")));
+      SPropertyOperations.assign(SLinkOperations.getTarget(newWord, LINKS.voiceTuning$ZxMO), PROPS.pitch$miKV, 100);
+      SPropertyOperations.assign(SLinkOperations.getTarget(newWord, LINKS.voiceTuning$ZxMO), PROPS.speakingRate$mjeX, 100);
+      SPropertyOperations.assign(SLinkOperations.getTarget(newWord, LINKS.voiceTuning$ZxMO), PROPS.volume$moRl, 100);
+      return newWord;
     }
     public EditorCell createNodeCell(SNode elementNode) {
       EditorCell elementCell = getUpdateSession().updateChildNodeCell(elementNode);
@@ -99,7 +108,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
       getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(inputsListHandler_3j2vfr_a0.this.getNode(), LINKS.inputs$iwW4));
       try {
         EditorCell emptyCell = null;
-        emptyCell = super.createEmptyCell();
+        emptyCell = createConstant_0();
         installElementCellActions(null, emptyCell, true);
         setCellContext(emptyCell);
         return emptyCell;
@@ -135,13 +144,26 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
         }
       }
     }
+    private EditorCell createConstant_0() {
+      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+      editorCell.setCellId("Constant_3j2vfr_a0a");
+      editorCell.setDefaultText("<here has to be input!>");
+      return editorCell;
+    }
   }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink inputs$iwW4 = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b034L, 0x4d41c767d8337bb9L, "inputs");
+    /*package*/ static final SContainmentLink voiceTuning$ZxMO = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L, 0xf8c3893a78b2550L, "voiceTuning");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SInterfaceConcept IHumanInputConfirmed$rG = MetaAdapterFactory.getInterfaceConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b109L, "ProjectionalQiChat.structure.IHumanInputConfirmed");
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty pitch$miKV = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b253bL, 0xf8c3893a78b253cL, "pitch");
+    /*package*/ static final SProperty speakingRate$mjeX = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b253bL, 0xf8c3893a78b253eL, "speakingRate");
+    /*package*/ static final SProperty volume$moRl = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b253bL, 0xf8c3893a78b2541L, "volume");
   }
 }
