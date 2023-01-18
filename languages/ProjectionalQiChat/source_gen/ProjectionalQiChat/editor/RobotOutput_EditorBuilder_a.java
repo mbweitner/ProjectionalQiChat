@@ -147,7 +147,7 @@ import org.jetbrains.mps.openapi.language.SProperty;
     private EditorCell createConstant_0() {
       EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
       editorCell.setCellId("Constant_74ils_a0a");
-      editorCell.setDefaultText("<here has to be output>");
+      editorCell.setDefaultText("<here has to be output!>");
       return editorCell;
     }
   }

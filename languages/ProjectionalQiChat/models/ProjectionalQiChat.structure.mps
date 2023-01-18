@@ -70,6 +70,21 @@
     <property role="TrG5h" value="Topic" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="3Mn0fnacZdY" role="1TKVEl">
+      <property role="IQ2nx" value="4365959419418375038" />
+      <property role="TrG5h" value="showDetails" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="3Mn0fnacZdZ" role="1TKVEl">
+      <property role="IQ2nx" value="4365959419418375039" />
+      <property role="TrG5h" value="hideProposals" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="3Mn0fnacZe0" role="1TKVEl">
+      <property role="IQ2nx" value="4365959419418375040" />
+      <property role="TrG5h" value="hideUserRules" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
     <node concept="PrWs8" id="6Zi8Kosir0c" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -119,6 +134,21 @@
       <property role="TrG5h" value="language" />
       <ref role="AX2Wp" node="6Zi8Kosir0Q" resolve="Language" />
     </node>
+    <node concept="1TJgyi" id="2TAzTAF_FRf" role="1TKVEl">
+      <property role="IQ2nx" value="3343517663540723151" />
+      <property role="TrG5h" value="showDetails" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="2TAzTAF_KKy" role="1TKVEl">
+      <property role="IQ2nx" value="3343517663540743202" />
+      <property role="TrG5h" value="hideHumanConcepts" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="2TAzTAF_KKY" role="1TKVEl">
+      <property role="IQ2nx" value="3343517663540743230" />
+      <property role="TrG5h" value="hideRobotConcepts" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
     <node concept="1TJgyj" id="4P1LQvocRHR" role="1TKVEi">
       <property role="IQ2ns" value="5566949863229455223" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -155,15 +185,16 @@
   <node concept="1TIwiD" id="6Zi8Kosir0J">
     <property role="EcuMT" value="8057541192470605871" />
     <property role="TrG5h" value="CommentRule" />
-    <property role="34LRSv" value="#" />
+    <property role="3GE5qa" value="Utilities" />
+    <property role="34LRSv" value="Comment" />
     <property role="R4oN_" value="Comment" />
     <ref role="1TJDcQ" node="6Zi8Kosir0j" resolve="Rule" />
   </node>
   <node concept="1TIwiD" id="6Zi8Kosir0K">
     <property role="EcuMT" value="8057541192470605872" />
     <property role="TrG5h" value="Proposal" />
-    <property role="34LRSv" value="p" />
-    <property role="R4oN_" value="Proposal (Robot output only)" />
+    <property role="34LRSv" value="Robot Output Only" />
+    <property role="R4oN_" value="(has to be triggered by nextProposal)" />
     <ref role="1TJDcQ" node="6Zi8Kosir0j" resolve="Rule" />
     <node concept="PrWs8" id="4P1LQvocRIh" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -365,8 +396,8 @@
     <property role="EcuMT" value="8057541192470606082" />
     <property role="TrG5h" value="UserRule" />
     <property role="3GE5qa" value="UserRules" />
-    <property role="34LRSv" value="u" />
-    <property role="R4oN_" value="User Rule(Input and output)" />
+    <property role="34LRSv" value="Input and Output" />
+    <property role="R4oN_" value="Robot recieves an Input and Outputs his Reaction" />
     <ref role="1TJDcQ" node="6Zi8Kosir41" resolve="AbstractUserRule" />
     <node concept="1TJgyj" id="4P1LQvocRIB" role="1TKVEi">
       <property role="IQ2ns" value="5566949863229455271" />
@@ -562,7 +593,7 @@
     <property role="3F6X1D" value="8057541192470606112" />
     <property role="3GE5qa" value="GerneralInputOutput" />
     <property role="TrG5h" value="WordString" />
-    <property role="FLfZY" value="([a-zA-ZöäüÖÄÜ]+[!\\?\\.',]?)|([0-9]*)" />
+    <property role="FLfZY" value="([a-zA-ZöäüÖÄÜß-]+[!\\?\\.',]?)|([0-9]*)" />
   </node>
   <node concept="1TIwiD" id="6Zi8Kosir4x">
     <property role="EcuMT" value="8057541192470606113" />
@@ -965,72 +996,72 @@
     <node concept="25R33" id="6Zi8Kosirau" role="25R1y">
       <property role="3tVfz5" value="8057541192470606494" />
       <property role="TrG5h" value="Dialog1Failure" />
-      <property role="1L1pqM" value="SpeakingFailure" />
+      <property role="1L1pqM" value="Speaking Failure" />
     </node>
     <node concept="25R33" id="6Zi8Kosirav" role="25R1y">
       <property role="3tVfz5" value="8057541192470606495" />
       <property role="TrG5h" value="Dialog1SameRule" />
-      <property role="1L1pqM" value="SameRuleTwice" />
+      <property role="1L1pqM" value="Same Rule Twice" />
     </node>
     <node concept="25R33" id="6Zi8KosiraC" role="25R1y">
       <property role="3tVfz5" value="8057541192470606504" />
       <property role="TrG5h" value="Dialog1NoOneSpeak5" />
-      <property role="1L1pqM" value="NoOneSpeak5" />
+      <property role="1L1pqM" value="No one speaks for 5 seconds" />
     </node>
     <node concept="25R33" id="6Zi8KosiraG" role="25R1y">
       <property role="3tVfz5" value="8057541192470606508" />
       <property role="TrG5h" value="Dialog1NoOneSpeak10" />
-      <property role="1L1pqM" value="NoOneSpeak10" />
+      <property role="1L1pqM" value="No one speaks for 10 seconds" />
     </node>
     <node concept="25R33" id="6Zi8KosiraL" role="25R1y">
       <property role="3tVfz5" value="8057541192470606513" />
       <property role="TrG5h" value="Dialog1NoOneSpeak15" />
-      <property role="1L1pqM" value="NoOneSpeak15" />
+      <property role="1L1pqM" value="No one speaks for 15 seconds" />
     </node>
     <node concept="25R33" id="6Zi8KosiraR" role="25R1y">
       <property role="3tVfz5" value="8057541192470606519" />
       <property role="TrG5h" value="Dialog1NoOneSpeak20" />
-      <property role="1L1pqM" value="NoOneSpeak20" />
+      <property role="1L1pqM" value="No one speaks for 20 seconds" />
     </node>
     <node concept="25R33" id="6Zi8KosiraY" role="25R1y">
       <property role="3tVfz5" value="8057541192470606526" />
       <property role="TrG5h" value="Dialog1NotSpeaking5" />
-      <property role="1L1pqM" value="HumanNotSpeaking5" />
+      <property role="1L1pqM" value="Human not spoken last 5 seconds" />
     </node>
     <node concept="25R33" id="6Zi8Kosirb6" role="25R1y">
       <property role="3tVfz5" value="8057541192470606534" />
       <property role="TrG5h" value="Dialog1NotSpeaking10" />
-      <property role="1L1pqM" value="HumanNotSpeaking10" />
+      <property role="1L1pqM" value="Human not spoken last 10 seconds" />
     </node>
     <node concept="25R33" id="6Zi8Kosirbf" role="25R1y">
       <property role="3tVfz5" value="8057541192470606543" />
-      <property role="1L1pqM" value="HumanNotSpeaking15" />
+      <property role="1L1pqM" value="Human not spoken last 15 seconds" />
       <property role="TrG5h" value="Dialog1NotSpeaking15" />
     </node>
     <node concept="25R33" id="6Zi8Kosirbp" role="25R1y">
       <property role="3tVfz5" value="8057541192470606553" />
       <property role="TrG5h" value="Dialog1NotSpeaking20" />
-      <property role="1L1pqM" value="HumanNotSpeaking20" />
+      <property role="1L1pqM" value="Human not spoken last 20 seconds" />
     </node>
     <node concept="25R33" id="6Zi8Kosirb$" role="25R1y">
       <property role="3tVfz5" value="8057541192470606564" />
-      <property role="TrG5h" value="Diaog1NotUnderstood" />
-      <property role="1L1pqM" value="NotUnderstood" />
+      <property role="TrG5h" value="Dialog1NotUnderstood" />
+      <property role="1L1pqM" value="Not Understood" />
     </node>
     <node concept="25R33" id="6Zi8KosirbK" role="25R1y">
       <property role="3tVfz5" value="8057541192470606576" />
       <property role="TrG5h" value="Dialog1NotUnderstood2" />
-      <property role="1L1pqM" value="NotUnterstoodTwiceOrMore" />
+      <property role="1L1pqM" value="Not unterstood twice or more" />
     </node>
     <node concept="25R33" id="6Zi8KosirbX" role="25R1y">
       <property role="3tVfz5" value="8057541192470606589" />
       <property role="TrG5h" value="Dialog1NotUnderstood3" />
-      <property role="1L1pqM" value="NotUnderstoodThriceOrMore" />
+      <property role="1L1pqM" value="Not understood thrice or more" />
     </node>
     <node concept="25R33" id="6Zi8Kosircb" role="25R1y">
       <property role="3tVfz5" value="8057541192470606603" />
       <property role="TrG5h" value="Dialog1SpeakFailure" />
-      <property role="1L1pqM" value="RobotOutputIsEmpty" />
+      <property role="1L1pqM" value="Robot Output is empty" />
     </node>
   </node>
   <node concept="1TIwiD" id="6Zi8Kosircq">
@@ -1341,7 +1372,7 @@
     <property role="EcuMT" value="2759821551037737525" />
     <property role="3GE5qa" value="Utilities" />
     <property role="TrG5h" value="CustomVariable" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="2pcQLgp4ACQ" role="1TKVEl">
       <property role="IQ2nx" value="2759821551037737526" />
       <property role="TrG5h" value="name" />
@@ -1363,6 +1394,48 @@
     <property role="EcuMT" value="3164244237121798003" />
     <property role="3GE5qa" value="Utilities" />
     <property role="TrG5h" value="VariableDeclarationContainer" />
+  </node>
+  <node concept="1TIwiD" id="7iFV4DYJEBV">
+    <property role="EcuMT" value="8407072934115322363" />
+    <property role="TrG5h" value="EmptyConcept" />
+    <property role="3GE5qa" value="Empties/test" />
+    <ref role="1TJDcQ" node="6Zi8Kosir47" resolve="Concept" />
+  </node>
+  <node concept="1TIwiD" id="7iFV4DYYVqr">
+    <property role="EcuMT" value="8407072934119323291" />
+    <property role="3GE5qa" value="Empties" />
+    <property role="TrG5h" value="EmptyRule" />
+    <ref role="1TJDcQ" node="6Zi8Kosir0j" resolve="Rule" />
+  </node>
+  <node concept="1TIwiD" id="7iFV4E1RDkm">
+    <property role="EcuMT" value="8407072934167745814" />
+    <property role="3GE5qa" value="Empties" />
+    <property role="TrG5h" value="EmptyFirstOrderSubrule" />
+    <ref role="1TJDcQ" node="6Zi8Kosir43" resolve="FirstOrderSubrule" />
+  </node>
+  <node concept="1TIwiD" id="7iFV4E1RDlI">
+    <property role="EcuMT" value="8407072934167745902" />
+    <property role="3GE5qa" value="Empties" />
+    <property role="TrG5h" value="EmptySecondOrderSubrule" />
+    <ref role="1TJDcQ" node="6Zi8Kosir44" resolve="SecondOrderSubrule" />
+  </node>
+  <node concept="1TIwiD" id="7iFV4E1RDmi">
+    <property role="EcuMT" value="8407072934167745938" />
+    <property role="3GE5qa" value="Empties" />
+    <property role="TrG5h" value="EmptyThirdOrderSubrule" />
+    <ref role="1TJDcQ" node="6Zi8Kosir45" resolve="ThirdOrderSubrule" />
+  </node>
+  <node concept="1TIwiD" id="5wtq$oGy68a">
+    <property role="EcuMT" value="6349347899289657866" />
+    <property role="3GE5qa" value="Empties" />
+    <property role="TrG5h" value="EmptyHumanInput" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="5wtq$oGy69b">
+    <property role="EcuMT" value="6349347899289657931" />
+    <property role="3GE5qa" value="Empties" />
+    <property role="TrG5h" value="EmptyRobotOutput" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
 </model>
 

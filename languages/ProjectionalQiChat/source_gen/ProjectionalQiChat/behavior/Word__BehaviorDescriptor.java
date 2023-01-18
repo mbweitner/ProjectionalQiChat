@@ -5,24 +5,40 @@ package ProjectionalQiChat.behavior;
 import jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import java.util.List;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
+import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
+import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
+import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
+import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
+import org.jetbrains.mps.openapi.language.SProperty;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public final class Word__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L, "ProjectionalQiChat.structure.Word");
 
+  public static final SMethod<Void> initializeVoiceTuningStandard_id7iFV4E1v11U = new SMethodBuilder<Void>(new SJavaCompoundTypeImpl(Void.class)).name("initializeVoiceTuningStandard").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("7iFV4E1v11U").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList();
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(initializeVoiceTuningStandard_id7iFV4E1v11U);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
+  /*package*/ static void initializeVoiceTuningStandard_id7iFV4E1v11U(@NotNull SNode __thisNode__) {
+    SNode voiceTuning = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b253bL, "ProjectionalQiChat.structure.VoiceTuningConfig"));
+    SPropertyOperations.assign(voiceTuning, PROPS.pitch$miKV, 100);
+    SPropertyOperations.assign(voiceTuning, PROPS.speakingRate$mjeX, 100);
+    SPropertyOperations.assign(voiceTuning, PROPS.volume$moRl, 100);
+    SLinkOperations.setTarget(__thisNode__, LINKS.voiceTuning$ZxMO, voiceTuning);
+  }
 
   /*package*/ Word__BehaviorDescriptor() {
   }
@@ -39,6 +55,9 @@ public final class Word__BehaviorDescriptor extends BaseBHDescriptor {
       throw new BHMethodNotFoundException(this, method);
     }
     switch (methodIndex) {
+      case 0:
+        initializeVoiceTuningStandard_id7iFV4E1v11U(node);
+        return null;
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -66,5 +85,15 @@ public final class Word__BehaviorDescriptor extends BaseBHDescriptor {
   @Override
   public SAbstractConcept getConcept() {
     return CONCEPT;
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty pitch$miKV = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b253bL, 0xf8c3893a78b253cL, "pitch");
+    /*package*/ static final SProperty speakingRate$mjeX = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b253bL, 0xf8c3893a78b253eL, "speakingRate");
+    /*package*/ static final SProperty volume$moRl = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b253bL, 0xf8c3893a78b2541L, "volume");
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink voiceTuning$ZxMO = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L, 0xf8c3893a78b2550L, "voiceTuning");
   }
 }

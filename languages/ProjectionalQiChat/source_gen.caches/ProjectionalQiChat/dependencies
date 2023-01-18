@@ -67,6 +67,7 @@
     <classNode dependClassName="ProjectionalQiChat.behavior.BehaviorAspectDescriptor" />
     <classNode dependClassName="ProjectionalQiChat.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="ProjectionalQiChat.editor.EditorAspectDescriptorImpl" />
+    <classNode dependClassName="ProjectionalQiChat.intentions.IntentionsDescriptor" />
     <classNode dependClassName="ProjectionalQiChat.structure.ConceptPresentationAspectImpl" />
     <classNode dependClassName="ProjectionalQiChat.structure.StructureAspectDescriptor" />
     <classNode dependClassName="ProjectionalQiChat.typesystem.TypesystemDescriptor" />
@@ -77,6 +78,7 @@
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IHelginsDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.actions.descriptor.ActionAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor" />
+    <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.SLanguageId" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.language.LanguageExtensions" />

@@ -9,6 +9,9 @@ import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
+import jetbrains.mps.openapi.editor.style.Style;
+import jetbrains.mps.editor.runtime.style.StyleImpl;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.editor.cellProviders.SingleRoleCellProvider;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -17,15 +20,11 @@ import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteSmart;
 import jetbrains.mps.openapi.editor.cells.DefaultSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.SEmptyContainmentSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
-import jetbrains.mps.openapi.editor.style.Style;
-import jetbrains.mps.editor.runtime.style.StyleImpl;
-import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
 import ProjectionalQiChat.editor.globalStyles_StyleSheet.ruleBordersStyleClass;
+import ProjectionalQiChat.editor.UserRuleStyles_StyleSheet.subruleMarginStyleClass;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
-import ProjectionalQiChat.editor.globalStyles_StyleSheet.notEditableStyleClass;
-import jetbrains.mps.editor.runtime.EditorCell_Empty;
-import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
+import ProjectionalQiChat.editor.globalStyles_StyleSheet.keywordStyleClass;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 /*package*/ class ThirdOrderSubrule_EditorBuilder_a extends AbstractEditorBuilder {
@@ -52,11 +51,13 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     editorCell.setCellId("Collection_e4d5or_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.getInstance().<Integer>getAttribute("de.itemis.mps.editor.celllayout.styles", "_margin"), 3);
+    editorCell.getStyle().putAll(style);
     if (nodeCondition_e4d5or_a0a()) {
       editorCell.addEditorCell(createRefNode_0());
     }
     editorCell.addEditorCell(createCollection_1());
-    editorCell.addEditorCell(createEmpty_0());
     return editorCell;
   }
   private boolean nodeCondition_e4d5or_a0a() {
@@ -126,12 +127,12 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     Style style = new StyleImpl();
     new ruleBordersStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     style.set(StyleAttributes.SELECTABLE, false);
+    new subruleMarginStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
     editorCell.addEditorCell(createConstant_0());
     editorCell.addEditorCell(createConstant_1());
     editorCell.addEditorCell(createRefNode_1());
     editorCell.addEditorCell(createConstant_2());
-    editorCell.addEditorCell(createConstant_3());
     editorCell.addEditorCell(createRefNode_2());
     return editorCell;
   }
@@ -139,13 +140,15 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "User Subsubsubrule");
     editorCell.setCellId("Constant_e4d5or_a1a");
     Style style = new StyleImpl();
+    new keywordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
+    style.set(StyleAttributes.getInstance().<Integer>getAttribute("de.itemis.mps.editor.celllayout.styles", "_margin-bottom"), 10);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Input:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Human Input:");
     editorCell.setCellId("Constant_e4d5or_b1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
@@ -212,19 +215,8 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     }
   }
   private EditorCell createConstant_2() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Robot Output:");
     editorCell.setCellId("Constant_e4d5or_d1a");
-    Style style = new StyleImpl();
-    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-    style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_3() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Output:");
-    editorCell.setCellId("Constant_e4d5or_e1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     editorCell.getStyle().putAll(style);
@@ -232,14 +224,14 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private EditorCell createRefNode_2() {
-    SingleRoleCellProvider provider = new outputSingleRoleHandler_e4d5or_f1a(myNode, LINKS.output$kSeI, getEditorContext());
+    SingleRoleCellProvider provider = new outputSingleRoleHandler_e4d5or_e1a(myNode, LINKS.output$kSeI, getEditorContext());
     return provider.createCell();
   }
-  private static class outputSingleRoleHandler_e4d5or_f1a extends SingleRoleCellProvider {
+  private static class outputSingleRoleHandler_e4d5or_e1a extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public outputSingleRoleHandler_e4d5or_f1a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public outputSingleRoleHandler_e4d5or_e1a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -288,13 +280,6 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     protected String getNoTargetText() {
       return "<no output>";
     }
-  }
-  private EditorCell createEmpty_0() {
-    EditorCell_Empty editorCell = new EditorCell_Empty(getEditorContext(), myNode);
-    editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteNode(editorCell.getSNode(), CellAction_DeleteNode.DeleteDirection.FORWARD));
-    editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteNode(editorCell.getSNode(), CellAction_DeleteNode.DeleteDirection.BACKWARD));
-    editorCell.setCellId("Empty_e4d5or_c0");
-    return editorCell;
   }
 
   private static final class LINKS {

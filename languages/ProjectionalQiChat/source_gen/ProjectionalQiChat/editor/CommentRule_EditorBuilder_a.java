@@ -9,6 +9,7 @@ import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.editor.cellProviders.SingleRoleCellProvider;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.openapi.editor.cells.CellActionType;
@@ -22,6 +23,7 @@ import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
 import jetbrains.mps.editor.runtime.EditorCell_Empty;
 import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
+import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 /*package*/ class CommentRule_EditorBuilder_a extends AbstractEditorBuilder {
@@ -49,8 +51,13 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     editorCell.setBig(true);
     setCellContext(editorCell);
     editorCell.addEditorCell(createRefNode_0());
-    editorCell.addEditorCell(createEmpty_0());
+    if (nodeCondition_s67ebc_a1a()) {
+      editorCell.addEditorCell(createEmpty_0());
+    }
     return editorCell;
+  }
+  private boolean nodeCondition_s67ebc_a1a() {
+    return !(SNodeOperations.isInstanceOf(SNodeOperations.getNextSibling(myNode), CONCEPTS.EmptyRule$Ev));
   }
   private EditorCell createRefNode_0() {
     SingleRoleCellProvider provider = new commentSingleRoleHandler_s67ebc_a0(myNode, LINKS.comment$qgE6, getEditorContext());
@@ -116,6 +123,10 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteNode(editorCell.getSNode(), CellAction_DeleteNode.DeleteDirection.BACKWARD));
     editorCell.setCellId("Empty_s67ebc_b0");
     return editorCell;
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept EmptyRule$Ev = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x74abec4a7efbb69bL, "ProjectionalQiChat.structure.EmptyRule");
   }
 
   private static final class LINKS {

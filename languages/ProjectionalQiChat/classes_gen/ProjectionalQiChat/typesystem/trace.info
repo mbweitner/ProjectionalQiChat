@@ -15,15 +15,15 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1076505808687:jetbrains.mps.baseLanguage.structure.WhileStatement" />
   <root>
     <file name="TypesystemDescriptor.java">
-      <unit at="8,0,36,0" name="ProjectionalQiChat.typesystem.TypesystemDescriptor" />
+      <unit at="8,0,84,0" name="ProjectionalQiChat.typesystem.TypesystemDescriptor" />
     </file>
   </root>
   <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/3164244237093420999">
     <file name="TypesystemDescriptor.java">
-      <node id="3164244237093420999" at="30,5,31,108" concept="7" />
-      <node id="3164244237093420999" at="31,108,32,55" concept="2" />
-      <node id="3164244237093420999" at="29,5,33,5" concept="0" />
-      <scope id="3164244237093420999" at="30,5,32,55">
+      <node id="3164244237093420999" at="46,5,47,108" concept="7" />
+      <node id="3164244237093420999" at="47,108,48,55" concept="2" />
+      <node id="3164244237093420999" at="45,5,49,5" concept="0" />
+      <scope id="3164244237093420999" at="46,5,48,55">
         <var name="nonTypesystemRule" id="3164244237093420999" />
       </scope>
     </file>
@@ -148,10 +148,10 @@
   </root>
   <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/3164244237099675461">
     <file name="TypesystemDescriptor.java">
-      <node id="3164244237099675461" at="10,5,11,106" concept="7" />
-      <node id="3164244237099675461" at="11,106,12,55" concept="2" />
-      <node id="3164244237099675461" at="9,33,13,5" concept="0" />
-      <scope id="3164244237099675461" at="10,5,12,55">
+      <node id="3164244237099675461" at="26,5,27,106" concept="7" />
+      <node id="3164244237099675461" at="27,106,28,55" concept="2" />
+      <node id="3164244237099675461" at="25,5,29,5" concept="0" />
+      <scope id="3164244237099675461" at="26,5,28,55">
         <var name="nonTypesystemRule" id="3164244237099675461" />
       </scope>
     </file>
@@ -252,12 +252,428 @@
       <unit id="3164244237099675461" at="27,0,91,0" name="ProjectionalQiChat.typesystem.check_double_cc_imports_Topic_NonTypesystemRule" />
     </file>
   </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/6349347899271397800">
+    <file name="TypesystemDescriptor.java">
+      <node id="6349347899271397800" at="58,5,59,108" concept="7" />
+      <node id="6349347899271397800" at="59,108,60,55" concept="2" />
+      <node id="6349347899271397800" at="57,5,61,5" concept="0" />
+      <scope id="6349347899271397800" at="58,5,60,55">
+        <var name="nonTypesystemRule" id="6349347899271397800" />
+      </scope>
+    </file>
+    <file name="check_no_first_emptySR_UserRule_NonTypesystemRule.java">
+      <node id="6349347899271482669" at="27,7,28,66" concept="7" />
+      <node id="6349347899271482669" at="28,66,29,235" concept="7" />
+      <node id="6349347899271482765" at="30,9,31,172" concept="7" />
+      <node id="6349347899271482765" at="31,172,32,71" concept="2" />
+      <node id="6349347899271397800" at="37,50,38,32" concept="8" />
+      <node id="6349347899271397800" at="40,68,41,102" concept="8" />
+      <node id="6349347899271397800" at="43,30,44,17" concept="8" />
+      <node id="6349347899271397800" at="48,0,49,0" concept="10" trace="subrules$kZhF" />
+      <node id="6349347899271397800" at="52,0,53,0" concept="10" trace="EmptyFirstOrderSubrule$mT" />
+      <node id="6349347899271397800" at="53,0,54,0" concept="10" trace="UserRule$oj" />
+      <node id="6349347899271397800" at="23,0,25,0" concept="1" trace="check_no_first_emptySR_UserRule_NonTypesystemRule#()V" />
+      <node id="6349347899271397800" at="37,0,40,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="6349347899271397800" at="40,0,43,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="6349347899271397800" at="43,0,46,0" concept="6" trace="overrides#()Z" />
+      <node id="6349347899271482765" at="29,235,33,9" concept="0" />
+      <node id="6349347899271482669" at="26,264,34,7" concept="0" />
+      <node id="6349347899271397807" at="25,121,35,5" concept="5" />
+      <node id="6349347899271397800" at="25,0,37,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="6349347899271397800" at="23,62,23,62" />
+      <scope id="6349347899271397800" at="37,50,38,32" />
+      <scope id="6349347899271397800" at="40,68,41,102" />
+      <scope id="6349347899271397800" at="43,30,44,17" />
+      <scope id="6349347899271397800" at="23,0,25,0" />
+      <scope id="6349347899271482765" at="30,9,32,71">
+        <var name="intentionProvider" id="6349347899271482765" />
+      </scope>
+      <scope id="6349347899271397800" at="37,0,40,0" />
+      <scope id="6349347899271397800" at="40,0,43,0">
+        <var name="argument" id="6349347899271397800" />
+      </scope>
+      <scope id="6349347899271397800" at="43,0,46,0" />
+      <scope id="6349347899271482669" at="27,7,33,9">
+        <var name="_reporter_2309309498" id="6349347899271482669" />
+        <var name="errorTarget" id="6349347899271482669" />
+      </scope>
+      <scope id="6349347899271397809" at="26,264,34,7" />
+      <scope id="6349347899271397801" at="25,121,35,5" />
+      <scope id="6349347899271397800" at="25,0,37,0">
+        <var name="status" id="6349347899271397800" />
+        <var name="typeCheckingContext" id="6349347899271397800" />
+        <var name="userRule" id="6349347899271397800" />
+      </scope>
+      <unit id="6349347899271397800" at="47,0,50,0" name="ProjectionalQiChat.typesystem.check_no_first_emptySR_UserRule_NonTypesystemRule$LINKS" />
+      <unit id="6349347899271397800" at="51,0,55,0" name="ProjectionalQiChat.typesystem.check_no_first_emptySR_UserRule_NonTypesystemRule$CONCEPTS" />
+      <unit id="6349347899271397800" at="22,0,56,0" name="ProjectionalQiChat.typesystem.check_no_first_emptySR_UserRule_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/6349347899271482762">
+    <file name="fix_no_FirstOrderSubrule_QuickFix.java">
+      <node id="6349347899271482762" at="17,46,18,124" concept="11" />
+      <node id="6349347899271649517" at="20,44,21,51" concept="8" />
+      <node id="6349347899271632644" at="24,140,25,139" concept="2" />
+      <node id="6349347899271632654" at="26,12,27,357" concept="2" />
+      <node id="6349347899271482762" at="32,0,33,0" concept="10" trace="UserRule$oj" />
+      <node id="6349347899271482762" at="33,0,34,0" concept="10" trace="EmptyFirstOrderSubrule$mT" />
+      <node id="6349347899271482762" at="37,0,38,0" concept="10" trace="subrules$kZhF" />
+      <node id="6349347899271632652" at="26,10,28,5" concept="0" />
+      <node id="6349347899271482762" at="17,0,20,0" concept="1" trace="fix_no_FirstOrderSubrule_QuickFix#()V" />
+      <node id="6349347899271482762" at="20,0,23,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="6349347899271632635" at="23,35,28,5" concept="5" />
+      <node id="6349347899271482762" at="23,0,30,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="6349347899271482762" at="17,46,18,124" />
+      <scope id="6349347899271649494" at="20,44,21,51" />
+      <scope id="6349347899271632643" at="24,140,25,139" />
+      <scope id="6349347899271632653" at="26,12,27,357" />
+      <scope id="6349347899271482762" at="17,0,20,0" />
+      <scope id="6349347899271482762" at="20,0,23,0">
+        <var name="node" id="6349347899271482762" />
+      </scope>
+      <scope id="6349347899271482764" at="23,35,28,5" />
+      <scope id="6349347899271482762" at="23,0,30,0">
+        <var name="node" id="6349347899271482762" />
+      </scope>
+      <unit id="6349347899271482762" at="36,0,39,0" name="ProjectionalQiChat.typesystem.fix_no_FirstOrderSubrule_QuickFix$LINKS" />
+      <unit id="6349347899271482762" at="31,0,35,0" name="ProjectionalQiChat.typesystem.fix_no_FirstOrderSubrule_QuickFix$CONCEPTS" />
+      <unit id="6349347899271482762" at="16,0,40,0" name="ProjectionalQiChat.typesystem.fix_no_FirstOrderSubrule_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/6349347899273982583">
+    <file name="TypesystemDescriptor.java">
+      <node id="6349347899273982583" at="54,5,55,118" concept="7" />
+      <node id="6349347899273982583" at="55,118,56,55" concept="2" />
+      <node id="6349347899273982583" at="53,5,57,5" concept="0" />
+      <scope id="6349347899273982583" at="54,5,56,55">
+        <var name="nonTypesystemRule" id="6349347899273982583" />
+      </scope>
+    </file>
+    <file name="check_no_first_emptySR_SecondOrderSubrule_NonTypesystemRule.java">
+      <node id="6349347899274061332" at="27,7,28,66" concept="7" />
+      <node id="6349347899274061332" at="28,66,29,243" concept="7" />
+      <node id="6349347899274061473" at="30,9,31,172" concept="7" />
+      <node id="6349347899274061473" at="31,172,32,71" concept="2" />
+      <node id="6349347899273982583" at="37,50,38,42" concept="8" />
+      <node id="6349347899273982583" at="40,68,41,102" concept="8" />
+      <node id="6349347899273982583" at="43,30,44,17" concept="8" />
+      <node id="6349347899273982583" at="48,0,49,0" concept="10" trace="subrules$l0eH" />
+      <node id="6349347899273982583" at="52,0,53,0" concept="10" trace="EmptyThirdOrderSubrule$8m" />
+      <node id="6349347899273982583" at="53,0,54,0" concept="10" trace="SecondOrderSubrule$ph" />
+      <node id="6349347899273982583" at="23,0,25,0" concept="1" trace="check_no_first_emptySR_SecondOrderSubrule_NonTypesystemRule#()V" />
+      <node id="6349347899273982583" at="37,0,40,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="6349347899273982583" at="40,0,43,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="6349347899273982583" at="43,0,46,0" concept="6" trace="overrides#()Z" />
+      <node id="6349347899274061473" at="29,243,33,9" concept="0" />
+      <node id="6349347899274061332" at="26,284,34,7" concept="0" />
+      <node id="6349347899273982590" at="25,131,35,5" concept="5" />
+      <node id="6349347899273982583" at="25,0,37,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="6349347899273982583" at="23,72,23,72" />
+      <scope id="6349347899273982583" at="37,50,38,42" />
+      <scope id="6349347899273982583" at="40,68,41,102" />
+      <scope id="6349347899273982583" at="43,30,44,17" />
+      <scope id="6349347899273982583" at="23,0,25,0" />
+      <scope id="6349347899274061473" at="30,9,32,71">
+        <var name="intentionProvider" id="6349347899274061473" />
+      </scope>
+      <scope id="6349347899273982583" at="37,0,40,0" />
+      <scope id="6349347899273982583" at="40,0,43,0">
+        <var name="argument" id="6349347899273982583" />
+      </scope>
+      <scope id="6349347899273982583" at="43,0,46,0" />
+      <scope id="6349347899274061332" at="27,7,33,9">
+        <var name="_reporter_2309309498" id="6349347899274061332" />
+        <var name="errorTarget" id="6349347899274061332" />
+      </scope>
+      <scope id="6349347899273982592" at="26,284,34,7" />
+      <scope id="6349347899273982584" at="25,131,35,5" />
+      <scope id="6349347899273982583" at="25,0,37,0">
+        <var name="secondOrderSubrule" id="6349347899273982583" />
+        <var name="status" id="6349347899273982583" />
+        <var name="typeCheckingContext" id="6349347899273982583" />
+      </scope>
+      <unit id="6349347899273982583" at="47,0,50,0" name="ProjectionalQiChat.typesystem.check_no_first_emptySR_SecondOrderSubrule_NonTypesystemRule$LINKS" />
+      <unit id="6349347899273982583" at="51,0,55,0" name="ProjectionalQiChat.typesystem.check_no_first_emptySR_SecondOrderSubrule_NonTypesystemRule$CONCEPTS" />
+      <unit id="6349347899273982583" at="22,0,56,0" name="ProjectionalQiChat.typesystem.check_no_first_emptySR_SecondOrderSubrule_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/6349347899274061470">
+    <file name="fix_no_ThirdOrderSubrule_QuickFix.java">
+      <node id="6349347899274061470" at="17,46,18,124" concept="11" />
+      <node id="6349347899274062512" at="20,44,21,61" concept="8" />
+      <node id="6349347899274098688" at="24,150,25,149" concept="2" />
+      <node id="6349347899274123116" at="26,12,27,367" concept="2" />
+      <node id="6349347899274061470" at="32,0,33,0" concept="10" trace="SecondOrderSubrule$ph" />
+      <node id="6349347899274061470" at="33,0,34,0" concept="10" trace="EmptyThirdOrderSubrule$8m" />
+      <node id="6349347899274061470" at="37,0,38,0" concept="10" trace="subrules$l0eH" />
+      <node id="6349347899274122825" at="26,10,28,5" concept="0" />
+      <node id="6349347899274061470" at="17,0,20,0" concept="1" trace="fix_no_ThirdOrderSubrule_QuickFix#()V" />
+      <node id="6349347899274061470" at="20,0,23,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="6349347899274063939" at="23,35,28,5" concept="5" />
+      <node id="6349347899274061470" at="23,0,30,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="6349347899274061470" at="17,46,18,124" />
+      <scope id="6349347899274062214" at="20,44,21,61" />
+      <scope id="6349347899274063941" at="24,150,25,149" />
+      <scope id="6349347899274122826" at="26,12,27,367" />
+      <scope id="6349347899274061470" at="17,0,20,0" />
+      <scope id="6349347899274061470" at="20,0,23,0">
+        <var name="node" id="6349347899274061470" />
+      </scope>
+      <scope id="6349347899274061472" at="23,35,28,5" />
+      <scope id="6349347899274061470" at="23,0,30,0">
+        <var name="node" id="6349347899274061470" />
+      </scope>
+      <unit id="6349347899274061470" at="36,0,39,0" name="ProjectionalQiChat.typesystem.fix_no_ThirdOrderSubrule_QuickFix$LINKS" />
+      <unit id="6349347899274061470" at="31,0,35,0" name="ProjectionalQiChat.typesystem.fix_no_ThirdOrderSubrule_QuickFix$CONCEPTS" />
+      <unit id="6349347899274061470" at="16,0,40,0" name="ProjectionalQiChat.typesystem.fix_no_ThirdOrderSubrule_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/6349347899284253619">
+    <file name="TypesystemDescriptor.java">
+      <node id="6349347899284253619" at="70,5,71,119" concept="7" />
+      <node id="6349347899284253619" at="71,119,72,55" concept="2" />
+      <node id="6349347899284253619" at="69,5,73,5" concept="0" />
+      <scope id="6349347899284253619" at="70,5,72,55">
+        <var name="nonTypesystemRule" id="6349347899284253619" />
+      </scope>
+    </file>
+    <file name="check_no_next_empty_rule_FirstOrderSubrule_NonTypesystemRule.java">
+      <node id="6349347899284262588" at="24,7,25,66" concept="7" />
+      <node id="6349347899284262588" at="25,66,26,238" concept="7" />
+      <node id="6349347899284262678" at="27,9,28,173" concept="7" />
+      <node id="6349347899284262678" at="28,173,29,71" concept="2" />
+      <node id="6349347899284253619" at="34,50,35,41" concept="8" />
+      <node id="6349347899284253619" at="37,68,38,102" concept="8" />
+      <node id="6349347899284253619" at="40,30,41,17" concept="8" />
+      <node id="6349347899284253619" at="45,0,46,0" concept="10" trace="EmptyFirstOrderSubrule$mT" />
+      <node id="6349347899284253619" at="46,0,47,0" concept="10" trace="FirstOrderSubrule$oM" />
+      <node id="6349347899284253619" at="20,0,22,0" concept="1" trace="check_no_next_empty_rule_FirstOrderSubrule_NonTypesystemRule#()V" />
+      <node id="6349347899284253619" at="34,0,37,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="6349347899284253619" at="37,0,40,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="6349347899284253619" at="40,0,43,0" concept="6" trace="overrides#()Z" />
+      <node id="6349347899284262678" at="26,238,30,9" concept="0" />
+      <node id="6349347899284262588" at="23,219,31,7" concept="0" />
+      <node id="6349347899284253629" at="22,130,32,5" concept="5" />
+      <node id="6349347899284253619" at="22,0,34,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="6349347899284253619" at="20,73,20,73" />
+      <scope id="6349347899284253619" at="34,50,35,41" />
+      <scope id="6349347899284253619" at="37,68,38,102" />
+      <scope id="6349347899284253619" at="40,30,41,17" />
+      <scope id="6349347899284253619" at="20,0,22,0" />
+      <scope id="6349347899284262678" at="27,9,29,71">
+        <var name="intentionProvider" id="6349347899284262678" />
+      </scope>
+      <scope id="6349347899284253619" at="34,0,37,0" />
+      <scope id="6349347899284253619" at="37,0,40,0">
+        <var name="argument" id="6349347899284253619" />
+      </scope>
+      <scope id="6349347899284253619" at="40,0,43,0" />
+      <scope id="6349347899284262588" at="24,7,30,9">
+        <var name="_reporter_2309309498" id="6349347899284262588" />
+        <var name="errorTarget" id="6349347899284262588" />
+      </scope>
+      <scope id="6349347899284253631" at="23,219,31,7" />
+      <scope id="6349347899284253620" at="22,130,32,5" />
+      <scope id="6349347899284253619" at="22,0,34,0">
+        <var name="firstOrderSubrule" id="6349347899284253619" />
+        <var name="status" id="6349347899284253619" />
+        <var name="typeCheckingContext" id="6349347899284253619" />
+      </scope>
+      <unit id="6349347899284253619" at="44,0,48,0" name="ProjectionalQiChat.typesystem.check_no_next_empty_rule_FirstOrderSubrule_NonTypesystemRule$CONCEPTS" />
+      <unit id="6349347899284253619" at="19,0,49,0" name="ProjectionalQiChat.typesystem.check_no_next_empty_rule_FirstOrderSubrule_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/6349347899284262675">
+    <file name="fix_no_next_empty_subrule_QuickFix.java">
+      <node id="6349347899284262675" at="14,47,15,124" concept="11" />
+      <node id="6349347899284267404" at="17,44,18,54" concept="8" />
+      <node id="6349347899284263023" at="20,35,21,200" concept="7" />
+      <node id="6349347899284263154" at="21,200,22,98" concept="2" />
+      <node id="6349347899284265718" at="22,98,23,56" concept="2" />
+      <node id="6349347899284262675" at="14,0,17,0" concept="1" trace="fix_no_next_empty_subrule_QuickFix#()V" />
+      <node id="6349347899284262675" at="17,0,20,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="6349347899284262675" at="20,0,25,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="6349347899284262675" at="14,47,15,124" />
+      <scope id="6349347899284267103" at="17,44,18,54" />
+      <scope id="6349347899284262675" at="14,0,17,0" />
+      <scope id="6349347899284262675" at="17,0,20,0">
+        <var name="node" id="6349347899284262675" />
+      </scope>
+      <scope id="6349347899284262677" at="20,35,23,56">
+        <var name="empty" id="6349347899284263026" />
+      </scope>
+      <scope id="6349347899284262675" at="20,0,25,0">
+        <var name="node" id="6349347899284262675" />
+      </scope>
+      <unit id="6349347899284262675" at="13,0,26,0" name="ProjectionalQiChat.typesystem.fix_no_next_empty_subrule_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/6349347899284270574">
+    <file name="TypesystemDescriptor.java">
+      <node id="6349347899284270574" at="62,5,63,115" concept="7" />
+      <node id="6349347899284270574" at="63,115,64,55" concept="2" />
+      <node id="6349347899284270574" at="61,5,65,5" concept="0" />
+      <scope id="6349347899284270574" at="62,5,64,55">
+        <var name="nonTypesystemRule" id="6349347899284270574" />
+      </scope>
+    </file>
+    <file name="check_no_next_empty_SecondOrderSubrule_NonTypesystemRule.java">
+      <node id="6349347899284274320" at="24,7,25,66" concept="7" />
+      <node id="6349347899284274320" at="25,66,26,245" concept="7" />
+      <node id="6349347899284274434" at="27,9,28,175" concept="7" />
+      <node id="6349347899284274434" at="28,175,29,71" concept="2" />
+      <node id="6349347899284270574" at="34,50,35,42" concept="8" />
+      <node id="6349347899284270574" at="37,68,38,102" concept="8" />
+      <node id="6349347899284270574" at="40,30,41,17" concept="8" />
+      <node id="6349347899284270574" at="45,0,46,0" concept="10" trace="EmptySecondOrderSubrule$op" />
+      <node id="6349347899284270574" at="46,0,47,0" concept="10" trace="SecondOrderSubrule$ph" />
+      <node id="6349347899284270574" at="20,0,22,0" concept="1" trace="check_no_next_empty_SecondOrderSubrule_NonTypesystemRule#()V" />
+      <node id="6349347899284270574" at="34,0,37,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="6349347899284270574" at="37,0,40,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="6349347899284270574" at="40,0,43,0" concept="6" trace="overrides#()Z" />
+      <node id="6349347899284274434" at="26,245,30,9" concept="0" />
+      <node id="6349347899284274320" at="23,223,31,7" concept="0" />
+      <node id="6349347899284270581" at="22,131,32,5" concept="5" />
+      <node id="6349347899284270574" at="22,0,34,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="6349347899284270574" at="20,69,20,69" />
+      <scope id="6349347899284270574" at="34,50,35,42" />
+      <scope id="6349347899284270574" at="37,68,38,102" />
+      <scope id="6349347899284270574" at="40,30,41,17" />
+      <scope id="6349347899284270574" at="20,0,22,0" />
+      <scope id="6349347899284274434" at="27,9,29,71">
+        <var name="intentionProvider" id="6349347899284274434" />
+      </scope>
+      <scope id="6349347899284270574" at="34,0,37,0" />
+      <scope id="6349347899284270574" at="37,0,40,0">
+        <var name="argument" id="6349347899284270574" />
+      </scope>
+      <scope id="6349347899284270574" at="40,0,43,0" />
+      <scope id="6349347899284274320" at="24,7,30,9">
+        <var name="_reporter_2309309498" id="6349347899284274320" />
+        <var name="errorTarget" id="6349347899284274320" />
+      </scope>
+      <scope id="6349347899284270583" at="23,223,31,7" />
+      <scope id="6349347899284270575" at="22,131,32,5" />
+      <scope id="6349347899284270574" at="22,0,34,0">
+        <var name="secondOrderSubrule" id="6349347899284270574" />
+        <var name="status" id="6349347899284270574" />
+        <var name="typeCheckingContext" id="6349347899284270574" />
+      </scope>
+      <unit id="6349347899284270574" at="44,0,48,0" name="ProjectionalQiChat.typesystem.check_no_next_empty_SecondOrderSubrule_NonTypesystemRule$CONCEPTS" />
+      <unit id="6349347899284270574" at="19,0,49,0" name="ProjectionalQiChat.typesystem.check_no_next_empty_SecondOrderSubrule_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/6349347899284274431">
+    <file name="fix_no_next_emptysubsubrule_QuickFix.java">
+      <node id="6349347899284274431" at="14,49,15,124" concept="11" />
+      <node id="6349347899284274784" at="17,44,18,56" concept="8" />
+      <node id="6349347899284276138" at="20,35,21,201" concept="7" />
+      <node id="6349347899284276258" at="21,201,22,102" concept="2" />
+      <node id="6349347899284281305" at="22,102,23,56" concept="2" />
+      <node id="6349347899284274431" at="14,0,17,0" concept="1" trace="fix_no_next_emptysubsubrule_QuickFix#()V" />
+      <node id="6349347899284274431" at="17,0,20,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="6349347899284274431" at="20,0,25,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="6349347899284274431" at="14,49,15,124" />
+      <scope id="6349347899284274779" at="17,44,18,56" />
+      <scope id="6349347899284274431" at="14,0,17,0" />
+      <scope id="6349347899284274431" at="17,0,20,0">
+        <var name="node" id="6349347899284274431" />
+      </scope>
+      <scope id="6349347899284274433" at="20,35,23,56">
+        <var name="empty" id="6349347899284276141" />
+      </scope>
+      <scope id="6349347899284274431" at="20,0,25,0">
+        <var name="node" id="6349347899284274431" />
+      </scope>
+      <unit id="6349347899284274431" at="13,0,26,0" name="ProjectionalQiChat.typesystem.fix_no_next_emptysubsubrule_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/6349347899284282610">
+    <file name="TypesystemDescriptor.java">
+      <node id="6349347899284282610" at="66,5,67,114" concept="7" />
+      <node id="6349347899284282610" at="67,114,68,55" concept="2" />
+      <node id="6349347899284282610" at="65,5,69,5" concept="0" />
+      <scope id="6349347899284282610" at="66,5,68,55">
+        <var name="nonTypesystemRule" id="6349347899284282610" />
+      </scope>
+    </file>
+    <file name="check_no_next_empty_ThirdOrderSubrule_NonTypesystemRule.java">
+      <node id="6349347899284287212" at="24,7,25,66" concept="7" />
+      <node id="6349347899284287212" at="25,66,26,251" concept="7" />
+      <node id="6349347899284287353" at="27,9,28,178" concept="7" />
+      <node id="6349347899284287353" at="28,178,29,71" concept="2" />
+      <node id="6349347899284282610" at="34,50,35,41" concept="8" />
+      <node id="6349347899284282610" at="37,68,38,102" concept="8" />
+      <node id="6349347899284282610" at="40,30,41,17" concept="8" />
+      <node id="6349347899284282610" at="45,0,46,0" concept="10" trace="EmptyThirdOrderSubrule$8m" />
+      <node id="6349347899284282610" at="46,0,47,0" concept="10" trace="ThirdOrderSubrule$pK" />
+      <node id="6349347899284282610" at="20,0,22,0" concept="1" trace="check_no_next_empty_ThirdOrderSubrule_NonTypesystemRule#()V" />
+      <node id="6349347899284282610" at="34,0,37,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="6349347899284282610" at="37,0,40,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="6349347899284282610" at="40,0,43,0" concept="6" trace="overrides#()Z" />
+      <node id="6349347899284287353" at="26,251,30,9" concept="0" />
+      <node id="6349347899284287212" at="23,219,31,7" concept="0" />
+      <node id="6349347899284282617" at="22,130,32,5" concept="5" />
+      <node id="6349347899284282610" at="22,0,34,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="6349347899284282610" at="20,68,20,68" />
+      <scope id="6349347899284282610" at="34,50,35,41" />
+      <scope id="6349347899284282610" at="37,68,38,102" />
+      <scope id="6349347899284282610" at="40,30,41,17" />
+      <scope id="6349347899284282610" at="20,0,22,0" />
+      <scope id="6349347899284287353" at="27,9,29,71">
+        <var name="intentionProvider" id="6349347899284287353" />
+      </scope>
+      <scope id="6349347899284282610" at="34,0,37,0" />
+      <scope id="6349347899284282610" at="37,0,40,0">
+        <var name="argument" id="6349347899284282610" />
+      </scope>
+      <scope id="6349347899284282610" at="40,0,43,0" />
+      <scope id="6349347899284287212" at="24,7,30,9">
+        <var name="_reporter_2309309498" id="6349347899284287212" />
+        <var name="errorTarget" id="6349347899284287212" />
+      </scope>
+      <scope id="6349347899284282619" at="23,219,31,7" />
+      <scope id="6349347899284282611" at="22,130,32,5" />
+      <scope id="6349347899284282610" at="22,0,34,0">
+        <var name="status" id="6349347899284282610" />
+        <var name="thirdOrderSubrule" id="6349347899284282610" />
+        <var name="typeCheckingContext" id="6349347899284282610" />
+      </scope>
+      <unit id="6349347899284282610" at="44,0,48,0" name="ProjectionalQiChat.typesystem.check_no_next_empty_ThirdOrderSubrule_NonTypesystemRule$CONCEPTS" />
+      <unit id="6349347899284282610" at="19,0,49,0" name="ProjectionalQiChat.typesystem.check_no_next_empty_ThirdOrderSubrule_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/6349347899284287350">
+    <file name="fix_no_next_emptysubsubsubrule_QuickFix.java">
+      <node id="6349347899284287350" at="14,52,15,124" concept="11" />
+      <node id="6349347899284287990" at="17,44,18,51" concept="8" />
+      <node id="6349347899284289588" at="20,35,21,200" concept="7" />
+      <node id="6349347899284289705" at="21,200,22,104" concept="2" />
+      <node id="6349347899284292095" at="22,104,23,56" concept="2" />
+      <node id="6349347899284287350" at="14,0,17,0" concept="1" trace="fix_no_next_emptysubsubsubrule_QuickFix#()V" />
+      <node id="6349347899284287350" at="17,0,20,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="6349347899284287350" at="20,0,25,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="6349347899284287350" at="14,52,15,124" />
+      <scope id="6349347899284287692" at="17,44,18,51" />
+      <scope id="6349347899284287350" at="14,0,17,0" />
+      <scope id="6349347899284287350" at="17,0,20,0">
+        <var name="node" id="6349347899284287350" />
+      </scope>
+      <scope id="6349347899284287352" at="20,35,23,56">
+        <var name="empty" id="6349347899284289591" />
+      </scope>
+      <scope id="6349347899284287350" at="20,0,25,0">
+        <var name="node" id="6349347899284287350" />
+      </scope>
+      <unit id="6349347899284287350" at="13,0,26,0" name="ProjectionalQiChat.typesystem.fix_no_next_emptysubsubsubrule_QuickFix" />
+    </file>
+  </root>
   <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/7237576769901947419">
     <file name="TypesystemDescriptor.java">
-      <node id="7237576769901947419" at="14,5,15,121" concept="7" />
-      <node id="7237576769901947419" at="15,121,16,55" concept="2" />
-      <node id="7237576769901947419" at="13,5,17,5" concept="0" />
-      <scope id="7237576769901947419" at="14,5,16,55">
+      <node id="7237576769901947419" at="30,5,31,121" concept="7" />
+      <node id="7237576769901947419" at="31,121,32,55" concept="2" />
+      <node id="7237576769901947419" at="29,5,33,5" concept="0" />
+      <scope id="7237576769901947419" at="30,5,32,55">
         <var name="nonTypesystemRule" id="7237576769901947419" />
       </scope>
     </file>
@@ -323,10 +739,10 @@
   </root>
   <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/7237576769902018413">
     <file name="TypesystemDescriptor.java">
-      <node id="7237576769902018413" at="22,5,23,121" concept="7" />
-      <node id="7237576769902018413" at="23,121,24,55" concept="2" />
-      <node id="7237576769902018413" at="21,5,25,5" concept="0" />
-      <scope id="7237576769902018413" at="22,5,24,55">
+      <node id="7237576769902018413" at="38,5,39,121" concept="7" />
+      <node id="7237576769902018413" at="39,121,40,55" concept="2" />
+      <node id="7237576769902018413" at="37,5,41,5" concept="0" />
+      <scope id="7237576769902018413" at="38,5,40,55">
         <var name="nonTypesystemRule" id="7237576769902018413" />
       </scope>
     </file>
@@ -492,10 +908,10 @@
   </root>
   <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/7237576769905716568">
     <file name="TypesystemDescriptor.java">
-      <node id="7237576769905716568" at="18,5,19,109" concept="7" />
-      <node id="7237576769905716568" at="19,109,20,55" concept="2" />
-      <node id="7237576769905716568" at="17,5,21,5" concept="0" />
-      <scope id="7237576769905716568" at="18,5,20,55">
+      <node id="7237576769905716568" at="34,5,35,109" concept="7" />
+      <node id="7237576769905716568" at="35,109,36,55" concept="2" />
+      <node id="7237576769905716568" at="33,5,37,5" concept="0" />
+      <scope id="7237576769905716568" at="34,5,36,55">
         <var name="nonTypesystemRule" id="7237576769905716568" />
       </scope>
     </file>
@@ -562,10 +978,10 @@
   </root>
   <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/7237576769905744937">
     <file name="TypesystemDescriptor.java">
-      <node id="7237576769905744937" at="26,5,27,109" concept="7" />
-      <node id="7237576769905744937" at="27,109,28,55" concept="2" />
-      <node id="7237576769905744937" at="25,5,29,5" concept="0" />
-      <scope id="7237576769905744937" at="26,5,28,55">
+      <node id="7237576769905744937" at="42,5,43,109" concept="7" />
+      <node id="7237576769905744937" at="43,109,44,55" concept="2" />
+      <node id="7237576769905744937" at="41,5,45,5" concept="0" />
+      <scope id="7237576769905744937" at="42,5,44,55">
         <var name="nonTypesystemRule" id="7237576769905744937" />
       </scope>
     </file>
@@ -729,6 +1145,503 @@
       <unit id="7237576769905748250" at="73,0,77,0" name="ProjectionalQiChat.typesystem.change_names_Topic_QuickFix$LINKS" />
       <unit id="7237576769905748250" at="78,0,82,0" name="ProjectionalQiChat.typesystem.change_names_Topic_QuickFix$CONCEPTS" />
       <unit id="7237576769905748250" at="21,0,87,0" name="ProjectionalQiChat.typesystem.change_names_Topic_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/8407072934137907612">
+    <file name="TypesystemDescriptor.java">
+      <node id="8407072934137907612" at="78,5,79,110" concept="7" />
+      <node id="8407072934137907612" at="79,110,80,55" concept="2" />
+      <node id="8407072934137907612" at="77,5,81,5" concept="0" />
+      <scope id="8407072934137907612" at="78,5,80,55">
+        <var name="nonTypesystemRule" id="8407072934137907612" />
+      </scope>
+    </file>
+    <file name="check_no_next_empty_rule_UserRule_NonTypesystemRule.java">
+      <node id="8407072934137915944" at="24,7,25,66" concept="7" />
+      <node id="8407072934137915944" at="25,66,26,230" concept="7" />
+      <node id="8407072934137916037" at="27,9,28,170" concept="7" />
+      <node id="8407072934137916037" at="28,170,29,71" concept="2" />
+      <node id="8407072934137907612" at="34,50,35,32" concept="8" />
+      <node id="8407072934137907612" at="37,68,38,102" concept="8" />
+      <node id="8407072934137907612" at="40,30,41,17" concept="8" />
+      <node id="8407072934137907612" at="45,0,46,0" concept="10" trace="EmptyRule$Ev" />
+      <node id="8407072934137907612" at="46,0,47,0" concept="10" trace="UserRule$oj" />
+      <node id="8407072934137907612" at="20,0,22,0" concept="1" trace="check_no_next_empty_rule_UserRule_NonTypesystemRule#()V" />
+      <node id="8407072934137907612" at="34,0,37,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8407072934137907612" at="37,0,40,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8407072934137907612" at="40,0,43,0" concept="6" trace="overrides#()Z" />
+      <node id="8407072934137916037" at="26,230,30,9" concept="0" />
+      <node id="8407072934137915944" at="23,107,31,7" concept="0" />
+      <node id="8407072934137909553" at="22,121,32,5" concept="5" />
+      <node id="8407072934137907612" at="22,0,34,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8407072934137907612" at="20,64,20,64" />
+      <scope id="8407072934137907612" at="34,50,35,32" />
+      <scope id="8407072934137907612" at="37,68,38,102" />
+      <scope id="8407072934137907612" at="40,30,41,17" />
+      <scope id="8407072934137907612" at="20,0,22,0" />
+      <scope id="8407072934137916037" at="27,9,29,71">
+        <var name="intentionProvider" id="8407072934137916037" />
+      </scope>
+      <scope id="8407072934137907612" at="34,0,37,0" />
+      <scope id="8407072934137907612" at="37,0,40,0">
+        <var name="argument" id="8407072934137907612" />
+      </scope>
+      <scope id="8407072934137907612" at="40,0,43,0" />
+      <scope id="8407072934137915944" at="24,7,30,9">
+        <var name="_reporter_2309309498" id="8407072934137915944" />
+        <var name="errorTarget" id="8407072934137915944" />
+      </scope>
+      <scope id="8407072934137909555" at="23,107,31,7" />
+      <scope id="8407072934137907613" at="22,121,32,5" />
+      <scope id="8407072934137907612" at="22,0,34,0">
+        <var name="status" id="8407072934137907612" />
+        <var name="typeCheckingContext" id="8407072934137907612" />
+        <var name="userRule" id="8407072934137907612" />
+      </scope>
+      <unit id="8407072934137907612" at="44,0,48,0" name="ProjectionalQiChat.typesystem.check_no_next_empty_rule_UserRule_NonTypesystemRule$CONCEPTS" />
+      <unit id="8407072934137907612" at="19,0,49,0" name="ProjectionalQiChat.typesystem.check_no_next_empty_rule_UserRule_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/8407072934137916034">
+    <file name="fix_no_next_empty_rule_QuickFix.java">
+      <node id="8407072934137916034" at="12,44,13,124" concept="11" />
+      <node id="8407072934137916685" at="15,44,16,47" concept="8" />
+      <node id="8407072934137918629" at="18,35,19,188" concept="2" />
+      <node id="8407072934137916034" at="12,0,15,0" concept="1" trace="fix_no_next_empty_rule_QuickFix#()V" />
+      <node id="8407072934137916034" at="15,0,18,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="8407072934137916034" at="18,0,21,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="8407072934137916034" at="12,44,13,124" />
+      <scope id="8407072934137916387" at="15,44,16,47" />
+      <scope id="8407072934137916036" at="18,35,19,188" />
+      <scope id="8407072934137916034" at="12,0,15,0" />
+      <scope id="8407072934137916034" at="15,0,18,0">
+        <var name="node" id="8407072934137916034" />
+      </scope>
+      <scope id="8407072934137916034" at="18,0,21,0">
+        <var name="node" id="8407072934137916034" />
+      </scope>
+      <unit id="8407072934137916034" at="11,0,22,0" name="ProjectionalQiChat.typesystem.fix_no_next_empty_rule_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/8407072934138655207">
+    <file name="TypesystemDescriptor.java">
+      <node id="8407072934138655207" at="74,5,75,110" concept="7" />
+      <node id="8407072934138655207" at="75,110,76,55" concept="2" />
+      <node id="8407072934138655207" at="73,5,77,5" concept="0" />
+      <scope id="8407072934138655207" at="74,5,76,55">
+        <var name="nonTypesystemRule" id="8407072934138655207" />
+      </scope>
+    </file>
+    <file name="check_no_next_empty_rule_Proposal_NonTypesystemRule.java">
+      <node id="8407072934138658539" at="24,7,25,66" concept="7" />
+      <node id="8407072934138658539" at="25,66,26,239" concept="7" />
+      <node id="8407072934138658676" at="27,9,28,170" concept="7" />
+      <node id="8407072934138658676" at="28,170,29,71" concept="2" />
+      <node id="8407072934138655207" at="34,50,35,32" concept="8" />
+      <node id="8407072934138655207" at="37,68,38,102" concept="8" />
+      <node id="8407072934138655207" at="40,30,41,17" concept="8" />
+      <node id="8407072934138655207" at="45,0,46,0" concept="10" trace="EmptyRule$Ev" />
+      <node id="8407072934138655207" at="46,0,47,0" concept="10" trace="Proposal$R9" />
+      <node id="8407072934138655207" at="20,0,22,0" concept="1" trace="check_no_next_empty_rule_Proposal_NonTypesystemRule#()V" />
+      <node id="8407072934138655207" at="34,0,37,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8407072934138655207" at="37,0,40,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8407072934138655207" at="40,0,43,0" concept="6" trace="overrides#()Z" />
+      <node id="8407072934138658676" at="26,239,30,9" concept="0" />
+      <node id="8407072934138658539" at="23,107,31,7" concept="0" />
+      <node id="8407072934138655214" at="22,121,32,5" concept="5" />
+      <node id="8407072934138655207" at="22,0,34,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8407072934138655207" at="20,64,20,64" />
+      <scope id="8407072934138655207" at="34,50,35,32" />
+      <scope id="8407072934138655207" at="37,68,38,102" />
+      <scope id="8407072934138655207" at="40,30,41,17" />
+      <scope id="8407072934138655207" at="20,0,22,0" />
+      <scope id="8407072934138658676" at="27,9,29,71">
+        <var name="intentionProvider" id="8407072934138658676" />
+      </scope>
+      <scope id="8407072934138655207" at="34,0,37,0" />
+      <scope id="8407072934138655207" at="37,0,40,0">
+        <var name="argument" id="8407072934138655207" />
+      </scope>
+      <scope id="8407072934138655207" at="40,0,43,0" />
+      <scope id="8407072934138658539" at="24,7,30,9">
+        <var name="_reporter_2309309498" id="8407072934138658539" />
+        <var name="errorTarget" id="8407072934138658539" />
+      </scope>
+      <scope id="8407072934138655216" at="23,107,31,7" />
+      <scope id="8407072934138655208" at="22,121,32,5" />
+      <scope id="8407072934138655207" at="22,0,34,0">
+        <var name="proposal" id="8407072934138655207" />
+        <var name="status" id="8407072934138655207" />
+        <var name="typeCheckingContext" id="8407072934138655207" />
+      </scope>
+      <unit id="8407072934138655207" at="44,0,48,0" name="ProjectionalQiChat.typesystem.check_no_next_empty_rule_Proposal_NonTypesystemRule$CONCEPTS" />
+      <unit id="8407072934138655207" at="19,0,49,0" name="ProjectionalQiChat.typesystem.check_no_next_empty_rule_Proposal_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/8407072934141126352">
+    <file name="TypesystemDescriptor.java">
+      <node id="8407072934141126352" at="10,5,11,94" concept="7" />
+      <node id="8407072934141126352" at="11,94,12,55" concept="2" />
+      <node id="8407072934141126352" at="9,33,13,5" concept="0" />
+      <scope id="8407072934141126352" at="10,5,12,55">
+        <var name="nonTypesystemRule" id="8407072934141126352" />
+      </scope>
+    </file>
+    <file name="check_CommentRule_NonTypesystemRule.java">
+      <node id="8407072934141129286" at="24,7,25,66" concept="7" />
+      <node id="8407072934141129286" at="25,66,26,259" concept="7" />
+      <node id="8407072934141129457" at="27,9,28,170" concept="7" />
+      <node id="8407072934141129457" at="28,170,29,71" concept="2" />
+      <node id="8407072934141126352" at="34,50,35,35" concept="8" />
+      <node id="8407072934141126352" at="37,68,38,102" concept="8" />
+      <node id="8407072934141126352" at="40,30,41,17" concept="8" />
+      <node id="8407072934141126352" at="45,0,46,0" concept="10" trace="EmptyRule$Ev" />
+      <node id="8407072934141126352" at="46,0,47,0" concept="10" trace="CommentRule$QE" />
+      <node id="8407072934141126352" at="20,0,22,0" concept="1" trace="check_CommentRule_NonTypesystemRule#()V" />
+      <node id="8407072934141126352" at="34,0,37,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8407072934141126352" at="37,0,40,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8407072934141126352" at="40,0,43,0" concept="6" trace="overrides#()Z" />
+      <node id="8407072934141129457" at="26,259,30,9" concept="0" />
+      <node id="8407072934141129286" at="23,110,31,7" concept="0" />
+      <node id="8407072934141126359" at="22,124,32,5" concept="5" />
+      <node id="8407072934141126352" at="22,0,34,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8407072934141126352" at="20,48,20,48" />
+      <scope id="8407072934141126352" at="34,50,35,35" />
+      <scope id="8407072934141126352" at="37,68,38,102" />
+      <scope id="8407072934141126352" at="40,30,41,17" />
+      <scope id="8407072934141126352" at="20,0,22,0" />
+      <scope id="8407072934141129457" at="27,9,29,71">
+        <var name="intentionProvider" id="8407072934141129457" />
+      </scope>
+      <scope id="8407072934141126352" at="34,0,37,0" />
+      <scope id="8407072934141126352" at="37,0,40,0">
+        <var name="argument" id="8407072934141126352" />
+      </scope>
+      <scope id="8407072934141126352" at="40,0,43,0" />
+      <scope id="8407072934141129286" at="24,7,30,9">
+        <var name="_reporter_2309309498" id="8407072934141129286" />
+        <var name="errorTarget" id="8407072934141129286" />
+      </scope>
+      <scope id="8407072934141126361" at="23,110,31,7" />
+      <scope id="8407072934141126353" at="22,124,32,5" />
+      <scope id="8407072934141126352" at="22,0,34,0">
+        <var name="commentRule" id="8407072934141126352" />
+        <var name="status" id="8407072934141126352" />
+        <var name="typeCheckingContext" id="8407072934141126352" />
+      </scope>
+      <unit id="8407072934141126352" at="44,0,48,0" name="ProjectionalQiChat.typesystem.check_CommentRule_NonTypesystemRule$CONCEPTS" />
+      <unit id="8407072934141126352" at="19,0,49,0" name="ProjectionalQiChat.typesystem.check_CommentRule_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/8407072934142551668">
+    <file name="TypesystemDescriptor.java">
+      <node id="8407072934142551668" at="18,5,19,95" concept="7" />
+      <node id="8407072934142551668" at="19,95,20,55" concept="2" />
+      <node id="8407072934142551668" at="17,5,21,5" concept="0" />
+      <scope id="8407072934142551668" at="18,5,20,55">
+        <var name="nonTypesystemRule" id="8407072934142551668" />
+      </scope>
+    </file>
+    <file name="check_HumanConcept_NonTypesystemRule.java">
+      <node id="8407072934142555154" at="24,7,25,66" concept="7" />
+      <node id="8407072934142555154" at="25,66,26,265" concept="7" />
+      <node id="8407072934142555354" at="27,9,28,173" concept="7" />
+      <node id="8407072934142555354" at="28,173,29,71" concept="2" />
+      <node id="8407072934142551668" at="34,50,35,36" concept="8" />
+      <node id="8407072934142551668" at="37,68,38,102" concept="8" />
+      <node id="8407072934142551668" at="40,30,41,17" concept="8" />
+      <node id="8407072934142551668" at="45,0,46,0" concept="10" trace="EmptyConcept$zW" />
+      <node id="8407072934142551668" at="46,0,47,0" concept="10" trace="HumanConcept$qf" />
+      <node id="8407072934142551668" at="20,0,22,0" concept="1" trace="check_HumanConcept_NonTypesystemRule#()V" />
+      <node id="8407072934142551668" at="34,0,37,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8407072934142551668" at="37,0,40,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8407072934142551668" at="40,0,43,0" concept="6" trace="overrides#()Z" />
+      <node id="8407072934142555354" at="26,265,30,9" concept="0" />
+      <node id="8407072934142555154" at="23,114,31,7" concept="0" />
+      <node id="8407072934142551675" at="22,125,32,5" concept="5" />
+      <node id="8407072934142551668" at="22,0,34,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8407072934142551668" at="20,49,20,49" />
+      <scope id="8407072934142551668" at="34,50,35,36" />
+      <scope id="8407072934142551668" at="37,68,38,102" />
+      <scope id="8407072934142551668" at="40,30,41,17" />
+      <scope id="8407072934142551668" at="20,0,22,0" />
+      <scope id="8407072934142555354" at="27,9,29,71">
+        <var name="intentionProvider" id="8407072934142555354" />
+      </scope>
+      <scope id="8407072934142551668" at="34,0,37,0" />
+      <scope id="8407072934142551668" at="37,0,40,0">
+        <var name="argument" id="8407072934142551668" />
+      </scope>
+      <scope id="8407072934142551668" at="40,0,43,0" />
+      <scope id="8407072934142555154" at="24,7,30,9">
+        <var name="_reporter_2309309498" id="8407072934142555154" />
+        <var name="errorTarget" id="8407072934142555154" />
+      </scope>
+      <scope id="8407072934142551677" at="23,114,31,7" />
+      <scope id="8407072934142551669" at="22,125,32,5" />
+      <scope id="8407072934142551668" at="22,0,34,0">
+        <var name="humanConcept" id="8407072934142551668" />
+        <var name="status" id="8407072934142551668" />
+        <var name="typeCheckingContext" id="8407072934142551668" />
+      </scope>
+      <unit id="8407072934142551668" at="44,0,48,0" name="ProjectionalQiChat.typesystem.check_HumanConcept_NonTypesystemRule$CONCEPTS" />
+      <unit id="8407072934142551668" at="19,0,49,0" name="ProjectionalQiChat.typesystem.check_HumanConcept_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/8407072934142555351">
+    <file name="fix_no_next_empty_concept_QuickFix.java">
+      <node id="8407072934142555351" at="15,47,16,124" concept="11" />
+      <node id="8407072934142556898" at="18,44,19,51" concept="8" />
+      <node id="8407072934143618209" at="21,35,22,193" concept="7" />
+      <node id="8407072934143618360" at="22,193,23,235" concept="2" />
+      <node id="8407072934142555699" at="23,235,24,59" concept="2" />
+      <node id="8407072934142555351" at="28,0,29,0" concept="10" trace="description$MSuR" />
+      <node id="8407072934142555351" at="15,0,18,0" concept="1" trace="fix_no_next_empty_concept_QuickFix#()V" />
+      <node id="8407072934142555351" at="18,0,21,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="8407072934142555351" at="21,0,26,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="8407072934142555351" at="15,47,16,124" />
+      <scope id="8407072934142556893" at="18,44,19,51" />
+      <scope id="8407072934142555351" at="15,0,18,0" />
+      <scope id="8407072934142555351" at="18,0,21,0">
+        <var name="node" id="8407072934142555351" />
+      </scope>
+      <scope id="8407072934142555353" at="21,35,24,59">
+        <var name="newEmpty" id="8407072934143618212" />
+      </scope>
+      <scope id="8407072934142555351" at="21,0,26,0">
+        <var name="node" id="8407072934142555351" />
+      </scope>
+      <unit id="8407072934142555351" at="27,0,30,0" name="ProjectionalQiChat.typesystem.fix_no_next_empty_concept_QuickFix$LINKS" />
+      <unit id="8407072934142555351" at="14,0,31,0" name="ProjectionalQiChat.typesystem.fix_no_next_empty_concept_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/8407072934142572417">
+    <file name="TypesystemDescriptor.java">
+      <node id="8407072934142572417" at="22,5,23,95" concept="7" />
+      <node id="8407072934142572417" at="23,95,24,55" concept="2" />
+      <node id="8407072934142572417" at="21,5,25,5" concept="0" />
+      <scope id="8407072934142572417" at="22,5,24,55">
+        <var name="nonTypesystemRule" id="8407072934142572417" />
+      </scope>
+    </file>
+    <file name="check_RobotConcept_NonTypesystemRule.java">
+      <node id="8407072934142575661" at="24,7,25,66" concept="7" />
+      <node id="8407072934142575661" at="25,66,26,264" concept="7" />
+      <node id="8407072934142575842" at="27,9,28,173" concept="7" />
+      <node id="8407072934142575842" at="28,173,29,71" concept="2" />
+      <node id="8407072934142572417" at="34,50,35,36" concept="8" />
+      <node id="8407072934142572417" at="37,68,38,102" concept="8" />
+      <node id="8407072934142572417" at="40,30,41,17" concept="8" />
+      <node id="8407072934142572417" at="45,0,46,0" concept="10" trace="EmptyConcept$zW" />
+      <node id="8407072934142572417" at="46,0,47,0" concept="10" trace="RobotConcept$rd" />
+      <node id="8407072934142572417" at="20,0,22,0" concept="1" trace="check_RobotConcept_NonTypesystemRule#()V" />
+      <node id="8407072934142572417" at="34,0,37,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8407072934142572417" at="37,0,40,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8407072934142572417" at="40,0,43,0" concept="6" trace="overrides#()Z" />
+      <node id="8407072934142575842" at="26,264,30,9" concept="0" />
+      <node id="8407072934142575661" at="23,114,31,7" concept="0" />
+      <node id="8407072934142572424" at="22,125,32,5" concept="5" />
+      <node id="8407072934142572417" at="22,0,34,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8407072934142572417" at="20,49,20,49" />
+      <scope id="8407072934142572417" at="34,50,35,36" />
+      <scope id="8407072934142572417" at="37,68,38,102" />
+      <scope id="8407072934142572417" at="40,30,41,17" />
+      <scope id="8407072934142572417" at="20,0,22,0" />
+      <scope id="8407072934142575842" at="27,9,29,71">
+        <var name="intentionProvider" id="8407072934142575842" />
+      </scope>
+      <scope id="8407072934142572417" at="34,0,37,0" />
+      <scope id="8407072934142572417" at="37,0,40,0">
+        <var name="argument" id="8407072934142572417" />
+      </scope>
+      <scope id="8407072934142572417" at="40,0,43,0" />
+      <scope id="8407072934142575661" at="24,7,30,9">
+        <var name="_reporter_2309309498" id="8407072934142575661" />
+        <var name="errorTarget" id="8407072934142575661" />
+      </scope>
+      <scope id="8407072934142572426" at="23,114,31,7" />
+      <scope id="8407072934142572418" at="22,125,32,5" />
+      <scope id="8407072934142572417" at="22,0,34,0">
+        <var name="robotConcept" id="8407072934142572417" />
+        <var name="status" id="8407072934142572417" />
+        <var name="typeCheckingContext" id="8407072934142572417" />
+      </scope>
+      <unit id="8407072934142572417" at="44,0,48,0" name="ProjectionalQiChat.typesystem.check_RobotConcept_NonTypesystemRule$CONCEPTS" />
+      <unit id="8407072934142572417" at="19,0,49,0" name="ProjectionalQiChat.typesystem.check_RobotConcept_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/8407072934143924778">
+    <file name="TypesystemDescriptor.java">
+      <node id="8407072934143924778" at="14,5,15,95" concept="7" />
+      <node id="8407072934143924778" at="15,95,16,55" concept="2" />
+      <node id="8407072934143924778" at="13,5,17,5" concept="0" />
+      <scope id="8407072934143924778" at="14,5,16,55">
+        <var name="nonTypesystemRule" id="8407072934143924778" />
+      </scope>
+    </file>
+    <file name="check_EmptyConcept_NonTypesystemRule.java">
+      <node id="8407072934143929989" at="25,7,26,66" concept="7" />
+      <node id="8407072934143929989" at="26,66,27,245" concept="7" />
+      <node id="8407072934143930117" at="28,9,29,182" concept="7" />
+      <node id="8407072934143930117" at="29,182,30,71" concept="2" />
+      <node id="8407072934143924778" at="35,50,36,36" concept="8" />
+      <node id="8407072934143924778" at="38,68,39,102" concept="8" />
+      <node id="8407072934143924778" at="41,30,42,17" concept="8" />
+      <node id="8407072934143924778" at="46,0,47,0" concept="10" trace="description$MSuR" />
+      <node id="8407072934143924778" at="50,0,51,0" concept="10" trace="EmptyConcept$zW" />
+      <node id="8407072934143924778" at="21,0,23,0" concept="1" trace="check_EmptyConcept_NonTypesystemRule#()V" />
+      <node id="8407072934143924778" at="35,0,38,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8407072934143924778" at="38,0,41,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8407072934143924778" at="41,0,44,0" concept="6" trace="overrides#()Z" />
+      <node id="8407072934143930117" at="27,245,31,9" concept="0" />
+      <node id="8407072934143929989" at="24,84,32,7" concept="0" />
+      <node id="8407072934143924785" at="23,125,33,5" concept="5" />
+      <node id="8407072934143924778" at="23,0,35,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8407072934143924778" at="21,49,21,49" />
+      <scope id="8407072934143924778" at="35,50,36,36" />
+      <scope id="8407072934143924778" at="38,68,39,102" />
+      <scope id="8407072934143924778" at="41,30,42,17" />
+      <scope id="8407072934143924778" at="21,0,23,0" />
+      <scope id="8407072934143930117" at="28,9,30,71">
+        <var name="intentionProvider" id="8407072934143930117" />
+      </scope>
+      <scope id="8407072934143924778" at="35,0,38,0" />
+      <scope id="8407072934143924778" at="38,0,41,0">
+        <var name="argument" id="8407072934143924778" />
+      </scope>
+      <scope id="8407072934143924778" at="41,0,44,0" />
+      <scope id="8407072934143929989" at="25,7,31,9">
+        <var name="_reporter_2309309498" id="8407072934143929989" />
+        <var name="errorTarget" id="8407072934143929989" />
+      </scope>
+      <scope id="8407072934143924787" at="24,84,32,7" />
+      <scope id="8407072934143924779" at="23,125,33,5" />
+      <scope id="8407072934143924778" at="23,0,35,0">
+        <var name="emptyConcept" id="8407072934143924778" />
+        <var name="status" id="8407072934143924778" />
+        <var name="typeCheckingContext" id="8407072934143924778" />
+      </scope>
+      <unit id="8407072934143924778" at="45,0,48,0" name="ProjectionalQiChat.typesystem.check_EmptyConcept_NonTypesystemRule$LINKS" />
+      <unit id="8407072934143924778" at="49,0,52,0" name="ProjectionalQiChat.typesystem.check_EmptyConcept_NonTypesystemRule$CONCEPTS" />
+      <unit id="8407072934143924778" at="20,0,53,0" name="ProjectionalQiChat.typesystem.check_EmptyConcept_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/8407072934143930114">
+    <file name="fix_no_description_of_EmptyConcept_QuickFix.java">
+      <node id="8407072934143930114" at="16,56,17,124" concept="11" />
+      <node id="8407072934143930715" at="19,44,20,52" concept="8" />
+      <node id="8407072934143936082" at="23,71,24,40" concept="7" />
+      <node id="8407072934143936389" at="24,40,25,241" concept="2" />
+      <node id="8407072934143930114" at="30,0,31,0" concept="10" trace="EmptyConcept$zW" />
+      <node id="8407072934143930114" at="34,0,35,0" concept="10" trace="description$MSuR" />
+      <node id="8407072934143930114" at="16,0,19,0" concept="1" trace="fix_no_description_of_EmptyConcept_QuickFix#()V" />
+      <node id="8407072934143930114" at="19,0,22,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="8407072934143932929" at="22,35,26,5" concept="5" />
+      <node id="8407072934143930114" at="22,0,28,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="8407072934143930114" at="16,56,17,124" />
+      <scope id="8407072934143930710" at="19,44,20,52" />
+      <scope id="8407072934143932931" at="23,71,25,241">
+        <var name="emptyConcept" id="8407072934143936085" />
+      </scope>
+      <scope id="8407072934143930114" at="16,0,19,0" />
+      <scope id="8407072934143930114" at="19,0,22,0">
+        <var name="node" id="8407072934143930114" />
+      </scope>
+      <scope id="8407072934143930116" at="22,35,26,5" />
+      <scope id="8407072934143930114" at="22,0,28,0">
+        <var name="node" id="8407072934143930114" />
+      </scope>
+      <unit id="8407072934143930114" at="29,0,32,0" name="ProjectionalQiChat.typesystem.fix_no_description_of_EmptyConcept_QuickFix$CONCEPTS" />
+      <unit id="8407072934143930114" at="33,0,36,0" name="ProjectionalQiChat.typesystem.fix_no_description_of_EmptyConcept_QuickFix$LINKS" />
+      <unit id="8407072934143930114" at="15,0,37,0" name="ProjectionalQiChat.typesystem.fix_no_description_of_EmptyConcept_QuickFix" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/8407072934167746000">
+    <file name="TypesystemDescriptor.java">
+      <node id="8407072934167746000" at="50,5,51,117" concept="7" />
+      <node id="8407072934167746000" at="51,117,52,55" concept="2" />
+      <node id="8407072934167746000" at="49,5,53,5" concept="0" />
+      <scope id="8407072934167746000" at="50,5,52,55">
+        <var name="nonTypesystemRule" id="8407072934167746000" />
+      </scope>
+    </file>
+    <file name="check_no_first_emptySR_FirstOrderSubrule_NonTypesystemRule.java">
+      <node id="8407072934169110289" at="27,7,28,66" concept="7" />
+      <node id="8407072934169110289" at="28,66,29,238" concept="7" />
+      <node id="8407072934169110373" at="30,9,31,173" concept="7" />
+      <node id="8407072934169110373" at="31,173,32,71" concept="2" />
+      <node id="8407072934167746000" at="37,50,38,41" concept="8" />
+      <node id="8407072934167746000" at="40,68,41,102" concept="8" />
+      <node id="8407072934167746000" at="43,30,44,17" concept="8" />
+      <node id="8407072934167746000" at="48,0,49,0" concept="10" trace="subrules$kZKc" />
+      <node id="8407072934167746000" at="52,0,53,0" concept="10" trace="EmptySecondOrderSubrule$op" />
+      <node id="8407072934167746000" at="53,0,54,0" concept="10" trace="FirstOrderSubrule$oM" />
+      <node id="8407072934167746000" at="23,0,25,0" concept="1" trace="check_no_first_emptySR_FirstOrderSubrule_NonTypesystemRule#()V" />
+      <node id="8407072934167746000" at="37,0,40,0" concept="6" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8407072934167746000" at="40,0,43,0" concept="6" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="8407072934167746000" at="43,0,46,0" concept="6" trace="overrides#()Z" />
+      <node id="8407072934169110373" at="29,238,33,9" concept="0" />
+      <node id="8407072934169110289" at="26,283,34,7" concept="0" />
+      <node id="8407072934167746007" at="25,130,35,5" concept="5" />
+      <node id="8407072934167746000" at="25,0,37,0" concept="6" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="8407072934167746000" at="23,71,23,71" />
+      <scope id="8407072934167746000" at="37,50,38,41" />
+      <scope id="8407072934167746000" at="40,68,41,102" />
+      <scope id="8407072934167746000" at="43,30,44,17" />
+      <scope id="8407072934167746000" at="23,0,25,0" />
+      <scope id="8407072934169110373" at="30,9,32,71">
+        <var name="intentionProvider" id="8407072934169110373" />
+      </scope>
+      <scope id="8407072934167746000" at="37,0,40,0" />
+      <scope id="8407072934167746000" at="40,0,43,0">
+        <var name="argument" id="8407072934167746000" />
+      </scope>
+      <scope id="8407072934167746000" at="43,0,46,0" />
+      <scope id="8407072934169110289" at="27,7,33,9">
+        <var name="_reporter_2309309498" id="8407072934169110289" />
+        <var name="errorTarget" id="8407072934169110289" />
+      </scope>
+      <scope id="8407072934167746009" at="26,283,34,7" />
+      <scope id="8407072934167746001" at="25,130,35,5" />
+      <scope id="8407072934167746000" at="25,0,37,0">
+        <var name="firstOrderSubrule" id="8407072934167746000" />
+        <var name="status" id="8407072934167746000" />
+        <var name="typeCheckingContext" id="8407072934167746000" />
+      </scope>
+      <unit id="8407072934167746000" at="47,0,50,0" name="ProjectionalQiChat.typesystem.check_no_first_emptySR_FirstOrderSubrule_NonTypesystemRule$LINKS" />
+      <unit id="8407072934167746000" at="51,0,55,0" name="ProjectionalQiChat.typesystem.check_no_first_emptySR_FirstOrderSubrule_NonTypesystemRule$CONCEPTS" />
+      <unit id="8407072934167746000" at="22,0,56,0" name="ProjectionalQiChat.typesystem.check_no_first_emptySR_FirstOrderSubrule_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:2e52173d-a6ef-4c74-b7ba-dc1accb9a614(ProjectionalQiChat.typesystem)/8407072934169110370">
+    <file name="fix_no_SecondOrderSubrule_QuickFix.java">
+      <node id="8407072934169110370" at="17,47,18,124" concept="11" />
+      <node id="8407072934169112551" at="20,44,21,57" concept="8" />
+      <node id="6349347899271566472" at="24,149,25,149" concept="2" />
+      <node id="6349347899271590900" at="26,12,27,367" concept="2" />
+      <node id="8407072934169110370" at="32,0,33,0" concept="10" trace="FirstOrderSubrule$oM" />
+      <node id="8407072934169110370" at="33,0,34,0" concept="10" trace="EmptySecondOrderSubrule$op" />
+      <node id="8407072934169110370" at="37,0,38,0" concept="10" trace="subrules$kZKc" />
+      <node id="6349347899271590609" at="26,10,28,5" concept="0" />
+      <node id="8407072934169110370" at="17,0,20,0" concept="1" trace="fix_no_SecondOrderSubrule_QuickFix#()V" />
+      <node id="8407072934169110370" at="20,0,23,0" concept="6" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="6349347899271542217" at="23,35,28,5" concept="5" />
+      <node id="8407072934169110370" at="23,0,30,0" concept="6" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="8407072934169110370" at="17,47,18,124" />
+      <scope id="8407072934169112253" at="20,44,21,57" />
+      <scope id="6349347899271542219" at="24,149,25,149" />
+      <scope id="6349347899271590610" at="26,12,27,367" />
+      <scope id="8407072934169110370" at="17,0,20,0" />
+      <scope id="8407072934169110370" at="20,0,23,0">
+        <var name="node" id="8407072934169110370" />
+      </scope>
+      <scope id="8407072934169110372" at="23,35,28,5" />
+      <scope id="8407072934169110370" at="23,0,30,0">
+        <var name="node" id="8407072934169110370" />
+      </scope>
+      <unit id="8407072934169110370" at="36,0,39,0" name="ProjectionalQiChat.typesystem.fix_no_SecondOrderSubrule_QuickFix$LINKS" />
+      <unit id="8407072934169110370" at="31,0,35,0" name="ProjectionalQiChat.typesystem.fix_no_SecondOrderSubrule_QuickFix$CONCEPTS" />
+      <unit id="8407072934169110370" at="16,0,40,0" name="ProjectionalQiChat.typesystem.fix_no_SecondOrderSubrule_QuickFix" />
     </file>
   </root>
 </debug-info>

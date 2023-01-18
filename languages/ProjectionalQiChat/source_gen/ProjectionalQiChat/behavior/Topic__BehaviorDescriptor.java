@@ -38,8 +38,9 @@ public final class Topic__BehaviorDescriptor extends BaseBHDescriptor {
   public static final SMethod<Void> cleanTopicImports_id2JDDPTAGdPF = new SMethodBuilder<Void>(new SJavaCompoundTypeImpl(Void.class)).name("cleanTopicImports").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("2JDDPTAGdPF").build();
   public static final SMethod<Void> cleanCCImports_id2JDDPTARrDK = new SMethodBuilder<Void>(new SJavaCompoundTypeImpl(Void.class)).name("cleanCCImports").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("2JDDPTARrDK").build();
   /*package*/ static final SMethod<Iterable<SNode>> _flat_sequences_id2JDDPTCdNYd = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("_flat_sequences").modifiers(0, AccessPrivileges.PRIVATE).concept(CONCEPT).id("2JDDPTCdNYd").build(SMethodBuilder.createJavaParameter((Class<Iterable<? extends Iterable<SNode>>>) ((Class) Object.class), ""));
+  public static final SMethod<Boolean> isContainingNextProposalFunction_id5wtq$oIVZy0 = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isContainingNextProposalFunction").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("5wtq$oIVZy0").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getConcepts_id4GE7JaV2Ue_, getVariables_id2JDDPTC5E6Z, cleanTopicImports_id2JDDPTAGdPF, cleanCCImports_id2JDDPTARrDK, _flat_sequences_id2JDDPTCdNYd);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getConcepts_id4GE7JaV2Ue_, getVariables_id2JDDPTC5E6Z, cleanTopicImports_id2JDDPTAGdPF, cleanCCImports_id2JDDPTARrDK, _flat_sequences_id2JDDPTCdNYd, isContainingNextProposalFunction_id5wtq$oIVZy0);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -138,6 +139,15 @@ public final class Topic__BehaviorDescriptor extends BaseBHDescriptor {
     }
     return flat;
   }
+  /*package*/ static boolean isContainingNextProposalFunction_id5wtq$oIVZy0(@NotNull SNode __thisNode__) {
+    Iterable<SNode> userRules = SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.UserRule$oj, false, new SAbstractConcept[]{});
+    for (SNode node_UserRule_ : userRules) {
+      if (ListSequence.fromList(SNodeOperations.getNodeDescendants(node_UserRule_, CONCEPTS.NextProposal$AA, false, new SAbstractConcept[]{})).count() > 0) {
+        return true;
+      }
+    }
+    return false;
+  }
 
   /*package*/ Topic__BehaviorDescriptor() {
   }
@@ -166,6 +176,8 @@ public final class Topic__BehaviorDescriptor extends BaseBHDescriptor {
         return null;
       case 4:
         return (T) ((Iterable<SNode>) _flat_sequences_id2JDDPTCdNYd(node, (Iterable<? extends Iterable<SNode>>) parameters[0]));
+      case 5:
+        return (T) ((Boolean) isContainingNextProposalFunction_id5wtq$oIVZy0(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -206,6 +218,8 @@ public final class Topic__BehaviorDescriptor extends BaseBHDescriptor {
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept VariableDeclaration$Pa = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b326L, "ProjectionalQiChat.structure.VariableDeclaration");
+    /*package*/ static final SConcept UserRule$oj = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b102L, "ProjectionalQiChat.structure.UserRule");
+    /*package*/ static final SConcept NextProposal$AA = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b2535L, "ProjectionalQiChat.structure.NextProposal");
   }
 
   private static final class PROPS {

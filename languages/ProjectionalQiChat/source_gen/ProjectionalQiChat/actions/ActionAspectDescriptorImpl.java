@@ -26,6 +26,8 @@ public class ActionAspectDescriptorImpl extends BaseActionAspectDescriptor imple
           return Collections.<NodeFactory>singletonList(new initializeSecondOrderSubrule.NodeFactory_8305283705764670629());
         case "ThirdOrderSubrule":
           return Collections.<NodeFactory>singletonList(new initializeThirdOrderSubrule.NodeFactory_8305283705764678569());
+        case "UserRule":
+          return Collections.<NodeFactory>singletonList(new setUpUserRule.NodeFactory_8407072934134644582());
         case "VoiceTuningConfig":
           return Collections.<NodeFactory>singletonList(new VoiceTuningConfigStandardInitializing.NodeFactory_1884303105527564455());
         default:

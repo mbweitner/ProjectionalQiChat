@@ -17,16 +17,21 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
   private final BHDescriptor myVariableDeclarationContainer__BehaviorDescriptor = new VariableDeclarationContainer__BehaviorDescriptor();
   private final BHDescriptor myConceptContainer__BehaviorDescriptor = new ConceptContainer__BehaviorDescriptor();
   private final BHDescriptor myTopic__BehaviorDescriptor = new Topic__BehaviorDescriptor();
+  private final BHDescriptor myHeaderSpecification__BehaviorDescriptor = new HeaderSpecification__BehaviorDescriptor();
   private final BHDescriptor myCommentRule__BehaviorDescriptor = new CommentRule__BehaviorDescriptor();
   private final BHDescriptor myProposal__BehaviorDescriptor = new Proposal__BehaviorDescriptor();
   private final BHDescriptor myConceptCollection__BehaviorDescriptor = new ConceptCollection__BehaviorDescriptor();
   private final BHDescriptor myAbstractUserRule__BehaviorDescriptor = new AbstractUserRule__BehaviorDescriptor();
+  private final BHDescriptor myUserRule__BehaviorDescriptor = new UserRule__BehaviorDescriptor();
   private final BHDescriptor myHumanConcept__BehaviorDescriptor = new HumanConcept__BehaviorDescriptor();
   private final BHDescriptor myConcept__BehaviorDescriptor = new Concept__BehaviorDescriptor();
   private final BHDescriptor myRobotConcept__BehaviorDescriptor = new RobotConcept__BehaviorDescriptor();
   private final BHDescriptor myInputChoice__BehaviorDescriptor = new InputChoice__BehaviorDescriptor();
   private final BHDescriptor myOutputChoice__BehaviorDescriptor = new OutputChoice__BehaviorDescriptor();
   private final BHDescriptor myWord__BehaviorDescriptor = new Word__BehaviorDescriptor();
+  private final BHDescriptor myEmptyFirstOrderSubrule__BehaviorDescriptor = new EmptyFirstOrderSubrule__BehaviorDescriptor();
+  private final BHDescriptor myEmptySecondOrderSubrule__BehaviorDescriptor = new EmptySecondOrderSubrule__BehaviorDescriptor();
+  private final BHDescriptor myEmptyThirdOrderSubrule__BehaviorDescriptor = new EmptyThirdOrderSubrule__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
   }
@@ -46,28 +51,38 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 4:
         return myConceptContainer__BehaviorDescriptor;
       case 5:
-        return myHumanConcept__BehaviorDescriptor;
+        return myEmptyFirstOrderSubrule__BehaviorDescriptor;
       case 6:
-        return myInputChoice__BehaviorDescriptor;
+        return myEmptySecondOrderSubrule__BehaviorDescriptor;
       case 7:
-        return myOutputChoice__BehaviorDescriptor;
+        return myEmptyThirdOrderSubrule__BehaviorDescriptor;
       case 8:
-        return myPause__BehaviorDescriptor;
+        return myHeaderSpecification__BehaviorDescriptor;
       case 9:
-        return myProposal__BehaviorDescriptor;
+        return myHumanConcept__BehaviorDescriptor;
       case 10:
-        return myRobotConcept__BehaviorDescriptor;
+        return myInputChoice__BehaviorDescriptor;
       case 11:
-        return myTopic__BehaviorDescriptor;
+        return myOutputChoice__BehaviorDescriptor;
       case 12:
-        return myVariableDeclarationContainer__BehaviorDescriptor;
+        return myPause__BehaviorDescriptor;
       case 13:
-        return myVoiceTuningConfig__BehaviorDescriptor;
+        return myProposal__BehaviorDescriptor;
       case 14:
+        return myRobotConcept__BehaviorDescriptor;
+      case 15:
+        return myTopic__BehaviorDescriptor;
+      case 16:
+        return myUserRule__BehaviorDescriptor;
+      case 17:
+        return myVariableDeclarationContainer__BehaviorDescriptor;
+      case 18:
+        return myVoiceTuningConfig__BehaviorDescriptor;
+      case 19:
         return myWord__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b101L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b02fL), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b107L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b032L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x4b2a1ef2bb0ba37fL), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b106L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b114L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b115L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b2555L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b030L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b108L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c487b95L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x2be9a75e6838bf73L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b253bL), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b101L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b02fL), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b107L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b032L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x4b2a1ef2bb0ba37fL), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x74abec4a81de9516L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x74abec4a81de956eL), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x74abec4a81de9592L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b016L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b106L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b114L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b115L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b2555L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b030L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b108L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c487b95L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b102L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x2be9a75e6838bf73L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b253bL), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L)).seal();
 }

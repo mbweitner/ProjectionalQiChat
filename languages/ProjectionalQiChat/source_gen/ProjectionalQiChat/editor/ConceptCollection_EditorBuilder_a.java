@@ -46,10 +46,11 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Indent;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_CreateChildRangeSelection;
 import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
 import jetbrains.mps.nodeEditor.selection.NodeRangeSelection;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
 /*package*/ class ConceptCollection_EditorBuilder_a extends AbstractEditorBuilder {
@@ -260,7 +261,13 @@ import org.jetbrains.mps.openapi.language.SConcept;
     public SAbstractConcept getChildSConcept() {
       return CONCEPTS.Concept$qI;
     }
+    public SNode createNodeToInsert(EditorContext editorContext, SNode prevNode, SNode nextNode, int index) {
+      return nodeFactory(prevNode, nextNode, index);
+    }
 
+    public SNode nodeFactory(SNode prevNode, SNode nextNode, int index) {
+      return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b106L, "ProjectionalQiChat.structure.HumanConcept"));
+    }
     public EditorCell createNodeCell(SNode elementNode) {
       EditorCell elementCell = getUpdateSession().updateChildNodeCell(elementNode);
       installElementCellActions(elementNode, elementCell, false);
@@ -310,7 +317,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       }
     }
     public boolean filter(SNode childNode) {
-      return !(SNodeOperations.isInstanceOf(childNode, CONCEPTS.RobotConcept$rd));
+      return SNodeOperations.isInstanceOf(childNode, CONCEPTS.HumanConcept$qf) || (SNodeOperations.isInstanceOf(childNode, CONCEPTS.EmptyConcept$zW) && SNodeOperations.isInstanceOf(SNodeOperations.getPrevSibling(childNode), CONCEPTS.HumanConcept$qf));
     }
   }
   public static class RangeSelectionFilter_4cdf8z_c5a extends NodeRangeSelection.RangeSelectionFilter {
@@ -320,7 +327,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       super(editorContext);
     }
     public boolean accept(SNode childNode) {
-      return !(SNodeOperations.isInstanceOf(childNode, CONCEPTS.RobotConcept$rd));
+      return SNodeOperations.isInstanceOf(childNode, CONCEPTS.HumanConcept$qf) || (SNodeOperations.isInstanceOf(childNode, CONCEPTS.EmptyConcept$zW) && SNodeOperations.isInstanceOf(SNodeOperations.getPrevSibling(childNode), CONCEPTS.HumanConcept$qf));
     }
     public String getModuleReference() {
       return "9f283760-f9ca-4f5b-8990-d42851344ce7(ProjectionalQiChat)";
@@ -382,7 +389,13 @@ import org.jetbrains.mps.openapi.language.SConcept;
     public SAbstractConcept getChildSConcept() {
       return CONCEPTS.Concept$qI;
     }
+    public SNode createNodeToInsert(EditorContext editorContext, SNode prevNode, SNode nextNode, int index) {
+      return nodeFactory(prevNode, nextNode, index);
+    }
 
+    public SNode nodeFactory(SNode prevNode, SNode nextNode, int index) {
+      return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b108L, "ProjectionalQiChat.structure.RobotConcept"));
+    }
     public EditorCell createNodeCell(SNode elementNode) {
       EditorCell elementCell = getUpdateSession().updateChildNodeCell(elementNode);
       installElementCellActions(elementNode, elementCell, false);
@@ -432,7 +445,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       }
     }
     public boolean filter(SNode childNode) {
-      return !(SNodeOperations.isInstanceOf(childNode, CONCEPTS.HumanConcept$qf));
+      return SNodeOperations.isInstanceOf(childNode, CONCEPTS.RobotConcept$rd) || (SNodeOperations.isInstanceOf(childNode, CONCEPTS.EmptyConcept$zW) && SNodeOperations.isInstanceOf(SNodeOperations.getPrevSibling(childNode), CONCEPTS.RobotConcept$rd));
     }
   }
   public static class RangeSelectionFilter_4cdf8z_g5a extends NodeRangeSelection.RangeSelectionFilter {
@@ -442,7 +455,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       super(editorContext);
     }
     public boolean accept(SNode childNode) {
-      return !(SNodeOperations.isInstanceOf(childNode, CONCEPTS.HumanConcept$qf));
+      return SNodeOperations.isInstanceOf(childNode, CONCEPTS.RobotConcept$rd) || (SNodeOperations.isInstanceOf(childNode, CONCEPTS.EmptyConcept$zW) && SNodeOperations.isInstanceOf(SNodeOperations.getPrevSibling(childNode), CONCEPTS.RobotConcept$rd));
     }
     public String getModuleReference() {
       return "9f283760-f9ca-4f5b-8990-d42851344ce7(ProjectionalQiChat)";
@@ -456,8 +469,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private static final class CONCEPTS {
     /*package*/ static final SConcept PropertyAttribute$Gb = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
     /*package*/ static final SConcept Concept$qI = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b107L, "ProjectionalQiChat.structure.Concept");
-    /*package*/ static final SConcept RobotConcept$rd = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b108L, "ProjectionalQiChat.structure.RobotConcept");
     /*package*/ static final SConcept HumanConcept$qf = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b106L, "ProjectionalQiChat.structure.HumanConcept");
+    /*package*/ static final SConcept EmptyConcept$zW = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x74abec4a7ebea9fbL, "ProjectionalQiChat.structure.EmptyConcept");
+    /*package*/ static final SConcept RobotConcept$rd = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b108L, "ProjectionalQiChat.structure.RobotConcept");
   }
 
   private static final class LINKS {

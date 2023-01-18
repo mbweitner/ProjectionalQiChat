@@ -23,6 +23,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_CustomVariable;
   private ConceptPresentation props_Description;
   private ConceptPresentation props_DialogueEvent;
+  private ConceptPresentation props_EmptyConcept;
+  private ConceptPresentation props_EmptyFirstOrderSubrule;
+  private ConceptPresentation props_EmptyHumanInput;
+  private ConceptPresentation props_EmptyRobotOutput;
+  private ConceptPresentation props_EmptyRule;
+  private ConceptPresentation props_EmptySecondOrderSubrule;
+  private ConceptPresentation props_EmptyThirdOrderSubrule;
   private ConceptPresentation props_FirstOrderSubrule;
   private ConceptPresentation props_ForbiddenWord;
   private ConceptPresentation props_Function;
@@ -105,7 +112,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_CommentRule == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("Comment");
-          cpb.rawPresentation("#");
+          cpb.rawPresentation("Comment");
           props_CommentRule = cpb.create();
         }
         return props_CommentRule;
@@ -176,6 +183,55 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DialogueEvent = cpb.create();
         }
         return props_DialogueEvent;
+      case LanguageConceptSwitch.EmptyConcept:
+        if (props_EmptyConcept == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_EmptyConcept = cpb.create();
+        }
+        return props_EmptyConcept;
+      case LanguageConceptSwitch.EmptyFirstOrderSubrule:
+        if (props_EmptyFirstOrderSubrule == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_EmptyFirstOrderSubrule = cpb.create();
+        }
+        return props_EmptyFirstOrderSubrule;
+      case LanguageConceptSwitch.EmptyHumanInput:
+        if (props_EmptyHumanInput == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("EmptyHumanInput");
+          props_EmptyHumanInput = cpb.create();
+        }
+        return props_EmptyHumanInput;
+      case LanguageConceptSwitch.EmptyRobotOutput:
+        if (props_EmptyRobotOutput == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("EmptyRobotOutput");
+          props_EmptyRobotOutput = cpb.create();
+        }
+        return props_EmptyRobotOutput;
+      case LanguageConceptSwitch.EmptyRule:
+        if (props_EmptyRule == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("EmptyRule");
+          props_EmptyRule = cpb.create();
+        }
+        return props_EmptyRule;
+      case LanguageConceptSwitch.EmptySecondOrderSubrule:
+        if (props_EmptySecondOrderSubrule == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_EmptySecondOrderSubrule = cpb.create();
+        }
+        return props_EmptySecondOrderSubrule;
+      case LanguageConceptSwitch.EmptyThirdOrderSubrule:
+        if (props_EmptyThirdOrderSubrule == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_EmptyThirdOrderSubrule = cpb.create();
+        }
+        return props_EmptyThirdOrderSubrule;
       case LanguageConceptSwitch.FirstOrderSubrule:
         if (props_FirstOrderSubrule == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -388,7 +444,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Proposal:
         if (props_Proposal == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("Proposal (Robot output only)");
+          cpb.shortDesc("(has to be triggered by nextProposal)");
           cpb.presentationByName();
           props_Proposal = cpb.create();
         }
@@ -484,7 +540,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.UserRule:
         if (props_UserRule == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("User Rule(Input and output)");
+          cpb.shortDesc("Robot recieves an Input and Outputs his Reaction");
           cpb.presentationByName();
           props_UserRule = cpb.create();
         }

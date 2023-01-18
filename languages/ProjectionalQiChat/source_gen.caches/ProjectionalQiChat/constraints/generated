@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-3xalbrxkvktl2xnmwcl6crvt45e7m44">
-  <files names="ConceptCollectionReference_Constraints.java:ConstraintsAspectDescriptor.java:FirstOrderSubrule_Constraints.java:HumanConceptReference_Constraints.java:InputStoreReference_Constraints.java:RobotConceptReference_Constraints.java:SecondOrderSubrule_Constraints.java:ThirdOrderSubrule_Constraints.java:TopicReference_Constraints.java:VariableDeclaration_Constraints.java:VariableEvent_Constraints.java:VariableReference_Constraints.java" />
+<product version="3" modelHash="429d9f0lvtedgqmojj04qvgjgpfazn">
+  <files names="ConceptCollectionReference_Constraints.java:ConstraintsAspectDescriptor.java:FirstOrderSubrule_Constraints.java:HumanConceptReference_Constraints.java:InputStoreReference_Constraints.java:ProposalFunction_Constraints.java:RobotConceptReference_Constraints.java:SecondOrderSubrule_Constraints.java:ThirdOrderSubrule_Constraints.java:TopicReference_Constraints.java:VariableDeclaration_Constraints.java:VariableEvent_Constraints.java:VariableReference_Constraints.java" />
 </product>
 

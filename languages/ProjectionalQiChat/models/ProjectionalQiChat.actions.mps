@@ -632,5 +632,50 @@
       </node>
     </node>
   </node>
+  <node concept="37WguZ" id="7iFV4DZTnX_">
+    <property role="3GE5qa" value="UserRules" />
+    <property role="TrG5h" value="setUpUserRule" />
+    <node concept="37WvkG" id="7iFV4DZTnXA" role="37WGs$">
+      <ref role="37XkoT" to="zefy:6Zi8Kosir42" resolve="UserRule" />
+      <node concept="37Y9Zx" id="7iFV4DZTnXB" role="37ZfLb">
+        <node concept="3clFbS" id="7iFV4DZTnXC" role="2VODD2">
+          <node concept="3clFbF" id="4h4O2dO58vQ" role="3cqZAp">
+            <node concept="37vLTI" id="4h4O2dO5bi6" role="3clFbG">
+              <node concept="2ShNRf" id="4h4O2dO5bkw" role="37vLTx">
+                <node concept="3zrR0B" id="4h4O2dO5biE" role="2ShVmc">
+                  <node concept="3Tqbb2" id="4h4O2dO5biF" role="3zrR0E">
+                    <ref role="ehGHo" to="zefy:6Zi8Kosir0O" resolve="HumanInput" />
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="4h4O2dO58Fg" role="37vLTJ">
+                <node concept="1r4Lsj" id="4h4O2dO58vP" role="2Oq$k0" />
+                <node concept="3TrEf2" id="4h4O2dO5911" role="2OqNvi">
+                  <ref role="3Tt5mk" to="zefy:4P1LQvocRIs" resolve="input" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="4h4O2dO5bo8" role="3cqZAp">
+            <node concept="37vLTI" id="4h4O2dO5c5s" role="3clFbG">
+              <node concept="2ShNRf" id="4h4O2dO5c7Z" role="37vLTx">
+                <node concept="3zrR0B" id="4h4O2dO5c7X" role="2ShVmc">
+                  <node concept="3Tqbb2" id="4h4O2dO5c7Y" role="3zrR0E">
+                    <ref role="ehGHo" to="zefy:6Zi8Kosir0N" resolve="RobotOutput" />
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="4h4O2dO5bAy" role="37vLTJ">
+                <node concept="1r4Lsj" id="4h4O2dO5bo7" role="2Oq$k0" />
+                <node concept="3TrEf2" id="4h4O2dO5bUh" role="2OqNvi">
+                  <ref role="3Tt5mk" to="zefy:4P1LQvocRIu" resolve="output" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

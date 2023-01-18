@@ -32,6 +32,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptCustomVariable = createDescriptorForCustomVariable();
   /*package*/ final ConceptDescriptor myConceptDescription = createDescriptorForDescription();
   /*package*/ final ConceptDescriptor myConceptDialogueEvent = createDescriptorForDialogueEvent();
+  /*package*/ final ConceptDescriptor myConceptEmptyConcept = createDescriptorForEmptyConcept();
+  /*package*/ final ConceptDescriptor myConceptEmptyFirstOrderSubrule = createDescriptorForEmptyFirstOrderSubrule();
+  /*package*/ final ConceptDescriptor myConceptEmptyHumanInput = createDescriptorForEmptyHumanInput();
+  /*package*/ final ConceptDescriptor myConceptEmptyRobotOutput = createDescriptorForEmptyRobotOutput();
+  /*package*/ final ConceptDescriptor myConceptEmptyRule = createDescriptorForEmptyRule();
+  /*package*/ final ConceptDescriptor myConceptEmptySecondOrderSubrule = createDescriptorForEmptySecondOrderSubrule();
+  /*package*/ final ConceptDescriptor myConceptEmptyThirdOrderSubrule = createDescriptorForEmptyThirdOrderSubrule();
   /*package*/ final ConceptDescriptor myConceptFirstOrderSubrule = createDescriptorForFirstOrderSubrule();
   /*package*/ final ConceptDescriptor myConceptForbiddenWord = createDescriptorForForbiddenWord();
   /*package*/ final ConceptDescriptor myConceptFunction = createDescriptorForFunction();
@@ -94,7 +101,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeNameString = new ConstrainedStringDatatypeDescriptorImpl(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x264cdb1417a7e1d7L, "NameString", "r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/2759821551013978583", "[a-zA-ZöäüÖÄÜ]*[0-9]*");
   /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeNumberString = new ConstrainedStringDatatypeDescriptorImpl(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b34eL, "NumberString", "r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8057541192470606670", "-?([1-9][0-9]*|0)(\\.[0-9]*[1-9]|\\.0)?");
   /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeVariableName = new ConstrainedStringDatatypeDescriptorImpl(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b335L, "VariableName", "r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8057541192470606645", "[a-zA-Z]+");
-  /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeWordString = new ConstrainedStringDatatypeDescriptorImpl(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b120L, "WordString", "r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8057541192470606112", "([a-zA-ZöäüÖÄÜ]+[!\\?\\.',]?)|([0-9]*)");
+  /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeWordString = new ConstrainedStringDatatypeDescriptorImpl(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b120L, "WordString", "r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8057541192470606112", "([a-zA-ZöäüÖÄÜß-]+[!\\?\\.',]?)|([0-9]*)");
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -110,7 +117,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractEvent, myConceptAbstractUserRule, myConceptComment, myConceptCommentRule, myConceptConcept, myConceptConceptCollection, myConceptConceptCollectionReference, myConceptConceptContainer, myConceptCondition, myConceptConditionConfirmed, myConceptCustomEvent, myConceptCustomVariable, myConceptDescription, myConceptDialogueEvent, myConceptFirstOrderSubrule, myConceptForbiddenWord, myConceptFunction, myConceptHeaderSpecification, myConceptHumanConcept, myConceptHumanConceptCall, myConceptHumanConceptReference, myConceptHumanInput, myConceptIChoiceConfirmed, myConceptIExtendedHumanInput, myConceptIExtendedRobotOutput, myConceptIHumanInputConfirmed, myConceptIInputChoiceConfirmed, myConceptIInputStoringConfirmed, myConceptIOptionalConfirmed, myConceptIOutputChoiceConfirmed, myConceptIPhraseConfirmed, myConceptIRobotOuputConfirmed, myConceptIVariableValue, myConceptInputChoice, myConceptInputStore, myConceptInputStoreCall, myConceptInputStoreReference, myConceptNAOqiEvent, myConceptNextProposal, myConceptNumber, myConceptOptional, myConceptOutputChoice, myConceptPause, myConceptPhrase, myConceptPreviousProposal, myConceptProposal, myConceptProposalFunction, myConceptRobotConcept, myConceptRobotConceptCall, myConceptRobotConceptReference, myConceptRobotOutput, myConceptRule, myConceptSameProposal, myConceptSecondOrderSubrule, myConceptStoreChoice, myConceptStringValue, myConceptThirdOrderSubrule, myConceptTopic, myConceptTopicReference, myConceptUserRule, myConceptVariableDeclaration, myConceptVariableDeclarationContainer, myConceptVariableEvent, myConceptVariableReference, myConceptVoiceTuningConfig, myConceptWildcard, myConceptWord);
+    return Arrays.asList(myConceptAbstractEvent, myConceptAbstractUserRule, myConceptComment, myConceptCommentRule, myConceptConcept, myConceptConceptCollection, myConceptConceptCollectionReference, myConceptConceptContainer, myConceptCondition, myConceptConditionConfirmed, myConceptCustomEvent, myConceptCustomVariable, myConceptDescription, myConceptDialogueEvent, myConceptEmptyConcept, myConceptEmptyFirstOrderSubrule, myConceptEmptyHumanInput, myConceptEmptyRobotOutput, myConceptEmptyRule, myConceptEmptySecondOrderSubrule, myConceptEmptyThirdOrderSubrule, myConceptFirstOrderSubrule, myConceptForbiddenWord, myConceptFunction, myConceptHeaderSpecification, myConceptHumanConcept, myConceptHumanConceptCall, myConceptHumanConceptReference, myConceptHumanInput, myConceptIChoiceConfirmed, myConceptIExtendedHumanInput, myConceptIExtendedRobotOutput, myConceptIHumanInputConfirmed, myConceptIInputChoiceConfirmed, myConceptIInputStoringConfirmed, myConceptIOptionalConfirmed, myConceptIOutputChoiceConfirmed, myConceptIPhraseConfirmed, myConceptIRobotOuputConfirmed, myConceptIVariableValue, myConceptInputChoice, myConceptInputStore, myConceptInputStoreCall, myConceptInputStoreReference, myConceptNAOqiEvent, myConceptNextProposal, myConceptNumber, myConceptOptional, myConceptOutputChoice, myConceptPause, myConceptPhrase, myConceptPreviousProposal, myConceptProposal, myConceptProposalFunction, myConceptRobotConcept, myConceptRobotConceptCall, myConceptRobotConceptReference, myConceptRobotOutput, myConceptRule, myConceptSameProposal, myConceptSecondOrderSubrule, myConceptStoreChoice, myConceptStringValue, myConceptThirdOrderSubrule, myConceptTopic, myConceptTopicReference, myConceptUserRule, myConceptVariableDeclaration, myConceptVariableDeclarationContainer, myConceptVariableEvent, myConceptVariableReference, myConceptVoiceTuningConfig, myConceptWildcard, myConceptWord);
   }
 
   @Override
@@ -145,6 +152,20 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDescription;
       case LanguageConceptSwitch.DialogueEvent:
         return myConceptDialogueEvent;
+      case LanguageConceptSwitch.EmptyConcept:
+        return myConceptEmptyConcept;
+      case LanguageConceptSwitch.EmptyFirstOrderSubrule:
+        return myConceptEmptyFirstOrderSubrule;
+      case LanguageConceptSwitch.EmptyHumanInput:
+        return myConceptEmptyHumanInput;
+      case LanguageConceptSwitch.EmptyRobotOutput:
+        return myConceptEmptyRobotOutput;
+      case LanguageConceptSwitch.EmptyRule:
+        return myConceptEmptyRule;
+      case LanguageConceptSwitch.EmptySecondOrderSubrule:
+        return myConceptEmptySecondOrderSubrule;
+      case LanguageConceptSwitch.EmptyThirdOrderSubrule:
+        return myConceptEmptyThirdOrderSubrule;
       case LanguageConceptSwitch.FirstOrderSubrule:
         return myConceptFirstOrderSubrule;
       case LanguageConceptSwitch.ForbiddenWord:
@@ -303,7 +324,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b013L);
     b.origin("r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8057541192470605871");
     b.version(3);
-    b.alias("#");
+    b.alias("Comment");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForConcept() {
@@ -400,6 +421,65 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("dialogueEvent", 0x4d41c767d8337bdeL).type(MetaIdFactory.dataTypeId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b29dL)).origin("5566949863229455326").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForEmptyConcept() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ProjectionalQiChat", "EmptyConcept", 0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x74abec4a7ebea9fbL);
+    b.class_(false, false, false);
+    // extends: ProjectionalQiChat.structure.Concept
+    b.super_(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b107L);
+    b.origin("r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8407072934115322363");
+    b.version(3);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEmptyFirstOrderSubrule() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ProjectionalQiChat", "EmptyFirstOrderSubrule", 0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x74abec4a81de9516L);
+    b.class_(false, false, false);
+    // extends: ProjectionalQiChat.structure.FirstOrderSubrule
+    b.super_(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b103L);
+    b.origin("r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8407072934167745814");
+    b.version(3);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEmptyHumanInput() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ProjectionalQiChat", "EmptyHumanInput", 0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x581d6a462c88620aL);
+    b.class_(false, false, false);
+    b.origin("r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/6349347899289657866");
+    b.version(3);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEmptyRobotOutput() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ProjectionalQiChat", "EmptyRobotOutput", 0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x581d6a462c88624bL);
+    b.class_(false, false, false);
+    b.origin("r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/6349347899289657931");
+    b.version(3);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEmptyRule() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ProjectionalQiChat", "EmptyRule", 0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x74abec4a7efbb69bL);
+    b.class_(false, false, false);
+    // extends: ProjectionalQiChat.structure.Rule
+    b.super_(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b013L);
+    b.origin("r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8407072934119323291");
+    b.version(3);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEmptySecondOrderSubrule() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ProjectionalQiChat", "EmptySecondOrderSubrule", 0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x74abec4a81de956eL);
+    b.class_(false, false, false);
+    // extends: ProjectionalQiChat.structure.SecondOrderSubrule
+    b.super_(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b104L);
+    b.origin("r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8407072934167745902");
+    b.version(3);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEmptyThirdOrderSubrule() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ProjectionalQiChat", "EmptyThirdOrderSubrule", 0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x74abec4a81de9592L);
+    b.class_(false, false, false);
+    // extends: ProjectionalQiChat.structure.ThirdOrderSubrule
+    b.super_(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b105L);
+    b.origin("r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8407072934167745938");
+    b.version(3);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForFirstOrderSubrule() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ProjectionalQiChat", "FirstOrderSubrule", 0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b103L);
     b.class_(false, false, false);
@@ -436,6 +516,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8057541192470605846");
     b.version(3);
     b.property("language", 0x4d41c767d8337b75L).type(MetaIdFactory.dataTypeId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b036L)).origin("5566949863229455221").done();
+    b.property("showDetails", 0x2e668f99ab96bdcfL).type(PrimitiveTypeId.BOOLEAN).origin("3343517663540723151").done();
+    b.property("hideHumanConcepts", 0x2e668f99ab970c22L).type(PrimitiveTypeId.BOOLEAN).origin("3343517663540743202").done();
+    b.property("hideRobotConcepts", 0x2e668f99ab970c3eL).type(PrimitiveTypeId.BOOLEAN).origin("3343517663540743230").done();
     b.aggregate("topics", 0x4d41c767d8337b77L).target(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b02eL).optional(true).ordered(true).multiple(true).origin("5566949863229455223").done();
     b.aggregate("conceptCollections", 0x4d41c767d8337b79L).target(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x4d41c767d834cf3dL).optional(true).ordered(true).multiple(true).origin("5566949863229455225").done();
     b.aggregate("localConcepts", 0x4d41c767d8337b7eL).target(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b107L).optional(true).ordered(true).multiple(true).origin("5566949863229455230").done();
@@ -698,7 +781,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(3);
     b.aggregate("output", 0x4d41c767d8337b93L).target(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b033L).optional(false).ordered(true).multiple(false).origin("5566949863229455251").done();
     b.aggregate("subrules", 0x4d41c767d8337b95L).target(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b103L).optional(true).ordered(true).multiple(true).origin("5566949863229455253").done();
-    b.alias("p");
+    b.alias("Robot Output Only");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForProposalFunction() {
@@ -809,6 +892,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x4b2a1ef2bb0ba37fL);
     b.origin("r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8057541192470526869");
     b.version(3);
+    b.property("showDetails", 0x3c9700f5ca33f37eL).type(PrimitiveTypeId.BOOLEAN).origin("4365959419418375038").done();
+    b.property("hideProposals", 0x3c9700f5ca33f37fL).type(PrimitiveTypeId.BOOLEAN).origin("4365959419418375039").done();
+    b.property("hideUserRules", 0x3c9700f5ca33f380L).type(PrimitiveTypeId.BOOLEAN).origin("4365959419418375040").done();
     b.aggregate("description", 0x2d6365a451be0df4L).target(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78fef99L).optional(false).ordered(true).multiple(false).origin("3270569510821563892").done();
     b.aggregate("header", 0x4d41c767d8337b6eL).target(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b016L).optional(false).ordered(true).multiple(false).origin("5566949863229455214").done();
     b.aggregate("body", 0x4d41c767d8337b70L).target(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b013L).optional(true).ordered(true).multiple(true).origin("5566949863229455216").done();
@@ -830,7 +916,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8057541192470606082");
     b.version(3);
     b.aggregate("subrules", 0x4d41c767d8337ba7L).target(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b103L).optional(true).ordered(true).multiple(true).origin("5566949863229455271").done();
-    b.alias("u");
+    b.alias("Input and Output");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForVariableDeclaration() {
