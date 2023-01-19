@@ -68,12 +68,22 @@ import org.jetbrains.mps.openapi.language.SConcept;
     new callContainerStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
     editorCell.addEditorCell(createConstant_0());
+    editorCell.addEditorCell(createConstant_1());
     editorCell.addEditorCell(createRefCell_0());
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Call");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Input Store");
     editorCell.setCellId("Constant_duuddo_a0");
+    Style style = new StyleImpl();
+    new callTextStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_1() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Call");
+    editorCell.setCellId("Constant_duuddo_b0");
     Style style = new StyleImpl();
     new callTextStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);

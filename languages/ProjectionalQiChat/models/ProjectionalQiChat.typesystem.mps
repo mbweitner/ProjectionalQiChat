@@ -95,6 +95,7 @@
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
       <concept id="1214918800624" name="jetbrains.mps.baseLanguage.structure.PostfixIncrementExpression" flags="nn" index="3uNrnE" />
+      <concept id="1073239437375" name="jetbrains.mps.baseLanguage.structure.NotEqualsExpression" flags="nn" index="3y3z36" />
       <concept id="1144226303539" name="jetbrains.mps.baseLanguage.structure.ForeachStatement" flags="nn" index="1DcWWT">
         <child id="1144226360166" name="iterable" index="1DdaDG" />
       </concept>
@@ -2511,7 +2512,7 @@
   </node>
   <node concept="18kY7G" id="7iFV4E0sLCE">
     <property role="TrG5h" value="check_EmptyConcept" />
-    <property role="3GE5qa" value="Empties/test" />
+    <property role="3GE5qa" value="Empties" />
     <node concept="3clFbS" id="7iFV4E0sLCF" role="18ibNy">
       <node concept="3clFbJ" id="7iFV4E0sLCL" role="3cqZAp">
         <node concept="2OqwBi" id="7iFV4E0sMkB" role="3clFbw">
@@ -3360,6 +3361,154 @@
         <node concept="3clFbF" id="5wtq$oGdB7Q" role="3cqZAp">
           <node concept="Xl_RD" id="5wtq$oGdB7P" role="3clFbG">
             <property role="Xl_RC" value="add new EmptySubsubsubrule as sibling" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="18kY7G" id="_CNqxIjAHw">
+    <property role="TrG5h" value="check_onlyWordChoice_HumanConcept" />
+    <property role="3GE5qa" value="Concepts" />
+    <node concept="3clFbS" id="_CNqxIjAHx" role="18ibNy">
+      <node concept="3clFbJ" id="_CNqxIjSam" role="3cqZAp">
+        <node concept="3y3z36" id="_CNqxIjSUz" role="3clFbw">
+          <node concept="2OqwBi" id="_CNqxIjTv_" role="3uHU7w">
+            <node concept="1YBJjd" id="_CNqxIjT9D" role="2Oq$k0">
+              <ref role="1YBMHb" node="_CNqxIjAHz" resolve="humanConcept" />
+            </node>
+            <node concept="2qgKlT" id="_CNqxIjTTG" role="2OqNvi">
+              <ref role="37wK5l" to="rfj6:2JDDPTEb_xw" resolve="isInputStoringConfirmed" />
+            </node>
+          </node>
+          <node concept="2OqwBi" id="_CNqxIjSmT" role="3uHU7B">
+            <node concept="1YBJjd" id="_CNqxIjSay" role="2Oq$k0">
+              <ref role="1YBMHb" node="_CNqxIjAHz" resolve="humanConcept" />
+            </node>
+            <node concept="3TrcHB" id="_CNqxIjS_6" role="2OqNvi">
+              <ref role="3TsBF5" to="zefy:4P1LQvocRIL" resolve="onlyWordChoice" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbS" id="_CNqxIjSao" role="3clFbx">
+          <node concept="2MkqsV" id="_CNqxIjTWq" role="3cqZAp">
+            <node concept="Xl_RD" id="_CNqxIjTWA" role="2MkJ7o">
+              <property role="Xl_RC" value="Human Concept: OnlyWordChoice has to be updated" />
+            </node>
+            <node concept="1YBJjd" id="_CNqxIjTZj" role="1urrMF">
+              <ref role="1YBMHb" node="_CNqxIjAHz" resolve="humanConcept" />
+            </node>
+            <node concept="3Cnw8n" id="_CNqxIjTZR" role="1urrFz">
+              <property role="ARO6o" value="true" />
+              <ref role="QpYPw" node="_CNqxIjTZO" resolve="fix_" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="_CNqxIjAHz" role="1YuTPh">
+      <property role="TrG5h" value="humanConcept" />
+      <ref role="1YaFvo" to="zefy:6Zi8Kosir46" resolve="HumanConcept" />
+    </node>
+  </node>
+  <node concept="Q5z_Y" id="_CNqxIjTZO">
+    <property role="TrG5h" value="fix_OnlyWordChoiceProperty" />
+    <node concept="Q5ZZ6" id="_CNqxIjTZP" role="Q6x$H">
+      <node concept="3clFbS" id="_CNqxIjTZQ" role="2VODD2">
+        <node concept="3clFbF" id="_CNqxIjUgb" role="3cqZAp">
+          <node concept="37vLTI" id="_CNqxIjVCK" role="3clFbG">
+            <node concept="2OqwBi" id="_CNqxIjWe$" role="37vLTx">
+              <node concept="1PxgMI" id="_CNqxIjVYF" role="2Oq$k0">
+                <property role="1BlNFB" value="true" />
+                <node concept="chp4Y" id="_CNqxIjVZv" role="3oSUPX">
+                  <ref role="cht4Q" to="zefy:6Zi8Kosir46" resolve="HumanConcept" />
+                </node>
+                <node concept="Q6c8r" id="_CNqxIjVDJ" role="1m5AlR" />
+              </node>
+              <node concept="2qgKlT" id="_CNqxIjWwD" role="2OqNvi">
+                <ref role="37wK5l" to="rfj6:2JDDPTEb_xw" resolve="isInputStoringConfirmed" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="_CNqxIjV03" role="37vLTJ">
+              <node concept="1PxgMI" id="_CNqxIjUOQ" role="2Oq$k0">
+                <property role="1BlNFB" value="true" />
+                <node concept="chp4Y" id="_CNqxIjUPz" role="3oSUPX">
+                  <ref role="cht4Q" to="zefy:6Zi8Kosir46" resolve="HumanConcept" />
+                </node>
+                <node concept="Q6c8r" id="_CNqxIjUga" role="1m5AlR" />
+              </node>
+              <node concept="3TrcHB" id="_CNqxIjVeo" role="2OqNvi">
+                <ref role="3TsBF5" to="zefy:4P1LQvocRIL" resolve="onlyWordChoice" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="18kY7G" id="_CNqxIrUa4">
+    <property role="TrG5h" value="check_HumanInput" />
+    <property role="3GE5qa" value="HumanInput" />
+    <node concept="3clFbS" id="_CNqxIrUa5" role="18ibNy">
+      <node concept="3clFbJ" id="_CNqxIrUab" role="3cqZAp">
+        <node concept="22lmx$" id="_CNqxIrUO5" role="3clFbw">
+          <node concept="3fqX7Q" id="_CNqxIrUXG" role="3uHU7w">
+            <node concept="2OqwBi" id="_CNqxIrV8H" role="3fr31v">
+              <node concept="1YBJjd" id="_CNqxIrUYr" role="2Oq$k0">
+                <ref role="1YBMHb" node="_CNqxIrUa7" resolve="humanInput" />
+              </node>
+              <node concept="2qgKlT" id="_CNqxIrVlL" role="2OqNvi">
+                <ref role="37wK5l" to="rfj6:_CNqxIpAhz" resolve="areAllInternInputStoresNamedRight" />
+              </node>
+            </node>
+          </node>
+          <node concept="3fqX7Q" id="_CNqxIrUSp" role="3uHU7B">
+            <node concept="2OqwBi" id="_CNqxIrUSr" role="3fr31v">
+              <node concept="1YBJjd" id="_CNqxIrUSs" role="2Oq$k0">
+                <ref role="1YBMHb" node="_CNqxIrUa7" resolve="humanInput" />
+              </node>
+              <node concept="2qgKlT" id="_CNqxIrUSt" role="2OqNvi">
+                <ref role="37wK5l" to="rfj6:_CNqxIrcOf" resolve="areAllInputStorePositionsRight" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbS" id="_CNqxIrUad" role="3clFbx">
+          <node concept="2MkqsV" id="_CNqxIrVnv" role="3cqZAp">
+            <node concept="Xl_RD" id="_CNqxIrVnF" role="2MkJ7o">
+              <property role="Xl_RC" value="InputStores have to be updated" />
+            </node>
+            <node concept="1YBJjd" id="_CNqxIrVpy" role="1urrMF">
+              <ref role="1YBMHb" node="_CNqxIrUa7" resolve="humanInput" />
+            </node>
+            <node concept="3Cnw8n" id="_CNqxIrVq4" role="1urrFz">
+              <property role="ARO6o" value="true" />
+              <ref role="QpYPw" node="_CNqxIrVq1" resolve="fix_" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="_CNqxIrUa7" role="1YuTPh">
+      <property role="TrG5h" value="humanInput" />
+      <ref role="1YaFvo" to="zefy:6Zi8Kosir0O" resolve="HumanInput" />
+    </node>
+  </node>
+  <node concept="Q5z_Y" id="_CNqxIrVq1">
+    <property role="TrG5h" value="fix_updateInputStores" />
+    <node concept="Q5ZZ6" id="_CNqxIrVq2" role="Q6x$H">
+      <node concept="3clFbS" id="_CNqxIrVq3" role="2VODD2">
+        <node concept="3clFbF" id="_CNqxIrVv6" role="3cqZAp">
+          <node concept="2OqwBi" id="_CNqxIrVUQ" role="3clFbG">
+            <node concept="1PxgMI" id="_CNqxIrVLn" role="2Oq$k0">
+              <property role="1BlNFB" value="true" />
+              <node concept="chp4Y" id="_CNqxIrVM4" role="3oSUPX">
+                <ref role="cht4Q" to="zefy:6Zi8Kosir0O" resolve="HumanInput" />
+              </node>
+              <node concept="Q6c8r" id="_CNqxIrVv5" role="1m5AlR" />
+            </node>
+            <node concept="2qgKlT" id="_CNqxIrW5h" role="2OqNvi">
+              <ref role="37wK5l" to="rfj6:_CNqxIrKzY" resolve="updateInputStores" />
+            </node>
           </node>
         </node>
       </node>

@@ -421,51 +421,74 @@
   </root>
   <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/3761955782241892872">
     <file name="InputStoreReference_Constraints.java">
-      <node id="3761955782241892872" at="29,44,30,43" concept="10" />
-      <node id="3761955782241892873" at="41,63,42,133" concept="6" />
-      <node id="3761955782241893249" at="45,80,46,122" concept="5" />
-      <node id="3761955782241932117" at="47,35,48,200" concept="6" />
-      <node id="3761955782241933681" at="49,13,50,94" concept="6" />
-      <node id="3761955782241892872" at="54,6,55,131" concept="5" />
-      <node id="3761955782241892873" at="55,131,56,42" concept="2" />
-      <node id="3761955782241892872" at="56,42,57,22" concept="6" />
-      <node id="3761955782241892872" at="61,0,62,0" concept="8" trace="InputStoreReference$C$" />
-      <node id="3761955782241892872" at="62,0,63,0" concept="8" trace="UserRule$oj" />
-      <node id="3761955782241892872" at="63,0,64,0" concept="8" trace="InputStore$rg" />
-      <node id="3761955782241892872" at="67,0,68,0" concept="8" trace="inputStore$oIB4" />
-      <node id="3761955782241892872" at="68,0,69,0" concept="8" trace="input$kRKG" />
-      <node id="3761955782241892872" at="69,0,70,0" concept="8" trace="inputs$iwW4" />
-      <node id="3761955782241892872" at="29,0,32,0" concept="1" trace="InputStoreReference_Constraints#()V" />
-      <node id="3761955782241895801" at="46,122,49,13" concept="3" />
-      <node id="3761955782241892873" at="40,0,44,0" concept="4" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
-      <node id="3761955782241892873" at="44,0,52,0" concept="4" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
-      <node id="3761955782241892873" at="38,56,52,10" concept="6" />
-      <node id="3761955782241892873" at="36,0,54,0" concept="4" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
-      <node id="3761955782241892873" at="34,90,54,6" concept="5" />
-      <node id="3761955782241892872" at="33,0,59,0" concept="4" trace="getSpecifiedReferences#()Ljava/util/Map;" />
-      <scope id="3761955782241892872" at="29,44,30,43" />
-      <scope id="3761955782241892873" at="41,63,42,133" />
-      <scope id="3761955782241895803" at="47,35,48,200" />
-      <scope id="3761955782241892872" at="29,0,32,0" />
-      <scope id="3761955782241892873" at="40,0,44,0" />
-      <scope id="3761955782241892873" at="45,80,50,94">
-        <var name="parent" id="3761955782241893252" />
+      <node id="3761955782241892872" at="33,0,34,0" concept="8" trace="LOG" />
+      <node id="3761955782241892872" at="34,44,35,43" concept="10" />
+      <node id="3761955782241892873" at="46,63,47,133" concept="6" />
+      <node id="678017867225404122" at="50,80,51,138" concept="5" />
+      <node id="678017867225408091" at="52,38,53,109" concept="2" />
+      <node id="678017867225440900" at="58,51,59,84" concept="6" />
+      <node id="678017867225451122" at="64,49,65,82" concept="6" />
+      <node id="678017867225452536" at="68,13,69,24" concept="6" />
+      <node id="3761955782241892872" at="73,6,74,131" concept="5" />
+      <node id="3761955782241892873" at="74,131,75,42" concept="2" />
+      <node id="3761955782241892872" at="75,42,76,22" concept="6" />
+      <node id="3761955782241892872" at="80,0,81,0" concept="8" trace="InputStoreReference$C$" />
+      <node id="3761955782241892872" at="81,0,82,0" concept="8" trace="AbstractUserRule$nO" />
+      <node id="3761955782241892872" at="82,0,83,0" concept="8" trace="InputStore$rg" />
+      <node id="3761955782241892872" at="86,0,87,0" concept="8" trace="inputStore$oIB4" />
+      <node id="3761955782241892872" at="87,0,88,0" concept="8" trace="input$kRKG" />
+      <node id="3761955782241892872" at="88,0,89,0" concept="8" trace="inputs$iwW4" />
+      <node id="3761955782241892872" at="92,0,93,0" concept="8" trace="name$MnvL" />
+      <node id="3761955782241892872" at="34,0,37,0" concept="1" trace="InputStoreReference_Constraints#()V" />
+      <node id="678017867225408091" at="51,138,54,13" concept="3" />
+      <node id="678017867225440563" at="58,0,61,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="678017867225451120" at="64,0,67,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="3761955782241892873" at="45,0,49,0" concept="4" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="678017867225418134" at="56,40,61,20" concept="2" />
+      <node id="678017867225448394" at="62,15,67,18" concept="6" />
+      <node id="678017867225418134" at="55,43,62,15" concept="3" />
+      <node id="678017867225414784" at="54,13,68,13" concept="3" />
+      <node id="3761955782241892873" at="49,0,71,0" concept="4" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="3761955782241892873" at="43,56,71,10" concept="6" />
+      <node id="3761955782241892873" at="41,0,73,0" concept="4" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="3761955782241892873" at="39,90,73,6" concept="5" />
+      <node id="3761955782241892872" at="38,0,78,0" concept="4" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="3761955782241892872" at="34,44,35,43" />
+      <scope id="3761955782241892873" at="46,63,47,133" />
+      <scope id="678017867225408091" at="52,38,53,109" />
+      <scope id="678017867225440564" at="58,51,59,84" />
+      <scope id="678017867225451121" at="64,49,65,82" />
+      <scope id="3761955782241892872" at="34,0,37,0" />
+      <scope id="678017867225440563" at="58,0,61,0">
+        <var name="it" id="678017867225440563" />
       </scope>
-      <scope id="3761955782241892873" at="44,0,52,0">
+      <scope id="678017867225451120" at="64,0,67,0">
+        <var name="it" id="678017867225451120" />
+      </scope>
+      <scope id="3761955782241892873" at="45,0,49,0" />
+      <scope id="678017867225418134" at="56,40,61,20" />
+      <scope id="678017867225414786" at="55,43,67,18" />
+      <scope id="3761955782241892873" at="50,80,69,24">
+        <var name="parentUserRule" id="678017867225404125" />
+      </scope>
+      <scope id="3761955782241892873" at="49,0,71,0">
         <var name="_context" id="3761955782241892873" />
       </scope>
-      <scope id="3761955782241892873" at="38,56,52,10" />
-      <scope id="3761955782241892873" at="36,0,54,0" />
-      <scope id="3761955782241892872" at="34,90,57,22">
+      <scope id="3761955782241892873" at="43,56,71,10" />
+      <scope id="3761955782241892873" at="41,0,73,0" />
+      <scope id="3761955782241892872" at="39,90,76,22">
         <var name="d0" id="3761955782241892873" />
         <var name="references" id="3761955782241892872" />
       </scope>
-      <scope id="3761955782241892872" at="33,0,59,0" />
-      <unit id="3761955782241892872" at="60,0,65,0" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$CONCEPTS" />
-      <unit id="3761955782241892872" at="66,0,71,0" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$LINKS" />
-      <unit id="3761955782241892873" at="39,19,52,9" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$1$1" />
-      <unit id="3761955782241892873" at="35,48,54,5" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$1" />
-      <unit id="3761955782241892872" at="28,0,72,0" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints" />
+      <scope id="3761955782241892872" at="38,0,78,0" />
+      <unit id="3761955782241892872" at="91,0,94,0" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$PROPS" />
+      <unit id="678017867225440563" at="57,184,61,17" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$1$1$1" />
+      <unit id="678017867225451120" at="63,189,67,15" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$1$1$2" />
+      <unit id="3761955782241892872" at="79,0,84,0" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$CONCEPTS" />
+      <unit id="3761955782241892872" at="85,0,90,0" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$LINKS" />
+      <unit id="3761955782241892873" at="44,19,71,9" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$1$1" />
+      <unit id="3761955782241892873" at="40,48,73,5" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$1" />
+      <unit id="3761955782241892872" at="32,0,95,0" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints" />
     </file>
   </root>
   <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/5416175529734991820">
@@ -577,77 +600,113 @@
   </root>
   <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/8305283705753709969">
     <file name="HumanConceptReference_Constraints.java">
-      <node id="8305283705753709969" at="32,46,33,45" concept="10" />
-      <node id="8305283705753709970" at="44,63,45,133" concept="6" />
-      <node id="8305283705753712587" at="48,80,49,216" concept="5" />
-      <node id="8305283705753712598" at="49,216,50,140" concept="5" />
-      <node id="8305283705753712616" at="53,49,54,142" concept="6" />
-      <node id="3164244237154749109" at="61,83,62,51" concept="5" />
-      <node id="3164244237157497197" at="62,51,63,128" concept="6" />
-      <node id="3164244237157512070" at="64,19,65,30" concept="6" />
-      <node id="8305283705753712629" at="68,13,69,59" concept="6" />
-      <node id="8305283705753709969" at="73,6,74,131" concept="5" />
-      <node id="8305283705753709970" at="74,131,75,42" concept="2" />
-      <node id="8305283705753709969" at="75,42,76,22" concept="6" />
-      <node id="8305283705753709969" at="80,0,81,0" concept="8" trace="HumanConceptReference$f9" />
-      <node id="8305283705753709969" at="81,0,82,0" concept="8" trace="ConceptContainer$NA" />
-      <node id="8305283705753709969" at="82,0,83,0" concept="8" trace="HumanConcept$qf" />
-      <node id="8305283705753709969" at="83,0,84,0" concept="8" trace="InputStore$rg" />
-      <node id="8305283705753709969" at="87,0,88,0" concept="8" trace="concept$nPab" />
-      <node id="8305283705753709969" at="91,0,92,0" concept="8" trace="name$MnvL" />
-      <node id="8305283705753709969" at="32,0,35,0" concept="1" trace="HumanConceptReference_Constraints#()V" />
-      <node id="8305283705753712614" at="53,0,56,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-      <node id="8305283705753709970" at="43,0,47,0" concept="4" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
-      <node id="3164244237157494164" at="60,49,64,19" concept="3" />
-      <node id="8305283705753712608" at="51,43,56,17" concept="2" />
-      <node id="8305283705753712606" at="50,140,57,13" concept="3" />
-      <node id="3164244237154739280" at="60,0,67,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-      <node id="3164244237154731949" at="58,208,67,17" concept="2" />
-      <node id="3164244237154711070" at="57,13,68,13" concept="3" />
-      <node id="8305283705753709970" at="47,0,71,0" concept="4" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
-      <node id="8305283705753709970" at="41,56,71,10" concept="6" />
-      <node id="8305283705753709970" at="39,0,73,0" concept="4" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
-      <node id="8305283705753709970" at="37,90,73,6" concept="5" />
-      <node id="8305283705753709969" at="36,0,78,0" concept="4" trace="getSpecifiedReferences#()Ljava/util/Map;" />
-      <scope id="8305283705753709969" at="32,46,33,45" />
-      <scope id="8305283705753709970" at="44,63,45,133" />
-      <scope id="8305283705753712615" at="53,49,54,142" />
-      <scope id="3164244237157494166" at="61,83,63,128">
+      <node id="8305283705753709969" at="39,46,40,45" concept="10" />
+      <node id="8305283705753709969" at="47,127,48,128" concept="5" />
+      <node id="8305283705753709969" at="48,128,49,0" concept="7" />
+      <node id="8305283705753709969" at="50,55,51,71" concept="2" />
+      <node id="8305283705753709969" at="52,9,53,0" concept="7" />
+      <node id="8305283705753709969" at="53,0,54,22" concept="6" />
+      <node id="8305283705753709970" at="66,63,67,133" concept="6" />
+      <node id="8305283705753712587" at="70,80,71,216" concept="5" />
+      <node id="8305283705753712598" at="71,216,72,140" concept="5" />
+      <node id="8305283705753712616" at="75,49,76,142" concept="6" />
+      <node id="3164244237154749109" at="83,83,84,51" concept="5" />
+      <node id="3164244237157497197" at="84,51,85,128" concept="6" />
+      <node id="3164244237157512070" at="86,19,87,30" concept="6" />
+      <node id="8305283705753712629" at="90,13,91,59" concept="6" />
+      <node id="8305283705753709969" at="95,6,96,131" concept="5" />
+      <node id="8305283705753709970" at="96,131,97,42" concept="2" />
+      <node id="8305283705753709969" at="97,42,98,22" concept="6" />
+      <node id="678017867207062279" at="101,75,102,124" concept="6" />
+      <node id="678017867207057788" at="103,12,104,18" concept="6" />
+      <node id="8305283705753709969" at="107,0,108,0" concept="8" trace="canBeChildBreakingPoint" />
+      <node id="8305283705753709969" at="110,0,111,0" concept="8" trace="HumanConceptReference$f9" />
+      <node id="8305283705753709969" at="111,0,112,0" concept="8" trace="ConceptContainer$NA" />
+      <node id="8305283705753709969" at="112,0,113,0" concept="8" trace="HumanConcept$qf" />
+      <node id="8305283705753709969" at="113,0,114,0" concept="8" trace="InputStore$rg" />
+      <node id="8305283705753709969" at="117,0,118,0" concept="8" trace="concept$nPab" />
+      <node id="8305283705753709969" at="121,0,122,0" concept="8" trace="name$MnvL" />
+      <node id="8305283705753709969" at="122,0,123,0" concept="8" trace="onlyWordChoice$l6_6" />
+      <node id="678017867207057742" at="103,10,105,5" concept="0" />
+      <node id="8305283705753709969" at="39,0,42,0" concept="1" trace="HumanConceptReference_Constraints#()V" />
+      <node id="8305283705753709969" at="49,0,52,9" concept="3" />
+      <node id="8305283705753712614" at="75,0,78,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="8305283705753709970" at="65,0,69,0" concept="4" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="3164244237157494164" at="82,49,86,19" concept="3" />
+      <node id="8305283705753712608" at="73,43,78,17" concept="2" />
+      <node id="678017867207043488" at="100,128,105,5" concept="3" />
+      <node id="8305283705753712606" at="72,140,79,13" concept="3" />
+      <node id="3164244237154739280" at="82,0,89,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="8305283705753709969" at="100,0,107,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="3164244237154731949" at="80,208,89,17" concept="2" />
+      <node id="8305283705753709969" at="46,0,56,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="3164244237154711070" at="79,13,90,13" concept="3" />
+      <node id="8305283705753709969" at="44,103,56,6" concept="6" />
+      <node id="8305283705753709969" at="43,0,58,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <node id="8305283705753709970" at="69,0,93,0" concept="4" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="8305283705753709970" at="63,56,93,10" concept="6" />
+      <node id="8305283705753709970" at="61,0,95,0" concept="4" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="8305283705753709970" at="59,90,95,6" concept="5" />
+      <node id="8305283705753709969" at="58,0,100,0" concept="4" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="8305283705753709969" at="39,46,40,45" />
+      <scope id="8305283705753709969" at="50,55,51,71" />
+      <scope id="8305283705753709970" at="66,63,67,133" />
+      <scope id="8305283705753712615" at="75,49,76,142" />
+      <scope id="678017867207043490" at="101,75,102,124" />
+      <scope id="678017867207057743" at="103,12,104,18" />
+      <scope id="3164244237157494166" at="83,83,85,128">
         <var name="thisConcept" id="3164244237154749112" />
       </scope>
-      <scope id="8305283705753709969" at="32,0,35,0" />
-      <scope id="8305283705753712614" at="53,0,56,0">
+      <scope id="8305283705753709969" at="39,0,42,0" />
+      <scope id="8305283705753712614" at="75,0,78,0">
         <var name="it" id="8305283705753712614" />
       </scope>
-      <scope id="8305283705753709970" at="43,0,47,0" />
-      <scope id="8305283705753712607" at="51,43,56,17" />
-      <scope id="3164244237154739281" at="60,49,65,30" />
-      <scope id="3164244237154739280" at="60,0,67,0">
+      <scope id="8305283705753709970" at="65,0,69,0" />
+      <scope id="8305283705753712607" at="73,43,78,17" />
+      <scope id="3164244237154739281" at="82,49,87,30" />
+      <scope id="678017867207043172" at="100,128,105,5" />
+      <scope id="8305283705753709969" at="47,127,54,22">
+        <var name="result" id="8305283705753709969" />
+      </scope>
+      <scope id="3164244237154739280" at="82,0,89,0">
         <var name="it" id="3164244237154739280" />
       </scope>
-      <scope id="3164244237154711072" at="58,208,67,17" />
-      <scope id="8305283705753709970" at="48,80,69,59">
+      <scope id="8305283705753709969" at="100,0,107,0">
+        <var name="childConcept" id="8305283705753709969" />
+        <var name="link" id="8305283705753709969" />
+        <var name="node" id="8305283705753709969" />
+        <var name="parentNode" id="8305283705753709969" />
+      </scope>
+      <scope id="3164244237154711072" at="80,208,89,17" />
+      <scope id="8305283705753709969" at="46,0,56,0">
+        <var name="checkingNodeContext" id="8305283705753709969" />
+        <var name="context" id="8305283705753709969" />
+      </scope>
+      <scope id="8305283705753709969" at="44,103,56,6" />
+      <scope id="8305283705753709969" at="43,0,58,0" />
+      <scope id="8305283705753709970" at="70,80,91,59">
         <var name="allConcepts" id="8305283705753712588" />
         <var name="currentConcept" id="8305283705753712599" />
       </scope>
-      <scope id="8305283705753709970" at="47,0,71,0">
+      <scope id="8305283705753709970" at="69,0,93,0">
         <var name="_context" id="8305283705753709970" />
       </scope>
-      <scope id="8305283705753709970" at="41,56,71,10" />
-      <scope id="8305283705753709970" at="39,0,73,0" />
-      <scope id="8305283705753709969" at="37,90,76,22">
+      <scope id="8305283705753709970" at="63,56,93,10" />
+      <scope id="8305283705753709970" at="61,0,95,0" />
+      <scope id="8305283705753709969" at="59,90,98,22">
         <var name="d0" id="8305283705753709970" />
         <var name="references" id="8305283705753709969" />
       </scope>
-      <scope id="8305283705753709969" at="36,0,78,0" />
-      <unit id="8305283705753709969" at="86,0,89,0" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints$LINKS" />
-      <unit id="8305283705753709969" at="90,0,93,0" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints$PROPS" />
-      <unit id="8305283705753712614" at="52,73,56,15" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints$1$1$1" />
-      <unit id="8305283705753709969" at="79,0,85,0" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints$CONCEPTS" />
-      <unit id="3164244237154739280" at="59,73,67,15" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints$1$1$2" />
-      <unit id="8305283705753709970" at="42,19,71,9" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints$1$1" />
-      <unit id="8305283705753709970" at="38,48,73,5" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints$1" />
-      <unit id="8305283705753709969" at="31,0,94,0" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints" />
+      <scope id="8305283705753709969" at="58,0,100,0" />
+      <unit id="8305283705753709969" at="116,0,119,0" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints$LINKS" />
+      <unit id="8305283705753712614" at="74,73,78,15" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints$2$1$1" />
+      <unit id="8305283705753709969" at="120,0,124,0" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints$PROPS" />
+      <unit id="8305283705753709969" at="109,0,115,0" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints$CONCEPTS" />
+      <unit id="3164244237154739280" at="81,73,89,15" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints$2$1$2" />
+      <unit id="8305283705753709969" at="45,15,56,5" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints$1" />
+      <unit id="8305283705753709970" at="64,19,93,9" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints$2$1" />
+      <unit id="8305283705753709970" at="60,48,95,5" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints$2" />
+      <unit id="8305283705753709969" at="38,0,125,0" name="ProjectionalQiChat.constraints.HumanConceptReference_Constraints" />
     </file>
   </root>
 </debug-info>

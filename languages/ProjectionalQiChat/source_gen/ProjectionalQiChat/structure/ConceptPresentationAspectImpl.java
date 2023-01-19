@@ -505,7 +505,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.StoreChoice:
         if (props_StoreChoice == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("StoreChoice");
+          cpb.shortDesc("(Store Choice)");
+          cpb.rawPresentation("[");
           props_StoreChoice = cpb.create();
         }
         return props_StoreChoice;

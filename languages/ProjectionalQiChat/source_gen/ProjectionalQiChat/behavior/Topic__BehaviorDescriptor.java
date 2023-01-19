@@ -39,8 +39,9 @@ public final class Topic__BehaviorDescriptor extends BaseBHDescriptor {
   public static final SMethod<Void> cleanCCImports_id2JDDPTARrDK = new SMethodBuilder<Void>(new SJavaCompoundTypeImpl(Void.class)).name("cleanCCImports").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("2JDDPTARrDK").build();
   /*package*/ static final SMethod<Iterable<SNode>> _flat_sequences_id2JDDPTCdNYd = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("_flat_sequences").modifiers(0, AccessPrivileges.PRIVATE).concept(CONCEPT).id("2JDDPTCdNYd").build(SMethodBuilder.createJavaParameter((Class<Iterable<? extends Iterable<SNode>>>) ((Class) Object.class), ""));
   public static final SMethod<Boolean> isContainingNextProposalFunction_id5wtq$oIVZy0 = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isContainingNextProposalFunction").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("5wtq$oIVZy0").build();
+  public static final SMethod<Boolean> hasEmptyDescription_id1i0VtCTcNxV = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("hasEmptyDescription").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("1i0VtCTcNxV").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getConcepts_id4GE7JaV2Ue_, getVariables_id2JDDPTC5E6Z, cleanTopicImports_id2JDDPTAGdPF, cleanCCImports_id2JDDPTARrDK, _flat_sequences_id2JDDPTCdNYd, isContainingNextProposalFunction_id5wtq$oIVZy0);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getConcepts_id4GE7JaV2Ue_, getVariables_id2JDDPTC5E6Z, cleanTopicImports_id2JDDPTAGdPF, cleanCCImports_id2JDDPTARrDK, _flat_sequences_id2JDDPTCdNYd, isContainingNextProposalFunction_id5wtq$oIVZy0, hasEmptyDescription_id1i0VtCTcNxV);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -148,6 +149,9 @@ public final class Topic__BehaviorDescriptor extends BaseBHDescriptor {
     }
     return false;
   }
+  /*package*/ static boolean hasEmptyDescription_id1i0VtCTcNxV(@NotNull SNode __thisNode__) {
+    return (SLinkOperations.getTarget(__thisNode__, LINKS.description$bmMZ) == null) || (boolean) Description__BehaviorDescriptor.isEmptyDescription_id1i0VtCT35fQ.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.description$bmMZ));
+  }
 
   /*package*/ Topic__BehaviorDescriptor() {
   }
@@ -178,6 +182,8 @@ public final class Topic__BehaviorDescriptor extends BaseBHDescriptor {
         return (T) ((Iterable<SNode>) _flat_sequences_id2JDDPTCdNYd(node, (Iterable<? extends Iterable<SNode>>) parameters[0]));
       case 5:
         return (T) ((Boolean) isContainingNextProposalFunction_id5wtq$oIVZy0(node));
+      case 6:
+        return (T) ((Boolean) hasEmptyDescription_id1i0VtCTcNxV(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -214,6 +220,7 @@ public final class Topic__BehaviorDescriptor extends BaseBHDescriptor {
     /*package*/ static final SReferenceLink conceptCollection$PnAr = MetaAdapterFactory.getReferenceLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x4d41c767d834cf3dL, 0x4d41c767d834cf3eL, "conceptCollection");
     /*package*/ static final SContainmentLink topics$hNc1 = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b016L, 0x4d41c767d8337b77L, "topics");
     /*package*/ static final SReferenceLink topic$hHYL = MetaAdapterFactory.getReferenceLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b02eL, 0x4d41c767d8337b73L, "topic");
+    /*package*/ static final SContainmentLink description$bmMZ = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c487b95L, 0x2d6365a451be0df4L, "description");
   }
 
   private static final class CONCEPTS {

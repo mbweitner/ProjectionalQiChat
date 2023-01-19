@@ -16,18 +16,21 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 import org.jetbrains.mps.openapi.language.SProperty;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 public final class Word__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L, "ProjectionalQiChat.structure.Word");
 
   public static final SMethod<Void> initializeVoiceTuningStandard_id7iFV4E1v11U = new SMethodBuilder<Void>(new SJavaCompoundTypeImpl(Void.class)).name("initializeVoiceTuningStandard").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("7iFV4E1v11U").build();
+  public static final SMethod<Boolean> isLastWordInRobotOutput_id3jtlk3LLMgD = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isLastWordInRobotOutput").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("3jtlk3LLMgD").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(initializeVoiceTuningStandard_id7iFV4E1v11U);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(initializeVoiceTuningStandard_id7iFV4E1v11U, isLastWordInRobotOutput_id3jtlk3LLMgD);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -38,6 +41,14 @@ public final class Word__BehaviorDescriptor extends BaseBHDescriptor {
     SPropertyOperations.assign(voiceTuning, PROPS.speakingRate$mjeX, 100);
     SPropertyOperations.assign(voiceTuning, PROPS.volume$moRl, 100);
     SLinkOperations.setTarget(__thisNode__, LINKS.voiceTuning$ZxMO, voiceTuning);
+  }
+  /*package*/ static boolean isLastWordInRobotOutput_id3jtlk3LLMgD(@NotNull SNode __thisNode__) {
+    if ((SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.RobotOutput$SA, false, false) != null)) {
+      if (RobotOutput__BehaviorDescriptor.getLastWordInOutput_id3jtlk3LLQh5.invoke(SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.RobotOutput$SA, false, false)) == __thisNode__) {
+        return true;
+      }
+    }
+    return false;
   }
 
   /*package*/ Word__BehaviorDescriptor() {
@@ -58,6 +69,8 @@ public final class Word__BehaviorDescriptor extends BaseBHDescriptor {
       case 0:
         initializeVoiceTuningStandard_id7iFV4E1v11U(node);
         return null;
+      case 1:
+        return (T) ((Boolean) isLastWordInRobotOutput_id3jtlk3LLMgD(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -95,5 +108,9 @@ public final class Word__BehaviorDescriptor extends BaseBHDescriptor {
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink voiceTuning$ZxMO = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L, 0xf8c3893a78b2550L, "voiceTuning");
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept RobotOutput$SA = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b033L, "ProjectionalQiChat.structure.RobotOutput");
   }
 }

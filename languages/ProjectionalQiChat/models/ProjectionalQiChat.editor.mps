@@ -482,6 +482,9 @@
       <concept id="1139858892567" name="jetbrains.mps.lang.smodel.structure.Node_InsertNewNextSiblingOperation" flags="nn" index="1$SAou">
         <reference id="1139858951584" name="concept" index="1$SOMD" />
       </concept>
+      <concept id="1139867745658" name="jetbrains.mps.lang.smodel.structure.Node_ReplaceWithNewOperation" flags="nn" index="1_qnLN">
+        <reference id="1139867957129" name="concept" index="1_rbq0" />
+      </concept>
       <concept id="1172326502327" name="jetbrains.mps.lang.smodel.structure.Concept_IsExactlyOperation" flags="nn" index="3O6GUB">
         <child id="1206733650006" name="conceptArgument" index="3QVz_e" />
       </concept>
@@ -9031,79 +9034,15 @@
     <ref role="1XX52x" to="zefy:6Zi8Kosir0K" resolve="Proposal" />
     <node concept="3EZMnI" id="2JDDPTFJilT" role="6VMZX">
       <node concept="l2Vlx" id="2JDDPTFJilU" role="2iSdaV" />
-      <node concept="3F0ifn" id="2JDDPTFJi_i" role="3EZMnx">
-        <property role="3F0ifm" value="Proposal" />
-        <node concept="ljvvj" id="2JDDPTFJi_K" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0ifn" id="2JDDPTFJiDQ" role="3EZMnx">
-        <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
-        <node concept="ljvvj" id="2JDDPTFJiIH" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
       <node concept="3F1sOY" id="2JDDPTFJiEq" role="3EZMnx">
         <ref role="1NtTu8" to="zefy:1IlkMXT4Uhp" resolve="comment" />
-        <node concept="lj46D" id="2JDDPTFJiIJ" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
         <node concept="ljvvj" id="2JDDPTFJiIL" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3F0ifn" id="2JDDPTFJiFk" role="3EZMnx">
-        <property role="3F0ifm" value="Output:" />
-        <node concept="lj46D" id="2JDDPTFJiIO" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="ljvvj" id="2JDDPTFJiIQ" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3EZMnI" id="2JDDPTFJiJ8" role="3EZMnx">
-        <node concept="l2Vlx" id="2JDDPTFJiJ9" role="2iSdaV" />
-        <node concept="3F1sOY" id="2JDDPTFJiFW" role="3EZMnx">
-          <ref role="1NtTu8" to="zefy:4P1LQvocRIj" resolve="output" />
-          <node concept="lj46D" id="2JDDPTFJiIT" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-        </node>
-        <node concept="ljvvj" id="2JDDPTFJiJK" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="2JDDPTFJiJM" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0ifn" id="2JDDPTFJiHC" role="3EZMnx">
-        <property role="3F0ifm" value="Subrules:" />
-        <node concept="lj46D" id="2JDDPTFJiIY" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="ljvvj" id="2JDDPTFJiJ0" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3EZMnI" id="2JDDPTFJiJR" role="3EZMnx">
-        <node concept="l2Vlx" id="2JDDPTFJiJS" role="2iSdaV" />
-        <node concept="3F2HdR" id="2JDDPTFJiIk" role="3EZMnx">
-          <ref role="1NtTu8" to="zefy:4P1LQvocRIl" resolve="subrules" />
-          <node concept="l2Vlx" id="2JDDPTFJiIm" role="2czzBx" />
-          <node concept="lj46D" id="2JDDPTFJiJ3" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-        </node>
-        <node concept="ljvvj" id="2JDDPTFJiK$" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="2JDDPTFJiKA" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0ifn" id="2JDDPTFJiLj" role="3EZMnx">
-        <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
-        <node concept="ljvvj" id="2JDDPTFJiLX" role="3F10Kt">
+      <node concept="PMmxH" id="7zBogW5nKeW" role="3EZMnx">
+        <ref role="PMmxG" node="5wtq$oJ5ZyC" resolve="proposal" />
+        <node concept="ljvvj" id="7zBogW5nKfz" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
@@ -9302,6 +9241,12 @@
       </node>
     </node>
     <node concept="3EZMnI" id="2JDDPTFJfZG" role="6VMZX">
+      <node concept="3F1sOY" id="7zBogW5jnua" role="3EZMnx">
+        <ref role="1NtTu8" to="zefy:1IlkMXT4Uhp" resolve="comment" />
+        <node concept="ljvvj" id="7zBogW5jnuu" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="l2Vlx" id="2JDDPTFJfZL" role="2iSdaV" />
       <node concept="PMmxH" id="4h4O2dOfvop" role="3EZMnx">
         <ref role="PMmxG" node="5wtq$oJcpxR" resolve="userRule" />
@@ -11534,6 +11479,10 @@
     <node concept="3EZMnI" id="7d2iSrL0R8e" role="2wV5jI">
       <ref role="1k5W1q" node="2_RqHNE0fzt" resolve="callContainer" />
       <node concept="3F0ifn" id="7d2iSrL0R8o" role="3EZMnx">
+        <property role="3F0ifm" value="Input Store" />
+        <ref role="1k5W1q" node="2_RqHNE0fwW" resolve="callText" />
+      </node>
+      <node concept="3F0ifn" id="_CNqxJxWU4" role="3EZMnx">
         <property role="3F0ifm" value="Call" />
         <ref role="1k5W1q" node="2_RqHNE0fwW" resolve="callText" />
       </node>
@@ -12881,7 +12830,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="7iFV4DYJECm">
-    <property role="3GE5qa" value="Empties/test" />
+    <property role="3GE5qa" value="Empties" />
     <ref role="1XX52x" to="zefy:7iFV4DYJEBV" resolve="EmptyConcept" />
     <node concept="3F0ifn" id="7iFV4DYJECo" role="2wV5jI">
       <node concept="VPxyj" id="7iFV4DYJSkf" role="3F10Kt">
@@ -12893,7 +12842,7 @@
     </node>
   </node>
   <node concept="22mcaB" id="7iFV4DYJSkF">
-    <property role="3GE5qa" value="Empties/test" />
+    <property role="3GE5qa" value="Empties" />
     <ref role="aqKnT" to="zefy:7iFV4DYJEBV" resolve="EmptyConcept" />
     <node concept="22hDWj" id="7iFV4DYJSkG" role="22hAXT" />
   </node>
@@ -15662,6 +15611,28 @@
         </node>
       </node>
       <node concept="2iRkQZ" id="3Mn0fnaRONW" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="325Ffw" id="_CNqxIRNuJ">
+    <property role="3GE5qa" value="HumanInput" />
+    <property role="TrG5h" value="StoreChoice" />
+    <ref role="1chiOs" to="zefy:6Zi8Kosir5r" resolve="IInputStoringConfirmed" />
+    <node concept="2PxR9H" id="_CNqxIRNuK" role="2QnnpI">
+      <node concept="2Py5lD" id="_CNqxIRNuL" role="2PyaAO">
+        <property role="2PWKIS" value="letter or digit" />
+      </node>
+      <node concept="2PzhpH" id="_CNqxIRNuM" role="2PL9iG">
+        <node concept="3clFbS" id="_CNqxIRNuN" role="2VODD2">
+          <node concept="3clFbF" id="_CNqxIRNv1" role="3cqZAp">
+            <node concept="2OqwBi" id="_CNqxIROx7" role="3clFbG">
+              <node concept="0GJ7k" id="_CNqxIRNv0" role="2Oq$k0" />
+              <node concept="1_qnLN" id="_CNqxIROFF" role="2OqNvi">
+                <ref role="1_rbq0" to="zefy:6Zi8Kosir5s" resolve="StoreChoice" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>

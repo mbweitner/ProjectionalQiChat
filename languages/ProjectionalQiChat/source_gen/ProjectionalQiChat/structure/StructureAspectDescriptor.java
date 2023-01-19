@@ -865,6 +865,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8057541192470606172");
     b.version(3);
     b.aggregate("choices", 0x4d41c767d8337bd4L).target(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L).optional(false).ordered(true).multiple(true).origin("5566949863229455316").done();
+    b.alias("[");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForStringValue() {

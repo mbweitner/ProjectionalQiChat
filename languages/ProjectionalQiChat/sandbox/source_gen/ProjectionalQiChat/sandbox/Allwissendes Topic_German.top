@@ -1,0 +1,85 @@
+# Description of Allwissendes Topic:
+#     hier steht was tolles
+
+topic: ~Allwissendes_Topic()
+language: ged
+# +--------------------------------------+
+# |   Concept Collection HumanConcepts   |
+# +--------------------------------------+
+# Human Concepts (Concepts can be used everywhere, where human input is expected. This concepts have no side effects there.) 
+concept:(test1) hier steht was tolles 
+concept:(test2) hier steht noch was tolles 
+concept:(asdfasdf) asfd asdf asd fasdf efwef wefwef w 
+concept:(asdasd) sdfsdf 
+concept:(asdf) aasd 
+concept:(test3) Und hier steht das tollste _[hier könnte ihre werbung stehen ] BackBumperPressedsafd _[asdf ] 
+
+# +--------------------------------------+
+# |   Concept Collection MixedConcepts   |
+# +--------------------------------------+
+# Robot Concepts (Concepts can be used everywhere, where robot output is expected. This concepts have no side effects there.) 
+concept:(Eins) Drei 
+concept:(Zwei) Zwei 
+concept:(Drei) Eins $hier="steht was"  \pau=1000\ 
+
+# Human Concepts (Concepts can be used everywhere, where human input is expected. This concepts have no side effects there.) 
+concept:(EinsBeispielConcept) eins 
+# hier könnte ihre werbung stehen
+concept:(Zwei) Zwei 
+concept:(Drei) Drei 
+
+# +--------------------------------------+
+# |   Concept Collection RobotConcepts   |
+# +--------------------------------------+
+# Robot Concepts (Concepts can be used everywhere, where robot output is expected. This concepts have no side effects there.) 
+concept:(test1) hier sagt wer was tolles 
+
+# Description of test2:
+#     Hier steht eine tolle beschreibung
+concept:(test2) Hier sagt jemand was noch tolleres 
+
+# Description of test3:
+#     Hier steht eine lange tolle beschreibung.
+#     Sie besitzt mehrere Zeilen und
+#     zählt mehrere dinge auf, wie:
+#     1. BulletLines
+#     2. Lines
+#     3. Numbered Lines
+#     * ende
+concept:(test3) Hier sagt einer was was so toll ist das alle staunen 
+
+# Human Concepts (Concepts can be used everywhere, where human input is expected. This concepts have no side effects there.) 
+concept:(asdasd) asdasd 
+
+
+# +--------------------+
+# |   Local Concepts   |
+# +--------------------+
+# Robot Concepts (Concepts can be used everywhere, where robot output is expected. This concepts have no side effects there.) 
+# hier steht ein Kommentar
+
+# Description of lokalerOutput:
+#     hier steht was
+#     ksd asdl asd
+concept:(lokalerOutput) Hier steht ein lokaler output \rst\ $hie=sasd ~test2 hier geht noch was ich weis ja nicht ab wann es komisch wird aber ich schätze 
+concept:(voiceTuningTest) Hier ist alles normel. \rspd=60\ Und hier wird es ein bisschen langsamer. \vct=40\ \vol=30\ Hier wird es leider und runtergepitcht. \vct=100\ \vol=100\ Anschließend nur langsamer. \rst\ Und wieder normal. 
+
+# Human Concepts (Concepts can be used everywhere, where human input is expected. This concepts have no side effects there.) 
+concept:(lokalesConcept) Hier steht was lokales hie
+concept:(hier_steht_was) Und hier sdf ich weis ja nicht 
+concept:(hier_steht_was2) hier muss natürlich noch ein input stehen 
+
+# hier steht was
+u:(Hier könnte Ihre Werbung stehn [und hier geht es natürlich weiter ] mit den Nachrichten mit Gundula Gause. ) Und hier wird was tolles ausgegeben 
+    
+# hier könnte dein Kommentar stehen
+proposal: Hier könnte ihre Werbung stehen 
+u:(VoiceTuning Test ) Hier ist alles normel. \rspd=60\ Und hier wird es ein bisschen langsamer. \vct=40\ \vol=30\ Hier wird es leider und runtergepitcht. \vct=100\ \vol=100\ Anschließend nur langsamer. \rst\ Und wieder normal. 
+    u1:(das ist ein weiterer Test ) mit irgendwas 
+        u2:(und es geht weiter in die dritte ebene ) ja das ist hier 
+            u3:(und die letzte Ebene ) ist hier 
+
+u2:(_[hier sollte eines der Wörter gewählt werden ] _[asdf auch ihre Werbung stehen ] _[hier köntne eines eurer wörter stehen ] _[hier ] ) hier $3 
+            
+
+

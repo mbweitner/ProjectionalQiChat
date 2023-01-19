@@ -40,11 +40,13 @@ public final class HumanConcept__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static boolean isInputStoringConfirmed_id2JDDPTEb_xw(@NotNull SNode __thisNode__) {
-    return ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(__thisNode__, LINKS.rule$l738), LINKS.inputs$iwW4)).all(new IWhereFilter<SNode>() {
+    // theoretically all Human and Robot Concepts could be regonized, but it's not usefull for the editor
+    boolean onlyChoicesOrWords = ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(__thisNode__, LINKS.rule$l738), LINKS.inputs$iwW4)).all(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
-        return SNodeOperations.isInstanceOf(it, CONCEPTS.Word$iA);
+        return SNodeOperations.isInstanceOf(it, CONCEPTS.Word$iA) || SNodeOperations.isInstanceOf(it, CONCEPTS.InputChoice$KG);
       }
     });
+    return onlyChoicesOrWords;
   }
 
   /*package*/ HumanConcept__BehaviorDescriptor() {
@@ -104,6 +106,7 @@ public final class HumanConcept__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class CONCEPTS {
+    /*package*/ static final SConcept InputChoice$KG = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b114L, "ProjectionalQiChat.structure.InputChoice");
     /*package*/ static final SConcept Word$iA = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L, "ProjectionalQiChat.structure.Word");
   }
 }

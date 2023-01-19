@@ -737,6 +737,8 @@
     <property role="EcuMT" value="8057541192470606172" />
     <property role="3GE5qa" value="HumanInput" />
     <property role="TrG5h" value="StoreChoice" />
+    <property role="34LRSv" value="[" />
+    <property role="R4oN_" value="(Store Choice)" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="6Zi8Kosir5A" role="PzmwI">
       <ref role="PrY4T" node="6Zi8Kosir5r" resolve="IInputStoringConfirmed" />
@@ -1398,7 +1400,7 @@
   <node concept="1TIwiD" id="7iFV4DYJEBV">
     <property role="EcuMT" value="8407072934115322363" />
     <property role="TrG5h" value="EmptyConcept" />
-    <property role="3GE5qa" value="Empties/test" />
+    <property role="3GE5qa" value="Empties" />
     <ref role="1TJDcQ" node="6Zi8Kosir47" resolve="Concept" />
   </node>
   <node concept="1TIwiD" id="7iFV4DYYVqr">

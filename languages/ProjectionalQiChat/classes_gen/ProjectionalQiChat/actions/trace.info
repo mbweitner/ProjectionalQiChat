@@ -165,22 +165,25 @@
   </root>
   <root nodeRef="r:0641c388-4638-4ae9-924f-d5e71c20d5e6(ProjectionalQiChat.actions)/8407072934134644581">
     <file name="setUpUserRule.java">
-      <node id="4919285543685359606" at="15,102,16,230" concept="0" />
-      <node id="4919285543685371400" at="16,230,17,232" concept="0" />
-      <node id="8407072934134644581" at="22,0,23,0" concept="6" trace="input$kRKG" />
-      <node id="8407072934134644581" at="23,0,24,0" concept="6" trace="output$kSeI" />
-      <node id="8407072934134644582" at="15,0,19,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;ILorg/jetbrains/mps/openapi/model/SModel;)V" />
-      <scope id="8407072934134644582" at="15,102,17,232" />
-      <scope id="8407072934134644582" at="15,0,19,0">
+      <node id="678017867186574483" at="17,102,18,63" concept="0" />
+      <node id="4919285543685359606" at="18,63,19,230" concept="0" />
+      <node id="4919285543685371400" at="19,230,20,232" concept="0" />
+      <node id="8407072934134644581" at="25,0,26,0" concept="6" trace="name$MnvL" />
+      <node id="8407072934134644581" at="29,0,30,0" concept="6" trace="input$kRKG" />
+      <node id="8407072934134644581" at="30,0,31,0" concept="6" trace="output$kSeI" />
+      <node id="8407072934134644582" at="17,0,22,0" concept="3" trace="setup#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;ILorg/jetbrains/mps/openapi/model/SModel;)V" />
+      <scope id="8407072934134644582" at="17,102,20,232" />
+      <scope id="8407072934134644582" at="17,0,22,0">
         <var name="enclosingNode" id="8407072934134644582" />
         <var name="index" id="8407072934134644582" />
         <var name="model" id="8407072934134644582" />
         <var name="newNode" id="8407072934134644582" />
         <var name="sampleNode" id="8407072934134644582" />
       </scope>
-      <unit id="8407072934134644581" at="21,0,25,0" name="ProjectionalQiChat.actions.setUpUserRule$LINKS" />
-      <unit id="8407072934134644582" at="14,0,20,0" name="ProjectionalQiChat.actions.setUpUserRule$NodeFactory_8407072934134644582" />
-      <unit id="8407072934134644581" at="13,0,26,0" name="ProjectionalQiChat.actions.setUpUserRule" />
+      <unit id="8407072934134644581" at="24,0,27,0" name="ProjectionalQiChat.actions.setUpUserRule$PROPS" />
+      <unit id="8407072934134644581" at="28,0,32,0" name="ProjectionalQiChat.actions.setUpUserRule$LINKS" />
+      <unit id="8407072934134644582" at="16,0,23,0" name="ProjectionalQiChat.actions.setUpUserRule$NodeFactory_8407072934134644582" />
+      <unit id="8407072934134644581" at="15,0,33,0" name="ProjectionalQiChat.actions.setUpUserRule" />
     </file>
   </root>
 </debug-info>

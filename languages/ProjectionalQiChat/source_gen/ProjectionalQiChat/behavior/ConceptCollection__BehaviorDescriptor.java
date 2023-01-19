@@ -26,8 +26,9 @@ public final class ConceptCollection__BehaviorDescriptor extends BaseBHDescripto
 
   public static final SMethod<Iterable<SNode>> getConcepts_id4GE7JaV2Ue_ = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("getConcepts").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4GE7JaV2Ue_").build();
   public static final SMethod<Iterable<SNode>> getVariables_id2JDDPTCcSUJ = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("getVariables").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("2JDDPTCcSUJ").build();
+  public static final SMethod<Boolean> hasEmptyDescription_id1i0VtCTcI4H = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("hasEmptyDescription").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("1i0VtCTcI4H").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getConcepts_id4GE7JaV2Ue_, getVariables_id2JDDPTCcSUJ);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getConcepts_id4GE7JaV2Ue_, getVariables_id2JDDPTCcSUJ, hasEmptyDescription_id1i0VtCTcI4H);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -37,6 +38,9 @@ public final class ConceptCollection__BehaviorDescriptor extends BaseBHDescripto
   }
   /*package*/ static Iterable<SNode> getVariables_id2JDDPTCcSUJ(@NotNull SNode __thisNode__) {
     return SNodeOperations.getNodeDescendants(__thisNode__, CONCEPTS.VariableDeclaration$Pa, false, new SAbstractConcept[]{});
+  }
+  /*package*/ static boolean hasEmptyDescription_id1i0VtCTcI4H(@NotNull SNode __thisNode__) {
+    return (SLinkOperations.getTarget(__thisNode__, LINKS.description$Kg0c) == null) || (boolean) Description__BehaviorDescriptor.isEmptyDescription_id1i0VtCT35fQ.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.description$Kg0c));
   }
 
   /*package*/ ConceptCollection__BehaviorDescriptor() {
@@ -58,6 +62,8 @@ public final class ConceptCollection__BehaviorDescriptor extends BaseBHDescripto
         return (T) ((Iterable<SNode>) getConcepts_id4GE7JaV2Ue_(node));
       case 1:
         return (T) ((Iterable<SNode>) getVariables_id2JDDPTCcSUJ(node));
+      case 2:
+        return (T) ((Boolean) hasEmptyDescription_id1i0VtCTcI4H(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -89,6 +95,7 @@ public final class ConceptCollection__BehaviorDescriptor extends BaseBHDescripto
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink concepts$ACmo = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b032L, 0x32fbc13db2d5faaeL, "concepts");
+    /*package*/ static final SContainmentLink description$Kg0c = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b032L, 0xf8c3893a78f9d73L, "description");
   }
 
   private static final class CONCEPTS {
