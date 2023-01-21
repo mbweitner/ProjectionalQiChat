@@ -36,7 +36,7 @@ public class EnumerationDescriptor_DialogueEvents extends EnumerationDescriptorB
   @Nullable
   @Override
   public EnumerationDescriptor.MemberDescriptor getDefault() {
-    return null;
+    return myMember_Dialog1NotUnderstood_0;
   }
 
   @NotNull

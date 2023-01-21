@@ -505,13 +505,33 @@
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
   </dependency>
   <dependency className="ProjectionalQiChat.editor.Condition_InspectorBuilder_a">
+    <classNode dependClassName="de.itemis.mps.editor.dropdown.runtime.EditorCell_DropDown" />
+    <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.Objects" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleAttributes" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.IAttributeDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorManager" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellMenu.SPropertySubstituteInfo" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Constant" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Property" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.SPropertyAccessor" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.transformation.SPropertyInfo" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.update.AttributeKind" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
   </dependency>
@@ -898,6 +918,7 @@
     <classNode dependClassName="ProjectionalQiChat.editor.GrammarCellsSubstituteMenu_VoiceTuningConfig" />
     <classNode dependClassName="ProjectionalQiChat.editor.GrammarCellsSubstituteMenu_Wildcard" />
     <classNode dependClassName="ProjectionalQiChat.editor.GrammarCellsSubstituteMenu_Word" />
+    <classNode dependClassName="ProjectionalQiChat.editor.GrammarCellsSubstituteMenu_onStartEvent" />
     <classNode dependClassName="ProjectionalQiChat.editor.HeaderSpecification_Editor" />
     <classNode dependClassName="ProjectionalQiChat.editor.HeaderSpecification_modelling_Editor" />
     <classNode dependClassName="ProjectionalQiChat.editor.HumanConcept" />
@@ -959,6 +980,7 @@
     <classNode dependClassName="ProjectionalQiChat.editor.Word_Editor" />
     <classNode dependClassName="ProjectionalQiChat.editor.Word_KeyMap" />
     <classNode dependClassName="ProjectionalQiChat.editor.Word_TransformationMenu" />
+    <classNode dependClassName="ProjectionalQiChat.editor.onStartEvent_Editor" />
     <classNode dependClassName="ProjectionalQiChat.editor.proposal" />
     <classNode dependClassName="ProjectionalQiChat.editor.proposalShort" />
     <classNode dependClassName="ProjectionalQiChat.editor.template_GrammarCellsSideTransformationsMenu" />
@@ -2821,6 +2843,24 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
+  <dependency className="ProjectionalQiChat.editor.GrammarCellsSubstituteMenu_onStartEvent">
+    <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.MenuPart" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuItem" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SModule" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SRepository" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
+  </dependency>
   <dependency className="ProjectionalQiChat.editor.HeaderSpecification_Editor">
     <classNode dependClassName="ProjectionalQiChat.editor.HeaderSpecification_EditorBuilder_a" />
     <classNode dependClassName="ProjectionalQiChat.editor.HeaderSpecification_InspectorBuilder_a" />
@@ -2957,6 +2997,7 @@
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.model.SubstituteInfoPaletteEntryProvider" />
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.substitute.SubstituteInfoFactory" />
     <classNode dependClassName="de.itemis.mps.editor.dropdown.runtime.EditorCell_DropDown" />
+    <classNode dependClassName="java.lang.Boolean" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Object" />
@@ -4360,16 +4401,25 @@
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
   </dependency>
   <dependency className="ProjectionalQiChat.editor.Proposal_InspectorBuilder_a">
+    <classNode dependClassName="ProjectionalQiChat.behavior.EmptyFirstOrderSubrule__BehaviorDescriptor" />
     <classNode dependClassName="ProjectionalQiChat.editor.globalStyles_StyleSheet.notEditableStyleClass" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteSmart" />
     <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleAttributes" />
     <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler" />
     <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.SingleRoleCellProvider" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cellMenu.SEmptyContainmentSubstituteInfo" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Constant" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
@@ -4380,6 +4430,8 @@
     <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
@@ -5431,6 +5483,7 @@
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.model.IPaletteEntryProvider" />
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.model.SubstituteInfoPaletteEntryProvider" />
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.substitute.SubstituteInfoFactory" />
+    <classNode dependClassName="java.lang.Boolean" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Object" />
@@ -6241,6 +6294,29 @@
     <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
+  <dependency className="ProjectionalQiChat.editor.onStartEvent_Editor">
+    <classNode dependClassName="ProjectionalQiChat.editor.onStartEvent_EditorBuilder_a" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
+  </dependency>
+  <dependency className="ProjectionalQiChat.editor.onStartEvent_EditorBuilder_a">
+    <classNode dependClassName="ProjectionalQiChat.editor.globalStyles_StyleSheet.eventContainerStyleClass" />
+    <classNode dependClassName="ProjectionalQiChat.editor.globalStyles_StyleSheet.eventStyleClass" />
+    <classNode dependClassName="ProjectionalQiChat.editor.globalStyles_StyleSheet.eventTextStyleClass" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Constant" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
+  </dependency>
   <dependency className="ProjectionalQiChat.editor.proposal">
     <classNode dependClassName="ProjectionalQiChat.editor.proposal_ComponentBuilder_a" />
     <classNode dependClassName="java.lang.String" />
@@ -6313,6 +6389,7 @@
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
   </dependency>
   <dependency className="ProjectionalQiChat.editor.proposal_ComponentBuilder_a">
+    <classNode dependClassName="ProjectionalQiChat.behavior.EmptyFirstOrderSubrule__BehaviorDescriptor" />
     <classNode dependClassName="ProjectionalQiChat.behavior.Topic__BehaviorDescriptor" />
     <classNode dependClassName="ProjectionalQiChat.editor.globalStyles_StyleSheet.eventTextStyleClass" />
     <classNode dependClassName="ProjectionalQiChat.editor.globalStyles_StyleSheet.keywordStyleClass" />
@@ -6335,6 +6412,7 @@
     <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler" />
     <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.SingleRoleCellProvider" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.IAttributeDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.EditorManager" />

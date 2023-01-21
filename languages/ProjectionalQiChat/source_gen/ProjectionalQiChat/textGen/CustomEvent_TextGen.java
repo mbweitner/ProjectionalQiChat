@@ -13,6 +13,7 @@ public class CustomEvent_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
+    tgs.append("e:");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.eventName$nYgS));
   }
 

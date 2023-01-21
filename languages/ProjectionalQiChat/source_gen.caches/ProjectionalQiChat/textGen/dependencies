@@ -24,12 +24,6 @@
   <uses module="b8e4beec-8383-4fb9-b0bb-9d1c9c159cfc(jetbrains.mps.lang.structure#1170324972255)" kind="dp" />
   <uses module="9ded098b-ad6a-4657-bfd9-48636cfe8bc3(jetbrains.mps.lang.traceable)" kind="dp" />
   <uses module="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt+dp" />
-  <dependency className="ProjectionalQiChat.textGen.AbstractEvent_TextGen">
-    <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
-    <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
-    <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
-  </dependency>
   <dependency className="ProjectionalQiChat.textGen.CommentRule_TextGen">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
@@ -405,7 +399,6 @@
   </dependency>
   <dependency className="ProjectionalQiChat.textGen.TextGenAspectDescriptor">
     <classNode dependClassName="ProjectionalQiChat.structure.LanguageConceptSwitch" />
-    <classNode dependClassName="ProjectionalQiChat.textGen.AbstractEvent_TextGen" />
     <classNode dependClassName="ProjectionalQiChat.textGen.CommentRule_TextGen" />
     <classNode dependClassName="ProjectionalQiChat.textGen.Comment_TextGen" />
     <classNode dependClassName="ProjectionalQiChat.textGen.ConceptCollectionReference_TextGen" />
@@ -452,6 +445,7 @@
     <classNode dependClassName="ProjectionalQiChat.textGen.VariableReference_TextGen" />
     <classNode dependClassName="ProjectionalQiChat.textGen.Wildcard_TextGen" />
     <classNode dependClassName="ProjectionalQiChat.textGen.Word_TextGen" />
+    <classNode dependClassName="ProjectionalQiChat.textGen.onStartEvent_TextGen" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
@@ -568,6 +562,13 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
+  </dependency>
+  <dependency className="ProjectionalQiChat.textGen.onStartEvent_TextGen">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.text.impl.TextGenSupport" />
+    <classNode dependClassName="jetbrains.mps.text.rt.TextGenContext" />
     <classNode extendsClassName="jetbrains.mps.text.rt.TextGenDescriptorBase" />
   </dependency>
 </dependenciesRoot>

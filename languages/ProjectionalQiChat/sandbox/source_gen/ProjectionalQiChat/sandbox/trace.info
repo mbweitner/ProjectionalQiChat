@@ -4,22 +4,22 @@
   <concept fqn="c:9f283760-f9ca-4f5b-8990-d42851344ce7/1120332614130986905:ProjectionalQiChat.structure.Description" />
   <root nodeRef="r:b6d916d6-5967-4a61-992b-ca3ae212d6cf(ProjectionalQiChat.sandbox)/3761955782231616222">
     <file name="Allwissendes Topic_German.top">
-      <node id="3761955782231616338" at="36,0,39,0" concept="1" />
-      <node id="3761955782231616491" at="40,0,49,0" concept="1" />
+      <node id="3761955782231616338" at="38,0,41,0" concept="1" />
+      <node id="3761955782231616491" at="42,0,51,0" concept="1" />
     </file>
   </root>
   <root nodeRef="r:b6d916d6-5967-4a61-992b-ca3ae212d6cf(ProjectionalQiChat.sandbox)/3761955782231617104">
     <file name="Allwissendes Topic_German.top">
-      <node id="4919285543692664131" at="27,0,28,0" concept="0" />
+      <node id="4919285543692664131" at="29,0,30,0" concept="0" />
     </file>
   </root>
   <root nodeRef="r:b6d916d6-5967-4a61-992b-ca3ae212d6cf(ProjectionalQiChat.sandbox)/3761955782232066379">
     <file name="Allwissendes Topic_German.top">
-      <node id="4365959419436316902" at="59,0,60,0" concept="0" />
-      <node id="4365959419436316920" at="72,0,73,0" concept="0" />
-      <node id="8712038721312877629" at="75,0,76,0" concept="0" />
+      <node id="4365959419436316902" at="61,0,62,0" concept="0" />
+      <node id="4365959419436316920" at="76,0,77,0" concept="0" />
+      <node id="8712038721312877629" at="79,0,80,0" concept="0" />
       <node id="3761955782232066380" at="1,0,3,0" concept="1" />
-      <node id="3761955782232066482" at="60,0,64,0" concept="1" />
+      <node id="3761955782232066482" at="62,0,66,0" concept="1" />
     </file>
   </root>
 </debug-info>

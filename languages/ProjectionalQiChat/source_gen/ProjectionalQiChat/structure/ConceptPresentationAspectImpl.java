@@ -83,6 +83,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_VoiceTuningConfig;
   private ConceptPresentation props_Wildcard;
   private ConceptPresentation props_Word;
+  private ConceptPresentation props_onStartEvent;
 
   @Override
   @Nullable
@@ -596,6 +597,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Word = cpb.create();
         }
         return props_Word;
+      case LanguageConceptSwitch.onStartEvent:
+        if (props_onStartEvent == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("(Event onStart triggered)");
+          cpb.rawPresentation("onStart");
+          props_onStartEvent = cpb.create();
+        }
+        return props_onStartEvent;
     }
     return null;
   }

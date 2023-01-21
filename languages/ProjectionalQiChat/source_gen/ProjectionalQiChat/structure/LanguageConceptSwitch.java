@@ -83,6 +83,7 @@ public final class LanguageConceptSwitch {
   public static final int VoiceTuningConfig = 71;
   public static final int Wildcard = 72;
   public static final int Word = 73;
+  public static final int onStartEvent = 74;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L);
@@ -160,6 +161,7 @@ public final class LanguageConceptSwitch {
     builder.put(0xf8c3893a78b253bL, VoiceTuningConfig);
     builder.put(0x6fd223061c49b15fL, Wildcard);
     builder.put(0x6fd223061c49b130L, Word);
+    builder.put(0x564d00b33bf507b0L, onStartEvent);
     myIndex = builder.seal();
   }
 

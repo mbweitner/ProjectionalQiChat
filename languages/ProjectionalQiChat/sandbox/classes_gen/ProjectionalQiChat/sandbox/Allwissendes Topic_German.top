@@ -3,6 +3,8 @@
 
 topic: ~Allwissendes_Topic()
 language: ged
+include: Tolles_TOpic_enu.top
+
 # +--------------------------------------+
 # |   Concept Collection HumanConcepts   |
 # +--------------------------------------+
@@ -12,7 +14,7 @@ concept:(test2) hier steht noch was tolles
 concept:(asdfasdf) asfd asdf asd fasdf efwef wefwef w 
 concept:(asdasd) sdfsdf 
 concept:(asdf) aasd 
-concept:(test3) Und hier steht das tollste _[hier könnte ihre werbung stehen ] BackBumperPressedsafd _[asdf ] 
+concept:(test3) Und hier steht das tollste _[hier könnte ihre werbung stehen ] e:BackBumperPressedsafd _[asdf ] 
 
 # +--------------------------------------+
 # |   Concept Collection MixedConcepts   |
@@ -63,11 +65,13 @@ concept:(asdasd) asdasd
 #     ksd asdl asd
 concept:(lokalerOutput) Hier steht ein lokaler output \rst\ $hie=sasd ~test2 hier geht noch was ich weis ja nicht ab wann es komisch wird aber ich schätze 
 concept:(voiceTuningTest) Hier ist alles normel. \rspd=60\ Und hier wird es ein bisschen langsamer. \vct=40\ \vol=30\ Hier wird es leider und runtergepitcht. \vct=100\ \vol=100\ Anschließend nur langsamer. \rst\ Und wieder normal. 
+concept:(sf) asf 
 
 # Human Concepts (Concepts can be used everywhere, where human input is expected. This concepts have no side effects there.) 
-concept:(lokalesConcept) Hier steht was lokales hie
+concept:(lokalesConcept) Hier steht was lokales 
 concept:(hier_steht_was) Und hier sdf ich weis ja nicht 
 concept:(hier_steht_was2) hier muss natürlich noch ein input stehen 
+concept:(hier) steth was tolles 
 
 # hier steht was
 u:(Hier könnte Ihre Werbung stehn [und hier geht es natürlich weiter ] mit den Nachrichten mit Gundula Gause. ) Und hier wird was tolles ausgegeben 
@@ -79,7 +83,16 @@ u:(VoiceTuning Test ) Hier ist alles normel. \rspd=60\ Und hier wird es ein biss
         u2:(und es geht weiter in die dritte ebene ) ja das ist hier 
             u3:(und die letzte Ebene ) ist hier 
 
-u2:(_[hier sollte eines der Wörter gewählt werden ] _[asdf auch ihre Werbung stehen ] _[hier köntne eines eurer wörter stehen ] _[hier ] ) hier $3 
+u2:(_[hier sollte eines der Wörter gewählt werden ] _[asdf auch ihre Werbung stehen ] _[hier köntne eines eurer wörter stehen ] _[hier ] e:event) hier nextProposal
             
 
 
+proposal: Schritt 5: Für den Zuckerguss Puderzucker und Zitronensaft miteinander verrühren und mit einem Teelöffel auf den Plätzchen verteilen. 
+proposal: asd 
+proposal: Defining extra concepts out of words or group of words hier geht es weiter 
+proposal: was geht ab 
+proposal: UserRule Moddeling Name muss noch den entsprechenden Style bekommen hier geht was 
+u:(e:Dialog/NotUnderstood) test eins 
+    
+u:(sdfg ) test 2 
+    

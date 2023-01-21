@@ -37,12 +37,13 @@ public class FirstOrderSubrule_Constraints extends BaseConstraintsDescriptor {
     };
   }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
-    return SNodeOperations.isInstanceOf(parentNode, CONCEPTS.UserRule$oj);
+    return SNodeOperations.isInstanceOf(parentNode, CONCEPTS.UserRule$oj) || SNodeOperations.isInstanceOf(parentNode, CONCEPTS.Proposal$R9);
   }
   private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)", "3761955782232066584");
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept FirstOrderSubrule$oM = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b103L, "ProjectionalQiChat.structure.FirstOrderSubrule");
+    /*package*/ static final SConcept Proposal$R9 = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b030L, "ProjectionalQiChat.structure.Proposal");
     /*package*/ static final SConcept UserRule$oj = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b102L, "ProjectionalQiChat.structure.UserRule");
   }
 }

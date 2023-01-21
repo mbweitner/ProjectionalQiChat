@@ -47,10 +47,12 @@ import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import ProjectionalQiChat.behavior.EmptyFirstOrderSubrule__BehaviorDescriptor;
 import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
 import jetbrains.mps.editor.runtime.EditorCell_Empty;
 import org.jetbrains.mps.openapi.language.SConcept;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 /*package*/ class proposal_ComponentBuilder_a extends AbstractEditorBuilder {
   private static final Logger LOG = LogManager.getLogger(proposal_ComponentBuilder_a.class);
@@ -98,7 +100,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     editorCell.addEditorCell(createConstant_2());
     editorCell.addEditorCell(createRefNode_0());
     if (nodeCondition_razzp5_a3a0()) {
-      editorCell.addEditorCell(createRefNodeList_0());
+      editorCell.addEditorCell(createCollection_3());
     }
     return editorCell;
   }
@@ -234,23 +236,31 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       return "<no output>";
     }
   }
+  private EditorCell createCollection_3() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_razzp5_d0a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createRefNodeList_0());
+    return editorCell;
+  }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new subrulesListHandler_razzp5_d0a(myNode, getEditorContext());
+    AbstractCellListHandler handler = new subrulesListHandler_razzp5_a3a0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Indent(), false);
     editorCell.setCellId("P_refNodeList_subrules");
     Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
     editorCell.getStyle().putAll(style);
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class subrulesListHandler_razzp5_d0a extends RefNodeListHandler {
+  private static class subrulesListHandler_razzp5_a3a0 extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public subrulesListHandler_razzp5_d0a(SNode ownerNode, EditorContext context) {
+    public subrulesListHandler_razzp5_a3a0(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -265,7 +275,19 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     public SAbstractConcept getChildSConcept() {
       return CONCEPTS.FirstOrderSubrule$oM;
     }
+    public SNode createNodeToInsert(EditorContext editorContext, SNode prevNode, SNode nextNode, int index) {
+      return nodeFactory(prevNode, nextNode, index);
+    }
 
+    public SNode nodeFactory(SNode prevNode, SNode nextNode, int index) {
+      SNode newSub = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b103L, "ProjectionalQiChat.structure.FirstOrderSubrule"));
+      SNode emptySubrule = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x74abec4a81de9516L, "ProjectionalQiChat.structure.EmptyFirstOrderSubrule"));
+      EmptyFirstOrderSubrule__BehaviorDescriptor.initializeEmptySubrule_id7iFV4E1Swfc.invoke(emptySubrule);
+      SLinkOperations.setTarget(newSub, LINKS.input$kRKG, SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b034L, "ProjectionalQiChat.structure.HumanInput")));
+      SLinkOperations.setTarget(newSub, LINKS.output$kSeI, SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b033L, "ProjectionalQiChat.structure.RobotOutput")));
+      SNodeOperations.insertNextSiblingChild(newSub, emptySubrule);
+      return newSub;
+    }
     public EditorCell createNodeCell(SNode elementNode) {
       EditorCell elementCell = getUpdateSession().updateChildNodeCell(elementNode);
       installElementCellActions(elementNode, elementCell, false);
@@ -273,7 +295,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(subrulesListHandler_razzp5_d0a.this.getNode(), LINKS.subrules$i9F_));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(subrulesListHandler_razzp5_a3a0.this.getNode(), LINKS.subrules$i9F_));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -331,6 +353,8 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
   private static final class LINKS {
     /*package*/ static final SContainmentLink subrules$i9F_ = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b030L, 0x4d41c767d8337b95L, "subrules");
     /*package*/ static final SContainmentLink output$i9dz = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b030L, 0x4d41c767d8337b93L, "output");
+    /*package*/ static final SContainmentLink input$kRKG = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b101L, 0x4d41c767d8337b9cL, "input");
+    /*package*/ static final SContainmentLink output$kSeI = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b101L, 0x4d41c767d8337b9eL, "output");
   }
 
   private static final class PROPS {

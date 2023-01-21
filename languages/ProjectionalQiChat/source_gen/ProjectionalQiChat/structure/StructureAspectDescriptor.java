@@ -92,6 +92,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptVoiceTuningConfig = createDescriptorForVoiceTuningConfig();
   /*package*/ final ConceptDescriptor myConceptWildcard = createDescriptorForWildcard();
   /*package*/ final ConceptDescriptor myConceptWord = createDescriptorForWord();
+  /*package*/ final ConceptDescriptor myConceptonStartEvent = createDescriptorForonStartEvent();
   /*package*/ final EnumerationDescriptor myEnumerationChooseOrder = new EnumerationDescriptor_ChooseOrder();
   /*package*/ final EnumerationDescriptor myEnumerationConditionSymbol = new EnumerationDescriptor_ConditionSymbol();
   /*package*/ final EnumerationDescriptor myEnumerationDialogueEvents = new EnumerationDescriptor_DialogueEvents();
@@ -101,7 +102,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeNameString = new ConstrainedStringDatatypeDescriptorImpl(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x264cdb1417a7e1d7L, "NameString", "r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/2759821551013978583", "[a-zA-ZöäüÖÄÜ]*[0-9]*");
   /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeNumberString = new ConstrainedStringDatatypeDescriptorImpl(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b34eL, "NumberString", "r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8057541192470606670", "-?([1-9][0-9]*|0)(\\.[0-9]*[1-9]|\\.0)?");
   /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeVariableName = new ConstrainedStringDatatypeDescriptorImpl(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b335L, "VariableName", "r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8057541192470606645", "[a-zA-Z]+");
-  /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeWordString = new ConstrainedStringDatatypeDescriptorImpl(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b120L, "WordString", "r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8057541192470606112", "([a-zA-ZöäüÖÄÜß-]+[!\\?\\.',]?)|([0-9]*)");
+  /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeWordString = new ConstrainedStringDatatypeDescriptorImpl(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b120L, "WordString", "r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8057541192470606112", "([a-zA-ZöäüÖÄÜß-]+[!\\?\\.',:]?)|([0-9]*)");
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -117,7 +118,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractEvent, myConceptAbstractUserRule, myConceptComment, myConceptCommentRule, myConceptConcept, myConceptConceptCollection, myConceptConceptCollectionReference, myConceptConceptContainer, myConceptCondition, myConceptConditionConfirmed, myConceptCustomEvent, myConceptCustomVariable, myConceptDescription, myConceptDialogueEvent, myConceptEmptyConcept, myConceptEmptyFirstOrderSubrule, myConceptEmptyHumanInput, myConceptEmptyRobotOutput, myConceptEmptyRule, myConceptEmptySecondOrderSubrule, myConceptEmptyThirdOrderSubrule, myConceptFirstOrderSubrule, myConceptForbiddenWord, myConceptFunction, myConceptHeaderSpecification, myConceptHumanConcept, myConceptHumanConceptCall, myConceptHumanConceptReference, myConceptHumanInput, myConceptIChoiceConfirmed, myConceptIExtendedHumanInput, myConceptIExtendedRobotOutput, myConceptIHumanInputConfirmed, myConceptIInputChoiceConfirmed, myConceptIInputStoringConfirmed, myConceptIOptionalConfirmed, myConceptIOutputChoiceConfirmed, myConceptIPhraseConfirmed, myConceptIRobotOuputConfirmed, myConceptIVariableValue, myConceptInputChoice, myConceptInputStore, myConceptInputStoreCall, myConceptInputStoreReference, myConceptNAOqiEvent, myConceptNextProposal, myConceptNumber, myConceptOptional, myConceptOutputChoice, myConceptPause, myConceptPhrase, myConceptPreviousProposal, myConceptProposal, myConceptProposalFunction, myConceptRobotConcept, myConceptRobotConceptCall, myConceptRobotConceptReference, myConceptRobotOutput, myConceptRule, myConceptSameProposal, myConceptSecondOrderSubrule, myConceptStoreChoice, myConceptStringValue, myConceptThirdOrderSubrule, myConceptTopic, myConceptTopicReference, myConceptUserRule, myConceptVariableDeclaration, myConceptVariableDeclarationContainer, myConceptVariableEvent, myConceptVariableReference, myConceptVoiceTuningConfig, myConceptWildcard, myConceptWord);
+    return Arrays.asList(myConceptAbstractEvent, myConceptAbstractUserRule, myConceptComment, myConceptCommentRule, myConceptConcept, myConceptConceptCollection, myConceptConceptCollectionReference, myConceptConceptContainer, myConceptCondition, myConceptConditionConfirmed, myConceptCustomEvent, myConceptCustomVariable, myConceptDescription, myConceptDialogueEvent, myConceptEmptyConcept, myConceptEmptyFirstOrderSubrule, myConceptEmptyHumanInput, myConceptEmptyRobotOutput, myConceptEmptyRule, myConceptEmptySecondOrderSubrule, myConceptEmptyThirdOrderSubrule, myConceptFirstOrderSubrule, myConceptForbiddenWord, myConceptFunction, myConceptHeaderSpecification, myConceptHumanConcept, myConceptHumanConceptCall, myConceptHumanConceptReference, myConceptHumanInput, myConceptIChoiceConfirmed, myConceptIExtendedHumanInput, myConceptIExtendedRobotOutput, myConceptIHumanInputConfirmed, myConceptIInputChoiceConfirmed, myConceptIInputStoringConfirmed, myConceptIOptionalConfirmed, myConceptIOutputChoiceConfirmed, myConceptIPhraseConfirmed, myConceptIRobotOuputConfirmed, myConceptIVariableValue, myConceptInputChoice, myConceptInputStore, myConceptInputStoreCall, myConceptInputStoreReference, myConceptNAOqiEvent, myConceptNextProposal, myConceptNumber, myConceptOptional, myConceptOutputChoice, myConceptPause, myConceptPhrase, myConceptPreviousProposal, myConceptProposal, myConceptProposalFunction, myConceptRobotConcept, myConceptRobotConceptCall, myConceptRobotConceptReference, myConceptRobotOutput, myConceptRule, myConceptSameProposal, myConceptSecondOrderSubrule, myConceptStoreChoice, myConceptStringValue, myConceptThirdOrderSubrule, myConceptTopic, myConceptTopicReference, myConceptUserRule, myConceptVariableDeclaration, myConceptVariableDeclarationContainer, myConceptVariableEvent, myConceptVariableReference, myConceptVoiceTuningConfig, myConceptWildcard, myConceptWord, myConceptonStartEvent);
   }
 
   @Override
@@ -272,6 +273,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptWildcard;
       case LanguageConceptSwitch.Word:
         return myConceptWord;
+      case LanguageConceptSwitch.onStartEvent:
+        return myConceptonStartEvent;
       default:
         return null;
     }
@@ -291,6 +294,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, true, false);
     b.parent(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b10bL);
     b.parent(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b251aL);
+    b.parent(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b126L);
     b.origin("r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8057541192470606176");
     b.version(3);
     return b.create();
@@ -989,8 +993,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b34cL);
     b.origin("r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/8057541192470606128");
     b.version(3);
-    b.property("word", 0x6fd223061c49b136L).type(MetaIdFactory.dataTypeId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b120L)).origin("8057541192470606134").done();
+    b.property("word", 0x6fd223061c49b136L).type(PrimitiveTypeId.STRING).origin("8057541192470606134").done();
     b.aggregate("voiceTuning", 0xf8c3893a78b2550L).target(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0xf8c3893a78b253bL).optional(false).ordered(true).multiple(false).origin("1120332614130672976").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForonStartEvent() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ProjectionalQiChat", "onStartEvent", 0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x564d00b33bf507b0L);
+    b.class_(false, false, false);
+    // extends: ProjectionalQiChat.structure.AbstractEvent
+    b.super_(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b160L);
+    b.origin("r:0cc63bc1-1b7d-4deb-8fa2-203bd65036cf(ProjectionalQiChat.structure)/6218627430273583024");
+    b.version(3);
+    b.alias("onStart");
     return b.create();
   }
 }

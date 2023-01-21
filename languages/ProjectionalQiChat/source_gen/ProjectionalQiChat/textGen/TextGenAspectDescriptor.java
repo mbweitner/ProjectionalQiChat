@@ -27,8 +27,6 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
   @Override
   public TextGenDescriptor getDescriptor(@NotNull SAbstractConcept concept) {
     switch (myIndex.index(concept)) {
-      case LanguageConceptSwitch.AbstractEvent:
-        return new AbstractEvent_TextGen();
       case LanguageConceptSwitch.Comment:
         return new Comment_TextGen();
       case LanguageConceptSwitch.CommentRule:
@@ -121,6 +119,8 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
         return new Wildcard_TextGen();
       case LanguageConceptSwitch.Word:
         return new Word_TextGen();
+      case LanguageConceptSwitch.onStartEvent:
+        return new onStartEvent_TextGen();
     }
     return null;
   }

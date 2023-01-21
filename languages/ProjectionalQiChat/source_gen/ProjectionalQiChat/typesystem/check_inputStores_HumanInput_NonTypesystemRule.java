@@ -16,8 +16,8 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class check_HumanInput_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
-  public check_HumanInput_NonTypesystemRule() {
+public class check_inputStores_HumanInput_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
+  public check_inputStores_HumanInput_NonTypesystemRule() {
   }
   public void applyRule(final SNode humanInput, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     if (!((boolean) HumanInput__BehaviorDescriptor.areAllInputStorePositionsRight_id_CNqxIrcOf.invoke(humanInput)) || !((boolean) HumanInput__BehaviorDescriptor.areAllInternInputStoresNamedRight_id_CNqxIpAhz.invoke(humanInput))) {

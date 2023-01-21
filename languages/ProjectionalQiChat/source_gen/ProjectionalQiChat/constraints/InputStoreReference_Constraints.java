@@ -5,11 +5,15 @@ package ProjectionalQiChat.constraints;
 import jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor;
 import org.apache.log4j.Logger;
 import org.apache.log4j.LogManager;
+import jetbrains.mps.smodel.runtime.ConstraintFunction;
+import jetbrains.mps.smodel.runtime.ConstraintContext_CanBeChild;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import jetbrains.mps.smodel.runtime.CheckingNodeContext;
 import java.util.Map;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import jetbrains.mps.smodel.runtime.ReferenceConstraintsDescriptor;
 import jetbrains.mps.smodel.runtime.base.BaseReferenceConstraintsDescriptor;
-import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.runtime.ReferenceScopeProvider;
 import jetbrains.mps.smodel.runtime.base.BaseScopeProvider;
 import org.jetbrains.mps.openapi.model.SNodeReference;
@@ -24,9 +28,10 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.scope.ListScope;
 import java.util.HashMap;
+import org.jetbrains.mps.openapi.language.SAbstractConcept;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public class InputStoreReference_Constraints extends BaseConstraintsDescriptor {
@@ -35,6 +40,21 @@ public class InputStoreReference_Constraints extends BaseConstraintsDescriptor {
     super(CONCEPTS.InputStoreReference$C$);
   }
 
+  @Override
+  protected ConstraintFunction<ConstraintContext_CanBeChild, Boolean> calculateCanBeChildConstraint() {
+    return new ConstraintFunction<ConstraintContext_CanBeChild, Boolean>() {
+      @NotNull
+      public Boolean invoke(@NotNull ConstraintContext_CanBeChild context, @Nullable CheckingNodeContext checkingNodeContext) {
+        boolean result = staticCanBeAChild(context.getNode(), context.getParentNode(), context.getConcept(), context.getLink());
+
+        if (!(result) && checkingNodeContext != null) {
+          checkingNodeContext.setBreakingNode(canBeChildBreakingPoint);
+        }
+
+        return result;
+      }
+    };
+  }
   @Override
   protected Map<SReferenceLink, ReferenceConstraintsDescriptor> getSpecifiedReferences() {
     BaseReferenceConstraintsDescriptor d0 = new BaseReferenceConstraintsDescriptor(LINKS.inputStore$oIB4, this, true, false) {
@@ -75,6 +95,10 @@ public class InputStoreReference_Constraints extends BaseConstraintsDescriptor {
     references.put(d0.getReference(), d0);
     return references;
   }
+  private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
+    return (SNodeOperations.getNodeAncestor(parentNode, CONCEPTS.AbstractUserRule$nO, false, false) != null);
+  }
+  private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)", "6218627430269047241");
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept InputStoreReference$C$ = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b321L, "ProjectionalQiChat.structure.InputStoreReference");

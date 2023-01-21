@@ -629,7 +629,18 @@ import org.jetbrains.mps.openapi.language.SConcept;
             if (editorCell.value.getContextGraph() != null) {
               Object defaultParent = editorCell.value.getContextGraph().getDefaultParent();
               if (defaultParent instanceof RootDCell) {
-                ((RootDCell) defaultParent).resetButtonConfig();
+                {
+                  Style styleDiagram = new StyleImpl();
+                  styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__layout-diagram-button"), true);
+                  styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__relayout-all-edges-button"), false);
+                  styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__maximize-diagram-button"), true);
+                  styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__reset-view-button"), true);
+                  styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__zoom-in-button"), true);
+                  styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__zoom-out-button"), true);
+                  styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__fit-size-all-diagram-button"), true);
+                  styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__show_ports_labels"), false);
+                  ((RootDCell) defaultParent).updateButtonConfig(styleDiagram);
+                }
               }
             }
           });

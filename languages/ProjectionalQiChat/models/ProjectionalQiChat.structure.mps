@@ -593,7 +593,7 @@
     <property role="3F6X1D" value="8057541192470606112" />
     <property role="3GE5qa" value="GerneralInputOutput" />
     <property role="TrG5h" value="WordString" />
-    <property role="FLfZY" value="([a-zA-ZöäüÖÄÜß-]+[!\\?\\.',]?)|([0-9]*)" />
+    <property role="FLfZY" value="([a-zA-ZöäüÖÄÜß-]+[!\\?\\.',:]?)|([0-9]*)" />
   </node>
   <node concept="1TIwiD" id="6Zi8Kosir4x">
     <property role="EcuMT" value="8057541192470606113" />
@@ -700,7 +700,7 @@
     <node concept="1TJgyi" id="6Zi8Kosir4Q" role="1TKVEl">
       <property role="IQ2nx" value="8057541192470606134" />
       <property role="TrG5h" value="word" />
-      <ref role="AX2Wp" node="6Zi8Kosir4w" resolve="WordString" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
   <node concept="1TIwiD" id="6Zi8Kosir5p">
@@ -814,6 +814,9 @@
     <node concept="PrWs8" id="Yce9eByMk$" role="PzmwI">
       <ref role="PrY4T" node="Yce9eByMkq" resolve="IInputChoiceConfirmed" />
     </node>
+    <node concept="PrWs8" id="5pd0bcTVcEp" role="PzmwI">
+      <ref role="PrY4T" node="6Zi8Kosir4A" resolve="IPhraseConfirmed" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6Zi8Kosir5K">
     <property role="EcuMT" value="8057541192470606192" />
@@ -885,6 +888,7 @@
     <property role="3F6X1D" value="8057541192470606197" />
     <property role="3GE5qa" value="HumanInputEvents" />
     <property role="TrG5h" value="NAOqiEvents" />
+    <ref role="1H5jkz" node="6Zi8Kosir5U" resolve="ALBattery1BatteryLow" />
     <node concept="25R33" id="6Zi8Kosir5Q" role="25R1y">
       <property role="3tVfz5" value="8057541192470606198" />
       <property role="TrG5h" value="ALBasicAwareness1HumanTracked" />
@@ -995,6 +999,7 @@
     <property role="3F6X1D" value="8057541192470606493" />
     <property role="3GE5qa" value="HumanInputEvents" />
     <property role="TrG5h" value="DialogueEvents" />
+    <ref role="1H5jkz" node="6Zi8Kosirb$" resolve="Dialog1NotUnderstood" />
     <node concept="25R33" id="6Zi8Kosirau" role="25R1y">
       <property role="3tVfz5" value="8057541192470606494" />
       <property role="TrG5h" value="Dialog1Failure" />
@@ -1438,6 +1443,14 @@
     <property role="3GE5qa" value="Empties" />
     <property role="TrG5h" value="EmptyRobotOutput" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="5pd0bcVXguK">
+    <property role="EcuMT" value="6218627430273583024" />
+    <property role="3GE5qa" value="HumanInputEvents" />
+    <property role="TrG5h" value="onStartEvent" />
+    <property role="34LRSv" value="onStart" />
+    <property role="R4oN_" value="(Event onStart triggered)" />
+    <ref role="1TJDcQ" node="6Zi8Kosir5w" resolve="AbstractEvent" />
   </node>
 </model>
 

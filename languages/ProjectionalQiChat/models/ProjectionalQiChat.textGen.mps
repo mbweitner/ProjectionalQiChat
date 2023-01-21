@@ -133,6 +133,7 @@
         <child id="1144104376918" name="parameter" index="1xVPHs" />
       </concept>
       <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
+      <concept id="7236635212850979475" name="jetbrains.mps.lang.smodel.structure.Node_HasNextSiblingOperation" flags="nn" index="rvlfL" />
       <concept id="2396822768958367367" name="jetbrains.mps.lang.smodel.structure.AbstractTypeCastExpression" flags="nn" index="$5XWr">
         <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
         <child id="3906496115198199033" name="conceptArgument" index="3oSUPX" />
@@ -2393,25 +2394,15 @@
       </node>
     </node>
   </node>
-  <node concept="WtQ9Q" id="3jtlk3LiFJA">
-    <property role="3GE5qa" value="HumanInputEvents" />
-    <ref role="WuzLi" to="zefy:6Zi8Kosir5w" resolve="AbstractEvent" />
-    <node concept="11bSqf" id="3jtlk3LiFJB" role="11c4hB">
-      <node concept="3clFbS" id="3jtlk3LiFJC" role="2VODD2">
-        <node concept="lc7rE" id="3jtlk3LiFJU" role="3cqZAp">
-          <node concept="la8eA" id="3jtlk3LiFKc" role="lcghm">
-            <property role="lacIc" value="e:" />
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="WtQ9Q" id="3jtlk3LiFLm">
     <property role="3GE5qa" value="HumanInputEvents" />
     <ref role="WuzLi" to="zefy:6Zi8Kosir5L" resolve="CustomEvent" />
     <node concept="11bSqf" id="3jtlk3LiFLn" role="11c4hB">
       <node concept="3clFbS" id="3jtlk3LiFLo" role="2VODD2">
         <node concept="lc7rE" id="3jtlk3LiFLE" role="3cqZAp">
+          <node concept="la8eA" id="5pd0bcThi6e" role="lcghm">
+            <property role="lacIc" value="e:" />
+          </node>
           <node concept="l9hG8" id="3jtlk3LiFLW" role="lcghm">
             <node concept="2OqwBi" id="3jtlk3LiFYq" role="lb14g">
               <node concept="117lpO" id="3jtlk3LiFMK" role="2Oq$k0" />
@@ -2430,16 +2421,30 @@
     <node concept="11bSqf" id="3jtlk3LiGjb" role="11c4hB">
       <node concept="3clFbS" id="3jtlk3LiGjc" role="2VODD2">
         <node concept="lc7rE" id="3jtlk3LiGju" role="3cqZAp">
+          <node concept="la8eA" id="5pd0bcThidX" role="lcghm">
+            <property role="lacIc" value="e:" />
+          </node>
           <node concept="l9hG8" id="3jtlk3LiGjK" role="lcghm">
-            <node concept="2OqwBi" id="3jtlk3LiHil" role="lb14g">
-              <node concept="2OqwBi" id="3jtlk3LiGwe" role="2Oq$k0">
-                <node concept="117lpO" id="3jtlk3LiGk$" role="2Oq$k0" />
-                <node concept="3TrcHB" id="3jtlk3LiGLq" role="2OqNvi">
-                  <ref role="3TsBF5" to="zefy:4P1LQvocRJu" resolve="dialogueEvent" />
+            <node concept="2OqwBi" id="5pd0bcTPRkl" role="lb14g">
+              <node concept="2OqwBi" id="3jtlk3LiHil" role="2Oq$k0">
+                <node concept="2OqwBi" id="3jtlk3LiGwe" role="2Oq$k0">
+                  <node concept="117lpO" id="3jtlk3LiGk$" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="3jtlk3LiGLq" role="2OqNvi">
+                    <ref role="3TsBF5" to="zefy:4P1LQvocRJu" resolve="dialogueEvent" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="3jtlk3LiHqe" role="2OqNvi">
+                  <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
                 </node>
               </node>
-              <node concept="liA8E" id="3jtlk3LiHqe" role="2OqNvi">
-                <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
+              <node concept="liA8E" id="5pd0bcTPSj1" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.replace(java.lang.CharSequence,java.lang.CharSequence)" resolve="replace" />
+                <node concept="Xl_RD" id="5pd0bcTPSpe" role="37wK5m">
+                  <property role="Xl_RC" value="1" />
+                </node>
+                <node concept="Xl_RD" id="5pd0bcTPSNP" role="37wK5m">
+                  <property role="Xl_RC" value="/" />
+                </node>
               </node>
             </node>
           </node>
@@ -2453,16 +2458,30 @@
     <node concept="11bSqf" id="3jtlk3LiHto" role="11c4hB">
       <node concept="3clFbS" id="3jtlk3LiHtp" role="2VODD2">
         <node concept="lc7rE" id="3jtlk3LiHtF" role="3cqZAp">
+          <node concept="la8eA" id="5pd0bcThikE" role="lcghm">
+            <property role="lacIc" value="e:" />
+          </node>
           <node concept="l9hG8" id="3jtlk3LiHtX" role="lcghm">
-            <node concept="2OqwBi" id="3jtlk3LiIaM" role="lb14g">
-              <node concept="2OqwBi" id="3jtlk3LiHEr" role="2Oq$k0">
-                <node concept="117lpO" id="3jtlk3LiHuL" role="2Oq$k0" />
-                <node concept="3TrcHB" id="3jtlk3LiHVB" role="2OqNvi">
-                  <ref role="3TsBF5" to="zefy:4P1LQvocRJq" resolve="naoqiEvent" />
+            <node concept="2OqwBi" id="5pd0bcTPQfg" role="lb14g">
+              <node concept="2OqwBi" id="3jtlk3LiIaM" role="2Oq$k0">
+                <node concept="2OqwBi" id="3jtlk3LiHEr" role="2Oq$k0">
+                  <node concept="117lpO" id="3jtlk3LiHuL" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="3jtlk3LiHVB" role="2OqNvi">
+                    <ref role="3TsBF5" to="zefy:4P1LQvocRJq" resolve="naoqiEvent" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="3jtlk3LiIiF" role="2OqNvi">
+                  <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
                 </node>
               </node>
-              <node concept="liA8E" id="3jtlk3LiIiF" role="2OqNvi">
-                <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
+              <node concept="liA8E" id="5pd0bcTPQ$x" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.replace(java.lang.CharSequence,java.lang.CharSequence)" resolve="replace" />
+                <node concept="Xl_RD" id="5pd0bcTPQAl" role="37wK5m">
+                  <property role="Xl_RC" value="1" />
+                </node>
+                <node concept="Xl_RD" id="5pd0bcTPQWy" role="37wK5m">
+                  <property role="Xl_RC" value="/" />
+                </node>
               </node>
             </node>
           </node>
@@ -2476,6 +2495,9 @@
     <node concept="11bSqf" id="3jtlk3LiIlP" role="11c4hB">
       <node concept="3clFbS" id="3jtlk3LiIlQ" role="2VODD2">
         <node concept="lc7rE" id="3jtlk3LiIm8" role="3cqZAp">
+          <node concept="la8eA" id="5pd0bcThiwQ" role="lcghm">
+            <property role="lacIc" value="e:" />
+          </node>
           <node concept="l9hG8" id="3jtlk3LiImq" role="lcghm">
             <node concept="2OqwBi" id="3jtlk3LiJ4H" role="lb14g">
               <node concept="2OqwBi" id="3jtlk3LiIyS" role="2Oq$k0">
@@ -3198,6 +3220,32 @@
                 </node>
               </node>
             </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="5pd0bcVXgwn">
+    <property role="3GE5qa" value="HumanInputEvents" />
+    <ref role="WuzLi" to="zefy:5pd0bcVXguK" resolve="onStartEvent" />
+    <node concept="11bSqf" id="5pd0bcVXgwo" role="11c4hB">
+      <node concept="3clFbS" id="5pd0bcVXgwp" role="2VODD2">
+        <node concept="lc7rE" id="5pd0bcVXgwF" role="3cqZAp">
+          <node concept="la8eA" id="5pd0bcVXgy2" role="lcghm">
+            <property role="lacIc" value="e:onStart" />
+          </node>
+        </node>
+        <node concept="3clFbJ" id="5pd0bcVXgzR" role="3cqZAp">
+          <node concept="3clFbS" id="5pd0bcVXgzT" role="3clFbx">
+            <node concept="lc7rE" id="5pd0bcVXh7V" role="3cqZAp">
+              <node concept="la8eA" id="5pd0bcVXh8h" role="lcghm">
+                <property role="lacIc" value=" " />
+              </node>
+            </node>
+          </node>
+          <node concept="2OqwBi" id="5pd0bcVXh6_" role="3clFbw">
+            <node concept="117lpO" id="5pd0bcVXh6A" role="2Oq$k0" />
+            <node concept="rvlfL" id="5pd0bcVXh6B" role="2OqNvi" />
           </node>
         </node>
       </node>

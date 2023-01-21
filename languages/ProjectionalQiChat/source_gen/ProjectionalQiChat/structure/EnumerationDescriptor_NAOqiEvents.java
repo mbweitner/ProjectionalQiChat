@@ -43,7 +43,7 @@ public class EnumerationDescriptor_NAOqiEvents extends EnumerationDescriptorBase
   @Nullable
   @Override
   public EnumerationDescriptor.MemberDescriptor getDefault() {
-    return null;
+    return myMember_ALBattery1BatteryLow_0;
   }
 
   @NotNull

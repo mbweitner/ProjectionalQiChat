@@ -7,19 +7,69 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="ConstraintsAspectDescriptor.java">
-      <unit at="13,0,51,0" name="ProjectionalQiChat.constraints.ConstraintsAspectDescriptor" />
+      <unit at="13,0,57,0" name="ProjectionalQiChat.constraints.ConstraintsAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/1979562036711432012">
+    <file name="Word_Constraints.java">
+      <node id="1979562036711432012" at="20,29,21,28" concept="11" />
+      <node id="1979562036711432013" at="25,59,26,60" concept="11" />
+      <node id="1979562036711432013" at="29,109,30,99" concept="5" />
+      <node id="1979562036711432013" at="31,53,32,159" concept="2" />
+      <node id="1979562036711432013" at="33,7,34,20" concept="6" />
+      <node id="1979562036711441453" at="36,85,37,127" concept="6" />
+      <node id="1979562036711432012" at="41,84,42,119" concept="5" />
+      <node id="1979562036711432013" at="42,119,43,61" concept="2" />
+      <node id="1979562036711432012" at="43,61,44,22" concept="6" />
+      <node id="1979562036711432012" at="48,0,49,0" concept="9" trace="Word$iA" />
+      <node id="1979562036711432012" at="52,0,53,0" concept="9" trace="word$QCkP" />
+      <node id="1979562036711432012" at="20,0,23,0" concept="1" trace="Word_Constraints#()V" />
+      <node id="1979562036711432013" at="25,0,28,0" concept="1" trace="Word_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="1979562036711432013" at="30,99,33,7" concept="3" />
+      <node id="1979562036711432013" at="36,0,39,0" concept="10" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="1979562036711432012" at="40,0,46,0" concept="4" trace="getSpecifiedProperties#()Ljava/util/Map;" />
+      <node id="1979562036711432013" at="28,0,36,0" concept="4" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <scope id="1979562036711432012" at="20,29,21,28" />
+      <scope id="1979562036711432013" at="25,59,26,60" />
+      <scope id="1979562036711432013" at="31,53,32,159" />
+      <scope id="1979562036711432094" at="36,85,37,127" />
+      <scope id="1979562036711432012" at="20,0,23,0" />
+      <scope id="1979562036711432013" at="25,0,28,0">
+        <var name="container" id="1979562036711432013" />
+      </scope>
+      <scope id="1979562036711432013" at="36,0,39,0">
+        <var name="node" id="1979562036711432013" />
+        <var name="propertyValue" id="1979562036711432013" />
+      </scope>
+      <scope id="1979562036711432012" at="41,84,44,22">
+        <var name="properties" id="1979562036711432012" />
+      </scope>
+      <scope id="1979562036711432013" at="29,109,34,20">
+        <var name="result" id="1979562036711432013" />
+      </scope>
+      <scope id="1979562036711432012" at="40,0,46,0" />
+      <scope id="1979562036711432013" at="28,0,36,0">
+        <var name="checkingNodeContext" id="1979562036711432013" />
+        <var name="node" id="1979562036711432013" />
+        <var name="propertyValue" id="1979562036711432013" />
+      </scope>
+      <unit id="1979562036711432012" at="47,0,50,0" name="ProjectionalQiChat.constraints.Word_Constraints$CONCEPTS" />
+      <unit id="1979562036711432012" at="51,0,54,0" name="ProjectionalQiChat.constraints.Word_Constraints$PROPS" />
+      <unit id="1979562036711432013" at="24,0,40,0" name="ProjectionalQiChat.constraints.Word_Constraints$Word_Property" />
+      <unit id="1979562036711432012" at="19,0,55,0" name="ProjectionalQiChat.constraints.Word_Constraints" />
     </file>
   </root>
   <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/3164244237118741832">
     <file name="VariableDeclaration_Constraints.java">
-      <node id="3164244237118741832" at="20,44,21,43" concept="10" />
-      <node id="3164244237118741833" at="25,59,26,60" concept="10" />
+      <node id="3164244237118741832" at="20,44,21,43" concept="11" />
+      <node id="3164244237118741833" at="25,59,26,60" concept="11" />
       <node id="3164244237118741833" at="29,109,30,99" concept="5" />
       <node id="3164244237118741833" at="31,53,32,159" concept="2" />
       <node id="3164244237118741833" at="33,7,34,20" concept="6" />
@@ -27,12 +77,12 @@
       <node id="3164244237118741832" at="41,84,42,119" concept="5" />
       <node id="3164244237118741833" at="42,119,43,61" concept="2" />
       <node id="3164244237118741832" at="43,61,44,22" concept="6" />
-      <node id="3164244237118741832" at="48,0,49,0" concept="8" trace="VariableDeclaration$Pa" />
-      <node id="3164244237118741832" at="52,0,53,0" concept="8" trace="name$MnvL" />
+      <node id="3164244237118741832" at="48,0,49,0" concept="9" trace="VariableDeclaration$Pa" />
+      <node id="3164244237118741832" at="52,0,53,0" concept="9" trace="name$MnvL" />
       <node id="3164244237118741832" at="20,0,23,0" concept="1" trace="VariableDeclaration_Constraints#()V" />
       <node id="3164244237118741833" at="25,0,28,0" concept="1" trace="Name_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
       <node id="3164244237118741833" at="30,99,33,7" concept="3" />
-      <node id="3164244237118741833" at="36,0,39,0" concept="9" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="3164244237118741833" at="36,0,39,0" concept="10" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
       <node id="3164244237118741832" at="40,0,46,0" concept="4" trace="getSpecifiedProperties#()Ljava/util/Map;" />
       <node id="3164244237118741833" at="28,0,36,0" concept="4" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
       <scope id="3164244237118741832" at="20,44,21,43" />
@@ -67,7 +117,7 @@
   </root>
   <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/3164244237119550088">
     <file name="VariableReference_Constraints.java">
-      <node id="3164244237119550088" at="31,42,32,41" concept="10" />
+      <node id="3164244237119550088" at="31,42,32,41" concept="11" />
       <node id="3164244237119550089" at="43,63,44,133" concept="6" />
       <node id="3164244237119550461" at="47,80,48,124" concept="5" />
       <node id="3164244237128165428" at="48,124,49,141" concept="5" />
@@ -79,11 +129,11 @@
       <node id="3164244237119550088" at="61,6,62,131" concept="5" />
       <node id="3164244237119550089" at="62,131,63,42" concept="2" />
       <node id="3164244237119550088" at="63,42,64,22" concept="6" />
-      <node id="3164244237119550088" at="68,0,69,0" concept="8" trace="VariableReference$SN" />
-      <node id="3164244237119550088" at="69,0,70,0" concept="8" trace="Topic$xv" />
-      <node id="3164244237119550088" at="70,0,71,0" concept="8" trace="ConceptCollection$S7" />
-      <node id="3164244237119550088" at="71,0,72,0" concept="8" trace="VariableDeclarationContainer$Zf" />
-      <node id="3164244237119550088" at="75,0,76,0" concept="8" trace="variable$oicI" />
+      <node id="3164244237119550088" at="68,0,69,0" concept="9" trace="VariableReference$SN" />
+      <node id="3164244237119550088" at="69,0,70,0" concept="9" trace="Topic$xv" />
+      <node id="3164244237119550088" at="70,0,71,0" concept="9" trace="ConceptCollection$S7" />
+      <node id="3164244237119550088" at="71,0,72,0" concept="9" trace="VariableDeclarationContainer$Zf" />
+      <node id="3164244237119550088" at="75,0,76,0" concept="9" trace="variable$oicI" />
       <node id="3164244237119550088" at="31,0,34,0" concept="1" trace="VariableReference_Constraints#()V" />
       <node id="3164244237119550089" at="42,0,46,0" concept="4" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
       <node id="3164244237128177599" at="50,107,55,13" concept="3" />
@@ -123,7 +173,7 @@
   </root>
   <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/3164244237124690291">
     <file name="VariableEvent_Constraints.java">
-      <node id="3164244237124690291" at="30,38,31,37" concept="10" />
+      <node id="3164244237124690291" at="30,38,31,37" concept="11" />
       <node id="3164244237124690292" at="42,63,43,133" concept="6" />
       <node id="3164244237124690596" at="46,80,47,124" concept="5" />
       <node id="3164244237124690604" at="47,124,48,103" concept="5" />
@@ -133,10 +183,10 @@
       <node id="3164244237124690291" at="57,6,58,131" concept="5" />
       <node id="3164244237124690292" at="58,131,59,42" concept="2" />
       <node id="3164244237124690291" at="59,42,60,22" concept="6" />
-      <node id="3164244237124690291" at="64,0,65,0" concept="8" trace="VariableEvent$TL" />
-      <node id="3164244237124690291" at="65,0,66,0" concept="8" trace="Topic$xv" />
-      <node id="3164244237124690291" at="66,0,67,0" concept="8" trace="VariableDeclarationContainer$Zf" />
-      <node id="3164244237124690291" at="70,0,71,0" concept="8" trace="variable$lkCa" />
+      <node id="3164244237124690291" at="64,0,65,0" concept="9" trace="VariableEvent$TL" />
+      <node id="3164244237124690291" at="65,0,66,0" concept="9" trace="Topic$xv" />
+      <node id="3164244237124690291" at="66,0,67,0" concept="9" trace="VariableDeclarationContainer$Zf" />
+      <node id="3164244237124690291" at="70,0,71,0" concept="9" trace="variable$lkCa" />
       <node id="3164244237124690291" at="30,0,33,0" concept="1" trace="VariableEvent_Constraints#()V" />
       <node id="3164244237158429091" at="48,103,51,13" concept="3" />
       <node id="3164244237124690292" at="41,0,45,0" concept="4" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
@@ -174,25 +224,26 @@
   </root>
   <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/3761955782232066583">
     <file name="FirstOrderSubrule_Constraints.java">
-      <node id="3761955782232066583" at="20,42,21,41" concept="10" />
+      <node id="3761955782232066583" at="20,42,21,41" concept="11" />
       <node id="3761955782232066583" at="28,127,29,128" concept="5" />
-      <node id="3761955782232066583" at="29,128,30,0" concept="7" />
+      <node id="3761955782232066583" at="29,128,30,0" concept="8" />
       <node id="3761955782232066583" at="31,55,32,71" concept="2" />
-      <node id="3761955782232066583" at="33,9,34,0" concept="7" />
+      <node id="3761955782232066583" at="33,9,34,0" concept="8" />
       <node id="3761955782232066583" at="34,0,35,22" concept="6" />
-      <node id="3761955782232066840" at="39,128,40,74" concept="6" />
-      <node id="3761955782232066583" at="42,0,43,0" concept="8" trace="canBeChildBreakingPoint" />
-      <node id="3761955782232066583" at="45,0,46,0" concept="8" trace="FirstOrderSubrule$oM" />
-      <node id="3761955782232066583" at="46,0,47,0" concept="8" trace="UserRule$oj" />
+      <node id="3761955782232066840" at="39,128,40,140" concept="6" />
+      <node id="3761955782232066583" at="42,0,43,0" concept="9" trace="canBeChildBreakingPoint" />
+      <node id="3761955782232066583" at="45,0,46,0" concept="9" trace="FirstOrderSubrule$oM" />
+      <node id="3761955782232066583" at="46,0,47,0" concept="9" trace="Proposal$R9" />
+      <node id="3761955782232066583" at="47,0,48,0" concept="9" trace="UserRule$oj" />
       <node id="3761955782232066583" at="20,0,23,0" concept="1" trace="FirstOrderSubrule_Constraints#()V" />
       <node id="3761955782232066583" at="30,0,33,9" concept="3" />
-      <node id="3761955782232066583" at="39,0,42,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="3761955782232066583" at="39,0,42,0" concept="10" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
       <node id="3761955782232066583" at="27,0,37,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
       <node id="3761955782232066583" at="25,103,37,6" concept="6" />
       <node id="3761955782232066583" at="24,0,39,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
       <scope id="3761955782232066583" at="20,42,21,41" />
       <scope id="3761955782232066583" at="31,55,32,71" />
-      <scope id="3761955782232066585" at="39,128,40,74" />
+      <scope id="3761955782232066585" at="39,128,40,140" />
       <scope id="3761955782232066583" at="20,0,23,0" />
       <scope id="3761955782232066583" at="39,0,42,0">
         <var name="childConcept" id="3761955782232066583" />
@@ -209,26 +260,26 @@
       </scope>
       <scope id="3761955782232066583" at="25,103,37,6" />
       <scope id="3761955782232066583" at="24,0,39,0" />
-      <unit id="3761955782232066583" at="44,0,48,0" name="ProjectionalQiChat.constraints.FirstOrderSubrule_Constraints$CONCEPTS" />
+      <unit id="3761955782232066583" at="44,0,49,0" name="ProjectionalQiChat.constraints.FirstOrderSubrule_Constraints$CONCEPTS" />
       <unit id="3761955782232066583" at="26,15,37,5" name="ProjectionalQiChat.constraints.FirstOrderSubrule_Constraints$1" />
-      <unit id="3761955782232066583" at="19,0,49,0" name="ProjectionalQiChat.constraints.FirstOrderSubrule_Constraints" />
+      <unit id="3761955782232066583" at="19,0,50,0" name="ProjectionalQiChat.constraints.FirstOrderSubrule_Constraints" />
     </file>
   </root>
   <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/3761955782232070530">
     <file name="SecondOrderSubrule_Constraints.java">
-      <node id="3761955782232070530" at="20,43,21,42" concept="10" />
+      <node id="3761955782232070530" at="20,43,21,42" concept="11" />
       <node id="3761955782232070530" at="28,127,29,128" concept="5" />
-      <node id="3761955782232070530" at="29,128,30,0" concept="7" />
+      <node id="3761955782232070530" at="29,128,30,0" concept="8" />
       <node id="3761955782232070530" at="31,55,32,71" concept="2" />
-      <node id="3761955782232070530" at="33,9,34,0" concept="7" />
+      <node id="3761955782232070530" at="33,9,34,0" concept="8" />
       <node id="3761955782232070530" at="34,0,35,22" concept="6" />
       <node id="3761955782232070555" at="39,128,40,83" concept="6" />
-      <node id="3761955782232070530" at="42,0,43,0" concept="8" trace="canBeChildBreakingPoint" />
-      <node id="3761955782232070530" at="45,0,46,0" concept="8" trace="SecondOrderSubrule$ph" />
-      <node id="3761955782232070530" at="46,0,47,0" concept="8" trace="FirstOrderSubrule$oM" />
+      <node id="3761955782232070530" at="42,0,43,0" concept="9" trace="canBeChildBreakingPoint" />
+      <node id="3761955782232070530" at="45,0,46,0" concept="9" trace="SecondOrderSubrule$ph" />
+      <node id="3761955782232070530" at="46,0,47,0" concept="9" trace="FirstOrderSubrule$oM" />
       <node id="3761955782232070530" at="20,0,23,0" concept="1" trace="SecondOrderSubrule_Constraints#()V" />
       <node id="3761955782232070530" at="30,0,33,9" concept="3" />
-      <node id="3761955782232070530" at="39,0,42,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="3761955782232070530" at="39,0,42,0" concept="10" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
       <node id="3761955782232070530" at="27,0,37,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
       <node id="3761955782232070530" at="25,103,37,6" concept="6" />
       <node id="3761955782232070530" at="24,0,39,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
@@ -258,19 +309,19 @@
   </root>
   <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/3761955782232073421">
     <file name="ThirdOrderSubrule_Constraints.java">
-      <node id="3761955782232073421" at="20,42,21,41" concept="10" />
+      <node id="3761955782232073421" at="20,42,21,41" concept="11" />
       <node id="3761955782232073421" at="28,127,29,128" concept="5" />
-      <node id="3761955782232073421" at="29,128,30,0" concept="7" />
+      <node id="3761955782232073421" at="29,128,30,0" concept="8" />
       <node id="3761955782232073421" at="31,55,32,71" concept="2" />
-      <node id="3761955782232073421" at="33,9,34,0" concept="7" />
+      <node id="3761955782232073421" at="33,9,34,0" concept="8" />
       <node id="3761955782232073421" at="34,0,35,22" concept="6" />
       <node id="3761955782232073678" at="39,128,40,84" concept="6" />
-      <node id="3761955782232073421" at="42,0,43,0" concept="8" trace="canBeChildBreakingPoint" />
-      <node id="3761955782232073421" at="45,0,46,0" concept="8" trace="ThirdOrderSubrule$pK" />
-      <node id="3761955782232073421" at="46,0,47,0" concept="8" trace="SecondOrderSubrule$ph" />
+      <node id="3761955782232073421" at="42,0,43,0" concept="9" trace="canBeChildBreakingPoint" />
+      <node id="3761955782232073421" at="45,0,46,0" concept="9" trace="ThirdOrderSubrule$pK" />
+      <node id="3761955782232073421" at="46,0,47,0" concept="9" trace="SecondOrderSubrule$ph" />
       <node id="3761955782232073421" at="20,0,23,0" concept="1" trace="ThirdOrderSubrule_Constraints#()V" />
       <node id="3761955782232073421" at="30,0,33,9" concept="3" />
-      <node id="3761955782232073421" at="39,0,42,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="3761955782232073421" at="39,0,42,0" concept="10" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
       <node id="3761955782232073421" at="27,0,37,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
       <node id="3761955782232073421" at="25,103,37,6" concept="6" />
       <node id="3761955782232073421" at="24,0,39,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
@@ -300,7 +351,7 @@
   </root>
   <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/3761955782232533618">
     <file name="TopicReference_Constraints.java">
-      <node id="3761955782232533618" at="31,39,32,38" concept="10" />
+      <node id="3761955782232533618" at="31,39,32,38" concept="11" />
       <node id="3761955782244457987" at="43,63,44,133" concept="6" />
       <node id="3761955782244467092" at="47,80,48,76" concept="5" />
       <node id="3761955782244473546" at="49,96,50,126" concept="2" />
@@ -310,10 +361,10 @@
       <node id="3761955782232533618" at="63,6,64,131" concept="5" />
       <node id="3761955782244457987" at="64,131,65,42" concept="2" />
       <node id="3761955782232533618" at="65,42,66,22" concept="6" />
-      <node id="3761955782232533618" at="70,0,71,0" concept="8" trace="TopicReference$Qb" />
-      <node id="3761955782232533618" at="71,0,72,0" concept="8" trace="Topic$xv" />
-      <node id="3761955782232533618" at="75,0,76,0" concept="8" trace="topic$hHYL" />
-      <node id="3761955782232533618" at="79,0,80,0" concept="8" trace="name$MnvL" />
+      <node id="3761955782232533618" at="70,0,71,0" concept="9" trace="TopicReference$Qb" />
+      <node id="3761955782232533618" at="71,0,72,0" concept="9" trace="Topic$xv" />
+      <node id="3761955782232533618" at="75,0,76,0" concept="9" trace="topic$hHYL" />
+      <node id="3761955782232533618" at="79,0,80,0" concept="9" trace="name$MnvL" />
       <node id="3761955782244466758" at="51,18,53,13" concept="0" />
       <node id="3761955782232533618" at="31,0,34,0" concept="1" trace="TopicReference_Constraints#()V" />
       <node id="3761955782245011244" at="55,0,58,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
@@ -360,7 +411,7 @@
   </root>
   <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/3761955782240908292">
     <file name="ConceptCollectionReference_Constraints.java">
-      <node id="3761955782240908292" at="31,51,32,50" concept="10" />
+      <node id="3761955782240908292" at="31,51,32,50" concept="11" />
       <node id="3164244237092599481" at="43,63,44,133" concept="6" />
       <node id="3164244237092600243" at="47,80,48,76" concept="5" />
       <node id="3164244237092600248" at="49,96,50,126" concept="2" />
@@ -370,11 +421,11 @@
       <node id="3761955782240908292" at="63,6,64,131" concept="5" />
       <node id="3164244237092599481" at="64,131,65,42" concept="2" />
       <node id="3761955782240908292" at="65,42,66,22" concept="6" />
-      <node id="3761955782240908292" at="70,0,71,0" concept="8" trace="ConceptCollectionReference$Xm" />
-      <node id="3761955782240908292" at="71,0,72,0" concept="8" trace="Topic$xv" />
-      <node id="3761955782240908292" at="72,0,73,0" concept="8" trace="ConceptCollection$S7" />
-      <node id="3761955782240908292" at="76,0,77,0" concept="8" trace="conceptCollection$PnAr" />
-      <node id="3761955782240908292" at="80,0,81,0" concept="8" trace="name$MnvL" />
+      <node id="3761955782240908292" at="70,0,71,0" concept="9" trace="ConceptCollectionReference$Xm" />
+      <node id="3761955782240908292" at="71,0,72,0" concept="9" trace="Topic$xv" />
+      <node id="3761955782240908292" at="72,0,73,0" concept="9" trace="ConceptCollection$S7" />
+      <node id="3761955782240908292" at="76,0,77,0" concept="9" trace="conceptCollection$PnAr" />
+      <node id="3761955782240908292" at="80,0,81,0" concept="9" trace="name$MnvL" />
       <node id="3164244237092600261" at="51,18,53,13" concept="0" />
       <node id="3761955782240908292" at="31,0,34,0" concept="1" trace="ConceptCollectionReference_Constraints#()V" />
       <node id="3164244237092600283" at="55,0,58,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
@@ -421,79 +472,109 @@
   </root>
   <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/3761955782241892872">
     <file name="InputStoreReference_Constraints.java">
-      <node id="3761955782241892872" at="33,0,34,0" concept="8" trace="LOG" />
-      <node id="3761955782241892872" at="34,44,35,43" concept="10" />
-      <node id="3761955782241892873" at="46,63,47,133" concept="6" />
-      <node id="678017867225404122" at="50,80,51,138" concept="5" />
-      <node id="678017867225408091" at="52,38,53,109" concept="2" />
-      <node id="678017867225440900" at="58,51,59,84" concept="6" />
-      <node id="678017867225451122" at="64,49,65,82" concept="6" />
-      <node id="678017867225452536" at="68,13,69,24" concept="6" />
-      <node id="3761955782241892872" at="73,6,74,131" concept="5" />
-      <node id="3761955782241892873" at="74,131,75,42" concept="2" />
-      <node id="3761955782241892872" at="75,42,76,22" concept="6" />
-      <node id="3761955782241892872" at="80,0,81,0" concept="8" trace="InputStoreReference$C$" />
-      <node id="3761955782241892872" at="81,0,82,0" concept="8" trace="AbstractUserRule$nO" />
-      <node id="3761955782241892872" at="82,0,83,0" concept="8" trace="InputStore$rg" />
-      <node id="3761955782241892872" at="86,0,87,0" concept="8" trace="inputStore$oIB4" />
-      <node id="3761955782241892872" at="87,0,88,0" concept="8" trace="input$kRKG" />
-      <node id="3761955782241892872" at="88,0,89,0" concept="8" trace="inputs$iwW4" />
-      <node id="3761955782241892872" at="92,0,93,0" concept="8" trace="name$MnvL" />
-      <node id="3761955782241892872" at="34,0,37,0" concept="1" trace="InputStoreReference_Constraints#()V" />
-      <node id="678017867225408091" at="51,138,54,13" concept="3" />
-      <node id="678017867225440563" at="58,0,61,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-      <node id="678017867225451120" at="64,0,67,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-      <node id="3761955782241892873" at="45,0,49,0" concept="4" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
-      <node id="678017867225418134" at="56,40,61,20" concept="2" />
-      <node id="678017867225448394" at="62,15,67,18" concept="6" />
-      <node id="678017867225418134" at="55,43,62,15" concept="3" />
-      <node id="678017867225414784" at="54,13,68,13" concept="3" />
-      <node id="3761955782241892873" at="49,0,71,0" concept="4" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
-      <node id="3761955782241892873" at="43,56,71,10" concept="6" />
-      <node id="3761955782241892873" at="41,0,73,0" concept="4" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
-      <node id="3761955782241892873" at="39,90,73,6" concept="5" />
-      <node id="3761955782241892872" at="38,0,78,0" concept="4" trace="getSpecifiedReferences#()Ljava/util/Map;" />
-      <scope id="3761955782241892872" at="34,44,35,43" />
-      <scope id="3761955782241892873" at="46,63,47,133" />
-      <scope id="678017867225408091" at="52,38,53,109" />
-      <scope id="678017867225440564" at="58,51,59,84" />
-      <scope id="678017867225451121" at="64,49,65,82" />
-      <scope id="3761955782241892872" at="34,0,37,0" />
-      <scope id="678017867225440563" at="58,0,61,0">
+      <node id="3761955782241892872" at="38,0,39,0" concept="9" trace="LOG" />
+      <node id="3761955782241892872" at="39,44,40,43" concept="11" />
+      <node id="3761955782241892872" at="47,127,48,128" concept="5" />
+      <node id="3761955782241892872" at="48,128,49,0" concept="8" />
+      <node id="3761955782241892872" at="50,55,51,71" concept="2" />
+      <node id="3761955782241892872" at="52,9,53,0" concept="8" />
+      <node id="3761955782241892872" at="53,0,54,22" concept="6" />
+      <node id="3761955782241892873" at="66,63,67,133" concept="6" />
+      <node id="678017867225404122" at="70,80,71,138" concept="5" />
+      <node id="678017867225408091" at="72,38,73,109" concept="2" />
+      <node id="678017867225440900" at="78,51,79,84" concept="6" />
+      <node id="678017867225451122" at="84,49,85,82" concept="6" />
+      <node id="678017867225452536" at="88,13,89,24" concept="6" />
+      <node id="3761955782241892872" at="93,6,94,131" concept="5" />
+      <node id="3761955782241892873" at="94,131,95,42" concept="2" />
+      <node id="3761955782241892872" at="95,42,96,22" concept="6" />
+      <node id="6218627430269048170" at="98,128,99,109" concept="6" />
+      <node id="3761955782241892872" at="101,0,102,0" concept="9" trace="canBeChildBreakingPoint" />
+      <node id="3761955782241892872" at="104,0,105,0" concept="9" trace="InputStoreReference$C$" />
+      <node id="3761955782241892872" at="105,0,106,0" concept="9" trace="AbstractUserRule$nO" />
+      <node id="3761955782241892872" at="106,0,107,0" concept="9" trace="InputStore$rg" />
+      <node id="3761955782241892872" at="110,0,111,0" concept="9" trace="inputStore$oIB4" />
+      <node id="3761955782241892872" at="111,0,112,0" concept="9" trace="input$kRKG" />
+      <node id="3761955782241892872" at="112,0,113,0" concept="9" trace="inputs$iwW4" />
+      <node id="3761955782241892872" at="116,0,117,0" concept="9" trace="name$MnvL" />
+      <node id="3761955782241892872" at="39,0,42,0" concept="1" trace="InputStoreReference_Constraints#()V" />
+      <node id="3761955782241892872" at="49,0,52,9" concept="3" />
+      <node id="678017867225408091" at="71,138,74,13" concept="3" />
+      <node id="678017867225440563" at="78,0,81,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="678017867225451120" at="84,0,87,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="3761955782241892872" at="98,0,101,0" concept="10" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="3761955782241892873" at="65,0,69,0" concept="4" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="678017867225418134" at="76,40,81,20" concept="2" />
+      <node id="678017867225448394" at="82,15,87,18" concept="6" />
+      <node id="678017867225418134" at="75,43,82,15" concept="3" />
+      <node id="3761955782241892872" at="46,0,56,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="3761955782241892872" at="44,103,56,6" concept="6" />
+      <node id="678017867225414784" at="74,13,88,13" concept="3" />
+      <node id="3761955782241892872" at="43,0,58,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <node id="3761955782241892873" at="69,0,91,0" concept="4" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="3761955782241892873" at="63,56,91,10" concept="6" />
+      <node id="3761955782241892873" at="61,0,93,0" concept="4" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="3761955782241892873" at="59,90,93,6" concept="5" />
+      <node id="3761955782241892872" at="58,0,98,0" concept="4" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="3761955782241892872" at="39,44,40,43" />
+      <scope id="3761955782241892872" at="50,55,51,71" />
+      <scope id="3761955782241892873" at="66,63,67,133" />
+      <scope id="678017867225408091" at="72,38,73,109" />
+      <scope id="678017867225440564" at="78,51,79,84" />
+      <scope id="678017867225451121" at="84,49,85,82" />
+      <scope id="6218627430269047242" at="98,128,99,109" />
+      <scope id="3761955782241892872" at="39,0,42,0" />
+      <scope id="678017867225440563" at="78,0,81,0">
         <var name="it" id="678017867225440563" />
       </scope>
-      <scope id="678017867225451120" at="64,0,67,0">
+      <scope id="678017867225451120" at="84,0,87,0">
         <var name="it" id="678017867225451120" />
       </scope>
-      <scope id="3761955782241892873" at="45,0,49,0" />
-      <scope id="678017867225418134" at="56,40,61,20" />
-      <scope id="678017867225414786" at="55,43,67,18" />
-      <scope id="3761955782241892873" at="50,80,69,24">
+      <scope id="3761955782241892872" at="98,0,101,0">
+        <var name="childConcept" id="3761955782241892872" />
+        <var name="link" id="3761955782241892872" />
+        <var name="node" id="3761955782241892872" />
+        <var name="parentNode" id="3761955782241892872" />
+      </scope>
+      <scope id="3761955782241892873" at="65,0,69,0" />
+      <scope id="678017867225418134" at="76,40,81,20" />
+      <scope id="3761955782241892872" at="47,127,54,22">
+        <var name="result" id="3761955782241892872" />
+      </scope>
+      <scope id="3761955782241892872" at="46,0,56,0">
+        <var name="checkingNodeContext" id="3761955782241892872" />
+        <var name="context" id="3761955782241892872" />
+      </scope>
+      <scope id="3761955782241892872" at="44,103,56,6" />
+      <scope id="678017867225414786" at="75,43,87,18" />
+      <scope id="3761955782241892872" at="43,0,58,0" />
+      <scope id="3761955782241892873" at="70,80,89,24">
         <var name="parentUserRule" id="678017867225404125" />
       </scope>
-      <scope id="3761955782241892873" at="49,0,71,0">
+      <scope id="3761955782241892873" at="69,0,91,0">
         <var name="_context" id="3761955782241892873" />
       </scope>
-      <scope id="3761955782241892873" at="43,56,71,10" />
-      <scope id="3761955782241892873" at="41,0,73,0" />
-      <scope id="3761955782241892872" at="39,90,76,22">
+      <scope id="3761955782241892873" at="63,56,91,10" />
+      <scope id="3761955782241892873" at="61,0,93,0" />
+      <scope id="3761955782241892872" at="59,90,96,22">
         <var name="d0" id="3761955782241892873" />
         <var name="references" id="3761955782241892872" />
       </scope>
-      <scope id="3761955782241892872" at="38,0,78,0" />
-      <unit id="3761955782241892872" at="91,0,94,0" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$PROPS" />
-      <unit id="678017867225440563" at="57,184,61,17" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$1$1$1" />
-      <unit id="678017867225451120" at="63,189,67,15" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$1$1$2" />
-      <unit id="3761955782241892872" at="79,0,84,0" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$CONCEPTS" />
-      <unit id="3761955782241892872" at="85,0,90,0" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$LINKS" />
-      <unit id="3761955782241892873" at="44,19,71,9" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$1$1" />
-      <unit id="3761955782241892873" at="40,48,73,5" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$1" />
-      <unit id="3761955782241892872" at="32,0,95,0" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints" />
+      <scope id="3761955782241892872" at="58,0,98,0" />
+      <unit id="3761955782241892872" at="115,0,118,0" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$PROPS" />
+      <unit id="678017867225440563" at="77,184,81,17" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$2$1$1" />
+      <unit id="678017867225451120" at="83,189,87,15" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$2$1$2" />
+      <unit id="3761955782241892872" at="103,0,108,0" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$CONCEPTS" />
+      <unit id="3761955782241892872" at="109,0,114,0" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$LINKS" />
+      <unit id="3761955782241892872" at="45,15,56,5" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$1" />
+      <unit id="3761955782241892873" at="64,19,91,9" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$2$1" />
+      <unit id="3761955782241892873" at="60,48,93,5" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints$2" />
+      <unit id="3761955782241892872" at="37,0,119,0" name="ProjectionalQiChat.constraints.InputStoreReference_Constraints" />
     </file>
   </root>
   <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/5416175529734991820">
     <file name="RobotConceptReference_Constraints.java">
-      <node id="5416175529734991820" at="32,46,33,45" concept="10" />
+      <node id="5416175529734991820" at="32,46,33,45" concept="11" />
       <node id="6883323784105055570" at="44,63,45,133" concept="6" />
       <node id="3761955782230331634" at="48,80,49,132" concept="5" />
       <node id="8305283705745790901" at="50,37,51,124" concept="5" />
@@ -504,11 +585,11 @@
       <node id="5416175529734991820" at="67,6,68,131" concept="5" />
       <node id="6883323784105055570" at="68,131,69,42" concept="2" />
       <node id="5416175529734991820" at="69,42,70,22" concept="6" />
-      <node id="5416175529734991820" at="74,0,75,0" concept="8" trace="RobotConceptReference$r0" />
-      <node id="5416175529734991820" at="75,0,76,0" concept="8" trace="ConceptContainer$NA" />
-      <node id="5416175529734991820" at="76,0,77,0" concept="8" trace="RobotConcept$rd" />
-      <node id="5416175529734991820" at="80,0,81,0" concept="8" trace="concept$oC45" />
-      <node id="5416175529734991820" at="84,0,85,0" concept="8" trace="name$MnvL" />
+      <node id="5416175529734991820" at="74,0,75,0" concept="9" trace="RobotConceptReference$r0" />
+      <node id="5416175529734991820" at="75,0,76,0" concept="9" trace="ConceptContainer$NA" />
+      <node id="5416175529734991820" at="76,0,77,0" concept="9" trace="RobotConcept$rd" />
+      <node id="5416175529734991820" at="80,0,81,0" concept="9" trace="concept$oC45" />
+      <node id="5416175529734991820" at="84,0,85,0" concept="9" trace="name$MnvL" />
       <node id="3761955782230355050" at="61,18,63,13" concept="0" />
       <node id="5416175529734991820" at="32,0,35,0" concept="1" trace="RobotConceptReference_Constraints#()V" />
       <node id="8305283705747122568" at="55,0,58,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
@@ -559,18 +640,18 @@
   </root>
   <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/6120172104214589949">
     <file name="ProposalFunction_Constraints.java">
-      <node id="6120172104214589949" at="22,41,23,40" concept="10" />
+      <node id="6120172104214589949" at="22,41,23,40" concept="11" />
       <node id="6120172104214589949" at="30,127,31,128" concept="5" />
-      <node id="6120172104214589949" at="31,128,32,0" concept="7" />
+      <node id="6120172104214589949" at="31,128,32,0" concept="8" />
       <node id="6120172104214589949" at="33,55,34,71" concept="2" />
-      <node id="6120172104214589949" at="35,9,36,0" concept="7" />
+      <node id="6120172104214589949" at="35,9,36,0" concept="8" />
       <node id="6120172104214589949" at="36,0,37,22" concept="6" />
       <node id="6120172104214590206" at="41,128,42,306" concept="6" />
-      <node id="6120172104214589949" at="44,0,45,0" concept="8" trace="canBeChildBreakingPoint" />
-      <node id="6120172104214589949" at="47,0,48,0" concept="8" trace="ProposalFunction$A7" />
+      <node id="6120172104214589949" at="44,0,45,0" concept="9" trace="canBeChildBreakingPoint" />
+      <node id="6120172104214589949" at="47,0,48,0" concept="9" trace="ProposalFunction$A7" />
       <node id="6120172104214589949" at="22,0,25,0" concept="1" trace="ProposalFunction_Constraints#()V" />
       <node id="6120172104214589949" at="32,0,35,9" concept="3" />
-      <node id="6120172104214589949" at="41,0,44,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="6120172104214589949" at="41,0,44,0" concept="10" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
       <node id="6120172104214589949" at="29,0,39,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
       <node id="6120172104214589949" at="27,103,39,6" concept="6" />
       <node id="6120172104214589949" at="26,0,41,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
@@ -598,13 +679,198 @@
       <unit id="6120172104214589949" at="21,0,50,0" name="ProjectionalQiChat.constraints.ProposalFunction_Constraints" />
     </file>
   </root>
+  <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/6218627430235616569">
+    <file name="AbstractEvent_Constraints.java">
+      <node id="6218627430235616569" at="23,38,24,37" concept="11" />
+      <node id="6218627430235616569" at="31,127,32,128" concept="5" />
+      <node id="6218627430235616569" at="32,128,33,0" concept="8" />
+      <node id="6218627430235616569" at="34,55,35,71" concept="2" />
+      <node id="6218627430235616569" at="36,9,37,0" concept="8" />
+      <node id="6218627430235616569" at="37,0,38,22" concept="6" />
+      <node id="6218627430241862120" at="42,128,43,0" concept="8" />
+      <node id="6218627430235620371" at="43,0,44,98" concept="5" />
+      <node id="6218627430241833244" at="44,98,45,147" concept="5" />
+      <node id="6218627430235621350" at="45,147,46,100" concept="5" />
+      <node id="6218627430239226842" at="46,100,47,90" concept="5" />
+      <node id="6218627430241936321" at="47,90,48,36" concept="5" />
+      <node id="6218627430241980178" at="49,29,50,82" concept="2" />
+      <node id="6218627430241999216" at="51,12,52,109" concept="2" />
+      <node id="6218627430241801110" at="53,5,54,508" concept="5" />
+      <node id="6218627430247085292" at="58,43,59,79" concept="6" />
+      <node id="6218627430242152308" at="65,39,66,100" concept="6" />
+      <node id="6218627430269040301" at="68,34,69,0" concept="8" />
+      <node id="6218627430269039597" at="69,0,70,29" concept="7" />
+      <node id="6218627430235628489" at="71,29,72,44" concept="6" />
+      <node id="6218627430242184848" at="75,43,76,53" concept="6" />
+      <node id="6218627430253330312" at="82,47,83,83" concept="6" />
+      <node id="6218627430254603732" at="87,24,88,28" concept="5" />
+      <node id="6218627430254636525" at="89,34,90,75" concept="2" />
+      <node id="6218627430254656717" at="91,16,92,102" concept="2" />
+      <node id="6218627430253091695" at="94,31,95,190" concept="5" />
+      <node id="6218627430253410024" at="96,54,97,79" concept="6" />
+      <node id="6218627430235836894" at="101,5,102,17" concept="6" />
+      <node id="6218627430235616569" at="104,0,105,0" concept="9" trace="canBeChildBreakingPoint" />
+      <node id="6218627430235616569" at="107,0,108,0" concept="9" trace="AbstractEvent$sH" />
+      <node id="6218627430235616569" at="108,0,109,0" concept="9" trace="HumanInput$T5" />
+      <node id="6218627430235616569" at="109,0,110,0" concept="9" trace="InputChoice$KG" />
+      <node id="6218627430235616569" at="110,0,111,0" concept="9" trace="Phrase$1a" />
+      <node id="6218627430235616569" at="114,0,115,0" concept="9" trace="choices$YXnx" />
+      <node id="6218627430241998668" at="51,10,53,5" concept="0" />
+      <node id="6218627430254655417" at="91,14,93,9" concept="0" />
+      <node id="6218627430235616569" at="23,0,26,0" concept="1" trace="AbstractEvent_Constraints#()V" />
+      <node id="6218627430235616569" at="33,0,36,9" concept="3" />
+      <node id="6218627430247080569" at="58,0,61,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="6218627430242151533" at="65,0,68,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="6218627430235625142" at="70,29,73,5" concept="3" />
+      <node id="6218627430242173092" at="74,29,77,7" concept="3" />
+      <node id="6218627430253328983" at="82,0,85,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="6218627430253086749" at="95,190,98,11" concept="3" />
+      <node id="6218627430241973499" at="48,36,53,5" concept="3" />
+      <node id="6218627430247024590" at="56,39,61,23" concept="6" />
+      <node id="6218627430242100083" at="63,20,68,34" concept="5" />
+      <node id="6218627430253266640" at="80,43,85,27" concept="6" />
+      <node id="6218627430254617154" at="88,28,93,9" concept="3" />
+      <node id="6218627430254675040" at="93,9,99,9" concept="3" />
+      <node id="6218627430247020182" at="56,0,63,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="6218627430253265484" at="80,0,87,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="6218627430246963869" at="54,508,63,20" concept="5" />
+      <node id="6218627430253209592" at="78,36,87,24" concept="5" />
+      <node id="6218627430235616569" at="30,0,40,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="6218627430235616569" at="28,103,40,6" concept="6" />
+      <node id="6218627430235616569" at="27,0,42,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <node id="6218627430253072001" at="77,7,100,7" concept="3" />
+      <node id="6218627430241955777" at="73,5,101,5" concept="3" />
+      <node id="6218627430235616569" at="42,0,104,0" concept="10" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <scope id="6218627430235616569" at="23,38,24,37" />
+      <scope id="6218627430235616569" at="34,55,35,71" />
+      <scope id="6218627430241973501" at="49,29,50,82" />
+      <scope id="6218627430241998669" at="51,12,52,109" />
+      <scope id="6218627430247080570" at="58,43,59,79" />
+      <scope id="6218627430242151534" at="65,39,66,100" />
+      <scope id="6218627430235625144" at="71,29,72,44" />
+      <scope id="6218627430242173094" at="75,43,76,53" />
+      <scope id="6218627430253328984" at="82,47,83,83" />
+      <scope id="6218627430254617156" at="89,34,90,75" />
+      <scope id="6218627430254655418" at="91,16,92,102" />
+      <scope id="6218627430253086751" at="96,54,97,79" />
+      <scope id="6218627430235616569" at="23,0,26,0" />
+      <scope id="6218627430247080569" at="58,0,61,0">
+        <var name="it" id="6218627430247080569" />
+      </scope>
+      <scope id="6218627430242151533" at="65,0,68,0">
+        <var name="it" id="6218627430242151533" />
+      </scope>
+      <scope id="6218627430253328983" at="82,0,85,0">
+        <var name="it" id="6218627430253328983" />
+      </scope>
+      <scope id="6218627430254675042" at="94,31,98,11">
+        <var name="ancestorIsInputChoiceWithEvents" id="6218627430253091698" />
+      </scope>
+      <scope id="6218627430247020183" at="56,39,61,23" />
+      <scope id="6218627430253265485" at="80,43,85,27" />
+      <scope id="6218627430235616569" at="31,127,38,22">
+        <var name="result" id="6218627430235616569" />
+      </scope>
+      <scope id="6218627430247020182" at="56,0,63,0">
+        <var name="it" id="6218627430247020182" />
+      </scope>
+      <scope id="6218627430253265484" at="80,0,87,0">
+        <var name="it" id="6218627430253265484" />
+      </scope>
+      <scope id="6218627430235616569" at="30,0,40,0">
+        <var name="checkingNodeContext" id="6218627430235616569" />
+        <var name="context" id="6218627430235616569" />
+      </scope>
+      <scope id="6218627430235616569" at="28,103,40,6" />
+      <scope id="6218627430235616569" at="27,0,42,0" />
+      <scope id="6218627430253072003" at="78,36,99,9">
+        <var name="allChoicesDontHaveEvents" id="6218627430253209595" />
+        <var name="parent" id="6218627430254603735" />
+      </scope>
+      <scope id="6218627430241955779" at="74,29,100,7" />
+      <scope id="6218627430235616571" at="42,128,102,17">
+        <var name="allEventsAreInOneChoice" id="6218627430242100086" />
+        <var name="ancestorHumanInput" id="6218627430241936324" />
+        <var name="nodeIsInHumanInput" id="6218627430241833247" />
+        <var name="onlyOneChoiceHaveEvents" id="6218627430246963872" />
+        <var name="parentHumanInputHasMaxOneEvent" id="6218627430241801113" />
+        <var name="parentIsHumanInput" id="6218627430235620374" />
+        <var name="parentIsInputChoice" id="6218627430235621353" />
+        <var name="parentIsPhrase" id="6218627430239226845" />
+      </scope>
+      <scope id="6218627430235616569" at="42,0,104,0">
+        <var name="childConcept" id="6218627430235616569" />
+        <var name="link" id="6218627430235616569" />
+        <var name="node" id="6218627430235616569" />
+        <var name="parentNode" id="6218627430235616569" />
+      </scope>
+      <unit id="6218627430235616569" at="113,0,116,0" name="ProjectionalQiChat.constraints.AbstractEvent_Constraints$LINKS" />
+      <unit id="6218627430247080569" at="57,100,61,9" name="ProjectionalQiChat.constraints.AbstractEvent_Constraints$2$1" />
+      <unit id="6218627430242151533" at="64,184,68,5" name="ProjectionalQiChat.constraints.AbstractEvent_Constraints$3" />
+      <unit id="6218627430253328983" at="81,104,85,13" name="ProjectionalQiChat.constraints.AbstractEvent_Constraints$4$1" />
+      <unit id="6218627430235616569" at="106,0,112,0" name="ProjectionalQiChat.constraints.AbstractEvent_Constraints$CONCEPTS" />
+      <unit id="6218627430247020182" at="55,184,63,5" name="ProjectionalQiChat.constraints.AbstractEvent_Constraints$2" />
+      <unit id="6218627430253265484" at="79,189,87,9" name="ProjectionalQiChat.constraints.AbstractEvent_Constraints$4" />
+      <unit id="6218627430235616569" at="29,15,40,5" name="ProjectionalQiChat.constraints.AbstractEvent_Constraints$1" />
+      <unit id="6218627430235616569" at="22,0,117,0" name="ProjectionalQiChat.constraints.AbstractEvent_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/6218627430266732139">
+    <file name="CustomEvent_Constraints.java">
+      <node id="6218627430266732139" at="20,36,21,35" concept="11" />
+      <node id="6218627430266732140" at="25,64,26,65" concept="11" />
+      <node id="6218627430266732140" at="29,109,30,99" concept="5" />
+      <node id="6218627430266732140" at="31,53,32,159" concept="2" />
+      <node id="6218627430266732140" at="33,7,34,20" concept="6" />
+      <node id="6218627430266742651" at="36,85,37,63" concept="6" />
+      <node id="6218627430266732139" at="41,84,42,119" concept="5" />
+      <node id="6218627430266732140" at="42,119,43,71" concept="2" />
+      <node id="6218627430266732139" at="43,71,44,22" concept="6" />
+      <node id="6218627430266732139" at="48,0,49,0" concept="9" trace="CustomEvent$Ti" />
+      <node id="6218627430266732139" at="52,0,53,0" concept="9" trace="eventName$nYgS" />
+      <node id="6218627430266732139" at="20,0,23,0" concept="1" trace="CustomEvent_Constraints#()V" />
+      <node id="6218627430266732140" at="25,0,28,0" concept="1" trace="EventName_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
+      <node id="6218627430266732140" at="30,99,33,7" concept="3" />
+      <node id="6218627430266732140" at="36,0,39,0" concept="10" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <node id="6218627430266732139" at="40,0,46,0" concept="4" trace="getSpecifiedProperties#()Ljava/util/Map;" />
+      <node id="6218627430266732140" at="28,0,36,0" concept="4" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <scope id="6218627430266732139" at="20,36,21,35" />
+      <scope id="6218627430266732140" at="25,64,26,65" />
+      <scope id="6218627430266732140" at="31,53,32,159" />
+      <scope id="6218627430266732299" at="36,85,37,63" />
+      <scope id="6218627430266732139" at="20,0,23,0" />
+      <scope id="6218627430266732140" at="25,0,28,0">
+        <var name="container" id="6218627430266732140" />
+      </scope>
+      <scope id="6218627430266732140" at="36,0,39,0">
+        <var name="node" id="6218627430266732140" />
+        <var name="propertyValue" id="6218627430266732140" />
+      </scope>
+      <scope id="6218627430266732139" at="41,84,44,22">
+        <var name="properties" id="6218627430266732139" />
+      </scope>
+      <scope id="6218627430266732140" at="29,109,34,20">
+        <var name="result" id="6218627430266732140" />
+      </scope>
+      <scope id="6218627430266732139" at="40,0,46,0" />
+      <scope id="6218627430266732140" at="28,0,36,0">
+        <var name="checkingNodeContext" id="6218627430266732140" />
+        <var name="node" id="6218627430266732140" />
+        <var name="propertyValue" id="6218627430266732140" />
+      </scope>
+      <unit id="6218627430266732139" at="47,0,50,0" name="ProjectionalQiChat.constraints.CustomEvent_Constraints$CONCEPTS" />
+      <unit id="6218627430266732139" at="51,0,54,0" name="ProjectionalQiChat.constraints.CustomEvent_Constraints$PROPS" />
+      <unit id="6218627430266732140" at="24,0,40,0" name="ProjectionalQiChat.constraints.CustomEvent_Constraints$EventName_Property" />
+      <unit id="6218627430266732139" at="19,0,55,0" name="ProjectionalQiChat.constraints.CustomEvent_Constraints" />
+    </file>
+  </root>
   <root nodeRef="r:0732640b-7693-4dcb-8a72-67b764f4b543(ProjectionalQiChat.constraints)/8305283705753709969">
     <file name="HumanConceptReference_Constraints.java">
-      <node id="8305283705753709969" at="39,46,40,45" concept="10" />
+      <node id="8305283705753709969" at="39,46,40,45" concept="11" />
       <node id="8305283705753709969" at="47,127,48,128" concept="5" />
-      <node id="8305283705753709969" at="48,128,49,0" concept="7" />
+      <node id="8305283705753709969" at="48,128,49,0" concept="8" />
       <node id="8305283705753709969" at="50,55,51,71" concept="2" />
-      <node id="8305283705753709969" at="52,9,53,0" concept="7" />
+      <node id="8305283705753709969" at="52,9,53,0" concept="8" />
       <node id="8305283705753709969" at="53,0,54,22" concept="6" />
       <node id="8305283705753709970" at="66,63,67,133" concept="6" />
       <node id="8305283705753712587" at="70,80,71,216" concept="5" />
@@ -619,14 +885,14 @@
       <node id="8305283705753709969" at="97,42,98,22" concept="6" />
       <node id="678017867207062279" at="101,75,102,124" concept="6" />
       <node id="678017867207057788" at="103,12,104,18" concept="6" />
-      <node id="8305283705753709969" at="107,0,108,0" concept="8" trace="canBeChildBreakingPoint" />
-      <node id="8305283705753709969" at="110,0,111,0" concept="8" trace="HumanConceptReference$f9" />
-      <node id="8305283705753709969" at="111,0,112,0" concept="8" trace="ConceptContainer$NA" />
-      <node id="8305283705753709969" at="112,0,113,0" concept="8" trace="HumanConcept$qf" />
-      <node id="8305283705753709969" at="113,0,114,0" concept="8" trace="InputStore$rg" />
-      <node id="8305283705753709969" at="117,0,118,0" concept="8" trace="concept$nPab" />
-      <node id="8305283705753709969" at="121,0,122,0" concept="8" trace="name$MnvL" />
-      <node id="8305283705753709969" at="122,0,123,0" concept="8" trace="onlyWordChoice$l6_6" />
+      <node id="8305283705753709969" at="107,0,108,0" concept="9" trace="canBeChildBreakingPoint" />
+      <node id="8305283705753709969" at="110,0,111,0" concept="9" trace="HumanConceptReference$f9" />
+      <node id="8305283705753709969" at="111,0,112,0" concept="9" trace="ConceptContainer$NA" />
+      <node id="8305283705753709969" at="112,0,113,0" concept="9" trace="HumanConcept$qf" />
+      <node id="8305283705753709969" at="113,0,114,0" concept="9" trace="InputStore$rg" />
+      <node id="8305283705753709969" at="117,0,118,0" concept="9" trace="concept$nPab" />
+      <node id="8305283705753709969" at="121,0,122,0" concept="9" trace="name$MnvL" />
+      <node id="8305283705753709969" at="122,0,123,0" concept="9" trace="onlyWordChoice$l6_6" />
       <node id="678017867207057742" at="103,10,105,5" concept="0" />
       <node id="8305283705753709969" at="39,0,42,0" concept="1" trace="HumanConceptReference_Constraints#()V" />
       <node id="8305283705753709969" at="49,0,52,9" concept="3" />
@@ -637,7 +903,7 @@
       <node id="678017867207043488" at="100,128,105,5" concept="3" />
       <node id="8305283705753712606" at="72,140,79,13" concept="3" />
       <node id="3164244237154739280" at="82,0,89,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-      <node id="8305283705753709969" at="100,0,107,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="8305283705753709969" at="100,0,107,0" concept="10" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
       <node id="3164244237154731949" at="80,208,89,17" concept="2" />
       <node id="8305283705753709969" at="46,0,56,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
       <node id="3164244237154711070" at="79,13,90,13" concept="3" />

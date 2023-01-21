@@ -16,8 +16,8 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class check_HumanConcept_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
-  public check_HumanConcept_NonTypesystemRule() {
+public class check_next_sibling_emptyConcept_HumanConcept_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
+  public check_next_sibling_emptyConcept_HumanConcept_NonTypesystemRule() {
   }
   public void applyRule(final SNode humanConcept, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     if (!(SNodeOperations.isInstanceOf(SNodeOperations.getNextSibling(humanConcept), CONCEPTS.EmptyConcept$zW))) {

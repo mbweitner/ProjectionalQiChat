@@ -16,10 +16,12 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.openapi.intentions.IntentionDescriptor;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public final class convertToProposal_Intention extends AbstractIntentionDescriptor implements IntentionFactory {
@@ -59,7 +61,13 @@ public final class convertToProposal_Intention extends AbstractIntentionDescript
       SNode newProposal = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b030L, "ProjectionalQiChat.structure.Proposal"));
       SLinkOperations.setTarget(newProposal, LINKS.comment$qgE6, SLinkOperations.getTarget(node, LINKS.comment$qgE6));
       SLinkOperations.setTarget(newProposal, LINKS.output$i9dz, SLinkOperations.getTarget(node, LINKS.output$kSeI));
-      ListSequence.fromList(SLinkOperations.getChildren(newProposal, LINKS.subrules$i9F_)).addSequence(ListSequence.fromList(SLinkOperations.getChildren(node, LINKS.subrules$kZhF)));
+      if (ListSequence.fromList(SLinkOperations.getChildren(node, LINKS.subrules$kZhF)).where(new IWhereFilter<SNode>() {
+        public boolean accept(SNode it) {
+          return SNodeOperations.isInstanceOf(it, CONCEPTS.EmptyFirstOrderSubrule$mT);
+        }
+      }).count() != ListSequence.fromList(SLinkOperations.getChildren(node, LINKS.subrules$kZhF)).count()) {
+        ListSequence.fromList(SLinkOperations.getChildren(newProposal, LINKS.subrules$i9F_)).addSequence(ListSequence.fromList(SLinkOperations.getChildren(node, LINKS.subrules$kZhF)));
+      }
       SPropertyOperations.assign(newProposal, PROPS.name$MnvL, SPropertyOperations.getString(node, PROPS.name$MnvL));
       SNodeOperations.replaceWithAnother(node, newProposal);
     }
@@ -73,7 +81,7 @@ public final class convertToProposal_Intention extends AbstractIntentionDescript
     }
 
     private boolean isApplicableToNode(final SNode node, final EditorContext editorContext) {
-      return (SLinkOperations.getTarget(node, LINKS.input$kRKG) == null) || ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(node, LINKS.input$kRKG), LINKS.inputs$iwW4)).isEmpty();
+      return (SLinkOperations.getTarget(node, LINKS.input$kRKG) == null) || ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(node, LINKS.input$kRKG), LINKS.inputs$iwW4)).isEmpty() || (ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(node, LINKS.input$kRKG), LINKS.inputs$iwW4)).count() == 1 && SNodeOperations.isInstanceOf(ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(node, LINKS.input$kRKG), LINKS.inputs$iwW4)).first(), CONCEPTS.Word$iA) && isEmptyString(SPropertyOperations.getString(SNodeOperations.as(ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(node, LINKS.input$kRKG), LINKS.inputs$iwW4)).first(), CONCEPTS.Word$iA), PROPS.word$QCkP)));
     }
 
 
@@ -82,6 +90,9 @@ public final class convertToProposal_Intention extends AbstractIntentionDescript
       return convertToProposal_Intention.this;
     }
 
+  }
+  private static boolean isEmptyString(String str) {
+    return str == null || str.isEmpty();
   }
 
   private static final class LINKS {
@@ -94,7 +105,13 @@ public final class convertToProposal_Intention extends AbstractIntentionDescript
     /*package*/ static final SContainmentLink inputs$iwW4 = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b034L, 0x4d41c767d8337bb9L, "inputs");
   }
 
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept EmptyFirstOrderSubrule$mT = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x74abec4a81de9516L, "ProjectionalQiChat.structure.EmptyFirstOrderSubrule");
+    /*package*/ static final SConcept Word$iA = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L, "ProjectionalQiChat.structure.Word");
+  }
+
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty word$QCkP = MetaAdapterFactory.getProperty(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b130L, 0x6fd223061c49b136L, "word");
   }
 }
