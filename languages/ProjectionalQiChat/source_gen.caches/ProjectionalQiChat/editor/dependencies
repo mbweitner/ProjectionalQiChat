@@ -980,6 +980,7 @@
     <classNode dependClassName="ProjectionalQiChat.editor.Word_Editor" />
     <classNode dependClassName="ProjectionalQiChat.editor.Word_KeyMap" />
     <classNode dependClassName="ProjectionalQiChat.editor.Word_TransformationMenu" />
+    <classNode dependClassName="ProjectionalQiChat.editor.explanation" />
     <classNode dependClassName="ProjectionalQiChat.editor.onStartEvent_Editor" />
     <classNode dependClassName="ProjectionalQiChat.editor.proposal" />
     <classNode dependClassName="ProjectionalQiChat.editor.proposalShort" />
@@ -6260,6 +6261,44 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.transformation.TransformationMenuBase" />
   </dependency>
+  <dependency className="ProjectionalQiChat.editor.explanation">
+    <classNode dependClassName="ProjectionalQiChat.editor.explanation_ComponentBuilder_a" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Collection" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.openapi.editor.descriptor.ConceptEditorComponent" />
+  </dependency>
+  <dependency className="ProjectionalQiChat.editor.explanation_ComponentBuilder_a">
+    <classNode dependClassName="ProjectionalQiChat.editor.globalStyles_StyleSheet.notEditableStyleClass" />
+    <classNode dependClassName="de.itemis.mps.editor.bool.runtime.CheckboxCellProvider" />
+    <classNode dependClassName="de.itemis.mps.editor.bool.runtime.EditorCell_Checkbox" />
+    <classNode dependClassName="de.itemis.mps.editor.celllayout.runtime.cells.HorizontalLineCell" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleAttributes" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.MPSFonts" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Constant" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SProperty" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
+  </dependency>
   <dependency className="ProjectionalQiChat.editor.globalStyles_StyleSheet">
     <classNode dependClassName="ProjectionalQiChat.editor.globalStyles_StyleSheet.eventTextStyleClass" />
     <classNode dependClassName="ProjectionalQiChat.editor.globalStyles_StyleSheet.proposalFunctionContainerStyleClass" />
@@ -6491,6 +6530,7 @@
   </dependency>
   <dependency className="ProjectionalQiChat.editor.userRuleShort_ComponentBuilder_a">
     <classNode dependClassName="ProjectionalQiChat.editor.globalStyles_StyleSheet.keywordStyleClass" />
+    <classNode dependClassName="ProjectionalQiChat.editor.globalStyles_StyleSheet.nameStyleClass" />
     <classNode dependClassName="ProjectionalQiChat.editor.globalStyles_StyleSheet.ruleBordersStyleClass" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Iterable" />

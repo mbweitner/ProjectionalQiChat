@@ -20,9 +20,11 @@ import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
+import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.openapi.intentions.IntentionDescriptor;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SInterfaceConcept;
+import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public final class convertToRobotConcept_Intention extends AbstractIntentionDescriptor implements IntentionFactory {
@@ -76,11 +78,25 @@ public final class convertToRobotConcept_Intention extends AbstractIntentionDesc
     }
 
     private boolean isApplicableToNode(final SNode node, final EditorContext editorContext) {
-      return ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(node, LINKS.rule$l738), LINKS.inputs$iwW4)).all(new IWhereFilter<SNode>() {
-        public boolean accept(SNode it) {
-          return SNodeOperations.isInstanceOf(it, CONCEPTS.IRobotOuputConfirmed$CL);
-        }
-      });
+      if ((SLinkOperations.getTarget(node, LINKS.rule$l738) != null) && ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(node, LINKS.rule$l738), LINKS.inputs$iwW4)).isNotEmpty()) {
+        boolean allInputsAreAlsoRobotOutputConfirmed = ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(node, LINKS.rule$l738), LINKS.inputs$iwW4)).all(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return SNodeOperations.isInstanceOf(it, CONCEPTS.IRobotOuputConfirmed$CL);
+          }
+        });
+        boolean parentConceptCollectionHasNoSimmilarConcept = (SNodeOperations.getNodeAncestor(node, CONCEPTS.ConceptCollection$S7, false, false) != null) && (ListSequence.fromList(SNodeOperations.getNodeDescendants(SNodeOperations.getNodeAncestor(node, CONCEPTS.ConceptCollection$S7, false, false), CONCEPTS.RobotConcept$rd, false, new SAbstractConcept[]{})).all(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return !(SPropertyOperations.getString(it, PROPS.name$MnvL).equals(SPropertyOperations.getString(node, PROPS.name$MnvL)));
+          }
+        }));
+        boolean parentTopicHasNoSimmilarConcept = (SNodeOperations.getNodeAncestor(node, CONCEPTS.Topic$xv, false, false) != null) && ListSequence.fromList(SNodeOperations.getNodeDescendants(SNodeOperations.getNodeAncestor(node, CONCEPTS.Topic$xv, false, false), CONCEPTS.RobotConcept$rd, false, new SAbstractConcept[]{})).all(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return !(SPropertyOperations.getString(it, PROPS.name$MnvL).equals(SPropertyOperations.getString(node, PROPS.name$MnvL)));
+          }
+        });
+        return allInputsAreAlsoRobotOutputConfirmed && (parentConceptCollectionHasNoSimmilarConcept || parentTopicHasNoSimmilarConcept);
+      }
+      return false;
     }
 
 
@@ -102,6 +118,9 @@ public final class convertToRobotConcept_Intention extends AbstractIntentionDesc
 
   private static final class CONCEPTS {
     /*package*/ static final SInterfaceConcept IRobotOuputConfirmed$CL = MetaAdapterFactory.getInterfaceConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b10fL, "ProjectionalQiChat.structure.IRobotOuputConfirmed");
+    /*package*/ static final SConcept ConceptCollection$S7 = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b032L, "ProjectionalQiChat.structure.ConceptCollection");
+    /*package*/ static final SConcept RobotConcept$rd = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b108L, "ProjectionalQiChat.structure.RobotConcept");
+    /*package*/ static final SConcept Topic$xv = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c487b95L, "ProjectionalQiChat.structure.Topic");
   }
 
   private static final class PROPS {

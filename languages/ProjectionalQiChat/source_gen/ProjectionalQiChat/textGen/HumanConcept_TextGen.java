@@ -24,6 +24,7 @@ public class HumanConcept_TextGen extends TextGenDescriptorBase {
     }
     tgs.append("concept:(");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$MnvL).replace(" ", "_"));
+    tgs.append("HC");
     tgs.append(") ");
     tgs.appendNode(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.rule$l738));
     tgs.newLine();

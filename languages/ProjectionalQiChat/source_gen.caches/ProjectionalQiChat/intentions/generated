@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="7lcvqzg1i67wr7vl9yxlvfyeknshaxw">
-  <files names="IntentionsDescriptor.java:addHumanConcept_Intention.java:addRobotConceptToTopic_Intention.java:addSubrule_Intention.java:addSubsubrule_Intention.java:addSubsubsubrule_Intention.java:convertToHumanConcept_Intention.java:convertToProposal_Intention.java:convertToRobotConcept_Intention.java:convertToUserRule_Intention.java:importConceptCollections_Intention.java:importTopics_Intention.java:triggerOnStopped_Intention.java" />
+<product version="3" modelHash="-34mmygt7ciw5j8hnt8lwqn29zxxlka">
+  <files names="IntentionsDescriptor.java:addHumanConcept_Intention.java:addRobotConceptToTopic_Intention.java:addSubrule_Intention.java:addSubsubrule_Intention.java:addSubsubsubrule_Intention.java:cloneHumanConcept_Intention.java:cloneRobotConcept_Intention.java:convertToHumanConcept_Intention.java:convertToProposal_Intention.java:convertToRobotConcept_Intention.java:convertToUserRule_Intention.java:importConceptCollections_Intention.java:importTopics_Intention.java:sortConceptsHumanRobot_Intention.java:sortConceptsRobotHuman_Intention.java:triggerOnStopped_Intention.java" />
 </product>
 

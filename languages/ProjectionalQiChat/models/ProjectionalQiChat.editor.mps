@@ -33,6 +33,7 @@
     <import index="tpen" ref="r:00000000-0000-4000-0000-011c895902c3(jetbrains.mps.baseLanguage.editor)" implicit="true" />
     <import index="cj4x" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.openapi.editor(MPS.Editor/)" implicit="true" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" implicit="true" />
+    <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -365,6 +366,7 @@
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
+      <concept id="1073239437375" name="jetbrains.mps.baseLanguage.structure.NotEqualsExpression" flags="nn" index="3y3z36" />
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
@@ -8544,6 +8546,12 @@
       <node concept="3F0ifn" id="2PzpqhhJwB5" role="3EZMnx">
         <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
       </node>
+      <node concept="PMmxH" id="2JgAzNTvTg8" role="3EZMnx">
+        <ref role="PMmxG" node="2JgAzNStW7z" resolve="explanation" />
+      </node>
+      <node concept="3F0ifn" id="2JgAzNTvT2x" role="3EZMnx">
+        <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+      </node>
       <node concept="3EZMnI" id="2PzpqhhJx6F" role="3EZMnx">
         <node concept="3F0ifn" id="5jJe1Dcg1qC" role="3EZMnx">
           <property role="3F0ifm" value="Topic Imports" />
@@ -15924,6 +15932,662 @@
         <ref role="1k5W1q" node="2_RqHNDT1x_" resolve="event" />
       </node>
       <node concept="2iRkQZ" id="5pd0bcVXgvn" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="PKFIW" id="2JgAzNStW7z">
+    <property role="TrG5h" value="explanation" />
+    <ref role="1XX52x" to="zefy:6Zi8Kosi7Il" resolve="Topic" />
+    <node concept="3EZMnI" id="2JgAzNTbrEl" role="2wV5jI">
+      <node concept="3EZMnI" id="2JgAzNTbsZy" role="3EZMnx">
+        <node concept="l2Vlx" id="2JgAzNTbsZz" role="2iSdaV" />
+        <node concept="3F0ifn" id="2JgAzNTbs99" role="3EZMnx">
+          <property role="3F0ifm" value="Hide Explanations:" />
+        </node>
+        <node concept="27S6Sx" id="2JgAzNTbt3T" role="3EZMnx">
+          <property role="1yattU" value="0.2" />
+          <property role="1yattY" value="0.2" />
+          <property role="MwhBj" value="${module}/icons/checkMark.png" />
+          <property role="1x$9Fj" value="${module}/icons/xMark.png" />
+          <ref role="1NtTu8" to="zefy:2JgAzNTbriA" resolve="hideExplanation" />
+        </node>
+      </node>
+      <node concept="2iRkQZ" id="2JgAzNTbrEm" role="2iSdaV" />
+      <node concept="3EZMnI" id="2JgAzNSu9Np" role="3EZMnx">
+        <node concept="3EZMnI" id="2JgAzNSu9Nw" role="3EZMnx">
+          <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+          <node concept="VPM3Z" id="2JgAzNSu9Ny" role="3F10Kt" />
+          <node concept="3F0ifn" id="2JgAzNSubVr" role="3EZMnx">
+            <property role="3F0ifm" value="Tipps &amp; Tricks im Umgang mit dem Editor" />
+          </node>
+          <node concept="3F0ifn" id="2JgAzNSubVu" role="3EZMnx" />
+          <node concept="3EZMnI" id="2JgAzNSubVO" role="3EZMnx">
+            <node concept="3EZMnI" id="2JgAzNTbuMx" role="3EZMnx">
+              <node concept="VPM3Z" id="2JgAzNTbuMz" role="3F10Kt" />
+              <node concept="pj6Ft" id="2JgAzNTbuOp" role="3F10Kt">
+                <property role="VOm3f" value="true" />
+              </node>
+              <node concept="3F0ifn" id="2JgAzNSubVS" role="3EZMnx">
+                <property role="3F0ifm" value="Tastenkombinationen/-kürzel:" />
+              </node>
+              <node concept="3EZMnI" id="2JgAzNSubWb" role="3EZMnx">
+                <node concept="VPM3Z" id="2JgAzNSubWd" role="3F10Kt" />
+                <node concept="3EZMnI" id="2JgAzNSubWp" role="3EZMnx">
+                  <node concept="VPM3Z" id="2JgAzNSubWr" role="3F10Kt" />
+                  <node concept="3F0ifn" id="2JgAzNSubWD" role="3EZMnx">
+                    <property role="3F0ifm" value="Kombination" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNSMSIg" role="3EZMnx">
+                    <property role="3F0ifm" value="    " />
+                    <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNSubWN" role="3EZMnx">
+                    <property role="3F0ifm" value="Effekt" />
+                  </node>
+                  <node concept="2iRfu4" id="2JgAzNSubWu" role="2iSdaV" />
+                </node>
+                <node concept="3EZMnI" id="2JgAzNT77qh" role="3EZMnx">
+                  <node concept="VPM3Z" id="2JgAzNT77qj" role="3F10Kt" />
+                  <node concept="3F0ifn" id="2JgAzNT77qL" role="3EZMnx">
+                    <property role="3F0ifm" value="Alt + 2" />
+                    <node concept="Vb9p2" id="2JgAzNT77r4" role="3F10Kt" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT77qR" role="3EZMnx">
+                    <property role="3F0ifm" value="    " />
+                    <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT77qZ" role="3EZMnx">
+                    <property role="3F0ifm" value="Inspektor anzeigen/ausblenden (Zusatzinformationen für die derzeitige Auswahl)" />
+                    <node concept="Vb9p2" id="2JgAzNT77r6" role="3F10Kt" />
+                  </node>
+                  <node concept="2iRfu4" id="2JgAzNT77qm" role="2iSdaV" />
+                </node>
+                <node concept="3EZMnI" id="2JgAzNSubX4" role="3EZMnx">
+                  <node concept="VPM3Z" id="2JgAzNSubX6" role="3F10Kt" />
+                  <node concept="3F0ifn" id="2JgAzNSubXj" role="3EZMnx">
+                    <property role="3F0ifm" value="Strg + Leertaste" />
+                    <node concept="Vb9p2" id="2JgAzNSubYL" role="3F10Kt" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNSMSIr" role="3EZMnx">
+                    <property role="3F0ifm" value="    " />
+                    <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNSubXp" role="3EZMnx">
+                    <property role="3F0ifm" value="Zeigt mögliche Einträge für die aktuell ausgewählte Positon" />
+                    <node concept="Vb9p2" id="2JgAzNSubYN" role="3F10Kt" />
+                  </node>
+                  <node concept="2iRfu4" id="2JgAzNSubX9" role="2iSdaV" />
+                </node>
+                <node concept="2EHx9g" id="2JgAzNSubWz" role="2iSdaV" />
+                <node concept="lj46D" id="2JgAzNSubWm" role="3F10Kt">
+                  <property role="VOm3f" value="true" />
+                </node>
+                <node concept="3EZMnI" id="2JgAzNSubYf" role="3EZMnx">
+                  <node concept="VPM3Z" id="2JgAzNSubYh" role="3F10Kt" />
+                  <node concept="3F0ifn" id="2JgAzNSubYz" role="3EZMnx">
+                    <property role="3F0ifm" value="Alt + Enter" />
+                    <node concept="Vb9p2" id="2JgAzNSubYP" role="3F10Kt" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNSMSIJ" role="3EZMnx">
+                    <property role="3F0ifm" value="    " />
+                    <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNSubYR" role="3EZMnx">
+                    <property role="3F0ifm" value="Zeigt mögliche Operationen an, die an der ausgewählten Stelle durchgeführt werden können" />
+                    <node concept="Vb9p2" id="2JgAzNSubYW" role="3F10Kt" />
+                  </node>
+                  <node concept="2iRfu4" id="2JgAzNSubYk" role="2iSdaV" />
+                </node>
+                <node concept="3EZMnI" id="2JgAzNT77rC" role="3EZMnx">
+                  <node concept="VPM3Z" id="2JgAzNT77rE" role="3F10Kt" />
+                  <node concept="3F0ifn" id="2JgAzNT77sg" role="3EZMnx">
+                    <property role="3F0ifm" value="Enter oder Leertaste" />
+                    <node concept="Vb9p2" id="2JgAzNT77sz" role="3F10Kt" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT77sm" role="3EZMnx">
+                    <property role="3F0ifm" value="    " />
+                    <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT77su" role="3EZMnx">
+                    <property role="3F0ifm" value="Element nach Derzeitigem einfügen(Manchmal funktioniert nur Enter)" />
+                    <node concept="Vb9p2" id="2JgAzNT77s_" role="3F10Kt" />
+                  </node>
+                  <node concept="2iRfu4" id="2JgAzNT77rH" role="2iSdaV" />
+                </node>
+                <node concept="3EZMnI" id="2JgAzNTbmKS" role="3EZMnx">
+                  <node concept="VPM3Z" id="2JgAzNTbmKU" role="3F10Kt" />
+                  <node concept="3F0ifn" id="2JgAzNTbmKW" role="3EZMnx">
+                    <property role="3F0ifm" value="Shift + Enter" />
+                    <node concept="Vb9p2" id="2JgAzNTbmLS" role="3F10Kt" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNTbmLF" role="3EZMnx">
+                    <property role="3F0ifm" value="    " />
+                    <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNTbmLN" role="3EZMnx">
+                    <property role="3F0ifm" value="Element vor Derzeitgem einfügen" />
+                    <node concept="Vb9p2" id="2JgAzNTbmLU" role="3F10Kt" />
+                  </node>
+                  <node concept="2iRfu4" id="2JgAzNTbmKX" role="2iSdaV" />
+                </node>
+              </node>
+              <node concept="l2Vlx" id="2JgAzNTbuMA" role="2iSdaV" />
+              <node concept="lj46D" id="2JgAzNTbuOt" role="3F10Kt">
+                <property role="VOm3f" value="true" />
+              </node>
+            </node>
+            <node concept="3F0ifn" id="2JgAzNTbqt$" role="3EZMnx">
+              <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+            </node>
+            <node concept="2T_mXK" id="2JgAzNTbrbD" role="3EZMnx" />
+            <node concept="3F0ifn" id="2JgAzNTbvkX" role="3EZMnx">
+              <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+            </node>
+            <node concept="3EZMnI" id="2JgAzNTbvnS" role="3EZMnx">
+              <node concept="VPM3Z" id="2JgAzNTbvnU" role="3F10Kt" />
+              <node concept="pj6Ft" id="2JgAzNTbvp2" role="3F10Kt">
+                <property role="VOm3f" value="true" />
+              </node>
+              <node concept="3F0ifn" id="2JgAzNTbvnW" role="3EZMnx">
+                <property role="3F0ifm" value="Erstellen eines Topics" />
+              </node>
+              <node concept="3EZMnI" id="2JgAzNTbvpd" role="3EZMnx">
+                <node concept="VPM3Z" id="2JgAzNTbvpf" role="3F10Kt" />
+                <node concept="3F0ifn" id="2JgAzNTbvpu" role="3EZMnx">
+                  <property role="3F0ifm" value="Concept(Konzept)" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNTb_0I" role="3EZMnx">
+                  <property role="3F0ifm" value="Eine Konzept ist eine Sammlung von Wörtern oder Sätzen die man einem bestimmten Themenbereich mit Namen zuordnen kann." />
+                  <node concept="lj46D" id="2JgAzNTb_17" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNTb_1g" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNTb_0R" role="3EZMnx">
+                  <property role="3F0ifm" value="Der Name des Konzepts kann anschließend in einer Interaktionsregel eingesetzt werden." />
+                  <node concept="lj46D" id="2JgAzNTb_19" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNTb_1n" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNTb_11" role="3EZMnx">
+                  <property role="3F0ifm" value="Wir unterscheiden zwischen zwei Konzepten. Einem RobotOutput Konzept, welches nur dort eingesetzt werden kann," />
+                  <node concept="lj46D" id="2JgAzNTb_1b" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNTb_1u" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNTb_24" role="3EZMnx">
+                  <property role="3F0ifm" value="wo der Roboter eine Ausgabe tätigt. Und einem HumanInput Konzept, welches nur dort eingesetzt werden kann," />
+                  <node concept="lj46D" id="2JgAzNTb_2h" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNTb_2P" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNTb_2x" role="3EZMnx">
+                  <property role="3F0ifm" value="wo der Roboter einen Input von einem Menschen erwartet." />
+                  <node concept="lj46D" id="2JgAzNTb_2K" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNTb_2W" role="3F10Kt" />
+                </node>
+                <node concept="l2Vlx" id="2JgAzNTbvpC" role="2iSdaV" />
+                <node concept="lj46D" id="2JgAzNTbvpo" role="3F10Kt">
+                  <property role="VOm3f" value="true" />
+                </node>
+                <node concept="pj6Ft" id="2JgAzNTbvpJ" role="3F10Kt">
+                  <property role="VOm3f" value="true" />
+                </node>
+              </node>
+              <node concept="3F0ifn" id="5oCX5VaGKab" role="3EZMnx">
+                <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+              </node>
+              <node concept="3EZMnI" id="2JgAzNTb_3o" role="3EZMnx">
+                <node concept="VPM3Z" id="2JgAzNTb_3q" role="3F10Kt" />
+                <node concept="3F0ifn" id="2JgAzNTb_45" role="3EZMnx">
+                  <property role="3F0ifm" value="Robot Output Only (Proposal)" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNTb_4b" role="3EZMnx">
+                  <property role="3F0ifm" value="Ein Proposal ist eine Interaktionsregel, welche nur eine Ausgabe des Roboters erzeugt." />
+                  <node concept="lj46D" id="2JgAzNTb_4z" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNTb_4G" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNTb_4j" role="3EZMnx">
+                  <property role="3F0ifm" value="Eine solche Regeln muss von einer Funktion namens &quot;nextProposal&quot; aufgerufen werden," />
+                  <node concept="lj46D" id="2JgAzNTb_4_" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNTb_4N" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNTb_7E" role="3EZMnx">
+                  <property role="3F0ifm" value="damit die Ausgabe erzeugt wird." />
+                  <node concept="lj46D" id="2JgAzNTb_7R" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNTb_7W" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNTb_4t" role="3EZMnx">
+                  <property role="3F0ifm" value="Enthält ein Topic mehrere Proposals, so werden diese von oben nach unten einzeln aufgerufen. (pro Funktionsaufruf)" />
+                  <node concept="lj46D" id="2JgAzNTb_4B" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNTb_4U" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNTb_8V" role="3EZMnx">
+                  <property role="3F0ifm" value="(Es sollte mindestens eine UserRule geben, welche die Funktion nextProposal aufruft.)" />
+                  <node concept="lj46D" id="2JgAzNTb_9b" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNTb_9g" role="3F10Kt" />
+                </node>
+                <node concept="l2Vlx" id="2JgAzNTb_3t" role="2iSdaV" />
+                <node concept="lj46D" id="2JgAzNTb_3T" role="3F10Kt">
+                  <property role="VOm3f" value="true" />
+                </node>
+                <node concept="pj6Ft" id="2JgAzNTb_40" role="3F10Kt">
+                  <property role="VOm3f" value="true" />
+                </node>
+              </node>
+              <node concept="3F0ifn" id="5oCX5VaGKbZ" role="3EZMnx">
+                <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+              </node>
+              <node concept="3EZMnI" id="2JgAzNTb_5_" role="3EZMnx">
+                <node concept="VPM3Z" id="2JgAzNTb_5B" role="3F10Kt" />
+                <node concept="pj6Ft" id="2JgAzNTb_6o" role="3F10Kt">
+                  <property role="VOm3f" value="true" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNTb_6w" role="3EZMnx">
+                  <property role="3F0ifm" value="Input and Output (UserRule)" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNTb_76" role="3EZMnx">
+                  <property role="3F0ifm" value="Eine UserRule ist eine Interaktionsregel, welche eine Eingabe von Menschen erwartet und entsprechend eine Ausgabe des Roboters erzeugt." />
+                  <node concept="lj46D" id="2JgAzNTb_9n" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNTb_9u" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNTb_7e" role="3EZMnx">
+                  <property role="3F0ifm" value="Die Eingabe einer solchen Regel, kann sowohl ein gesprochener Satz/Wort sein, als auch ein Einfluss von außen, wie ein Tastendruck am Roboter." />
+                  <node concept="lj46D" id="2JgAzNTb_9p" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNTb_9_" role="3F10Kt" />
+                </node>
+                <node concept="l2Vlx" id="2JgAzNTb_5E" role="2iSdaV" />
+                <node concept="lj46D" id="2JgAzNTb_6s" role="3F10Kt">
+                  <property role="VOm3f" value="true" />
+                </node>
+              </node>
+              <node concept="l2Vlx" id="2JgAzNTbvnX" role="2iSdaV" />
+              <node concept="lj46D" id="2JgAzNTbvp6" role="3F10Kt">
+                <property role="VOm3f" value="true" />
+              </node>
+            </node>
+            <node concept="VPM3Z" id="2JgAzNSubVQ" role="3F10Kt" />
+            <node concept="pj6Ft" id="2JgAzNSubW4" role="3F10Kt">
+              <property role="VOm3f" value="true" />
+            </node>
+            <node concept="l2Vlx" id="2JgAzNSubVT" role="2iSdaV" />
+          </node>
+          <node concept="2iRkQZ" id="2JgAzNSu9N_" role="2iSdaV" />
+          <node concept="pkWqt" id="2JgAzNTbmLY" role="pqm2j">
+            <node concept="3clFbS" id="2JgAzNTbmLZ" role="2VODD2">
+              <node concept="3clFbF" id="2JgAzNTbmM4" role="3cqZAp">
+                <node concept="3clFbC" id="2JgAzNTboOO" role="3clFbG">
+                  <node concept="Xl_RD" id="2JgAzNTbpeP" role="3uHU7w">
+                    <property role="Xl_RC" value="ged" />
+                  </node>
+                  <node concept="2OqwBi" id="2JgAzNTbobY" role="3uHU7B">
+                    <node concept="2OqwBi" id="2JgAzNTbn_r" role="2Oq$k0">
+                      <node concept="2OqwBi" id="2JgAzNTbn1_" role="2Oq$k0">
+                        <node concept="pncrf" id="2JgAzNTbmM3" role="2Oq$k0" />
+                        <node concept="3TrEf2" id="2JgAzNTbnoq" role="2OqNvi">
+                          <ref role="3Tt5mk" to="zefy:4P1LQvocRHI" resolve="header" />
+                        </node>
+                      </node>
+                      <node concept="3TrcHB" id="2JgAzNTbnMo" role="2OqNvi">
+                        <ref role="3TsBF5" to="zefy:4P1LQvocRHP" resolve="language" />
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="2JgAzNTbot2" role="2OqNvi">
+                      <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2iRfu4" id="2JgAzNSu9Ns" role="2iSdaV" />
+        <node concept="3EZMnI" id="2JgAzNSubVa" role="3EZMnx">
+          <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+          <node concept="3F0ifn" id="2JgAzNT$X5t" role="3EZMnx">
+            <property role="3F0ifm" value="Tips &amp; tricks for using the editor" />
+          </node>
+          <node concept="3F0ifn" id="2JgAzNT$X5u" role="3EZMnx" />
+          <node concept="3EZMnI" id="2JgAzNT$X5v" role="3EZMnx">
+            <node concept="3EZMnI" id="2JgAzNT$X5w" role="3EZMnx">
+              <node concept="VPM3Z" id="2JgAzNT$X5x" role="3F10Kt" />
+              <node concept="pj6Ft" id="2JgAzNT$X5y" role="3F10Kt">
+                <property role="VOm3f" value="true" />
+              </node>
+              <node concept="3F0ifn" id="2JgAzNT$X5z" role="3EZMnx">
+                <property role="3F0ifm" value="Keyboard shortcuts:" />
+              </node>
+              <node concept="3EZMnI" id="2JgAzNT$X5$" role="3EZMnx">
+                <node concept="VPM3Z" id="2JgAzNT$X5_" role="3F10Kt" />
+                <node concept="3EZMnI" id="2JgAzNT$X5A" role="3EZMnx">
+                  <node concept="VPM3Z" id="2JgAzNT$X5B" role="3F10Kt" />
+                  <node concept="3F0ifn" id="2JgAzNT$X5C" role="3EZMnx">
+                    <property role="3F0ifm" value="Shortcut" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT$X5D" role="3EZMnx">
+                    <property role="3F0ifm" value="    " />
+                    <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT$X5E" role="3EZMnx">
+                    <property role="3F0ifm" value="Effect" />
+                  </node>
+                  <node concept="2iRfu4" id="2JgAzNT$X5F" role="2iSdaV" />
+                </node>
+                <node concept="3EZMnI" id="2JgAzNT$X5G" role="3EZMnx">
+                  <node concept="VPM3Z" id="2JgAzNT$X5H" role="3F10Kt" />
+                  <node concept="3F0ifn" id="2JgAzNT$X5I" role="3EZMnx">
+                    <property role="3F0ifm" value="Alt + 2" />
+                    <node concept="Vb9p2" id="2JgAzNT$X5J" role="3F10Kt" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT$X5K" role="3EZMnx">
+                    <property role="3F0ifm" value="    " />
+                    <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT$X5L" role="3EZMnx">
+                    <property role="3F0ifm" value="Inspector show/hide (Additional information for the current selection)" />
+                    <node concept="Vb9p2" id="2JgAzNT$X5M" role="3F10Kt" />
+                  </node>
+                  <node concept="2iRfu4" id="2JgAzNT$X5N" role="2iSdaV" />
+                </node>
+                <node concept="3EZMnI" id="2JgAzNT$X5O" role="3EZMnx">
+                  <node concept="VPM3Z" id="2JgAzNT$X5P" role="3F10Kt" />
+                  <node concept="3F0ifn" id="2JgAzNT$X5Q" role="3EZMnx">
+                    <property role="3F0ifm" value="Strg + Space" />
+                    <node concept="Vb9p2" id="2JgAzNT$X5R" role="3F10Kt" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT$X5S" role="3EZMnx">
+                    <property role="3F0ifm" value="    " />
+                    <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT$X5T" role="3EZMnx">
+                    <property role="3F0ifm" value="Shows possible entries for the current selection" />
+                    <node concept="Vb9p2" id="2JgAzNT$X5U" role="3F10Kt" />
+                  </node>
+                  <node concept="2iRfu4" id="2JgAzNT$X5V" role="2iSdaV" />
+                </node>
+                <node concept="2EHx9g" id="2JgAzNT$X5W" role="2iSdaV" />
+                <node concept="lj46D" id="2JgAzNT$X5X" role="3F10Kt">
+                  <property role="VOm3f" value="true" />
+                </node>
+                <node concept="3EZMnI" id="2JgAzNT$X5Y" role="3EZMnx">
+                  <node concept="VPM3Z" id="2JgAzNT$X5Z" role="3F10Kt" />
+                  <node concept="3F0ifn" id="2JgAzNT$X60" role="3EZMnx">
+                    <property role="3F0ifm" value="Alt + Enter" />
+                    <node concept="Vb9p2" id="2JgAzNT$X61" role="3F10Kt" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT$X62" role="3EZMnx">
+                    <property role="3F0ifm" value="    " />
+                    <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT$X63" role="3EZMnx">
+                    <property role="3F0ifm" value="Shows possible operations that can be performed on the selected location" />
+                    <node concept="Vb9p2" id="2JgAzNT$X64" role="3F10Kt" />
+                  </node>
+                  <node concept="2iRfu4" id="2JgAzNT$X65" role="2iSdaV" />
+                </node>
+                <node concept="3EZMnI" id="2JgAzNT$X66" role="3EZMnx">
+                  <node concept="VPM3Z" id="2JgAzNT$X67" role="3F10Kt" />
+                  <node concept="3F0ifn" id="2JgAzNT$X68" role="3EZMnx">
+                    <property role="3F0ifm" value="Enter oder Leertaste" />
+                    <node concept="Vb9p2" id="2JgAzNT$X69" role="3F10Kt" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT$X6a" role="3EZMnx">
+                    <property role="3F0ifm" value="    " />
+                    <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT$X6b" role="3EZMnx">
+                    <property role="3F0ifm" value="Insert item after current one(Sometimes only Enter works)" />
+                    <node concept="Vb9p2" id="2JgAzNT$X6c" role="3F10Kt" />
+                  </node>
+                  <node concept="2iRfu4" id="2JgAzNT$X6d" role="2iSdaV" />
+                </node>
+                <node concept="3EZMnI" id="2JgAzNT$X6e" role="3EZMnx">
+                  <node concept="VPM3Z" id="2JgAzNT$X6f" role="3F10Kt" />
+                  <node concept="3F0ifn" id="2JgAzNT$X6g" role="3EZMnx">
+                    <property role="3F0ifm" value="Shift + Enter" />
+                    <node concept="Vb9p2" id="2JgAzNT$X6h" role="3F10Kt" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT$X6i" role="3EZMnx">
+                    <property role="3F0ifm" value="    " />
+                    <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+                  </node>
+                  <node concept="3F0ifn" id="2JgAzNT$X6j" role="3EZMnx">
+                    <property role="3F0ifm" value="Insert item before current one" />
+                    <node concept="Vb9p2" id="2JgAzNT$X6k" role="3F10Kt" />
+                  </node>
+                  <node concept="2iRfu4" id="2JgAzNT$X6l" role="2iSdaV" />
+                </node>
+              </node>
+              <node concept="l2Vlx" id="2JgAzNT$X6m" role="2iSdaV" />
+              <node concept="lj46D" id="2JgAzNT$X6n" role="3F10Kt">
+                <property role="VOm3f" value="true" />
+              </node>
+            </node>
+            <node concept="3F0ifn" id="2JgAzNT$X6o" role="3EZMnx">
+              <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+            </node>
+            <node concept="2T_mXK" id="2JgAzNT$X6p" role="3EZMnx" />
+            <node concept="3F0ifn" id="2JgAzNT$X6q" role="3EZMnx">
+              <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+            </node>
+            <node concept="3EZMnI" id="2JgAzNT$X6r" role="3EZMnx">
+              <node concept="VPM3Z" id="2JgAzNT$X6s" role="3F10Kt" />
+              <node concept="pj6Ft" id="2JgAzNT$X6t" role="3F10Kt">
+                <property role="VOm3f" value="true" />
+              </node>
+              <node concept="3F0ifn" id="2JgAzNT$X6u" role="3EZMnx">
+                <property role="3F0ifm" value="Creation of a Topic" />
+              </node>
+              <node concept="3EZMnI" id="2JgAzNT$X6v" role="3EZMnx">
+                <node concept="VPM3Z" id="2JgAzNT$X6w" role="3F10Kt" />
+                <node concept="3F0ifn" id="2JgAzNT$X6x" role="3EZMnx">
+                  <property role="3F0ifm" value="Concept" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNT$X6y" role="3EZMnx">
+                  <property role="3F0ifm" value="A concept is a named collection of words or sentences of a specific topic. " />
+                  <node concept="lj46D" id="2JgAzNT$X6z" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNT$X6$" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNT$X6_" role="3EZMnx">
+                  <property role="3F0ifm" value="The name of the concept can be used in a interaction rule." />
+                  <node concept="lj46D" id="2JgAzNT$X6A" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNT$X6B" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNT$X6C" role="3EZMnx">
+                  <property role="3F0ifm" value="Concepts can be HumanInput concept or RobotOutput concept." />
+                  <node concept="lj46D" id="2JgAzNT$X6D" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNT$X6E" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNT$X6F" role="3EZMnx">
+                  <property role="3F0ifm" value="HumanInput concepts can only be used where human input is expected and" />
+                  <node concept="lj46D" id="2JgAzNT$X6G" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNT$X6H" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNT$XvK" role="3EZMnx">
+                  <property role="3F0ifm" value="RobotOutput concepts can only be used where robot output is expected." />
+                  <node concept="lj46D" id="2JgAzNT$Xw3" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNT$Xw8" role="3F10Kt" />
+                </node>
+                <node concept="l2Vlx" id="2JgAzNT$X6L" role="2iSdaV" />
+                <node concept="lj46D" id="2JgAzNT$X6M" role="3F10Kt">
+                  <property role="VOm3f" value="true" />
+                </node>
+                <node concept="pj6Ft" id="2JgAzNT$X6N" role="3F10Kt">
+                  <property role="VOm3f" value="true" />
+                </node>
+              </node>
+              <node concept="3F0ifn" id="5oCX5VaGKfK" role="3EZMnx">
+                <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+              </node>
+              <node concept="3EZMnI" id="2JgAzNT$X6O" role="3EZMnx">
+                <node concept="VPM3Z" id="2JgAzNT$X6P" role="3F10Kt" />
+                <node concept="3F0ifn" id="2JgAzNT$X6Q" role="3EZMnx">
+                  <property role="3F0ifm" value="Robot Output Only (Proposal)" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNT$X6R" role="3EZMnx">
+                  <property role="3F0ifm" value="A proposal is an interaction rule, which produces robot output only." />
+                  <node concept="lj46D" id="2JgAzNT$X6S" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNT$X6T" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNT$X6U" role="3EZMnx">
+                  <property role="3F0ifm" value="Such a rule should be triggered by a function named &quot;nextProposal&quot; to" />
+                  <node concept="lj46D" id="2JgAzNT$X6V" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNT$X6W" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNT$X6X" role="3EZMnx">
+                  <property role="3F0ifm" value="produce an output." />
+                  <node concept="lj46D" id="2JgAzNT$X6Y" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNT$X6Z" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNT$X70" role="3EZMnx">
+                  <property role="3F0ifm" value="If a topic contains more than one proposal, they will be triggered one by one from top to bottom." />
+                  <node concept="lj46D" id="2JgAzNT$X71" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNT$X72" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNT$X73" role="3EZMnx">
+                  <property role="3F0ifm" value="(At least there should be one UserRule in the topic, which calls the &quot;nextProposal&quot; function)" />
+                  <node concept="lj46D" id="2JgAzNT$X74" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNT$X75" role="3F10Kt" />
+                </node>
+                <node concept="l2Vlx" id="2JgAzNT$X76" role="2iSdaV" />
+                <node concept="lj46D" id="2JgAzNT$X77" role="3F10Kt">
+                  <property role="VOm3f" value="true" />
+                </node>
+                <node concept="pj6Ft" id="2JgAzNT$X78" role="3F10Kt">
+                  <property role="VOm3f" value="true" />
+                </node>
+              </node>
+              <node concept="3F0ifn" id="5oCX5VaGKdQ" role="3EZMnx">
+                <ref role="1k5W1q" node="5Z9ErPsR6Gr" resolve="notEditable" />
+              </node>
+              <node concept="3EZMnI" id="2JgAzNT$X79" role="3EZMnx">
+                <node concept="VPM3Z" id="2JgAzNT$X7a" role="3F10Kt" />
+                <node concept="pj6Ft" id="2JgAzNT$X7b" role="3F10Kt">
+                  <property role="VOm3f" value="true" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNT$X7c" role="3EZMnx">
+                  <property role="3F0ifm" value="Input and Output (UserRule)" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNT$X7d" role="3EZMnx">
+                  <property role="3F0ifm" value="A UserRule is an interaction rule that expects input from humans and generates an output from the robot." />
+                  <node concept="lj46D" id="2JgAzNT$X7e" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNT$X7f" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNT$X7g" role="3EZMnx">
+                  <property role="3F0ifm" value="The Input of that kind of rule can be either a spoken sentence/word or an outside influence," />
+                  <node concept="lj46D" id="2JgAzNT$X7h" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNT$X7i" role="3F10Kt" />
+                </node>
+                <node concept="3F0ifn" id="2JgAzNT$XwR" role="3EZMnx">
+                  <property role="3F0ifm" value="like a button press on the robot." />
+                  <node concept="lj46D" id="2JgAzNT$Xx1" role="3F10Kt">
+                    <property role="VOm3f" value="true" />
+                  </node>
+                  <node concept="Vb9p2" id="2JgAzNT$Xx6" role="3F10Kt" />
+                </node>
+                <node concept="l2Vlx" id="2JgAzNT$X7j" role="2iSdaV" />
+                <node concept="lj46D" id="2JgAzNT$X7k" role="3F10Kt">
+                  <property role="VOm3f" value="true" />
+                </node>
+              </node>
+              <node concept="l2Vlx" id="2JgAzNT$X7l" role="2iSdaV" />
+              <node concept="lj46D" id="2JgAzNT$X7m" role="3F10Kt">
+                <property role="VOm3f" value="true" />
+              </node>
+            </node>
+            <node concept="VPM3Z" id="2JgAzNT$X7n" role="3F10Kt" />
+            <node concept="pj6Ft" id="2JgAzNT$X7o" role="3F10Kt">
+              <property role="VOm3f" value="true" />
+            </node>
+            <node concept="l2Vlx" id="2JgAzNT$X7p" role="2iSdaV" />
+          </node>
+          <node concept="VPM3Z" id="2JgAzNSubVc" role="3F10Kt" />
+          <node concept="2iRkQZ" id="2JgAzNSubVf" role="2iSdaV" />
+          <node concept="pkWqt" id="2JgAzNSubYY" role="pqm2j">
+            <node concept="3clFbS" id="2JgAzNSubYZ" role="2VODD2">
+              <node concept="3clFbF" id="2JgAzNTbptN" role="3cqZAp">
+                <node concept="3y3z36" id="2JgAzNTbpZB" role="3clFbG">
+                  <node concept="2OqwBi" id="2JgAzNTbptV" role="3uHU7B">
+                    <node concept="2OqwBi" id="2JgAzNTbptW" role="2Oq$k0">
+                      <node concept="2OqwBi" id="2JgAzNTbptX" role="2Oq$k0">
+                        <node concept="pncrf" id="2JgAzNTbptY" role="2Oq$k0" />
+                        <node concept="3TrEf2" id="2JgAzNTbptZ" role="2OqNvi">
+                          <ref role="3Tt5mk" to="zefy:4P1LQvocRHI" resolve="header" />
+                        </node>
+                      </node>
+                      <node concept="3TrcHB" id="2JgAzNTbpu0" role="2OqNvi">
+                        <ref role="3TsBF5" to="zefy:4P1LQvocRHP" resolve="language" />
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="2JgAzNTbpu1" role="2OqNvi">
+                      <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
+                    </node>
+                  </node>
+                  <node concept="Xl_RD" id="2JgAzNTbptU" role="3uHU7w">
+                    <property role="Xl_RC" value="ged" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="pkWqt" id="2JgAzNTgDR3" role="pqm2j">
+          <node concept="3clFbS" id="2JgAzNTgDR4" role="2VODD2">
+            <node concept="3clFbF" id="2JgAzNTgDU9" role="3cqZAp">
+              <node concept="3fqX7Q" id="2JgAzNTgEzq" role="3clFbG">
+                <node concept="2OqwBi" id="2JgAzNTgEzs" role="3fr31v">
+                  <node concept="pncrf" id="2JgAzNTgEzt" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="2JgAzNTgEzu" role="2OqNvi">
+                    <ref role="3TsBF5" to="zefy:2JgAzNTbriA" resolve="hideExplanation" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>

@@ -16,7 +16,8 @@ public class HumanConceptReference_TextGen extends TextGenDescriptorBase {
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
     tgs.append("~");
-    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.concept$nPab), PROPS.name$MnvL));
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.concept$nPab), PROPS.name$MnvL).replace(" ", "_"));
+    tgs.append("HC");
     tgs.append(" ");
   }
 

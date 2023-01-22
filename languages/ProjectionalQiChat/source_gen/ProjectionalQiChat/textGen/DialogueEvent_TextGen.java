@@ -13,8 +13,11 @@ public class DialogueEvent_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("e:");
-    tgs.append(SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.dialogueEvent$o55M).getName().replace("1", "/"));
+    try {
+      tgs.append("e:");
+      tgs.append(SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.dialogueEvent$o55M).getName().replace("1", "/"));
+    } catch (Error E) {
+    }
   }
 
   private static final class PROPS {

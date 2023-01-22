@@ -41,8 +41,9 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
       case 1:
         if (true) {
           // concept
-          intentions = new IntentionFactory[1];
+          intentions = new IntentionFactory[2];
           intentions[0] = new convertToRobotConcept_Intention();
+          intentions[1] = new cloneHumanConcept_Intention();
         }
         break;
       case 2:
@@ -55,8 +56,9 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
       case 3:
         if (true) {
           // concept
-          intentions = new IntentionFactory[1];
+          intentions = new IntentionFactory[2];
           intentions[0] = new convertToHumanConcept_Intention();
+          intentions[1] = new cloneRobotConcept_Intention();
         }
         break;
       case 4:
@@ -76,11 +78,13 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
       case 6:
         if (true) {
           // concept
-          intentions = new IntentionFactory[4];
+          intentions = new IntentionFactory[6];
           intentions[0] = new addRobotConceptToTopic_Intention();
           intentions[1] = new addHumanConcept_Intention();
           intentions[2] = new importTopics_Intention();
           intentions[3] = new importConceptCollections_Intention();
+          intentions[4] = new sortConceptsRobotHuman_Intention();
+          intentions[5] = new sortConceptsHumanRobot_Intention();
         }
         break;
       case 7:
@@ -100,7 +104,7 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
   @NotNull
   @Override
   public Collection<IntentionFactory> getAllIntentions() {
-    IntentionFactory[] rv = new IntentionFactory[12];
+    IntentionFactory[] rv = new IntentionFactory[16];
     rv[0] = new convertToUserRule_Intention();
     rv[1] = new convertToProposal_Intention();
     rv[2] = new convertToHumanConcept_Intention();
@@ -113,6 +117,10 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
     rv[9] = new addHumanConcept_Intention();
     rv[10] = new importTopics_Intention();
     rv[11] = new importConceptCollections_Intention();
+    rv[12] = new cloneRobotConcept_Intention();
+    rv[13] = new cloneHumanConcept_Intention();
+    rv[14] = new sortConceptsRobotHuman_Intention();
+    rv[15] = new sortConceptsHumanRobot_Intention();
     return Arrays.asList(rv);
   }
   private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b103L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b106L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b030L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b108L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b033L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b104L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c487b95L), MetaIdFactory.conceptId(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b102L)).seal();
