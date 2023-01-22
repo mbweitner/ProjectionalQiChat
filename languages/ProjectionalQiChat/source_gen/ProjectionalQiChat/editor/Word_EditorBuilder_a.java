@@ -251,6 +251,7 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
     editorCell.setCellId("Collection_8g1p9d_b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.BASE_LINE_CELL, true);
+    style.set(StyleAttributes.HORIZONTAL_ALIGN, CellAlign.CENTER);
     editorCell.getStyle().putAll(style);
     editorCell.addEditorCell(createProperty_0());
     return editorCell;

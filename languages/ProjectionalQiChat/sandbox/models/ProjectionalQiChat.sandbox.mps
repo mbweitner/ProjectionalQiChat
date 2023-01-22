@@ -31,12 +31,12 @@
       <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="nn" index="1PaTwC" />
     </language>
   </registry>
-  <node concept="1NA_yj" id="5oCX5Vcz4bd">
+  <node concept="1NA_yj" id="7DSrvg68$k0">
     <property role="TrG5h" value="Rezept" />
-    <node concept="2C0Xsa" id="5oCX5Vcz4be" role="1WRmxg">
-      <node concept="1PaTwC" id="5oCX5Vcz4bf" role="2lOMFJ" />
+    <node concept="2C0Xsa" id="7DSrvg68$k1" role="1WRmxg">
+      <node concept="1PaTwC" id="7DSrvg68$k2" role="2lOMFJ" />
     </node>
-    <node concept="1NATcg" id="5oCX5Vcz4bg" role="2lsFK9" />
+    <node concept="1NATcg" id="7DSrvg68$k3" role="2lsFK9" />
   </node>
 </model>
 

@@ -3798,5 +3798,160 @@
       </node>
     </node>
   </node>
+  <node concept="2S6QgY" id="7DSrvg5QAoM">
+    <property role="3GE5qa" value="topicIntention" />
+    <property role="TrG5h" value="newProposal" />
+    <property role="2ZfUl0" value="true" />
+    <ref role="2ZfgGC" to="zefy:6Zi8Kosi7Il" resolve="Topic" />
+    <node concept="2S6ZIM" id="7DSrvg5QAoN" role="2ZfVej">
+      <node concept="3clFbS" id="7DSrvg5QAoO" role="2VODD2">
+        <node concept="3clFbF" id="7DSrvg5QAtQ" role="3cqZAp">
+          <node concept="Xl_RD" id="7DSrvg5QAtP" role="3clFbG">
+            <property role="Xl_RC" value="create new Robot Output Only rule (Proposal)" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2Sbjvc" id="7DSrvg5QAoP" role="2ZfgGD">
+      <node concept="3clFbS" id="7DSrvg5QAoQ" role="2VODD2">
+        <node concept="3cpWs8" id="7DSrvg5QB6R" role="3cqZAp">
+          <node concept="3cpWsn" id="7DSrvg5QB6U" role="3cpWs9">
+            <property role="TrG5h" value="newProposal" />
+            <node concept="3Tqbb2" id="7DSrvg5QB6Q" role="1tU5fm">
+              <ref role="ehGHo" to="zefy:6Zi8Kosir0K" resolve="Proposal" />
+            </node>
+            <node concept="2ShNRf" id="7DSrvg5QB87" role="33vP2m">
+              <node concept="3zrR0B" id="7DSrvg5QB85" role="2ShVmc">
+                <node concept="3Tqbb2" id="7DSrvg5QB86" role="3zrR0E">
+                  <ref role="ehGHo" to="zefy:6Zi8Kosir0K" resolve="Proposal" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="7DSrvg5QB8U" role="3cqZAp">
+          <node concept="37vLTI" id="7DSrvg5QBJM" role="3clFbG">
+            <node concept="2ShNRf" id="7DSrvg5QBMs" role="37vLTx">
+              <node concept="3zrR0B" id="7DSrvg5QBK_" role="2ShVmc">
+                <node concept="3Tqbb2" id="7DSrvg5QBKA" role="3zrR0E">
+                  <ref role="ehGHo" to="zefy:6Zi8Kosir0N" resolve="RobotOutput" />
+                </node>
+              </node>
+            </node>
+            <node concept="2OqwBi" id="7DSrvg5QBjG" role="37vLTJ">
+              <node concept="37vLTw" id="7DSrvg5QB8S" role="2Oq$k0">
+                <ref role="3cqZAo" node="7DSrvg5QB6U" resolve="newProposal" />
+              </node>
+              <node concept="3TrEf2" id="7DSrvg5QByx" role="2OqNvi">
+                <ref role="3Tt5mk" to="zefy:4P1LQvocRIj" resolve="output" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="7DSrvg5QBNx" role="3cqZAp">
+          <node concept="2OqwBi" id="7DSrvg5QD$v" role="3clFbG">
+            <node concept="2OqwBi" id="7DSrvg5QBX7" role="2Oq$k0">
+              <node concept="2Sf5sV" id="7DSrvg5QBNw" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="7DSrvg5QCae" role="2OqNvi">
+                <ref role="3TtcxE" to="zefy:4P1LQvocRHK" resolve="body" />
+              </node>
+            </node>
+            <node concept="TSZUe" id="7DSrvg5QEUS" role="2OqNvi">
+              <node concept="37vLTw" id="7DSrvg5QFa4" role="25WWJ7">
+                <ref role="3cqZAo" node="7DSrvg5QB6U" resolve="newProposal" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2S6QgY" id="7DSrvg5QFnv">
+    <property role="3GE5qa" value="topicIntention" />
+    <property role="TrG5h" value="newUserRule" />
+    <property role="2ZfUl0" value="true" />
+    <ref role="2ZfgGC" to="zefy:6Zi8Kosi7Il" resolve="Topic" />
+    <node concept="2S6ZIM" id="7DSrvg5QFnw" role="2ZfVej">
+      <node concept="3clFbS" id="7DSrvg5QFnx" role="2VODD2">
+        <node concept="3clFbF" id="7DSrvg5QFsz" role="3cqZAp">
+          <node concept="Xl_RD" id="7DSrvg5QFsy" role="3clFbG">
+            <property role="Xl_RC" value="create new Input and Output rule (UserRule)" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2Sbjvc" id="7DSrvg5QFny" role="2ZfgGD">
+      <node concept="3clFbS" id="7DSrvg5QFnz" role="2VODD2">
+        <node concept="3cpWs8" id="7DSrvg5QHo3" role="3cqZAp">
+          <node concept="3cpWsn" id="7DSrvg5QHo6" role="3cpWs9">
+            <property role="TrG5h" value="newUserRule" />
+            <node concept="3Tqbb2" id="7DSrvg5QHo2" role="1tU5fm">
+              <ref role="ehGHo" to="zefy:6Zi8Kosir42" resolve="UserRule" />
+            </node>
+            <node concept="2ShNRf" id="7DSrvg5QHp9" role="33vP2m">
+              <node concept="3zrR0B" id="7DSrvg5QHp7" role="2ShVmc">
+                <node concept="3Tqbb2" id="7DSrvg5QHp8" role="3zrR0E">
+                  <ref role="ehGHo" to="zefy:6Zi8Kosir42" resolve="UserRule" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="7DSrvg5QHpY" role="3cqZAp">
+          <node concept="37vLTI" id="7DSrvg5QI4l" role="3clFbG">
+            <node concept="2ShNRf" id="7DSrvg5QI6R" role="37vLTx">
+              <node concept="3zrR0B" id="7DSrvg5QI50" role="2ShVmc">
+                <node concept="3Tqbb2" id="7DSrvg5QI51" role="3zrR0E">
+                  <ref role="ehGHo" to="zefy:6Zi8Kosir0O" resolve="HumanInput" />
+                </node>
+              </node>
+            </node>
+            <node concept="2OqwBi" id="7DSrvg5QHC4" role="37vLTJ">
+              <node concept="37vLTw" id="7DSrvg5QHpW" role="2Oq$k0">
+                <ref role="3cqZAo" node="7DSrvg5QHo6" resolve="newUserRule" />
+              </node>
+              <node concept="3TrEf2" id="7DSrvg5QHSR" role="2OqNvi">
+                <ref role="3Tt5mk" to="zefy:4P1LQvocRIs" resolve="input" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="7DSrvg5QI7L" role="3cqZAp">
+          <node concept="37vLTI" id="7DSrvg5QIJ$" role="3clFbG">
+            <node concept="2ShNRf" id="7DSrvg5QIMf" role="37vLTx">
+              <node concept="3zrR0B" id="7DSrvg5QIKo" role="2ShVmc">
+                <node concept="3Tqbb2" id="7DSrvg5QIKp" role="3zrR0E">
+                  <ref role="ehGHo" to="zefy:6Zi8Kosir0N" resolve="RobotOutput" />
+                </node>
+              </node>
+            </node>
+            <node concept="2OqwBi" id="7DSrvg5QIjj" role="37vLTJ">
+              <node concept="37vLTw" id="7DSrvg5QI7J" role="2Oq$k0">
+                <ref role="3cqZAo" node="7DSrvg5QHo6" resolve="newUserRule" />
+              </node>
+              <node concept="3TrEf2" id="7DSrvg5QI$6" role="2OqNvi">
+                <ref role="3Tt5mk" to="zefy:4P1LQvocRIu" resolve="output" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="7DSrvg5QIQ6" role="3cqZAp">
+          <node concept="2OqwBi" id="7DSrvg5QKBe" role="3clFbG">
+            <node concept="2OqwBi" id="7DSrvg5QIZG" role="2Oq$k0">
+              <node concept="2Sf5sV" id="7DSrvg5QIQ5" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="7DSrvg5QJcW" role="2OqNvi">
+                <ref role="3TtcxE" to="zefy:4P1LQvocRHK" resolve="body" />
+              </node>
+            </node>
+            <node concept="TSZUe" id="7DSrvg5QNdT" role="2OqNvi">
+              <node concept="37vLTw" id="7DSrvg5QNqD" role="25WWJ7">
+                <ref role="3cqZAo" node="7DSrvg5QHo6" resolve="newUserRule" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

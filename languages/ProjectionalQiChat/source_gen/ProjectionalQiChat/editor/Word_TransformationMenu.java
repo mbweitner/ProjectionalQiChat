@@ -40,6 +40,7 @@ import jetbrains.mps.internal.collections.runtime.CollectionSequence;
 import jetbrains.mps.editor.runtime.cells.CellIdManager;
 import org.jetbrains.mps.openapi.language.SProperty;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 public class Word_TransformationMenu extends TransformationMenuBase {
   private final Set<String> myLocations = SetSequence.fromSetAndArray(new HashSet<String>(), MenuLocations.RIGHT_SIDE_TRANSFORM, MenuLocations.LEFT_SIDE_TRANSFORM);
@@ -118,6 +119,10 @@ public class Word_TransformationMenu extends TransformationMenuBase {
         SelectionUtil.selectNode(_context.getEditorContext(), SLinkOperations.getTarget(newDeclaration, LINKS.value$oJJI));
       }
 
+      @Override
+      public boolean canExecute(@NotNull String pattern) {
+        return (SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.RobotOutput$SA, false, false) != null);
+      }
 
 
 
@@ -183,6 +188,10 @@ public class Word_TransformationMenu extends TransformationMenuBase {
         SelectionUtil.selectCell(_context.getEditorContext(), newDeclaration, "*" + CellIdManager.createPropertyId("name"));
       }
 
+      @Override
+      public boolean canExecute(@NotNull String pattern) {
+        return (SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.RobotOutput$SA, false, false) != null);
+      }
 
 
 
@@ -211,5 +220,9 @@ public class Word_TransformationMenu extends TransformationMenuBase {
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink value$oJJI = MetaAdapterFactory.getContainmentLink(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b326L, 0x4d41c767d8337beaL, "value");
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept RobotOutput$SA = MetaAdapterFactory.getConcept(0x9f283760f9ca4f5bL, 0x8990d42851344ce7L, 0x6fd223061c49b033L, "ProjectionalQiChat.structure.RobotOutput");
   }
 }

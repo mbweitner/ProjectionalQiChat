@@ -49,6 +49,7 @@
         <property id="1226504838901" name="measure" index="2hoDZC" />
       </concept>
       <concept id="1597643335227097138" name="jetbrains.mps.lang.editor.structure.QueryFunctionParameter_TransformationMenu_node" flags="ng" index="7Obwk" />
+      <concept id="6516520003787916624" name="jetbrains.mps.lang.editor.structure.QueryFunction_TransformationMenu_Condition" flags="ig" index="27VH4U" />
       <concept id="6822301196700715228" name="jetbrains.mps.lang.editor.structure.ConceptEditorHintDeclarationReference" flags="ig" index="2aJ2om">
         <reference id="5944657839026714445" name="hint" index="2$4xQ3" />
       </concept>
@@ -94,6 +95,7 @@
       <concept id="1239814640496" name="jetbrains.mps.lang.editor.structure.CellLayout_VerticalGrid" flags="nn" index="2EHx9g" />
       <concept id="1638911550608610798" name="jetbrains.mps.lang.editor.structure.QueryFunction_TransformationMenu_Execute" flags="ig" index="IWg2L" />
       <concept id="1638911550608610278" name="jetbrains.mps.lang.editor.structure.TransformationMenuPart_Action" flags="ng" index="IWgqT">
+        <child id="6202297022026447496" name="canExecuteFunction" index="2jiSrf" />
         <child id="1638911550608610281" name="executeFunction" index="IWgqQ" />
         <child id="5692353713941573325" name="textFunction" index="1hCUd6" />
       </concept>
@@ -1939,6 +1941,9 @@
           </node>
           <node concept="2R9Tw8" id="5oCX5VcgU8W" role="3F10Kt">
             <property role="VOm3f" value="true" />
+          </node>
+          <node concept="37jFXN" id="7DSrvg5$mIK" role="3F10Kt">
+            <property role="37lx6p" value="hZ7kQ4a/CENTER" />
           </node>
         </node>
       </node>
@@ -12627,6 +12632,25 @@
             </node>
           </node>
         </node>
+        <node concept="27VH4U" id="7DSrvg5EGeP" role="2jiSrf">
+          <node concept="3clFbS" id="7DSrvg5EGeQ" role="2VODD2">
+            <node concept="3clFbF" id="7DSrvg5EGjt" role="3cqZAp">
+              <node concept="2OqwBi" id="7DSrvg5EHvb" role="3clFbG">
+                <node concept="2OqwBi" id="7DSrvg5EGD5" role="2Oq$k0">
+                  <node concept="7Obwk" id="7DSrvg5EGjs" role="2Oq$k0" />
+                  <node concept="2Xjw5R" id="7DSrvg5EH9T" role="2OqNvi">
+                    <node concept="1xMEDy" id="7DSrvg5EH9V" role="1xVPHs">
+                      <node concept="chp4Y" id="7DSrvg5EHip" role="ri$Ld">
+                        <ref role="cht4Q" to="zefy:6Zi8Kosir0N" resolve="RobotOutput" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3x8VRR" id="7DSrvg5EHSy" role="2OqNvi" />
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
     </node>
     <node concept="1Qtc8_" id="2JDDPTCZObJ" role="IW6Ez">
@@ -12726,6 +12750,25 @@
                     <ref role="fyFUz" to="tpck:h0TrG11" resolve="name" />
                   </node>
                 </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="27VH4U" id="7DSrvg5EI8J" role="2jiSrf">
+          <node concept="3clFbS" id="7DSrvg5EI8K" role="2VODD2">
+            <node concept="3clFbF" id="7DSrvg5EI9l" role="3cqZAp">
+              <node concept="2OqwBi" id="7DSrvg5EI9n" role="3clFbG">
+                <node concept="2OqwBi" id="7DSrvg5EI9o" role="2Oq$k0">
+                  <node concept="7Obwk" id="7DSrvg5EI9p" role="2Oq$k0" />
+                  <node concept="2Xjw5R" id="7DSrvg5EI9q" role="2OqNvi">
+                    <node concept="1xMEDy" id="7DSrvg5EI9r" role="1xVPHs">
+                      <node concept="chp4Y" id="7DSrvg5EI9s" role="ri$Ld">
+                        <ref role="cht4Q" to="zefy:6Zi8Kosir0N" resolve="RobotOutput" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3x8VRR" id="7DSrvg5EI9t" role="2OqNvi" />
               </node>
             </node>
           </node>
@@ -16152,6 +16195,27 @@
           <node concept="3F0ifn" id="2JgAzNSubVr" role="3EZMnx">
             <property role="3F0ifm" value="Tipps &amp; Tricks im Umgang mit dem Editor" />
           </node>
+          <node concept="3F0ifn" id="7DSrvg62EnU" role="3EZMnx" />
+          <node concept="3EZMnI" id="7DSrvg62Fgr" role="3EZMnx">
+            <node concept="2iRfu4" id="7DSrvg62Fgs" role="2iSdaV" />
+            <node concept="3F0ifn" id="7DSrvg62EKf" role="3EZMnx">
+              <property role="3F0ifm" value="Wichtigste Regel:" />
+            </node>
+            <node concept="3F0ifn" id="7DSrvg62Fx5" role="3EZMnx">
+              <property role="3F0ifm" value="Ist etwas" />
+              <node concept="Vb9p2" id="7DSrvg62Fxy" role="3F10Kt" />
+            </node>
+            <node concept="3F0ifn" id="7DSrvg62Fxi" role="3EZMnx">
+              <property role="3F0ifm" value="rot" />
+              <node concept="VechU" id="7DSrvg62FxI" role="3F10Kt">
+                <property role="Vb096" value="fLwANPn/red" />
+              </node>
+            </node>
+            <node concept="3F0ifn" id="7DSrvg62Fxs" role="3EZMnx">
+              <property role="3F0ifm" value="dann fehlt etwas oder es ist etwas falsch!" />
+              <node concept="Vb9p2" id="7DSrvg62FxK" role="3F10Kt" />
+            </node>
+          </node>
           <node concept="3F0ifn" id="2JgAzNSubVu" role="3EZMnx" />
           <node concept="3EZMnI" id="2JgAzNSubVO" role="3EZMnx">
             <node concept="3EZMnI" id="2JgAzNTbuMx" role="3EZMnx">
@@ -16459,6 +16523,27 @@
             <property role="3F0ifm" value="Tips &amp; tricks for using the editor" />
           </node>
           <node concept="3F0ifn" id="2JgAzNT$X5u" role="3EZMnx" />
+          <node concept="3EZMnI" id="7DSrvg62GAj" role="3EZMnx">
+            <node concept="2iRfu4" id="7DSrvg62GAk" role="2iSdaV" />
+            <node concept="3F0ifn" id="7DSrvg62FSQ" role="3EZMnx">
+              <property role="3F0ifm" value="Important Rule:" />
+            </node>
+            <node concept="3F0ifn" id="7DSrvg62GDU" role="3EZMnx">
+              <property role="3F0ifm" value="If something is" />
+              <node concept="Vb9p2" id="7DSrvg62GEi" role="3F10Kt" />
+            </node>
+            <node concept="3F0ifn" id="7DSrvg62GE2" role="3EZMnx">
+              <property role="3F0ifm" value="red" />
+              <node concept="VechU" id="7DSrvg62GEk" role="3F10Kt">
+                <property role="Vb096" value="fLwANPn/red" />
+              </node>
+            </node>
+            <node concept="3F0ifn" id="7DSrvg62GEc" role="3EZMnx">
+              <property role="3F0ifm" value="then it is wrong or something is missing!" />
+              <node concept="Vb9p2" id="7DSrvg62GEm" role="3F10Kt" />
+            </node>
+          </node>
+          <node concept="3F0ifn" id="7DSrvg62FzQ" role="3EZMnx" />
           <node concept="3EZMnI" id="2JgAzNT$X5v" role="3EZMnx">
             <node concept="3EZMnI" id="2JgAzNT$X5w" role="3EZMnx">
               <node concept="VPM3Z" id="2JgAzNT$X5x" role="3F10Kt" />

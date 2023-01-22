@@ -23,6 +23,8 @@ import jetbrains.mps.editor.runtime.style.StyleImpl;
 import ProjectionalQiChat.editor.globalStyles_StyleSheet.notEditableStyleClass;
 import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.nodeEditor.MPSFonts;
+import jetbrains.mps.openapi.editor.style.StyleRegistry;
+import jetbrains.mps.nodeEditor.MPSColors;
 import de.itemis.mps.editor.celllayout.runtime.cells.HorizontalLineCell;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -97,7 +99,7 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
       editorCell.addEditorCell(createCollection_3());
     }
     if (nodeCondition_qdcqoc_a1b0()) {
-      editorCell.addEditorCell(createCollection_17());
+      editorCell.addEditorCell(createCollection_18());
     }
     return editorCell;
   }
@@ -117,6 +119,8 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
     editorCell.addEditorCell(createConstant_1());
     editorCell.addEditorCell(createConstant_2());
     editorCell.addEditorCell(createCollection_4());
+    editorCell.addEditorCell(createConstant_7());
+    editorCell.addEditorCell(createCollection_5());
     return editorCell;
   }
   private EditorCell createConstant_1() {
@@ -132,155 +136,165 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
     return editorCell;
   }
   private EditorCell createCollection_4() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_qdcqoc_c0b0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
-    editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createCollection_5());
-    editorCell.addEditorCell(createConstant_22());
-    editorCell.addEditorCell(createHorizontalLineCell_1());
-    editorCell.addEditorCell(createConstant_23());
-    editorCell.addEditorCell(createCollection_13());
-    return editorCell;
-  }
-  private EditorCell createCollection_5() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_qdcqoc_a2a1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_3());
-    editorCell.addEditorCell(createCollection_6());
-    return editorCell;
-  }
-  private EditorCell createConstant_3() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Tastenkombinationen/-kürzel:");
-    editorCell.setCellId("Constant_qdcqoc_a0c0b0");
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createCollection_6() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
-    editorCell.setCellId("Collection_qdcqoc_b0c0b0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    editorCell.getStyle().putAll(style);
-    editorCell.setGridLayout(true);
-    editorCell.addEditorCell(createCollection_7());
-    editorCell.addEditorCell(createCollection_8());
-    editorCell.addEditorCell(createCollection_9());
-    editorCell.addEditorCell(createCollection_10());
-    editorCell.addEditorCell(createCollection_11());
-    editorCell.addEditorCell(createCollection_12());
-    return editorCell;
-  }
-  private EditorCell createCollection_7() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_qdcqoc_a1a2a1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    editorCell.getStyle().putAll(style);
+    editorCell.setCellId("Collection_qdcqoc_c0b0");
+    editorCell.addEditorCell(createConstant_3());
     editorCell.addEditorCell(createConstant_4());
     editorCell.addEditorCell(createConstant_5());
     editorCell.addEditorCell(createConstant_6());
     return editorCell;
   }
+  private EditorCell createConstant_3() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Wichtigste Regel:");
+    editorCell.setCellId("Constant_qdcqoc_a2a1a");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
   private EditorCell createConstant_4() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Kombination");
-    editorCell.setCellId("Constant_qdcqoc_a0b0c0b0");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Ist etwas");
+    editorCell.setCellId("Constant_qdcqoc_b2a1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_5() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
-    editorCell.setCellId("Constant_qdcqoc_b0b0c0b0");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "rot");
+    editorCell.setCellId("Constant_qdcqoc_c2a1a");
     Style style = new StyleImpl();
-    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    style.set(StyleAttributes.TEXT_COLOR, StyleRegistry.getInstance().getSimpleColor(MPSColors.red));
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_6() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Effekt");
-    editorCell.setCellId("Constant_qdcqoc_c0b0c0b0");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "dann fehlt etwas oder es ist etwas falsch!");
+    editorCell.setCellId("Constant_qdcqoc_d2a1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_7() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+    editorCell.setCellId("Constant_qdcqoc_d0b0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createCollection_5() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_qdcqoc_e0b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createCollection_6());
+    editorCell.addEditorCell(createConstant_27());
+    editorCell.addEditorCell(createHorizontalLineCell_1());
+    editorCell.addEditorCell(createConstant_28());
+    editorCell.addEditorCell(createCollection_14());
+    return editorCell;
+  }
+  private EditorCell createCollection_6() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_qdcqoc_a4a1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_8());
+    editorCell.addEditorCell(createCollection_7());
+    return editorCell;
+  }
+  private EditorCell createConstant_8() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Tastenkombinationen/-kürzel:");
+    editorCell.setCellId("Constant_qdcqoc_a0e0b0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createCollection_7() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
+    editorCell.setCellId("Collection_qdcqoc_b0e0b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setGridLayout(true);
+    editorCell.addEditorCell(createCollection_8());
+    editorCell.addEditorCell(createCollection_9());
+    editorCell.addEditorCell(createCollection_10());
+    editorCell.addEditorCell(createCollection_11());
+    editorCell.addEditorCell(createCollection_12());
+    editorCell.addEditorCell(createCollection_13());
     return editorCell;
   }
   private EditorCell createCollection_8() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_qdcqoc_b1a2a1a");
+    editorCell.setCellId("Collection_qdcqoc_a1a4a1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_7());
-    editorCell.addEditorCell(createConstant_8());
     editorCell.addEditorCell(createConstant_9());
-    return editorCell;
-  }
-  private EditorCell createConstant_7() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Alt + 2");
-    editorCell.setCellId("Constant_qdcqoc_a1b0c0b0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_8() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
-    editorCell.setCellId("Constant_qdcqoc_b1b0c0b0");
-    Style style = new StyleImpl();
-    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
+    editorCell.addEditorCell(createConstant_10());
+    editorCell.addEditorCell(createConstant_11());
     return editorCell;
   }
   private EditorCell createConstant_9() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Inspektor anzeigen/ausblenden (Zusatzinformationen für die derzeitige Auswahl)");
-    editorCell.setCellId("Constant_qdcqoc_c1b0c0b0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Kombination");
+    editorCell.setCellId("Constant_qdcqoc_a0b0e0b0");
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createCollection_9() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_qdcqoc_c1a2a1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_10());
-    editorCell.addEditorCell(createConstant_11());
-    editorCell.addEditorCell(createConstant_12());
-    return editorCell;
-  }
   private EditorCell createConstant_10() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Strg + Leertaste");
-    editorCell.setCellId("Constant_qdcqoc_a2b0c0b0");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
+    editorCell.setCellId("Constant_qdcqoc_b0b0e0b0");
     Style style = new StyleImpl();
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_11() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Effekt");
+    editorCell.setCellId("Constant_qdcqoc_c0b0e0b0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createCollection_9() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
+    editorCell.setCellId("Collection_qdcqoc_b1a4a1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_12());
+    editorCell.addEditorCell(createConstant_13());
+    editorCell.addEditorCell(createConstant_14());
+    return editorCell;
+  }
+  private EditorCell createConstant_12() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Alt + 2");
+    editorCell.setCellId("Constant_qdcqoc_a1b0e0b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_13() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
-    editorCell.setCellId("Constant_qdcqoc_b2b0c0b0");
+    editorCell.setCellId("Constant_qdcqoc_b1b0e0b0");
     Style style = new StyleImpl();
     new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_12() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Zeigt mögliche Einträge für die aktuell ausgewählte Positon");
-    editorCell.setCellId("Constant_qdcqoc_c2b0c0b0");
+  private EditorCell createConstant_14() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Inspektor anzeigen/ausblenden (Zusatzinformationen für die derzeitige Auswahl)");
+    editorCell.setCellId("Constant_qdcqoc_c1b0e0b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
     editorCell.getStyle().putAll(style);
@@ -289,36 +303,36 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
   }
   private EditorCell createCollection_10() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_qdcqoc_d1a2a1a");
+    editorCell.setCellId("Collection_qdcqoc_c1a4a1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_13());
-    editorCell.addEditorCell(createConstant_14());
     editorCell.addEditorCell(createConstant_15());
+    editorCell.addEditorCell(createConstant_16());
+    editorCell.addEditorCell(createConstant_17());
     return editorCell;
   }
-  private EditorCell createConstant_13() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Alt + Enter");
-    editorCell.setCellId("Constant_qdcqoc_a3b0c0b0");
+  private EditorCell createConstant_15() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Strg + Leertaste");
+    editorCell.setCellId("Constant_qdcqoc_a2b0e0b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_14() {
+  private EditorCell createConstant_16() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
-    editorCell.setCellId("Constant_qdcqoc_b3b0c0b0");
+    editorCell.setCellId("Constant_qdcqoc_b2b0e0b0");
     Style style = new StyleImpl();
     new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_15() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Zeigt mögliche Operationen an, die an der ausgewählten Stelle durchgeführt werden können");
-    editorCell.setCellId("Constant_qdcqoc_c3b0c0b0");
+  private EditorCell createConstant_17() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Zeigt mögliche Einträge für die aktuell ausgewählte Positon");
+    editorCell.setCellId("Constant_qdcqoc_c2b0e0b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
     editorCell.getStyle().putAll(style);
@@ -327,36 +341,36 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
   }
   private EditorCell createCollection_11() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_qdcqoc_e1a2a1a");
+    editorCell.setCellId("Collection_qdcqoc_d1a4a1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_16());
-    editorCell.addEditorCell(createConstant_17());
     editorCell.addEditorCell(createConstant_18());
+    editorCell.addEditorCell(createConstant_19());
+    editorCell.addEditorCell(createConstant_20());
     return editorCell;
   }
-  private EditorCell createConstant_16() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Enter oder Leertaste");
-    editorCell.setCellId("Constant_qdcqoc_a4b0c0b0");
+  private EditorCell createConstant_18() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Alt + Enter");
+    editorCell.setCellId("Constant_qdcqoc_a3b0e0b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_17() {
+  private EditorCell createConstant_19() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
-    editorCell.setCellId("Constant_qdcqoc_b4b0c0b0");
+    editorCell.setCellId("Constant_qdcqoc_b3b0e0b0");
     Style style = new StyleImpl();
     new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_18() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Element nach Derzeitigem einfügen(Manchmal funktioniert nur Enter)");
-    editorCell.setCellId("Constant_qdcqoc_c4b0c0b0");
+  private EditorCell createConstant_20() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Zeigt mögliche Operationen an, die an der ausgewählten Stelle durchgeführt werden können");
+    editorCell.setCellId("Constant_qdcqoc_c3b0e0b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
     editorCell.getStyle().putAll(style);
@@ -365,36 +379,18 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
   }
   private EditorCell createCollection_12() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_qdcqoc_f1a2a1a");
+    editorCell.setCellId("Collection_qdcqoc_e1a4a1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_19());
-    editorCell.addEditorCell(createConstant_20());
     editorCell.addEditorCell(createConstant_21());
-    return editorCell;
-  }
-  private EditorCell createConstant_19() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Shift + Enter");
-    editorCell.setCellId("Constant_qdcqoc_a5b0c0b0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_20() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
-    editorCell.setCellId("Constant_qdcqoc_b5b0c0b0");
-    Style style = new StyleImpl();
-    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
+    editorCell.addEditorCell(createConstant_22());
+    editorCell.addEditorCell(createConstant_23());
     return editorCell;
   }
   private EditorCell createConstant_21() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Element vor Derzeitgem einfügen");
-    editorCell.setCellId("Constant_qdcqoc_c5b0c0b0");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Enter oder Leertaste");
+    editorCell.setCellId("Constant_qdcqoc_a4b0e0b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
     editorCell.getStyle().putAll(style);
@@ -402,8 +398,64 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
     return editorCell;
   }
   private EditorCell createConstant_22() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
+    editorCell.setCellId("Constant_qdcqoc_b4b0e0b0");
+    Style style = new StyleImpl();
+    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_23() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Element nach Derzeitigem einfügen(Manchmal funktioniert nur Enter)");
+    editorCell.setCellId("Constant_qdcqoc_c4b0e0b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createCollection_13() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
+    editorCell.setCellId("Collection_qdcqoc_f1a4a1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_24());
+    editorCell.addEditorCell(createConstant_25());
+    editorCell.addEditorCell(createConstant_26());
+    return editorCell;
+  }
+  private EditorCell createConstant_24() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Shift + Enter");
+    editorCell.setCellId("Constant_qdcqoc_a5b0e0b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_25() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
+    editorCell.setCellId("Constant_qdcqoc_b5b0e0b0");
+    Style style = new StyleImpl();
+    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_26() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Element vor Derzeitgem einfügen");
+    editorCell.setCellId("Constant_qdcqoc_c5b0e0b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_27() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
-    editorCell.setCellId("Constant_qdcqoc_b2a1a");
+    editorCell.setCellId("Constant_qdcqoc_b4a1a");
     Style style = new StyleImpl();
     new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
@@ -412,149 +464,88 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
   }
   private EditorCell createHorizontalLineCell_0(EditorContext editorContext, SNode node) {
     HorizontalLineCell editorCell = new HorizontalLineCell(editorContext, node);
-    editorCell.setCellId("HorizontalLineCell_qdcqoc_c2a1a");
+    editorCell.setCellId("HorizontalLineCell_qdcqoc_c4a1a");
     return editorCell;
   }
   private EditorCell createHorizontalLineCell_1() {
     return createHorizontalLineCell_0(getEditorContext(), myNode);
   }
-  private EditorCell createConstant_23() {
+  private EditorCell createConstant_28() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
-    editorCell.setCellId("Constant_qdcqoc_d2a1a");
+    editorCell.setCellId("Constant_qdcqoc_d4a1a");
     Style style = new StyleImpl();
     new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createCollection_13() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_qdcqoc_e2a1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_24());
-    editorCell.addEditorCell(createCollection_14());
-    editorCell.addEditorCell(createConstant_31());
-    editorCell.addEditorCell(createCollection_15());
-    editorCell.addEditorCell(createConstant_38());
-    editorCell.addEditorCell(createCollection_16());
-    return editorCell;
-  }
-  private EditorCell createConstant_24() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Erstellen eines Topics");
-    editorCell.setCellId("Constant_qdcqoc_a4c0b0");
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createCollection_14() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_qdcqoc_b4c0b0");
+    editorCell.setCellId("Collection_qdcqoc_e4a1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_25());
-    editorCell.addEditorCell(createConstant_26());
-    editorCell.addEditorCell(createConstant_27());
-    editorCell.addEditorCell(createConstant_28());
     editorCell.addEditorCell(createConstant_29());
-    editorCell.addEditorCell(createConstant_30());
-    return editorCell;
-  }
-  private EditorCell createConstant_25() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Concept(Konzept)");
-    editorCell.setCellId("Constant_qdcqoc_a1e2a1a");
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_26() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Eine Konzept ist eine Sammlung von Wörtern oder Sätzen die man einem bestimmten Themenbereich mit Namen zuordnen kann.");
-    editorCell.setCellId("Constant_qdcqoc_b1e2a1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_27() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Der Name des Konzepts kann anschließend in einer Interaktionsregel eingesetzt werden.");
-    editorCell.setCellId("Constant_qdcqoc_c1e2a1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_28() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Wir unterscheiden zwischen zwei Konzepten. Einem RobotOutput Konzept, welches nur dort eingesetzt werden kann,");
-    editorCell.setCellId("Constant_qdcqoc_d1e2a1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
+    editorCell.addEditorCell(createCollection_15());
+    editorCell.addEditorCell(createConstant_36());
+    editorCell.addEditorCell(createCollection_16());
+    editorCell.addEditorCell(createConstant_43());
+    editorCell.addEditorCell(createCollection_17());
     return editorCell;
   }
   private EditorCell createConstant_29() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "wo der Roboter eine Ausgabe tätigt. Und einem HumanInput Konzept, welches nur dort eingesetzt werden kann,");
-    editorCell.setCellId("Constant_qdcqoc_e1e2a1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_30() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "wo der Roboter einen Input von einem Menschen erwartet.");
-    editorCell.setCellId("Constant_qdcqoc_f1e2a1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_31() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
-    editorCell.setCellId("Constant_qdcqoc_c4c0b0");
-    Style style = new StyleImpl();
-    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-    editorCell.getStyle().putAll(style);
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Erstellen eines Topics");
+    editorCell.setCellId("Constant_qdcqoc_a4e0b0");
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createCollection_15() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_qdcqoc_d4c0b0");
+    editorCell.setCellId("Collection_qdcqoc_b4e0b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
     editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_30());
+    editorCell.addEditorCell(createConstant_31());
     editorCell.addEditorCell(createConstant_32());
     editorCell.addEditorCell(createConstant_33());
     editorCell.addEditorCell(createConstant_34());
     editorCell.addEditorCell(createConstant_35());
-    editorCell.addEditorCell(createConstant_36());
-    editorCell.addEditorCell(createConstant_37());
+    return editorCell;
+  }
+  private EditorCell createConstant_30() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Concept(Konzept)");
+    editorCell.setCellId("Constant_qdcqoc_a1e4a1a");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_31() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Eine Konzept ist eine Sammlung von Wörtern oder Sätzen die man einem bestimmten Themenbereich mit Namen zuordnen kann.");
+    editorCell.setCellId("Constant_qdcqoc_b1e4a1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_32() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Robot Output Only (Proposal)");
-    editorCell.setCellId("Constant_qdcqoc_a3e2a1a");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Der Name des Konzepts kann anschließend in einer Interaktionsregel eingesetzt werden.");
+    editorCell.setCellId("Constant_qdcqoc_c1e4a1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_33() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Ein Proposal ist eine Interaktionsregel, welche nur eine Ausgabe des Roboters erzeugt.");
-    editorCell.setCellId("Constant_qdcqoc_b3e2a1a");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Wir unterscheiden zwischen zwei Konzepten. Einem RobotOutput Konzept, welches nur dort eingesetzt werden kann,");
+    editorCell.setCellId("Constant_qdcqoc_d1e4a1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
@@ -563,8 +554,8 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
     return editorCell;
   }
   private EditorCell createConstant_34() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Eine solche Regeln muss von einer Funktion namens \"nextProposal\" aufgerufen werden,");
-    editorCell.setCellId("Constant_qdcqoc_c3e2a1a");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "wo der Roboter eine Ausgabe tätigt. Und einem HumanInput Konzept, welches nur dort eingesetzt werden kann,");
+    editorCell.setCellId("Constant_qdcqoc_e1e4a1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
@@ -573,8 +564,8 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
     return editorCell;
   }
   private EditorCell createConstant_35() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "damit die Ausgabe erzeugt wird.");
-    editorCell.setCellId("Constant_qdcqoc_d3e2a1a");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "wo der Roboter einen Input von einem Menschen erwartet.");
+    editorCell.setCellId("Constant_qdcqoc_f1e4a1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
@@ -583,28 +574,8 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
     return editorCell;
   }
   private EditorCell createConstant_36() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Enthält ein Topic mehrere Proposals, so werden diese von oben nach unten einzeln aufgerufen. (pro Funktionsaufruf)");
-    editorCell.setCellId("Constant_qdcqoc_e3e2a1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_37() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "(Es sollte mindestens eine UserRule geben, welche die Funktion nextProposal aufruft.)");
-    editorCell.setCellId("Constant_qdcqoc_f3e2a1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_38() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
-    editorCell.setCellId("Constant_qdcqoc_e4c0b0");
+    editorCell.setCellId("Constant_qdcqoc_c4e0b0");
     Style style = new StyleImpl();
     new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
@@ -613,26 +584,49 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
   }
   private EditorCell createCollection_16() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_qdcqoc_f4c0b0");
+    editorCell.setCellId("Collection_qdcqoc_d4e0b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
-    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
     editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_37());
+    editorCell.addEditorCell(createConstant_38());
     editorCell.addEditorCell(createConstant_39());
     editorCell.addEditorCell(createConstant_40());
     editorCell.addEditorCell(createConstant_41());
+    editorCell.addEditorCell(createConstant_42());
+    return editorCell;
+  }
+  private EditorCell createConstant_37() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Robot Output Only (Proposal)");
+    editorCell.setCellId("Constant_qdcqoc_a3e4a1a");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_38() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Ein Proposal ist eine Interaktionsregel, welche nur eine Ausgabe des Roboters erzeugt.");
+    editorCell.setCellId("Constant_qdcqoc_b3e4a1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_39() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Input and Output (UserRule)");
-    editorCell.setCellId("Constant_qdcqoc_a5e2a1a");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Eine solche Regeln muss von einer Funktion namens \"nextProposal\" aufgerufen werden,");
+    editorCell.setCellId("Constant_qdcqoc_c3e4a1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_40() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Eine UserRule ist eine Interaktionsregel, welche eine Eingabe von Menschen erwartet und entsprechend eine Ausgabe des Roboters erzeugt.");
-    editorCell.setCellId("Constant_qdcqoc_b5e2a1a");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "damit die Ausgabe erzeugt wird.");
+    editorCell.setCellId("Constant_qdcqoc_d3e4a1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
@@ -641,8 +635,8 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
     return editorCell;
   }
   private EditorCell createConstant_41() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Die Eingabe einer solchen Regel, kann sowohl ein gesprochener Satz/Wort sein, als auch ein Einfluss von außen, wie ein Tastendruck am Roboter.");
-    editorCell.setCellId("Constant_qdcqoc_c5e2a1a");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Enthält ein Topic mehrere Proposals, so werden diese von oben nach unten einzeln aufgerufen. (pro Funktionsaufruf)");
+    editorCell.setCellId("Constant_qdcqoc_e3e4a1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
@@ -650,218 +644,250 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createCollection_17() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
-    editorCell.setCellId("Collection_qdcqoc_b1a");
-    Style style = new StyleImpl();
-    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-    style.set(StyleAttributes.SELECTABLE, false);
-    editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_42());
-    editorCell.addEditorCell(createConstant_43());
-    editorCell.addEditorCell(createCollection_18());
-    return editorCell;
-  }
   private EditorCell createConstant_42() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Tips & tricks for using the editor");
-    editorCell.setCellId("Constant_qdcqoc_a1b0");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "(Es sollte mindestens eine UserRule geben, welche die Funktion nextProposal aufruft.)");
+    editorCell.setCellId("Constant_qdcqoc_f3e4a1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_43() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
-    editorCell.setCellId("Constant_qdcqoc_b1b0");
+    editorCell.setCellId("Constant_qdcqoc_e4e0b0");
+    Style style = new StyleImpl();
+    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createCollection_18() {
+  private EditorCell createCollection_17() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_qdcqoc_c1b0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
-    editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createCollection_19());
-    editorCell.addEditorCell(createConstant_63());
-    editorCell.addEditorCell(createHorizontalLineCell_3());
-    editorCell.addEditorCell(createConstant_64());
-    editorCell.addEditorCell(createCollection_27());
-    return editorCell;
-  }
-  private EditorCell createCollection_19() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_qdcqoc_a2b1a");
+    editorCell.setCellId("Collection_qdcqoc_f4e0b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     editorCell.getStyle().putAll(style);
     editorCell.addEditorCell(createConstant_44());
-    editorCell.addEditorCell(createCollection_20());
+    editorCell.addEditorCell(createConstant_45());
+    editorCell.addEditorCell(createConstant_46());
     return editorCell;
   }
   private EditorCell createConstant_44() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Keyboard shortcuts:");
-    editorCell.setCellId("Constant_qdcqoc_a0c1b0");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Input and Output (UserRule)");
+    editorCell.setCellId("Constant_qdcqoc_a5e4a1a");
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createCollection_20() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
-    editorCell.setCellId("Collection_qdcqoc_b0c1b0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    editorCell.getStyle().putAll(style);
-    editorCell.setGridLayout(true);
-    editorCell.addEditorCell(createCollection_21());
-    editorCell.addEditorCell(createCollection_22());
-    editorCell.addEditorCell(createCollection_23());
-    editorCell.addEditorCell(createCollection_24());
-    editorCell.addEditorCell(createCollection_25());
-    editorCell.addEditorCell(createCollection_26());
-    return editorCell;
-  }
-  private EditorCell createCollection_21() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_qdcqoc_a1a2b1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_45());
-    editorCell.addEditorCell(createConstant_46());
-    editorCell.addEditorCell(createConstant_47());
-    return editorCell;
-  }
   private EditorCell createConstant_45() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Shortcut");
-    editorCell.setCellId("Constant_qdcqoc_a0b0c1b0");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Eine UserRule ist eine Interaktionsregel, welche eine Eingabe von Menschen erwartet und entsprechend eine Ausgabe des Roboters erzeugt.");
+    editorCell.setCellId("Constant_qdcqoc_b5e4a1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_46() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
-    editorCell.setCellId("Constant_qdcqoc_b0b0c1b0");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Die Eingabe einer solchen Regel, kann sowohl ein gesprochener Satz/Wort sein, als auch ein Einfluss von außen, wie ein Tastendruck am Roboter.");
+    editorCell.setCellId("Constant_qdcqoc_c5e4a1a");
     Style style = new StyleImpl();
-    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_47() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Effect");
-    editorCell.setCellId("Constant_qdcqoc_c0b0c1b0");
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createCollection_22() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_qdcqoc_b1a2b1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_48());
-    editorCell.addEditorCell(createConstant_49());
-    editorCell.addEditorCell(createConstant_50());
-    return editorCell;
-  }
-  private EditorCell createConstant_48() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Alt + 2");
-    editorCell.setCellId("Constant_qdcqoc_a1b0c1b0");
-    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_49() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
-    editorCell.setCellId("Constant_qdcqoc_b1b0c1b0");
+  private EditorCell createCollection_18() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
+    editorCell.setCellId("Collection_qdcqoc_b1a");
     Style style = new StyleImpl();
     new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_47());
+    editorCell.addEditorCell(createConstant_48());
+    editorCell.addEditorCell(createCollection_19());
+    editorCell.addEditorCell(createConstant_53());
+    editorCell.addEditorCell(createCollection_20());
+    return editorCell;
+  }
+  private EditorCell createConstant_47() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Tips & tricks for using the editor");
+    editorCell.setCellId("Constant_qdcqoc_a1b0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_48() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+    editorCell.setCellId("Constant_qdcqoc_b1b0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createCollection_19() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
+    editorCell.setCellId("Collection_qdcqoc_c1b0");
+    editorCell.addEditorCell(createConstant_49());
+    editorCell.addEditorCell(createConstant_50());
+    editorCell.addEditorCell(createConstant_51());
+    editorCell.addEditorCell(createConstant_52());
+    return editorCell;
+  }
+  private EditorCell createConstant_49() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Important Rule:");
+    editorCell.setCellId("Constant_qdcqoc_a2b1a");
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_50() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Inspector show/hide (Additional information for the current selection)");
-    editorCell.setCellId("Constant_qdcqoc_c1b0c1b0");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "If something is");
+    editorCell.setCellId("Constant_qdcqoc_b2b1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createCollection_23() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_qdcqoc_c1a2b1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_51());
-    editorCell.addEditorCell(createConstant_52());
-    editorCell.addEditorCell(createConstant_53());
-    return editorCell;
-  }
   private EditorCell createConstant_51() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Strg + Space");
-    editorCell.setCellId("Constant_qdcqoc_a2b0c1b0");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "red");
+    editorCell.setCellId("Constant_qdcqoc_c2b1a");
     Style style = new StyleImpl();
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    style.set(StyleAttributes.TEXT_COLOR, StyleRegistry.getInstance().getSimpleColor(MPSColors.red));
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_52() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
-    editorCell.setCellId("Constant_qdcqoc_b2b0c1b0");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "then it is wrong or something is missing!");
+    editorCell.setCellId("Constant_qdcqoc_d2b1a");
     Style style = new StyleImpl();
-    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_53() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Shows possible entries for the current selection");
-    editorCell.setCellId("Constant_qdcqoc_c2b0c1b0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+    editorCell.setCellId("Constant_qdcqoc_d1b0");
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createCollection_24() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_qdcqoc_d1a2b1a");
+  private EditorCell createCollection_20() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_qdcqoc_e1b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
+    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createCollection_21());
+    editorCell.addEditorCell(createConstant_73());
+    editorCell.addEditorCell(createHorizontalLineCell_3());
+    editorCell.addEditorCell(createConstant_74());
+    editorCell.addEditorCell(createCollection_29());
+    return editorCell;
+  }
+  private EditorCell createCollection_21() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_qdcqoc_a4b1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     editorCell.getStyle().putAll(style);
     editorCell.addEditorCell(createConstant_54());
-    editorCell.addEditorCell(createConstant_55());
-    editorCell.addEditorCell(createConstant_56());
+    editorCell.addEditorCell(createCollection_22());
     return editorCell;
   }
   private EditorCell createConstant_54() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Alt + Enter");
-    editorCell.setCellId("Constant_qdcqoc_a3b0c1b0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Keyboard shortcuts:");
+    editorCell.setCellId("Constant_qdcqoc_a0e1b0");
     editorCell.setDefaultText("");
     return editorCell;
   }
+  private EditorCell createCollection_22() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
+    editorCell.setCellId("Collection_qdcqoc_b0e1b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setGridLayout(true);
+    editorCell.addEditorCell(createCollection_23());
+    editorCell.addEditorCell(createCollection_24());
+    editorCell.addEditorCell(createCollection_25());
+    editorCell.addEditorCell(createCollection_26());
+    editorCell.addEditorCell(createCollection_27());
+    editorCell.addEditorCell(createCollection_28());
+    return editorCell;
+  }
+  private EditorCell createCollection_23() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
+    editorCell.setCellId("Collection_qdcqoc_a1a4b1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_55());
+    editorCell.addEditorCell(createConstant_56());
+    editorCell.addEditorCell(createConstant_57());
+    return editorCell;
+  }
   private EditorCell createConstant_55() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Shortcut");
+    editorCell.setCellId("Constant_qdcqoc_a0b0e1b0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_56() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
-    editorCell.setCellId("Constant_qdcqoc_b3b0c1b0");
+    editorCell.setCellId("Constant_qdcqoc_b0b0e1b0");
     Style style = new StyleImpl();
     new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_56() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Shows possible operations that can be performed on the selected location");
-    editorCell.setCellId("Constant_qdcqoc_c3b0c1b0");
+  private EditorCell createConstant_57() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Effect");
+    editorCell.setCellId("Constant_qdcqoc_c0b0e1b0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createCollection_24() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
+    editorCell.setCellId("Collection_qdcqoc_b1a4b1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_58());
+    editorCell.addEditorCell(createConstant_59());
+    editorCell.addEditorCell(createConstant_60());
+    return editorCell;
+  }
+  private EditorCell createConstant_58() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Alt + 2");
+    editorCell.setCellId("Constant_qdcqoc_a1b0e1b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_59() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
+    editorCell.setCellId("Constant_qdcqoc_b1b0e1b0");
+    Style style = new StyleImpl();
+    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_60() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Inspector show/hide (Additional information for the current selection)");
+    editorCell.setCellId("Constant_qdcqoc_c1b0e1b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
     editorCell.getStyle().putAll(style);
@@ -870,36 +896,36 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
   }
   private EditorCell createCollection_25() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_qdcqoc_e1a2b1a");
+    editorCell.setCellId("Collection_qdcqoc_c1a4b1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_57());
-    editorCell.addEditorCell(createConstant_58());
-    editorCell.addEditorCell(createConstant_59());
+    editorCell.addEditorCell(createConstant_61());
+    editorCell.addEditorCell(createConstant_62());
+    editorCell.addEditorCell(createConstant_63());
     return editorCell;
   }
-  private EditorCell createConstant_57() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Enter oder Leertaste");
-    editorCell.setCellId("Constant_qdcqoc_a4b0c1b0");
+  private EditorCell createConstant_61() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Strg + Space");
+    editorCell.setCellId("Constant_qdcqoc_a2b0e1b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_58() {
+  private EditorCell createConstant_62() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
-    editorCell.setCellId("Constant_qdcqoc_b4b0c1b0");
+    editorCell.setCellId("Constant_qdcqoc_b2b0e1b0");
     Style style = new StyleImpl();
     new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_59() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Insert item after current one(Sometimes only Enter works)");
-    editorCell.setCellId("Constant_qdcqoc_c4b0c1b0");
+  private EditorCell createConstant_63() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Shows possible entries for the current selection");
+    editorCell.setCellId("Constant_qdcqoc_c2b0e1b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
     editorCell.getStyle().putAll(style);
@@ -908,45 +934,121 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
   }
   private EditorCell createCollection_26() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_qdcqoc_f1a2b1a");
+    editorCell.setCellId("Collection_qdcqoc_d1a4b1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_60());
-    editorCell.addEditorCell(createConstant_61());
-    editorCell.addEditorCell(createConstant_62());
+    editorCell.addEditorCell(createConstant_64());
+    editorCell.addEditorCell(createConstant_65());
+    editorCell.addEditorCell(createConstant_66());
     return editorCell;
   }
-  private EditorCell createConstant_60() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Shift + Enter");
-    editorCell.setCellId("Constant_qdcqoc_a5b0c1b0");
+  private EditorCell createConstant_64() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Alt + Enter");
+    editorCell.setCellId("Constant_qdcqoc_a3b0e1b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_61() {
+  private EditorCell createConstant_65() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
-    editorCell.setCellId("Constant_qdcqoc_b5b0c1b0");
+    editorCell.setCellId("Constant_qdcqoc_b3b0e1b0");
     Style style = new StyleImpl();
     new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_62() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Insert item before current one");
-    editorCell.setCellId("Constant_qdcqoc_c5b0c1b0");
+  private EditorCell createConstant_66() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Shows possible operations that can be performed on the selected location");
+    editorCell.setCellId("Constant_qdcqoc_c3b0e1b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_63() {
+  private EditorCell createCollection_27() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
+    editorCell.setCellId("Collection_qdcqoc_e1a4b1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_67());
+    editorCell.addEditorCell(createConstant_68());
+    editorCell.addEditorCell(createConstant_69());
+    return editorCell;
+  }
+  private EditorCell createConstant_67() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Enter oder Leertaste");
+    editorCell.setCellId("Constant_qdcqoc_a4b0e1b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_68() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
+    editorCell.setCellId("Constant_qdcqoc_b4b0e1b0");
+    Style style = new StyleImpl();
+    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_69() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Insert item after current one(Sometimes only Enter works)");
+    editorCell.setCellId("Constant_qdcqoc_c4b0e1b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createCollection_28() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
+    editorCell.setCellId("Collection_qdcqoc_f1a4b1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_70());
+    editorCell.addEditorCell(createConstant_71());
+    editorCell.addEditorCell(createConstant_72());
+    return editorCell;
+  }
+  private EditorCell createConstant_70() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Shift + Enter");
+    editorCell.setCellId("Constant_qdcqoc_a5b0e1b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_71() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "    ");
+    editorCell.setCellId("Constant_qdcqoc_b5b0e1b0");
+    Style style = new StyleImpl();
+    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_72() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Insert item before current one");
+    editorCell.setCellId("Constant_qdcqoc_c5b0e1b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_73() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
-    editorCell.setCellId("Constant_qdcqoc_b2b1a");
+    editorCell.setCellId("Constant_qdcqoc_b4b1a");
     Style style = new StyleImpl();
     new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
@@ -955,118 +1057,15 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
   }
   private EditorCell createHorizontalLineCell_2(EditorContext editorContext, SNode node) {
     HorizontalLineCell editorCell = new HorizontalLineCell(editorContext, node);
-    editorCell.setCellId("HorizontalLineCell_qdcqoc_c2b1a");
+    editorCell.setCellId("HorizontalLineCell_qdcqoc_c4b1a");
     return editorCell;
   }
   private EditorCell createHorizontalLineCell_3() {
     return createHorizontalLineCell_2(getEditorContext(), myNode);
   }
-  private EditorCell createConstant_64() {
+  private EditorCell createConstant_74() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
-    editorCell.setCellId("Constant_qdcqoc_d2b1a");
-    Style style = new StyleImpl();
-    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createCollection_27() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_qdcqoc_e2b1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_65());
-    editorCell.addEditorCell(createCollection_28());
-    editorCell.addEditorCell(createConstant_72());
-    editorCell.addEditorCell(createCollection_29());
-    editorCell.addEditorCell(createConstant_79());
-    editorCell.addEditorCell(createCollection_30());
-    return editorCell;
-  }
-  private EditorCell createConstant_65() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Creation of a Topic");
-    editorCell.setCellId("Constant_qdcqoc_a4c1b0");
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createCollection_28() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_qdcqoc_b4c1b0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
-    editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_66());
-    editorCell.addEditorCell(createConstant_67());
-    editorCell.addEditorCell(createConstant_68());
-    editorCell.addEditorCell(createConstant_69());
-    editorCell.addEditorCell(createConstant_70());
-    editorCell.addEditorCell(createConstant_71());
-    return editorCell;
-  }
-  private EditorCell createConstant_66() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Concept");
-    editorCell.setCellId("Constant_qdcqoc_a1e2b1a");
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_67() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "A concept is a named collection of words or sentences of a specific topic. ");
-    editorCell.setCellId("Constant_qdcqoc_b1e2b1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_68() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "The name of the concept can be used in a interaction rule.");
-    editorCell.setCellId("Constant_qdcqoc_c1e2b1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_69() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Concepts can be HumanInput concept or RobotOutput concept.");
-    editorCell.setCellId("Constant_qdcqoc_d1e2b1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_70() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "HumanInput concepts can only be used where human input is expected and");
-    editorCell.setCellId("Constant_qdcqoc_e1e2b1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_71() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "RobotOutput concepts can only be used where robot output is expected.");
-    editorCell.setCellId("Constant_qdcqoc_f1e2b1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_72() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
-    editorCell.setCellId("Constant_qdcqoc_c4c1b0");
+    editorCell.setCellId("Constant_qdcqoc_d4b1a");
     Style style = new StyleImpl();
     new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
@@ -1075,59 +1074,51 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
   }
   private EditorCell createCollection_29() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_qdcqoc_d4c1b0");
+    editorCell.setCellId("Collection_qdcqoc_e4b1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_75());
+    editorCell.addEditorCell(createCollection_30());
+    editorCell.addEditorCell(createConstant_82());
+    editorCell.addEditorCell(createCollection_31());
+    editorCell.addEditorCell(createConstant_89());
+    editorCell.addEditorCell(createCollection_32());
+    return editorCell;
+  }
+  private EditorCell createConstant_75() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Creation of a Topic");
+    editorCell.setCellId("Constant_qdcqoc_a4e1b0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createCollection_30() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_qdcqoc_b4e1b0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
     editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_73());
-    editorCell.addEditorCell(createConstant_74());
-    editorCell.addEditorCell(createConstant_75());
     editorCell.addEditorCell(createConstant_76());
     editorCell.addEditorCell(createConstant_77());
     editorCell.addEditorCell(createConstant_78());
-    return editorCell;
-  }
-  private EditorCell createConstant_73() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Robot Output Only (Proposal)");
-    editorCell.setCellId("Constant_qdcqoc_a3e2b1a");
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_74() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "A proposal is an interaction rule, which produces robot output only.");
-    editorCell.setCellId("Constant_qdcqoc_b3e2b1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_75() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Such a rule should be triggered by a function named \"nextProposal\" to");
-    editorCell.setCellId("Constant_qdcqoc_c3e2b1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
+    editorCell.addEditorCell(createConstant_79());
+    editorCell.addEditorCell(createConstant_80());
+    editorCell.addEditorCell(createConstant_81());
     return editorCell;
   }
   private EditorCell createConstant_76() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "produce an output.");
-    editorCell.setCellId("Constant_qdcqoc_d3e2b1a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
-    editorCell.getStyle().putAll(style);
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Concept");
+    editorCell.setCellId("Constant_qdcqoc_a1e4b1a");
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_77() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "If a topic contains more than one proposal, they will be triggered one by one from top to bottom.");
-    editorCell.setCellId("Constant_qdcqoc_e3e2b1a");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "A concept is a named collection of words or sentences of a specific topic. ");
+    editorCell.setCellId("Constant_qdcqoc_b1e4b1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
@@ -1136,8 +1127,8 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
     return editorCell;
   }
   private EditorCell createConstant_78() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "(At least there should be one UserRule in the topic, which calls the \"nextProposal\" function)");
-    editorCell.setCellId("Constant_qdcqoc_f3e2b1a");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "The name of the concept can be used in a interaction rule.");
+    editorCell.setCellId("Constant_qdcqoc_c1e4b1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
@@ -1146,37 +1137,28 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
     return editorCell;
   }
   private EditorCell createConstant_79() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
-    editorCell.setCellId("Constant_qdcqoc_e4c1b0");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Concepts can be HumanInput concept or RobotOutput concept.");
+    editorCell.setCellId("Constant_qdcqoc_d1e4b1a");
     Style style = new StyleImpl();
-    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createCollection_30() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_qdcqoc_f4c1b0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
-    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
-    editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_80());
-    editorCell.addEditorCell(createConstant_81());
-    editorCell.addEditorCell(createConstant_82());
-    editorCell.addEditorCell(createConstant_83());
-    return editorCell;
-  }
   private EditorCell createConstant_80() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Input and Output (UserRule)");
-    editorCell.setCellId("Constant_qdcqoc_a5e2b1a");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "HumanInput concepts can only be used where human input is expected and");
+    editorCell.setCellId("Constant_qdcqoc_e1e4b1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_81() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "A UserRule is an interaction rule that expects input from humans and generates an output from the robot.");
-    editorCell.setCellId("Constant_qdcqoc_b5e2b1a");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "RobotOutput concepts can only be used where robot output is expected.");
+    editorCell.setCellId("Constant_qdcqoc_f1e4b1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
@@ -1185,8 +1167,39 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
     return editorCell;
   }
   private EditorCell createConstant_82() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "The Input of that kind of rule can be either a spoken sentence/word or an outside influence,");
-    editorCell.setCellId("Constant_qdcqoc_c5e2b1a");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+    editorCell.setCellId("Constant_qdcqoc_c4e1b0");
+    Style style = new StyleImpl();
+    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createCollection_31() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_qdcqoc_d4e1b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_83());
+    editorCell.addEditorCell(createConstant_84());
+    editorCell.addEditorCell(createConstant_85());
+    editorCell.addEditorCell(createConstant_86());
+    editorCell.addEditorCell(createConstant_87());
+    editorCell.addEditorCell(createConstant_88());
+    return editorCell;
+  }
+  private EditorCell createConstant_83() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Robot Output Only (Proposal)");
+    editorCell.setCellId("Constant_qdcqoc_a3e4b1a");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_84() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "A proposal is an interaction rule, which produces robot output only.");
+    editorCell.setCellId("Constant_qdcqoc_b3e4b1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
@@ -1194,9 +1207,98 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_83() {
+  private EditorCell createConstant_85() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Such a rule should be triggered by a function named \"nextProposal\" to");
+    editorCell.setCellId("Constant_qdcqoc_c3e4b1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_86() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "produce an output.");
+    editorCell.setCellId("Constant_qdcqoc_d3e4b1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_87() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "If a topic contains more than one proposal, they will be triggered one by one from top to bottom.");
+    editorCell.setCellId("Constant_qdcqoc_e3e4b1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_88() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "(At least there should be one UserRule in the topic, which calls the \"nextProposal\" function)");
+    editorCell.setCellId("Constant_qdcqoc_f3e4b1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_89() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+    editorCell.setCellId("Constant_qdcqoc_e4e1b0");
+    Style style = new StyleImpl();
+    new notEditableStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createCollection_32() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_qdcqoc_f4e1b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_90());
+    editorCell.addEditorCell(createConstant_91());
+    editorCell.addEditorCell(createConstant_92());
+    editorCell.addEditorCell(createConstant_93());
+    return editorCell;
+  }
+  private EditorCell createConstant_90() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Input and Output (UserRule)");
+    editorCell.setCellId("Constant_qdcqoc_a5e4b1a");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_91() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "A UserRule is an interaction rule that expects input from humans and generates an output from the robot.");
+    editorCell.setCellId("Constant_qdcqoc_b5e4b1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_92() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "The Input of that kind of rule can be either a spoken sentence/word or an outside influence,");
+    editorCell.setCellId("Constant_qdcqoc_c5e4b1a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+    style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_93() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "like a button press on the robot.");
-    editorCell.setCellId("Constant_qdcqoc_d5e2b1a");
+    editorCell.setCellId("Constant_qdcqoc_d5e4b1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);

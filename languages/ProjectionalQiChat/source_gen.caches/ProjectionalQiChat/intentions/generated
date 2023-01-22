@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-67zb9dbx0meoy19fvwzd2wzdk2d8ldu">
-  <files names="IntentionsDescriptor.java:addHumanConcept_Intention.java:addRobotConceptToTopic_Intention.java:addSubrule_Intention.java:addSubsubrule_Intention.java:addSubsubsubrule_Intention.java:cloneHumanConcept_Intention.java:cloneRobotConcept_Intention.java:convertToHumanConcept_Intention.java:convertToProposal_Intention.java:convertToRobotConcept_Intention.java:convertToUserRule_Intention.java:importConceptCollections_Intention.java:importTopics_Intention.java:sortConceptsHumanRobot_Intention.java:sortConceptsRobotHuman_Intention.java:triggerOnStopped_Intention.java" />
+<product version="3" modelHash="-c5wsxur7l7roshmwg2e0q8sanzfrbyg">
+  <files names="IntentionsDescriptor.java:addHumanConcept_Intention.java:addRobotConceptToTopic_Intention.java:addSubrule_Intention.java:addSubsubrule_Intention.java:addSubsubsubrule_Intention.java:cloneHumanConcept_Intention.java:cloneRobotConcept_Intention.java:convertToHumanConcept_Intention.java:convertToProposal_Intention.java:convertToRobotConcept_Intention.java:convertToUserRule_Intention.java:importConceptCollections_Intention.java:importTopics_Intention.java:newProposal_Intention.java:newUserRule_Intention.java:sortConceptsHumanRobot_Intention.java:sortConceptsRobotHuman_Intention.java:triggerOnStopped_Intention.java" />
 </product>
 

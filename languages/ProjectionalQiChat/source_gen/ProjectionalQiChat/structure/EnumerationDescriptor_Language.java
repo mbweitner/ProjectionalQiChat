@@ -40,7 +40,7 @@ public class EnumerationDescriptor_Language extends EnumerationDescriptorBase {
   @Nullable
   @Override
   public EnumerationDescriptor.MemberDescriptor getDefault() {
-    return myMember_enu_0;
+    return myMember_ged_0;
   }
 
   @NotNull
