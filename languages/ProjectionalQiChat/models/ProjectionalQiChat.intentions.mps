@@ -1980,7 +1980,7 @@
       <node concept="3clFbS" id="5pd0bcWuPrF" role="2VODD2">
         <node concept="3clFbF" id="5pd0bcWuPx3" role="3cqZAp">
           <node concept="Xl_RD" id="5pd0bcWuPx2" role="3clFbG">
-            <property role="Xl_RC" value="add new RobotConcept to Topic" />
+            <property role="Xl_RC" value="add new output concept to Topic" />
           </node>
         </node>
       </node>
@@ -2053,7 +2053,7 @@
       <node concept="3clFbS" id="5pd0bcWC5n3" role="2VODD2">
         <node concept="3clFbF" id="5pd0bcWC5sh" role="3cqZAp">
           <node concept="Xl_RD" id="5pd0bcWC5sg" role="3clFbG">
-            <property role="Xl_RC" value="add new HumanConcept to Topic" />
+            <property role="Xl_RC" value="add new input concept to Topic" />
           </node>
         </node>
       </node>

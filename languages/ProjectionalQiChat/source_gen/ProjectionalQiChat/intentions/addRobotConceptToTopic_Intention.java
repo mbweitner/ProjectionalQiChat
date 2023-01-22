@@ -48,7 +48,7 @@ public final class addRobotConceptToTopic_Intention extends AbstractIntentionDes
 
     @Override
     public String getDescription(final SNode node, final EditorContext editorContext) {
-      return "add new RobotConcept to Topic";
+      return "add new output concept to Topic";
     }
 
     @Override

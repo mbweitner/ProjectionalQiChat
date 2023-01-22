@@ -48,7 +48,7 @@ public final class addHumanConcept_Intention extends AbstractIntentionDescriptor
 
     @Override
     public String getDescription(final SNode node, final EditorContext editorContext) {
-      return "add new HumanConcept to Topic";
+      return "add new input concept to Topic";
     }
 
     @Override
