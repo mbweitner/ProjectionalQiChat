@@ -1,3 +1,28 @@
 topic: ~Rezept()
 language: ged
+# +--------------------+
+# |   Local Concepts   |
+# +--------------------+
+# Robot Concepts (Concepts can be used everywhere, where robot output is expected. This concepts have no side effects there.) 
+concept:(muerbeteigZutatenRC) 125 Gramm kalte Butter, 200 Gramm Weizenmehl, 100 Gramm Zucker, eine Packung Vanillezucker und ein Ei 
+concept:(zuckergussZutatenRC) 2 Esslöffel Zitronensaft, 6 Esslöffel Puderzucker und Zuckerdekor 
 
+
+proposal: Schritt 1: Für den Mürbeteig Butter, Mehl, Zucker, Vanillezucker und das Ei zu einem gleichmäßigen Teig verkneten. Den Teig anschließend für 30 Minuten in den Kühlschrank legen. 
+proposal: Schritt 2: Ein Blech mit Backpapier auslegen und den Ofen auf 160 Grad Umluft vorheizen. 
+proposal: Schritt 3: Arbeitsfläche bemehlen. Dann den Teig darauf etwa 5 Millimeter dick ausrollen, mit beliebigen Keks-Ausstecherformen ausstechen und direkt auf das Blech legen. 
+proposal: Schritt 4: Kekse nun für 7 bis 10 Minuten backen und anschließend gut auskühlen lassen. 
+proposal: Schritt 5: Für den Zuckerguss Puderzucker und Zitronensaft miteinander verrühren und mit einem Teelöffel auf den Plätzchen verteilen. 
+proposal: Schritt 6: Abschließend mit buntem Zuckerdekor verzieren und den Guss fest werden lassen. 
+u:(Was sind die Zutaten für den Mürbeteig? ) Die Zutaten für den Mürbeteig sind ~muerbeteigZutatenRC 
+    
+u:(Was sind die Zutaten für den Zuckerguss? ) Die Zutaten für den Mürebeteig sind ~zuckergussZutatenRC 
+    
+u:(["Weiter " "Was ist der nächste Schritt " "Nächster Schritt " ] ) ^nextProposal
+    
+u:(["Noch einmal " "Den selben Schritt nochmal " ] ) ^sameProposal
+    
+u:(e:onStart) "Hi! Hi ich bin Pepper lass uns gemeins Butterplätzchen backen! " 
+    
+u:(e:onStopped) $onStopped=1 
+    

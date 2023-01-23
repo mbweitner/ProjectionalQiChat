@@ -10,6 +10,6 @@ public class NextProposal_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("nextProposal");
+    tgs.append("^nextProposal");
   }
 }

@@ -85,8 +85,6 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
         return new PreviousProposal_TextGen();
       case LanguageConceptSwitch.Proposal:
         return new Proposal_TextGen();
-      case LanguageConceptSwitch.ProposalFunction:
-        return new ProposalFunction_TextGen();
       case LanguageConceptSwitch.RobotConcept:
         return new RobotConcept_TextGen();
       case LanguageConceptSwitch.RobotConceptReference:

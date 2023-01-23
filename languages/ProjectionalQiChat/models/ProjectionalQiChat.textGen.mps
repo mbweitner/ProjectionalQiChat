@@ -2580,19 +2580,6 @@
       </node>
     </node>
   </node>
-  <node concept="WtQ9Q" id="3jtlk3LiJqm">
-    <property role="3GE5qa" value="Functions" />
-    <ref role="WuzLi" to="zefy:Yce9eByMkO" resolve="ProposalFunction" />
-    <node concept="11bSqf" id="3jtlk3LiJqn" role="11c4hB">
-      <node concept="3clFbS" id="3jtlk3LiJqo" role="2VODD2">
-        <node concept="lc7rE" id="3jtlk3LiJqE" role="3cqZAp">
-          <node concept="la8eA" id="3jtlk3LiJqW" role="lcghm">
-            <property role="lacIc" value="^" />
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="WtQ9Q" id="3jtlk3LiK6z">
     <property role="3GE5qa" value="Functions" />
     <ref role="WuzLi" to="zefy:Yce9eByMkP" resolve="NextProposal" />
@@ -2600,7 +2587,7 @@
       <node concept="3clFbS" id="3jtlk3LiK6_" role="2VODD2">
         <node concept="lc7rE" id="3jtlk3LiK6R" role="3cqZAp">
           <node concept="la8eA" id="3jtlk3LiK79" role="lcghm">
-            <property role="lacIc" value="nextProposal" />
+            <property role="lacIc" value="^nextProposal" />
           </node>
         </node>
       </node>
@@ -2613,7 +2600,7 @@
       <node concept="3clFbS" id="3jtlk3LiK8$" role="2VODD2">
         <node concept="lc7rE" id="3jtlk3LiK8Q" role="3cqZAp">
           <node concept="la8eA" id="3jtlk3LiK98" role="lcghm">
-            <property role="lacIc" value="previousProposal" />
+            <property role="lacIc" value="^previousProposal" />
           </node>
         </node>
       </node>
@@ -2626,7 +2613,7 @@
       <node concept="3clFbS" id="3jtlk3LiKa5" role="2VODD2">
         <node concept="lc7rE" id="3jtlk3LiKan" role="3cqZAp">
           <node concept="la8eA" id="3jtlk3LiKaD" role="lcghm">
-            <property role="lacIc" value="sameProposal" />
+            <property role="lacIc" value="^sameProposal" />
           </node>
         </node>
       </node>

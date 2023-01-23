@@ -10,6 +10,6 @@ public class SameProposal_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("sameProposal");
+    tgs.append("^sameProposal");
   }
 }

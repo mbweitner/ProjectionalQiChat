@@ -14,34 +14,34 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/5351203823916750322:jetbrains.mps.baseLanguage.structure.TryUniversalStatement" />
   <root>
     <file name="TextGenAspectDescriptor.java">
-      <unit at="146,0,149,0" name="ProjectionalQiChat.textGen.TextGenAspectDescriptor$CONCEPTS" />
-      <unit at="150,0,153,0" name="ProjectionalQiChat.textGen.TextGenAspectDescriptor$LINKS" />
-      <unit at="154,0,158,0" name="ProjectionalQiChat.textGen.TextGenAspectDescriptor$PROPS" />
-      <unit at="20,0,159,0" name="ProjectionalQiChat.textGen.TextGenAspectDescriptor" />
+      <unit at="144,0,147,0" name="ProjectionalQiChat.textGen.TextGenAspectDescriptor$CONCEPTS" />
+      <unit at="148,0,151,0" name="ProjectionalQiChat.textGen.TextGenAspectDescriptor$LINKS" />
+      <unit at="152,0,156,0" name="ProjectionalQiChat.textGen.TextGenAspectDescriptor$PROPS" />
+      <unit at="20,0,157,0" name="ProjectionalQiChat.textGen.TextGenAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/1477442199273532688">
     <file name="TextGenAspectDescriptor.java">
-      <node id="1477442199273532688" at="106,39,107,35" concept="7" />
-      <node id="1477442199273532688" at="131,56,132,47" concept="6" />
-      <node id="1477442199273532688" at="132,47,133,50" concept="6" />
-      <node id="1477442199273532688" at="133,50,134,84" concept="2" />
-      <node id="1477442199273532688" at="134,84,135,17" concept="1" />
-      <node id="1477442199273534574" at="139,55,140,173" concept="7" />
-      <node id="1477442199273532989" at="142,60,143,17" concept="7" />
-      <node id="1477442199273532688" at="139,0,142,0" concept="10" trace="getFileName_Topic#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
-      <node id="1477442199273532688" at="142,0,145,0" concept="10" trace="getFileExtension_Topic#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
-      <node id="1477442199273532688" at="130,58,136,7" concept="4" />
-      <scope id="1477442199273532688" at="106,39,107,35" />
-      <scope id="1477442199273532688" at="139,55,140,173" />
-      <scope id="1477442199273532688" at="142,60,143,17" />
-      <scope id="1477442199273532688" at="139,0,142,0">
+      <node id="1477442199273532688" at="104,39,105,35" concept="7" />
+      <node id="1477442199273532688" at="129,56,130,47" concept="6" />
+      <node id="1477442199273532688" at="130,47,131,50" concept="6" />
+      <node id="1477442199273532688" at="131,50,132,84" concept="2" />
+      <node id="1477442199273532688" at="132,84,133,17" concept="1" />
+      <node id="1477442199273534574" at="137,55,138,173" concept="7" />
+      <node id="1477442199273532989" at="140,60,141,17" concept="7" />
+      <node id="1477442199273532688" at="137,0,140,0" concept="10" trace="getFileName_Topic#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="1477442199273532688" at="140,0,143,0" concept="10" trace="getFileExtension_Topic#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="1477442199273532688" at="128,58,134,7" concept="4" />
+      <scope id="1477442199273532688" at="104,39,105,35" />
+      <scope id="1477442199273532688" at="137,55,138,173" />
+      <scope id="1477442199273532688" at="140,60,141,17" />
+      <scope id="1477442199273532688" at="137,0,140,0">
         <var name="node" id="1477442199273532688" />
       </scope>
-      <scope id="1477442199273532688" at="142,0,145,0">
+      <scope id="1477442199273532688" at="140,0,143,0">
         <var name="node" id="1477442199273532688" />
       </scope>
-      <scope id="1477442199273532688" at="131,56,135,17">
+      <scope id="1477442199273532688" at="129,56,133,17">
         <var name="ext" id="1477442199273532688" />
         <var name="fname" id="1477442199273532688" />
       </scope>
@@ -198,8 +198,8 @@
   </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/1477442199284809449">
     <file name="TextGenAspectDescriptor.java">
-      <node id="1477442199284809449" at="108,48,109,44" concept="7" />
-      <scope id="1477442199284809449" at="108,48,109,44" />
+      <node id="1477442199284809449" at="106,48,107,44" concept="7" />
+      <scope id="1477442199284809449" at="106,48,107,44" />
     </file>
     <file name="TopicReference_TextGen.java">
       <node id="1477442199284809449" at="18,54,19,55" concept="6" />
@@ -353,8 +353,8 @@
       <unit id="1477442199288934793" at="15,0,43,0" name="ProjectionalQiChat.textGen.RobotConcept_TextGen" />
     </file>
     <file name="TextGenAspectDescriptor.java">
-      <node id="1477442199288934793" at="90,46,91,42" concept="7" />
-      <scope id="1477442199288934793" at="90,46,91,42" />
+      <node id="1477442199288934793" at="88,46,89,42" concept="7" />
+      <scope id="1477442199288934793" at="88,46,89,42" />
     </file>
   </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/1477442199288953110">
@@ -455,8 +455,8 @@
       <unit id="1477442199291007050" at="13,0,26,0" name="ProjectionalQiChat.textGen.RobotOutput_TextGen" />
     </file>
     <file name="TextGenAspectDescriptor.java">
-      <node id="1477442199291007050" at="94,45,95,41" concept="7" />
-      <scope id="1477442199291007050" at="94,45,95,41" />
+      <node id="1477442199291007050" at="92,45,93,41" concept="7" />
+      <scope id="1477442199291007050" at="92,45,93,41" />
     </file>
   </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/3809294597218693896">
@@ -563,8 +563,8 @@
   </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/3809294597239059083">
     <file name="TextGenAspectDescriptor.java">
-      <node id="3809294597239059083" at="120,38,121,34" concept="7" />
-      <scope id="3809294597239059083" at="120,38,121,34" />
+      <node id="3809294597239059083" at="118,38,119,34" concept="7" />
+      <scope id="3809294597239059083" at="118,38,119,34" />
     </file>
     <file name="Word_TextGen.java">
       <node id="3809294597239059083" at="22,54,23,55" concept="6" />
@@ -757,8 +757,8 @@
   </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/3809294597239759494">
     <file name="TextGenAspectDescriptor.java">
-      <node id="3809294597239759494" at="118,42,119,38" concept="7" />
-      <scope id="3809294597239759494" at="118,42,119,38" />
+      <node id="3809294597239759494" at="116,42,117,38" concept="7" />
+      <scope id="3809294597239759494" at="116,42,117,38" />
     </file>
     <file name="Wildcard_TextGen.java">
       <node id="3809294597239759494" at="11,54,12,55" concept="6" />
@@ -947,8 +947,8 @@
   </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/3809294597239793012">
     <file name="TextGenAspectDescriptor.java">
-      <node id="3809294597239793012" at="114,47,115,43" concept="7" />
-      <scope id="3809294597239793012" at="114,47,115,43" />
+      <node id="3809294597239793012" at="112,47,113,43" concept="7" />
+      <scope id="3809294597239793012" at="112,47,113,43" />
     </file>
     <file name="VariableEvent_TextGen.java">
       <node id="3809294597239793012" at="16,54,17,55" concept="6" />
@@ -968,30 +968,12 @@
       <unit id="3809294597239793012" at="14,0,30,0" name="ProjectionalQiChat.textGen.VariableEvent_TextGen" />
     </file>
   </root>
-  <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/3809294597239797398">
-    <file name="ProposalFunction_TextGen.java">
-      <node id="3809294597239797398" at="11,54,12,55" concept="6" />
-      <node id="3809294597239797436" at="12,55,13,20" concept="2" />
-      <node id="3809294597239797398" at="10,0,15,0" concept="5" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
-      <scope id="3809294597239797398" at="11,54,13,20">
-        <var name="tgs" id="3809294597239797398" />
-      </scope>
-      <scope id="3809294597239797398" at="10,0,15,0">
-        <var name="ctx" id="3809294597239797398" />
-      </scope>
-      <unit id="3809294597239797398" at="9,0,16,0" name="ProjectionalQiChat.textGen.ProposalFunction_TextGen" />
-    </file>
-    <file name="TextGenAspectDescriptor.java">
-      <node id="3809294597239797398" at="88,50,89,46" concept="7" />
-      <scope id="3809294597239797398" at="88,50,89,46" />
-    </file>
-  </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/3809294597239800227">
     <file name="NextProposal_TextGen.java">
       <node id="3809294597239800227" at="11,54,12,55" concept="6" />
-      <node id="3809294597239800265" at="12,55,13,31" concept="2" />
+      <node id="3809294597239800265" at="12,55,13,32" concept="2" />
       <node id="3809294597239800227" at="10,0,15,0" concept="5" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
-      <scope id="3809294597239800227" at="11,54,13,31">
+      <scope id="3809294597239800227" at="11,54,13,32">
         <var name="tgs" id="3809294597239800227" />
       </scope>
       <scope id="3809294597239800227" at="10,0,15,0">
@@ -1007,9 +989,9 @@
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/3809294597239800354">
     <file name="PreviousProposal_TextGen.java">
       <node id="3809294597239800354" at="11,54,12,55" concept="6" />
-      <node id="3809294597239800392" at="12,55,13,35" concept="2" />
+      <node id="3809294597239800392" at="12,55,13,36" concept="2" />
       <node id="3809294597239800354" at="10,0,15,0" concept="5" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
-      <scope id="3809294597239800354" at="11,54,13,35">
+      <scope id="3809294597239800354" at="11,54,13,36">
         <var name="tgs" id="3809294597239800354" />
       </scope>
       <scope id="3809294597239800354" at="10,0,15,0">
@@ -1025,9 +1007,9 @@
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/3809294597239800451">
     <file name="SameProposal_TextGen.java">
       <node id="3809294597239800451" at="11,54,12,55" concept="6" />
-      <node id="3809294597239800489" at="12,55,13,31" concept="2" />
+      <node id="3809294597239800489" at="12,55,13,32" concept="2" />
       <node id="3809294597239800451" at="10,0,15,0" concept="5" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
-      <scope id="3809294597239800451" at="11,54,13,31">
+      <scope id="3809294597239800451" at="11,54,13,32">
         <var name="tgs" id="3809294597239800451" />
       </scope>
       <scope id="3809294597239800451" at="10,0,15,0">
@@ -1036,8 +1018,8 @@
       <unit id="3809294597239800451" at="9,0,16,0" name="ProjectionalQiChat.textGen.SameProposal_TextGen" />
     </file>
     <file name="TextGenAspectDescriptor.java">
-      <node id="3809294597239800451" at="96,46,97,42" concept="7" />
-      <scope id="3809294597239800451" at="96,46,97,42" />
+      <node id="3809294597239800451" at="94,46,95,42" concept="7" />
+      <scope id="3809294597239800451" at="94,46,95,42" />
     </file>
   </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/3809294597241942464">
@@ -1063,8 +1045,8 @@
       <unit id="3809294597241942464" at="13,0,28,0" name="ProjectionalQiChat.textGen.StoreChoice_TextGen" />
     </file>
     <file name="TextGenAspectDescriptor.java">
-      <node id="3809294597241942464" at="100,45,101,41" concept="7" />
-      <scope id="3809294597241942464" at="100,45,101,41" />
+      <node id="3809294597241942464" at="98,45,99,41" concept="7" />
+      <scope id="3809294597241942464" at="98,45,99,41" />
     </file>
   </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/3809294597244151699">
@@ -1102,8 +1084,8 @@
   </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/3809294597244190996">
     <file name="TextGenAspectDescriptor.java">
-      <node id="3809294597244190996" at="116,51,117,47" concept="7" />
-      <scope id="3809294597244190996" at="116,51,117,47" />
+      <node id="3809294597244190996" at="114,51,115,47" concept="7" />
+      <scope id="3809294597244190996" at="114,51,115,47" />
     </file>
     <file name="VariableReference_TextGen.java">
       <node id="3809294597244190996" at="16,54,17,55" concept="6" />
@@ -1126,8 +1108,8 @@
   </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/3809294597244195641">
     <file name="TextGenAspectDescriptor.java">
-      <node id="3809294597244195641" at="112,53,113,49" concept="7" />
-      <scope id="3809294597244195641" at="112,53,113,49" />
+      <node id="3809294597244195641" at="110,53,111,49" concept="7" />
+      <scope id="3809294597244195641" at="110,53,111,49" />
     </file>
     <file name="VariableDeclaration_TextGen.java">
       <node id="3809294597244195641" at="16,54,17,55" concept="6" />
@@ -1171,8 +1153,8 @@
       <unit id="3809294597244200475" at="14,0,32,0" name="ProjectionalQiChat.textGen.RobotConceptReference_TextGen" />
     </file>
     <file name="TextGenAspectDescriptor.java">
-      <node id="3809294597244200475" at="92,55,93,51" concept="7" />
-      <scope id="3809294597244200475" at="92,55,93,51" />
+      <node id="3809294597244200475" at="90,55,91,51" concept="7" />
+      <scope id="3809294597244200475" at="90,55,91,51" />
     </file>
   </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/3809294597244205116">
@@ -1244,14 +1226,14 @@
       <unit id="3809294597246842235" at="12,0,29,0" name="ProjectionalQiChat.textGen.StringValue_TextGen" />
     </file>
     <file name="TextGenAspectDescriptor.java">
-      <node id="3809294597246842235" at="102,45,103,41" concept="7" />
-      <scope id="3809294597246842235" at="102,45,103,41" />
+      <node id="3809294597246842235" at="100,45,101,41" concept="7" />
+      <scope id="3809294597246842235" at="100,45,101,41" />
     </file>
   </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/6218627430273583127">
     <file name="TextGenAspectDescriptor.java">
-      <node id="6218627430273583127" at="122,46,123,42" concept="7" />
-      <scope id="6218627430273583127" at="122,46,123,42" />
+      <node id="6218627430273583127" at="120,46,121,42" concept="7" />
+      <scope id="6218627430273583127" at="120,46,121,42" />
     </file>
     <file name="onStartEvent_TextGen.java">
       <node id="6218627430273583127" at="12,54,13,55" concept="6" />
@@ -1322,8 +1304,8 @@
   </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/8712038721312892556">
     <file name="TextGenAspectDescriptor.java">
-      <node id="8712038721312892556" at="110,42,111,38" concept="7" />
-      <scope id="8712038721312892556" at="110,42,111,38" />
+      <node id="8712038721312892556" at="108,42,109,38" concept="7" />
+      <scope id="8712038721312892556" at="108,42,109,38" />
     </file>
     <file name="UserRule_TextGen.java">
       <node id="8712038721312892556" at="15,54,16,55" concept="6" />
@@ -1440,14 +1422,14 @@
       <unit id="8712038721312911451" at="13,0,42,0" name="ProjectionalQiChat.textGen.SecondOrderSubrule_TextGen" />
     </file>
     <file name="TextGenAspectDescriptor.java">
-      <node id="8712038721312911451" at="98,52,99,48" concept="7" />
-      <scope id="8712038721312911451" at="98,52,99,48" />
+      <node id="8712038721312911451" at="96,52,97,48" concept="7" />
+      <scope id="8712038721312911451" at="96,52,97,48" />
     </file>
   </root>
   <root nodeRef="r:f1cc8776-be71-4a8e-a61c-4c93eaf69332(ProjectionalQiChat.textGen)/8712038721312923958">
     <file name="TextGenAspectDescriptor.java">
-      <node id="8712038721312923958" at="104,51,105,47" concept="7" />
-      <scope id="8712038721312923958" at="104,51,105,47" />
+      <node id="8712038721312923958" at="102,51,103,47" concept="7" />
+      <scope id="8712038721312923958" at="102,51,103,47" />
     </file>
     <file name="ThirdOrderSubrule_TextGen.java">
       <node id="8712038721312923958" at="14,54,15,55" concept="6" />
