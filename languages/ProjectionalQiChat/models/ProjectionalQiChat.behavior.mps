@@ -1313,7 +1313,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="2JDDPTBey3E">
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <ref role="13h7C2" to="zefy:6Zi8Kosir4l" resolve="OutputChoice" />
     <node concept="13hLZK" id="2JDDPTBey3F" role="13h7CW">
       <node concept="3clFbS" id="2JDDPTBey3G" role="2VODD2">
@@ -1381,7 +1381,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="2JDDPTBjmjJ">
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <ref role="13h7C2" to="zefy:6Zi8Kosir4K" resolve="Word" />
     <node concept="13i0hz" id="7iFV4E1v11U" role="13h7CS">
       <property role="TrG5h" value="initializeVoiceTuningStandard" />
@@ -1615,7 +1615,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="2JDDPTBM_8T">
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <ref role="13h7C2" to="zefy:6Zi8Kosir4k" resolve="InputChoice" />
     <node concept="13hLZK" id="2JDDPTBM_8U" role="13h7CW">
       <node concept="3clFbS" id="2JDDPTBM_8V" role="2VODD2">
@@ -3327,7 +3327,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="3jtlk3LMj2n">
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <ref role="13h7C2" to="zefy:6Zi8Kosir4x" resolve="Phrase" />
     <node concept="13i0hz" id="3jtlk3LMj2y" role="13h7CS">
       <property role="TrG5h" value="getLastWord" />

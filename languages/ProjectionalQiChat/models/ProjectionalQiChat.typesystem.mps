@@ -3246,6 +3246,7 @@
   </node>
   <node concept="Q5z_Y" id="5wtq$oGdzNZ">
     <property role="TrG5h" value="fix_no_next_emptysubsubrule" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <node concept="Q5ZZ6" id="5wtq$oGdzO0" role="Q6x$H">
       <node concept="3clFbS" id="5wtq$oGdzO1" role="2VODD2">
         <node concept="3cpWs8" id="5wtq$oGd$eE" role="3cqZAp">
@@ -3352,6 +3353,7 @@
   </node>
   <node concept="Q5z_Y" id="5wtq$oGdAXQ">
     <property role="TrG5h" value="fix_no_next_emptysubsubsubrule" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <node concept="Q5ZZ6" id="5wtq$oGdAXR" role="Q6x$H">
       <node concept="3clFbS" id="5wtq$oGdAXS" role="2VODD2">
         <node concept="3cpWs8" id="5wtq$oGdBwO" role="3cqZAp">
@@ -3447,6 +3449,7 @@
   </node>
   <node concept="Q5z_Y" id="_CNqxIjTZO">
     <property role="TrG5h" value="fix_OnlyWordChoiceProperty" />
+    <property role="3GE5qa" value="Concepts" />
     <node concept="Q5ZZ6" id="_CNqxIjTZP" role="Q6x$H">
       <node concept="3clFbS" id="_CNqxIjTZQ" role="2VODD2">
         <node concept="3clFbF" id="_CNqxIjUgb" role="3cqZAp">
@@ -3530,6 +3533,7 @@
   </node>
   <node concept="Q5z_Y" id="_CNqxIrVq1">
     <property role="TrG5h" value="fix_updateInputStores" />
+    <property role="3GE5qa" value="RobotOutput" />
     <node concept="Q5ZZ6" id="_CNqxIrVq2" role="Q6x$H">
       <node concept="3clFbS" id="_CNqxIrVq3" role="2VODD2">
         <node concept="3clFbF" id="_CNqxIrVv6" role="3cqZAp">
@@ -3551,7 +3555,7 @@
   </node>
   <node concept="18kY7G" id="1HSOiWCoJt2">
     <property role="TrG5h" value="check_Word" />
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <node concept="3clFbS" id="1HSOiWCoJt3" role="18ibNy">
       <node concept="3clFbJ" id="1HSOiWCoJt9" role="3cqZAp">
         <node concept="1Wc70l" id="1HSOiWCLz0l" role="3clFbw">
@@ -3621,6 +3625,7 @@
   </node>
   <node concept="Q5z_Y" id="1HSOiWCoLz2">
     <property role="TrG5h" value="fix_Words_with_Spaces" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <node concept="Q5ZZ6" id="1HSOiWCoLz3" role="Q6x$H">
       <node concept="3clFbS" id="1HSOiWCoLz4" role="2VODD2">
         <node concept="RRSsy" id="1HSOiWCxeIO" role="3cqZAp">
@@ -3887,6 +3892,7 @@
   </node>
   <node concept="Q5z_Y" id="1HSOiWDiOrG">
     <property role="TrG5h" value="fix_no_RobotOutput_elements" />
+    <property role="3GE5qa" value="RobotOutput" />
     <node concept="Q5ZZ6" id="1HSOiWDiOrH" role="Q6x$H">
       <node concept="3clFbS" id="1HSOiWDiOrI" role="2VODD2">
         <node concept="3cpWs8" id="1HSOiWD_ESv" role="3cqZAp">
@@ -4157,6 +4163,7 @@
   </node>
   <node concept="Q5z_Y" id="6LJJ5IXp$rY">
     <property role="TrG5h" value="fix_no_HumanInput_elements" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <node concept="Q5ZZ6" id="6LJJ5IXp$rZ" role="Q6x$H">
       <node concept="3clFbS" id="6LJJ5IXp$s0" role="2VODD2">
         <node concept="RRSsy" id="5pd0bcSH5bJ" role="3cqZAp">
@@ -4356,6 +4363,7 @@
   </node>
   <node concept="Q5z_Y" id="6LJJ5IXuR5B">
     <property role="TrG5h" value="fix_userrule_has_no_input_output" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <node concept="Q5ZZ6" id="6LJJ5IXuR5C" role="Q6x$H">
       <node concept="3clFbS" id="6LJJ5IXuR5D" role="2VODD2">
         <node concept="3cpWs8" id="6LJJ5IXuRhR" role="3cqZAp">

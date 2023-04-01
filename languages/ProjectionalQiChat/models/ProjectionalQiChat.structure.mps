@@ -39,6 +39,7 @@
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
+      <concept id="1083243159079" name="jetbrains.mps.lang.structure.structure.PrimitiveDataTypeDeclaration" flags="ng" index="QkHVr" />
       <concept id="1071489090640" name="jetbrains.mps.lang.structure.structure.ConceptDeclaration" flags="ig" index="1TIwiD">
         <property id="1096454100552" name="rootable" index="19KtqR" />
         <reference id="1071489389519" name="extends" index="1TJDcQ" />
@@ -529,7 +530,7 @@
   </node>
   <node concept="1TIwiD" id="6Zi8Kosir4k">
     <property role="EcuMT" value="8057541192470606100" />
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <property role="TrG5h" value="InputChoice" />
     <property role="34LRSv" value="[" />
     <property role="R4oN_" value="InputChoice" />
@@ -552,7 +553,7 @@
   </node>
   <node concept="1TIwiD" id="6Zi8Kosir4l">
     <property role="EcuMT" value="8057541192470606101" />
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <property role="TrG5h" value="OutputChoice" />
     <property role="34LRSv" value="[" />
     <property role="R4oN_" value="OutputChoice" />
@@ -575,7 +576,7 @@
   </node>
   <node concept="25R3W" id="6Zi8Kosir4n">
     <property role="3F6X1D" value="8057541192470606103" />
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <property role="TrG5h" value="ChooseOrder" />
     <ref role="1H5jkz" node="6Zi8Kosir4o" resolve="default" />
     <node concept="25R33" id="6Zi8Kosir4o" role="25R1y">
@@ -596,13 +597,13 @@
   </node>
   <node concept="Az7Fb" id="6Zi8Kosir4w">
     <property role="3F6X1D" value="8057541192470606112" />
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <property role="TrG5h" value="WordString" />
     <property role="FLfZY" value="([a-zA-ZöäüÖÄÜß-]+[!\\?\\.',:]?)|([0-9]*)" />
   </node>
   <node concept="1TIwiD" id="6Zi8Kosir4x">
     <property role="EcuMT" value="8057541192470606113" />
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <property role="TrG5h" value="Phrase" />
     <property role="34LRSv" value="&quot;" />
     <property role="R4oN_" value="Phrase (word collection)" />
@@ -629,7 +630,7 @@
   </node>
   <node concept="1TIwiD" id="6Zi8Kosir4y">
     <property role="EcuMT" value="8057541192470606114" />
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <property role="TrG5h" value="Optional" />
     <property role="34LRSv" value="{" />
     <property role="R4oN_" value="Optional" />
@@ -652,13 +653,13 @@
     </node>
   </node>
   <node concept="PlHQZ" id="6Zi8Kosir4$">
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <property role="EcuMT" value="8057541192470606115" />
     <property role="TrG5h" value="IOptionalConfirmed" />
   </node>
   <node concept="PlHQZ" id="6Zi8Kosir4_">
     <property role="EcuMT" value="8057541192470606117" />
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <property role="TrG5h" value="IChoiceConfirmed" />
     <node concept="PrWs8" id="5Z9ErPsv6A3" role="PrDN$">
       <ref role="PrY4T" node="Yce9eByMkq" resolve="IInputChoiceConfirmed" />
@@ -669,12 +670,12 @@
   </node>
   <node concept="PlHQZ" id="6Zi8Kosir4A">
     <property role="EcuMT" value="8057541192470606118" />
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <property role="TrG5h" value="IPhraseConfirmed" />
   </node>
   <node concept="1TIwiD" id="6Zi8Kosir4K">
     <property role="EcuMT" value="8057541192470606128" />
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <property role="TrG5h" value="Word" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="Yce9eByMlg" role="1TKVEi">
@@ -1270,12 +1271,12 @@
   </node>
   <node concept="PlHQZ" id="Yce9eByMkq">
     <property role="EcuMT" value="1120332614130672922" />
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <property role="TrG5h" value="IInputChoiceConfirmed" />
   </node>
   <node concept="PlHQZ" id="Yce9eByMkt">
     <property role="EcuMT" value="1120332614130672925" />
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <property role="TrG5h" value="IOutputChoiceConfirmed" />
     <node concept="PrWs8" id="Yce9eByMkB" role="PrDN$">
       <ref role="PrY4T" node="6Zi8Kosir4A" resolve="IPhraseConfirmed" />
@@ -1456,6 +1457,10 @@
     <property role="34LRSv" value="onStart" />
     <property role="R4oN_" value="(Event onStart triggered)" />
     <ref role="1TJDcQ" node="6Zi8Kosir5w" resolve="AbstractEvent" />
+  </node>
+  <node concept="QkHVr" id="34nmgFNojDw">
+    <property role="3F6X1D" value="3537393935890594400" />
+    <property role="TrG5h" value="asd" />
   </node>
 </model>
 

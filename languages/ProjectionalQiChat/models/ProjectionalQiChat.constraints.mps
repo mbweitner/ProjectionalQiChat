@@ -1467,7 +1467,7 @@
     </node>
   </node>
   <node concept="1M2fIO" id="1HSOiWD29Xc">
-    <property role="3GE5qa" value="GerneralInputOutput" />
+    <property role="3GE5qa" value="GeneralInputOutput" />
     <ref role="1M2myG" to="zefy:6Zi8Kosir4K" resolve="Word" />
     <node concept="EnEH3" id="1HSOiWD29Xd" role="1MhHOB">
       <ref role="EomxK" to="zefy:6Zi8Kosir4Q" resolve="word" />
